@@ -10,3 +10,10 @@ Mukayila Alao
 Nima Sherpa
 David Vidals
 Theodore Frazier
+
+Frontend:
+npx create-react-app frontend
+
+Backend:
+npm init -y
+npm install express dotenv cors pg-promise
