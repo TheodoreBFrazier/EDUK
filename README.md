@@ -12,8 +12,8 @@ David Vidals
 Theodore Frazier
 
 Frontend:
-npx create-react-app frontend
+Add .env
+npm install
 
 Backend:
-npm init -y
-npm install express dotenv cors pg-promise
+npm install
