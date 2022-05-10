@@ -7,6 +7,6 @@ The goal of this app is to connect highschool/college students , minority groups
 Team Members:
 Lili Huang
 Mukayila Alao
-Nima Sherpa
+Nima $herpa
 David Vidals
 Theodore Frazier
