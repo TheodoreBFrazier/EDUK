@@ -11,7 +11,7 @@ CREATE TABLE users(
     last_name VARCHAR(50) NOT NULL,
     age INT NOT NULL,
     email TEXT,
-
+    mentor_id INTEGER REFERENCES mentors(mentor_id)
 );
 
 --JOIN TABLE
@@ -19,7 +19,6 @@ CREATE TABLE users(
 -- 1 2 5
 -- 2 2 7 
 CREATE TABLE users_resources(
-    id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(user_id) ON DELETE CASCADE,
     resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE
 );
@@ -28,9 +27,10 @@ CREATE TABLE users_resources(
 CREATE TABLE resources(
     resource_id SERIAL PRIMARY KEY,
     resource_name VARCHAR(100),
+    description TEXT,
     resource_category VARCHAR(100),
-    start_datetime TEXT NOT NULL,
-    end_datetime TEXT NOT NULL,
+    start_datetime TEXT,
+    end_datetime TEXT,
     url TEXT NOT NULL,
     isVerified BOOLEAN DEFAULT FALSE
 );
@@ -40,10 +40,11 @@ CREATE TABLE mentors(
     mentor_id SERIAL PRIMARY KEY,
     mentor_fname VARCHAR(50),
     mentor_lname VARCHAR(50),
+    bio TEXT,
     email TEXT,
     speciality TEXT,
-    user_id
-)
+    
+);
 
 --reviews
 
