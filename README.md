@@ -11,3 +11,10 @@ Mukayila Alao
 Nima $herpa
 David Vidals
 Theodore Frazier
+
+Frontend:
+Add .env
+npm install
+
+Backend:
+npm install
