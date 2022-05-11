@@ -19,7 +19,6 @@ CREATE TABLE users(
 -- 1 2 5
 -- 2 2 7 
 CREATE TABLE users_resources(
-    id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(user_id) ON DELETE CASCADE,
     resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE
 );
@@ -30,8 +29,8 @@ CREATE TABLE resources(
     resource_name VARCHAR(100),
     description TEXT,
     resource_category VARCHAR(100),
-    start_datetime TEXT NOT NULL,
-    end_datetime TEXT NOT NULL,
+    start_datetime TEXT,
+    end_datetime TEXT,
     url TEXT NOT NULL,
     isVerified BOOLEAN DEFAULT FALSE
 );
