@@ -1,7 +1,9 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
-const usersControllers = require("./controllers/usersControllers.js");
+const usersController = require("./controllers/usersControllers.js");
+//const resourcesController = require("./controllers/resourcesControllers.js");
+// const mentorsController=require("./controllers/mentorsControllers.js");
 
 // CONFIGURATION
 const app = express();
@@ -11,8 +13,11 @@ app.use(cors());
 // Parse incoming JSON
 app.use(express.json());
 
-app.use("/users", usersControllers);
-
+app.use("/users", usersController);
+//resources controller
+//app.use("/resources",resourcesController);
+//mentors controller
+//app.use("/mentors",mentorsController)
 require("dotenv").config();
 
 app.get("/", (req, res) => {
