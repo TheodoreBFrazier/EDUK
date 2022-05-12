@@ -2,7 +2,7 @@
 	"name": "backend",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "server.js",
 	"scripts": {
 		"db_init": "psql -U postgres -f db/schema.sql",
 		"db_seed": "psql -U postgres -f db/seed.sql",
