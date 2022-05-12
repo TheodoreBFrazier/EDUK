@@ -12,20 +12,22 @@ const app = express();
 app.use(cors());
 // Parse incoming JSON
 app.use(express.json());
-
+// /users/1/resources
 app.use("/users", usersController);
+
 //resources controller
+// /resources/1/users
 app.use("/resources", resourcesController);
 //mentors controller
 app.use("/mentors", mentorsController);
 require("dotenv").config();
 
 app.get("/", (req, res) => {
-	res.send("Welcome To Rose App");
+  res.send("Welcome To Rose App");
 });
 
 app.get("*", (req, res) => {
-	res.status(404).send("Page not found");
+  res.status(404).send("Page not found");
 });
 
 // EXPORT

@@ -1,6 +1,8 @@
 const express = require("express");
-const users = express.Router();
-
+const users = express.Router({ mergeParams: true });
+const resourcesController = require("./resourcesControllers.js");
+//users/1/resources
+//resources/1/users
 //users queries functions
 const {
   updateUser,
@@ -9,6 +11,9 @@ const {
   getAllUsers,
   getOneUser,
 } = require("../queries/users.js");
+
+//merge resources to users
+users.use("/:uid/resources", resourcesController);
 
 //get all users
 users.get("/", async (req, res) => {
