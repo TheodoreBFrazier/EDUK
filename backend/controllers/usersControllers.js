@@ -1,5 +1,4 @@
 const express = require("express");
-const { as } = require("pg-promise");
 const users = express.Router();
 
 //users queries functions

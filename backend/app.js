@@ -3,7 +3,7 @@ const cors = require("cors");
 const express = require("express");
 const usersController = require("./controllers/usersControllers.js");
 //const resourcesController = require("./controllers/resourcesControllers.js");
-// const mentorsController=require("./controllers/mentorsControllers.js");
+const mentorsController=require("./controllers/mentorsControllers.js");
 
 // CONFIGURATION
 const app = express();
@@ -17,7 +17,7 @@ app.use("/users", usersController);
 //resources controller
 //app.use("/resources",resourcesController);
 //mentors controller
-//app.use("/mentors",mentorsController)
+app.use("/mentors", mentorsController)
 require("dotenv").config();
 
 app.get("/", (req, res) => {
