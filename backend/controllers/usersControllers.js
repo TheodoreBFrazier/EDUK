@@ -1,5 +1,5 @@
 const express = require("express");
-const { getAllResources, getOneResource } = require("../queries/resources.js");
+
 const users = express.Router();
 //const resourcesController = require("./resourcesControllers.js");
 //users/1/resources
@@ -13,19 +13,26 @@ const {
   getOneUser,
 } = require("../queries/users.js");
 
+//resources queries functions
+const {
+  getAllResources,
+  getOneResource,
+  createResource,
+  deleteResource,
+} = require("../queries/resources.js");
+
 //merge resources to users
 //users.use("/:uid/resources", resourcesController);
 
-//get all users or get all users of a specific resource
+//get all users  /users/
 users.get("/", async (req, res) => {
-  const { resource_id } = req.params;
-  const users = await getAllUsers(resource_id);
+  const users = await getAllUsers();
   if (users[0]) {
     res.json({ success: true, result: users });
   } else res.status(500).json({ success: false, error: "server error..." });
 });
 
-//get a User
+//get a User   /users/1
 users.get("/:uid", async (req, res) => {
   const { uid } = req.params;
 
@@ -38,7 +45,8 @@ users.get("/:uid", async (req, res) => {
       .json({ success: false, error: `server error, no user at index ${uid}` });
 });
 
-//get all resources of a user
+//get all resources of a user  /users/1/resources
+
 users.get("/:uid/resources", async (req, res) => {
   const { uid } = req.params;
   const resources = await getAllResources(uid);
@@ -46,6 +54,7 @@ users.get("/:uid/resources", async (req, res) => {
     res.json({ success: true, result: resources });
   } else res.status(500).json({ error: resources });
 });
+
 //get a resource of a specific user
 users.get("/:uid/resources/:resource_id", async (req, res) => {
   const { resource_id, uid } = req.params;
@@ -65,6 +74,15 @@ users.post("/", async (req, res) => {
     res.status(500).json({ success: false, error: "unable to create user..." });
 });
 
+//add uid and resource_id into the join table(user add a resource to his profile)
+users.post("/:uid/resources", async (req, res) => {
+  const { uid } = req.params;
+  const resource = req.body;
+  const user_resource = await createResource(uid, resource);
+  if (user_resource.uid) res.json({ success: true, result: user_resource });
+  else res.status(500).json({ success: false, result: user_resource });
+});
+
 //delete User
 users.delete("/:uid", async (req, res) => {
   const { uid } = req.params;
@@ -76,7 +94,13 @@ users.delete("/:uid", async (req, res) => {
       .status(500)
       .json({ success: false, error: `unable to delete user ${uid}` });
 });
-
+//user remove a resource from his profile
+users.delete("/:uid/resources/:resource_id", async (req, res) => {
+  const { uid, resource_id } = req.params;
+  const removedResource = await deleteResource(uid, resource_id);
+  if (removedResource.uid) res.json({ success: true, result: removedResource });
+  else res.status(500).json({ success: false, error: removedResource });
+});
 //update a user
 users.put("/:uid", async (req, res) => {
   const { uid } = req.params;
