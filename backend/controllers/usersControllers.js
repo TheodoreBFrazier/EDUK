@@ -1,7 +1,9 @@
 const express = require("express");
-const { as } = require("pg-promise");
+const { getAllResources, getOneResource } = require("../queries/resources.js");
 const users = express.Router();
-
+//const resourcesController = require("./resourcesControllers.js");
+//users/1/resources
+//resources/1/users
 //users queries functions
 const {
   updateUser,
@@ -11,9 +13,13 @@ const {
   getOneUser,
 } = require("../queries/users.js");
 
-//get all users
+//merge resources to users
+//users.use("/:uid/resources", resourcesController);
+
+//get all users or get all users of a specific resource
 users.get("/", async (req, res) => {
-  const users = await getAllUsers();
+  const { resource_id } = req.params;
+  const users = await getAllUsers(resource_id);
   if (users[0]) {
     res.json({ success: true, result: users });
   } else res.status(500).json({ success: false, error: "server error..." });
@@ -30,6 +36,23 @@ users.get("/:uid", async (req, res) => {
     res
       .status(500)
       .json({ success: false, error: `server error, no user at index ${uid}` });
+});
+
+//get all resources of a user
+users.get("/:uid/resources", async (req, res) => {
+  const { uid } = req.params;
+  const resources = await getAllResources(uid);
+  if (resources[0]) {
+    res.json({ success: true, result: resources });
+  } else res.status(500).json({ error: resources });
+});
+//get a resource of a specific user
+users.get("/:uid/resources/:resource_id", async (req, res) => {
+  const { resource_id, uid } = req.params;
+  const resource = await getOneResource(uid, resource_id);
+  if (resource.resource_id) {
+    res.json({ success: true, result: resource });
+  } else res.status(500).json({ success: false, error: resource });
 });
 
 //create a user

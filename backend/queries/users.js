@@ -1,9 +1,19 @@
 const db = require("../db/dbConfig.js");
 
 //all users
-const getAllUsers = async () => {
+// /users
+const getAllUsers = async (resource_id) => {
   try {
-    const users = await db.many("SELECT * FROM users");
+    //if resource_id is available
+    if (resource_id) {
+      var users = await db.many(
+        "SELECT * FROM users WHERE uid IN (SELECT uid FROM users_resources WHERE resource_id=$1)",
+        resource_id
+      );
+    } else {
+      var users = await db.many("SELECT * FROM users");
+    }
+
     return users;
   } catch (error) {
     return error;

@@ -2,8 +2,8 @@
 const cors = require("cors");
 const express = require("express");
 const usersController = require("./controllers/usersControllers.js");
-//const resourcesController = require("./controllers/resourcesControllers.js");
-// const mentorsController=require("./controllers/mentorsControllers.js");
+const resourcesController = require("./controllers/resourcesControllers.js");
+const mentorsController = require("./controllers/mentorsControllers.js");
 
 // CONFIGURATION
 const app = express();
@@ -12,12 +12,14 @@ const app = express();
 app.use(cors());
 // Parse incoming JSON
 app.use(express.json());
-
+// /users/1/resources
 app.use("/users", usersController);
+
 //resources controller
-//app.use("/resources",resourcesController);
+// /resources/1/users
+app.use("/resources", resourcesController);
 //mentors controller
-//app.use("/mentors",mentorsController)
+app.use("/mentors", mentorsController);
 require("dotenv").config();
 
 app.get("/", (req, res) => {
