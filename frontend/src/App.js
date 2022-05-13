@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 import NewUser from "./pages/NewUser.js"
-import Navbar from "./Navbar.js";
 import EditUser from "./pages/EditUser.js";
 
 import NavBar from "./components/NavBar";
