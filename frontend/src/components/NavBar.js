@@ -8,6 +8,9 @@ export default function NavBar() {
             <Link to="/">
                 <h3> NYC Rose 🌹</h3>
             </Link>
+            <Link to="/">
+                <h3> Resources 🌹</h3>
+            </Link>
             <button>
                 New User
             </button>
