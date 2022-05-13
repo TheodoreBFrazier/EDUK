@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import SingleUserView from "./SingleUserView";
+import SingleUserView from "./SingleUserPage";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -9,25 +9,26 @@ function AllUsers() {
 
     useEffect(() => {
         axios.get(API + "/users")
-        .then((response) => {
-            setUsers(response.data);
-        }).catch((error) => {
-            console.log(error)
-        })
+            .then((response) => {
+                console.log(response)
+                setUsers(response.data.result);
+            }).catch((error) => {
+                console.log(error)
+            })
     }, [])
 
 
-return (
-    <div className="user">
-        <section>
-            <tbody className="users-arr">
-                {users.map((user) => {
-                    return <SingleUserView key={user.id} user={user} />
-                })}
-            </tbody>
-        </section>
-    </div>
-)
+    return (
+        <div className="user">
+            <section>
+                <tbody className="users-arr">
+                    {users.map((user) => {
+                        return <SingleUserView key={user.id} user={user} />
+                    })}
+                </tbody>
+            </section>
+        </div>
+    )
 
 }
 

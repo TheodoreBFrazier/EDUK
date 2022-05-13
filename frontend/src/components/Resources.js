@@ -10,21 +10,20 @@ function Resources() {
     useEffect(() => {
         axios.get(API + "/resources")
             .then((response) => {
-                setResources(response.data);
+                console.log(response)
+                setResources(response.data.result);
             }).catch((error) => {
                 console.log(error)
             })
     }, [])
 
     return (
-        <div classNames = "available-resources">
-            <section>
-                <tbody className="resource-arr">
+        <div classNames = "available-resources">       
+                <section className="resource-arr">
                     {resources.map((resource) => {
-                        return <SingleResource key = {resource.id} resoruce={resource} />
+                        return <SingleResource key = {resource.id} resource={resource} />
                     })}
-                </tbody>
-            </section>
+                </section>     
         </div>
     )
 

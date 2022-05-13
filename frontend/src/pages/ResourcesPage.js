@@ -1,7 +1,7 @@
 import Resources from "../components/Resources"
 
 
-function Resources() {
+function ResourcesPage() {
     return (
         <div>
             Welcome to resources
@@ -10,4 +10,4 @@ function Resources() {
     )
 }
 
-export default Resources
+export default ResourcesPage

@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 // IMPORTING PAGES
 
 import Home from "./pages/Home"
-import Resources from "./pages/Resources";
+import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
 
 //Shows a single resource
@@ -22,8 +22,8 @@ function App() {
         <main>
           <Routes>
           <Route path = "/" element={<Home />} />
-          <Route path = "/resources" element={<Resources/>} />
-          <Route path = "/resources/id" element={<ShowResource/>} />
+          <Route path = "/resources" element={<ResourcesPage/>} />
+          <Route path = "/resources/:id" element={<ShowResource/>} />
           <Route path = "/users" element={<UserPortal />} />
           
           </Routes>
