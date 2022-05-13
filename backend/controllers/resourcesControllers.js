@@ -36,7 +36,8 @@ resources.get("/:resource_id", async (req, res) => {
 
 resources.post("/", async (req, res) => {
   const resource = req.body;
-  const createdResouce = await createResource(resource);
+  const { uid } = req.params;
+  const createdResouce = await createResource(uid, resource);
   if (createdResouce.resource_id) {
     res.json({ success: true, result: createdResouce });
   } else {
@@ -49,8 +50,8 @@ resources.post("/", async (req, res) => {
 // delete a resource
 
 resources.delete("/:resource_id", async (req, res) => {
-  const { resource_id } = req.params;
-  const deletedResource = await deleteResource(resource_id);
+  const { uid, resource_id } = req.params;
+  const deletedResource = await deleteResource(uid, resource_id);
   if (deletedResource.resource_id) {
     res.json({ success: true, result: deletedResource });
   } else

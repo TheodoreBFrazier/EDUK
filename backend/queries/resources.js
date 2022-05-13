@@ -43,20 +43,34 @@ const getOneResource = async (uid, resource_id) => {
 };
 
 // creaete a resourcs
-const createResource = async (resource) => {
+// /users/uid/resources
+// /resources
+const createResource = async (uid, resource) => {
   try {
-    const createdResouce = await db.one(
-      "INSERT INTO resources(resource_name,description,resource_category,start_datetime, end_datetime, url) VALUES($1,$2,$3,$4,$5,$6) RETURNING *",
-      [
-        resource.resource_name,
-        resource.description,
-        resource.resource_category,
-        resource.start_datetime,
-        resource.end_datetime,
-        resource.url,
-      ]
-    );
-    return createdResouce;
+    //add uid and resource_id into the join table(user add a resource to his profile)
+    if (uid) {
+      const user_resource = await db.one(
+        "INSERT INTO users_resources(uid, resource_id) VALUES($1,$2) RETURNING*",
+        [uid, resource.resource_id]
+      );
+      return user_resource;
+    }
+
+    //create a new resource
+    else {
+      const createdResouce = await db.one(
+        "INSERT INTO resources(resource_name,description,resource_category,start_datetime, end_datetime, url) VALUES($1,$2,$3,$4,$5,$6) RETURNING *",
+        [
+          resource.resource_name,
+          resource.description,
+          resource.resource_category,
+          resource.start_datetime,
+          resource.end_datetime,
+          resource.url,
+        ]
+      );
+      return createdResouce;
+    }
   } catch (error) {
     return error;
   }
@@ -64,13 +78,24 @@ const createResource = async (resource) => {
 
 // delete a resource
 
-const deleteResource = async (resource_id) => {
+const deleteResource = async (uid, resource_id) => {
   try {
-    const deletedResource = await db.one(
-      "DELETE FROM resources WHERE resource_id=$1 RETURNING *",
-      resource_id
-    );
-    return deletedResource;
+    //user removes a resource from his profile
+    if (uid) {
+      const removedResource = await db.one(
+        "DELETE FROM users_resources WHERE uid=$1 AND resource_id=$2 RETURNING *",
+        [uid, resource_id]
+      );
+      return removedResource;
+    }
+    //delete a resource from the database
+    else {
+      const deletedResource = await db.one(
+        "DELETE FROM resources WHERE resource_id=$1 RETURNING *",
+        resource_id
+      );
+      return deletedResource;
+    }
   } catch (error) {
     return error;
   }
