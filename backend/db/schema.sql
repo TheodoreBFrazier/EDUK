@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS data_dev;
+firastDROP DATABASE IF EXISTS data_dev;
 CREATE DATABASE data_dev;
 
 \c data_dev;
