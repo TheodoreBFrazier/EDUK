@@ -1,11 +1,5 @@
 const db = require("../db/dbConfig.js");
 
-<<<<<<< HEAD
-// all resources
-const getAllResources = async () => {
-	try {
-		const resources = await db.many("SELECT * FROM resources");
-=======
 // all resources and resources of a specific user
 const getAllResources = async (uid) => {
 	try {
@@ -17,7 +11,6 @@ const getAllResources = async (uid) => {
 		} else {
 			var resources = await db.many("SELECT * FROM resources");
 		}
->>>>>>> nimabranch
 		return resources;
 	} catch (error) {
 		return error;
@@ -25,14 +18,6 @@ const getAllResources = async (uid) => {
 };
 s;
 // get a resource
-<<<<<<< HEAD
-const getOneResource = async (resource_id) => {
-	try {
-		const resource = await db.one(
-			"SELECT * FROM resources WHERE resource_id=$1",
-			resource_id
-		);
-=======
 const getOneResource = async (uid, resource_id) => {
 	try {
 		//if uid is not null
@@ -50,7 +35,6 @@ const getOneResource = async (uid, resource_id) => {
 			);
 		}
 
->>>>>>> nimabranch
 		return resource;
 	} catch (error) {
 		return error;
@@ -58,39 +42,6 @@ const getOneResource = async (uid, resource_id) => {
 };
 
 // creaete a resourcs
-<<<<<<< HEAD
-// /users/uid/resources
-// /resources
-const createResource = async (uid, resource) => {
-  try {
-    //add uid and resource_id into the join table(user add a resource to his profile)
-    if (uid) {
-      const user_resource = await db.one(
-        "INSERT INTO users_resources(uid, resource_id) VALUES($1,$2) RETURNING*",
-        [uid, resource.resource_id]
-      );
-      return user_resource;
-    }
-
-    //create a new resource
-    else {
-      const createdResouce = await db.one(
-        "INSERT INTO resources(resource_name,description,resource_category,start_datetime, end_datetime, url) VALUES($1,$2,$3,$4,$5,$6) RETURNING *",
-        [
-          resource.resource_name,
-          resource.description,
-          resource.resource_category,
-          resource.start_datetime,
-          resource.end_datetime,
-          resource.url,
-        ]
-      );
-      return createdResouce;
-    }
-  } catch (error) {
-    return error;
-  }
-=======
 const createResource = async (resource) => {
 	try {
 		const createdResouce = await db.one(
@@ -108,34 +59,10 @@ const createResource = async (resource) => {
 	} catch (error) {
 		return error;
 	}
->>>>>>> refs/remotes/origin/dev
 };
 
 // delete a resource
 
-<<<<<<< HEAD
-const deleteResource = async (uid, resource_id) => {
-  try {
-    //user removes a resource from his profile
-    if (uid) {
-      const removedResource = await db.one(
-        "DELETE FROM users_resources WHERE uid=$1 AND resource_id=$2 RETURNING *",
-        [uid, resource_id]
-      );
-      return removedResource;
-    }
-    //delete a resource from the database
-    else {
-      const deletedResource = await db.one(
-        "DELETE FROM resources WHERE resource_id=$1 RETURNING *",
-        resource_id
-      );
-      return deletedResource;
-    }
-  } catch (error) {
-    return error;
-  }
-=======
 const deleteResource = async (resource_id) => {
 	try {
 		const deletedResource = await db.one(
@@ -146,7 +73,6 @@ const deleteResource = async (resource_id) => {
 	} catch (error) {
 		return error;
 	}
->>>>>>> refs/remotes/origin/dev
 };
 
 // update a resources
