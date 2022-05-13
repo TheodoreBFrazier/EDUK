@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Resource from "./Resource"
+import SingleResource from "./SingleResource";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -21,7 +21,7 @@ function Resources() {
             <section>
                 <tbody className="resource-arr">
                     {resources.map((resource) => {
-                        return <Resource key = {resource.id} resoruce={resource} />
+                        return <SingleResource key = {resource.id} resoruce={resource} />
                     })}
                 </tbody>
             </section>
