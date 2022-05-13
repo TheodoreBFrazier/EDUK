@@ -21,7 +21,7 @@ function Resources() {
         <div classNames = "available-resources">       
                 <section className="resource-arr">
                     {resources.map((resource) => {
-                        return <SingleResource key = {resource.id} resource={resource} />
+                        return <SingleResource key = {resource.resource_id} resource={resource} />
                     })}
                 </section>     
         </div>
