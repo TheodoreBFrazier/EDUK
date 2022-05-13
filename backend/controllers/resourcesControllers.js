@@ -1,5 +1,7 @@
 const express = require("express");
-const resources = express.Router({ mergeParams: true });
+const resources = express.Router();
+//users controller
+// const usersController = require("./usersControllers.js");
 
 const {
   getAllResources,
@@ -8,6 +10,10 @@ const {
   deleteResource,
   updateResource,
 } = require("../queries/resources");
+const { getAllUsers } = require("../queries/users.js");
+
+//merge users controller to resources controller
+//resources.use("/:resource_id/users", usersController);
 
 // get all resources
 resources.get("/", async (req, res) => {
@@ -15,7 +21,7 @@ resources.get("/", async (req, res) => {
   const resources = await getAllResources(uid);
   if (resources[0]) {
     res.json({ success: true, result: resources });
-  } else res.status(500).json({ success: false, error: "server error..." });
+  } else res.status(500).json({ success: false, error: resources });
 });
 
 // get a resource
@@ -32,8 +38,16 @@ resources.get("/:resource_id", async (req, res) => {
   }
 });
 
-// create a resource
+//get all users using a specific resource
+resources.get("/:resource_id/users", async (req, res) => {
+  const { resource_id } = req.params;
+  const users = await getAllUsers(resource_id);
+  if (users[0]) {
+    res.json({ success: true, result: users });
+  } else res.status(500).json({ success: false, error: users });
+});
 
+// create a resource
 resources.post("/", async (req, res) => {
   const resource = req.body;
   const { uid } = req.params;
@@ -41,9 +55,7 @@ resources.post("/", async (req, res) => {
   if (createdResouce.resource_id) {
     res.json({ success: true, result: createdResouce });
   } else {
-    res
-      .status(500)
-      .json({ success: false, error: "unable to create resource..." });
+    res.status(500).json({ success: false, error: createdResouce });
   }
 });
 
@@ -57,7 +69,7 @@ resources.delete("/:resource_id", async (req, res) => {
   } else
     res.status(500).json({
       success: false,
-      error: `unable to delete resources ${resource_id}`,
+      error: deletedResource,
     });
 });
 
@@ -72,7 +84,7 @@ resources.put("/:resource_id", async (req, res) => {
   } else
     res.status(500).json({
       success: false,
-      error: `unable to update resource ${resource_id}`,
+      error: updatedResource,
     });
 });
 
