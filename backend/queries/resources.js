@@ -1,9 +1,23 @@
 const db = require("../db/dbConfig.js");
 
+<<<<<<< HEAD
 // all resources
 const getAllResources = async () => {
 	try {
 		const resources = await db.many("SELECT * FROM resources");
+=======
+// all resources and resources of a specific user
+const getAllResources = async (uid) => {
+	try {
+		if (uid) {
+			var resources = await db.many(
+				"SELECT * FROM resources WHERE resource_id IN (SELECT resource_id FROM users_resources WHERE uid=$1)",
+				uid
+			);
+		} else {
+			var resources = await db.many("SELECT * FROM resources");
+		}
+>>>>>>> nimabranch
 		return resources;
 	} catch (error) {
 		return error;
@@ -11,12 +25,32 @@ const getAllResources = async () => {
 };
 s;
 // get a resource
+<<<<<<< HEAD
 const getOneResource = async (resource_id) => {
 	try {
 		const resource = await db.one(
 			"SELECT * FROM resources WHERE resource_id=$1",
 			resource_id
 		);
+=======
+const getOneResource = async (uid, resource_id) => {
+	try {
+		//if uid is not null
+		if (uid) {
+			var resource = await db.one(
+				"SELECT * FROM resources WHERE resource_id IN (SELECT resource_id FROM users_resources WHERE uid=$1) AND resource_id=$2",
+				[uid, resource_id]
+			);
+		}
+		//if uid is null
+		else {
+			var resource = await db.one(
+				"SELECT * FROM resources WHERE resource_id=$1",
+				resource_id
+			);
+		}
+
+>>>>>>> nimabranch
 		return resource;
 	} catch (error) {
 		return error;
