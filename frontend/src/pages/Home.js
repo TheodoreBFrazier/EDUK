@@ -1,5 +1,9 @@
 import React from "react";
 
+import { Link } from "react-router-dom"
+
+import { Button } from "@mui/material"
+
 function Home() {
     return (
         <div className="Home">
@@ -13,6 +17,9 @@ function Home() {
                 <h2>Begin Your Journey</h2>
                 <p>We belive nobody should be left behind. Because of this, we help peoplewho are helping people.
                     <br />Upstream's impact is greatest when we work as ONE.  </p>
+                <Button variant='outlined'>
+                    <Link to="/about"> About Us </Link>
+                </Button>
             </div>
         </div>
     )
