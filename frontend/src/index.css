@@ -29,5 +29,15 @@ a {
 
 .Hero-text {
   width: 700px;
-  background-color: yellow;
+  margin-top: 150px;
+  margin-left: 125px;
+  text-align: left;
+}
+
+.Home {
+  height: 100vh;
+}
+
+h1 {
+  font-size: 40pt;
 }
