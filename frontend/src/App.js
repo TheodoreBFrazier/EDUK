@@ -1,7 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import React from "react";
+//STYLING
 
 import "./App.css";
+
+//Material UI
+
+import Button from '@material-ui/core/Button';
 
 import NavBar from "./components/NavBar";
 

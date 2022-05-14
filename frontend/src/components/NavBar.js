@@ -1,6 +1,14 @@
+import React from "react"
+
 //importing Link function
 
 import { Link } from "react-router-dom"
+
+
+// importing button from material UI
+
+import { Button } from "@mui/material"
+
 
 export default function NavBar() {
     return (
@@ -11,9 +19,10 @@ export default function NavBar() {
             <Link to="/resources">
                 <h3> Resources 🌹</h3>
             </Link>
-            <button>
+    
+            <Button variant = 'outlined'> 
               <Link to = "/users"> User Portal</Link>
-            </button>
+            </Button>
         </nav>
     )
 }
