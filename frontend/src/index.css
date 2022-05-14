@@ -12,11 +12,37 @@ code {
     monospace;
 }
 
+
+  /* TYPOGRAPHY */
+
+  h1 {
+    font-size: 40pt;
+  }
+
+  h2 {
+    font-size: 32pt;
+  }
+
+  h3 {
+    font-size: 24pt;
+  }
+
+  h4 {
+    font-family: 18pt;
+  }
+
+  p {
+    font-size: 16pt;
+  }
+
+  /* NAVIGATION CSS */
+
 nav {
-  height: 120px;
+height: 125px;
   background-color: #F2E86D;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 
 nav button {
@@ -29,15 +55,28 @@ a {
 
 .Hero-text {
   width: 700px;
-  margin-top: 150px;
   margin-left: 125px;
   text-align: left;
+  position: relative;
+  z-index: 9999;
+  
 }
 
-.Home {
+.Hero .Hero-text h3 {
+  position: relative;
+  z-index: 9999;
+}
+
+.Hero {
+  margin: 0;
+  background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
   height: 100vh;
 }
 
-h1 {
+
+.Hero-text h1 {
+  /* margin on top of H1 causes space between navbar and content */
+  margin-top: 0;
   font-size: 40pt;
+  
 }
