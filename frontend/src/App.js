@@ -15,7 +15,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home"
 import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
-
+import About from "./pages/About";
 
 //Shows a single resource
 import ShowResource from "./pages/ShowResource"
@@ -31,7 +31,7 @@ function App() {
           <Route path = "/resources" element={<ResourcesPage/>} />
           <Route path = "/resources/:id" element={<ShowResource/>} />
           <Route path = "/users" element={<UserPortal />} />
-          
+          <Route path = "/about" element={<About />} />
           </Routes>
         </main>
       </Router>
