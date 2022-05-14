@@ -14,11 +14,20 @@ code {
 
 nav {
   height: 120px;
-  background-color: bisque;
+  background-color: #F2E86D;
   display: flex;
   align-items: center;
 }
 
 nav button {
   margin-right: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Hero-text {
+  width: 700px;
+  background-color: yellow;
 }

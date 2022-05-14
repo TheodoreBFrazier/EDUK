@@ -19,10 +19,11 @@ export default function NavBar() {
             <Link to="/resources">
                 <h3> Resources 🌹</h3>
             </Link>
-    
+
+
             <Button variant = 'outlined'> 
               <Link to = "/users"> User Portal</Link>
             </Button>
-        </nav>
+            </nav>
     )
 }
