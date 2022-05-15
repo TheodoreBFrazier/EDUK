@@ -17,7 +17,14 @@ code {
 
 /* Importing Font */
 
+/* Regular */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Italics */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,700&display=swap');
+
 
 
 h1 {
@@ -94,7 +101,7 @@ a {
 
 .Hero .Hero-text h1 {
   /* Used padding to prevent white space from showing" */
-  font-size: 72pt;
+  font-weight: 700;
   padding-top: 250px;
   position: relative; 
   z-index: 9999;
@@ -107,7 +114,6 @@ a {
 }
 
 .Hero .Hero-text h3 {
-  margin-top: 50px;
   position: relative;
   z-index: 9999;
 }
@@ -143,11 +149,12 @@ a {
   margin-top: 0;
 }
 
-.resource-arr {
-  margin-top: 150px;
-  margin: auto;
-  width: 90%;
+.resource-arr {  
   display: grid;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
   grid-template-columns: 300px 300px 300px 300px;
   column-gap: 20px;
   row-gap: 40px;
@@ -162,6 +169,5 @@ card {
 }
 
 .resource-arr p {
-
   font-size: 12pt;
 }
