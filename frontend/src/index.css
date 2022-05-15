@@ -48,14 +48,31 @@ p {
 /* NAVIGATION CSS */
 
 nav {
+  margin-left: 125px;
   height: 125px;
   display: flex;
   align-items: center;
+  position: relative;
   margin-bottom: 0;
 }
 
-nav button {
+nav h3 {
   margin-right: 100px;
+  color: #574D68;
+}
+
+/* Use the class name to edit this button */
+.navigation Button {
+  color: white;
+  background-color: #f3a712;
+  height: 50px;
+  width: 150px;
+  margin-left: 500px;
+}
+
+.navigation Button a {
+  color: white;
+  text-decoration: none;
 }
 
 a {
@@ -75,7 +92,22 @@ a {
 
 }
 
+.Hero .Hero-text h1 {
+  /* Used padding to prevent white space from showing" */
+  font-size: 72pt;
+  padding-top: 250px;
+  position: relative; 
+  z-index: 9999;
+}
+
+.Hero .Hero-text h1 {
+  background: -webkit-linear-gradient(#574D68, #f3a712);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .Hero .Hero-text h3 {
+  margin-top: 50px;
   position: relative;
   z-index: 9999;
 }

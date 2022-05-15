@@ -9,7 +9,7 @@ function Home() {
         <div className="Home">
             <div className="Hero">
                 <div className="Hero-text">
-                    <h1>EVENING THE PLAYING FIELD</h1>
+                    <h1>TIME TO EVEN THE PLAYING FIELD</h1>
                     <h3>LINKING NYERS TO ESSENTIAL SERVICES  </h3>
                 </div>
             </div>
@@ -17,7 +17,7 @@ function Home() {
                 <h2>Begin Your Journey</h2>
                 <p>We belive nobody should be left behind. Because of this, we help peoplewho are helping people.
                     <br />Upstream's impact is greatest when we work as ONE.  </p>
-                <Button variant='outlined'>
+                <Button variant='contained'>
                     <Link to="/about"> About Us </Link>
                 </Button>
             </div>
