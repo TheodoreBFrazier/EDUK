@@ -16,6 +16,8 @@ function ResourcesPage() {
                     qui officia deserunt mollit anim id est laborum."
                 </h4>
             </div>
+            <br />
+            <br />
             <div className="search-resource">
                 <h4>Search</h4>
                 <SearchBar />

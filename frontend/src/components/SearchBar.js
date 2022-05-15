@@ -2,7 +2,18 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
-import { TextField } from "@mui/material";
+
+
+import { Icon, TextField } from "@mui/material";
+
+import { IconButton } from "@mui/material";
+import { InputAdornment } from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
+
+var textFieldStyle = {
+    width: '350px'
+}
+
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -35,14 +46,28 @@ const SearchBar = () => {
     }
 
     return (
-        <div>
+        <div className="resources-searchbar">
             <TextField
-            id="filled_basic"
-            label="Search"
+                style={textFieldStyle}
+                id="filled_basic"
+                label="Search"
                 type="search"
                 placeholder="Search here"
                 onChance={handleChange}
                 value={searchInput}
+
+                InputProps={{
+                    endAdornment: (
+                        <InputAdornment>
+                            <IconButton>
+                                <SearchIcon/>
+                            </IconButton>
+                        </InputAdornment>
+                    )
+
+                }}
+
+
             />
 
         </div>

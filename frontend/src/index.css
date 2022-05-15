@@ -149,6 +149,14 @@ a {
   margin-top: 0;
 }
 
+.search-resource {
+  height: 250px;
+}
+
+.resources-searchbar TextField {
+  width: 200px;
+}
+
 .resource-arr {  
   display: grid;
   justify-content: space-evenly;
