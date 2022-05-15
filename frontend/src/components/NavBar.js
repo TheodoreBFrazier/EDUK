@@ -14,14 +14,18 @@ export default function NavBar() {
     return (
         <nav className="navigation">
             <Link to="/">
-                <h3> NYC Rose 🌹</h3>
+                <h3> Home </h3>
             </Link>
             <Link to="/resources">
-                <h3> Resources 🌹</h3>
+                <h3> Resources </h3>
             </Link>
-    
-            <Button variant = 'outlined'> 
-              <Link to = "/users"> User Portal</Link>
+            <Link to="/about">
+                <h3> About </h3>
+            </Link>
+
+
+            <Button variant='contained'>
+                <Link to="/users"> User Portal</Link>
             </Button>
         </nav>
     )
