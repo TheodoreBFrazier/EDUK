@@ -21,6 +21,7 @@ function Home() {
                     <Link to="/about"> About Us </Link>
                 </Button>
             </div>
+            <div className=""></div>
         </div>
     )
 }

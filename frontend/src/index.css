@@ -53,6 +53,10 @@ a {
   text-decoration: none;
 }
 
+/* ------------------------------    HOME  -------------------------------------- */
+
+  /* HERO PAGE */
+
 .Hero-text {
   width: 700px;
   margin-left: 125px;
@@ -79,4 +83,33 @@ a {
   margin-top: 0;
   font-size: 40pt;
   
+}
+
+
+.about-intro {
+  margin-left: 150px;
+  text-align: left;
+  width: 500px;
+}
+
+.resource-arr {
+  margin: auto;
+width: 90%;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+card {
+  height: "100vh";
+}
+
+.resource-arr a {
+  text-decoration: none;
+}
+
+.resource-arr p {
+
+  font-size: 12pt;
 }

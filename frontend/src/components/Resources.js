@@ -4,6 +4,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import SingleResource from "./SingleResource";
 
+
+import { Card } from '@mui/material';
+
 const API = process.env.REACT_APP_API_URL;
 
 function Resources() {
@@ -20,13 +23,15 @@ function Resources() {
     }, [])
 
     return (
-        <div classNames = "available-resources">       
-                <section className="resource-arr">
+      
+                <div className="resource-arr">
+                    
                     {resources.map((resource) => {
                         return <SingleResource key = {resource.resource_id} resource={resource} />
                     })}
-                </section>     
-        </div>
+
+                </div>     
+
     )
 
 }
