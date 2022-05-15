@@ -13,33 +13,42 @@ code {
 }
 
 
-  /* TYPOGRAPHY */
+/* TYPOGRAPHY */
 
-  h1 {
-    font-size: 40pt;
-  }
+/* Importing Font */
 
-  h2 {
-    font-size: 32pt;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
-  h3 {
-    font-size: 24pt;
-  }
 
-  h4 {
-    font-family: 18pt;
-  }
+h1 {
+  font-size: 40pt;
+  font-family: 'Open Sans', sans-serif;
+}
 
-  p {
-    font-size: 16pt;
-  }
+h2 {
+  font-size: 32pt;
+  font-family: 'Open Sans', sans-serif;
+}
 
-  /* NAVIGATION CSS */
+h3 {
+  font-size: 24pt;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+  font-family: 18pt;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: 16pt;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* NAVIGATION CSS */
 
 nav {
-height: 125px;
-  background-color: #F2E86D;
+  height: 125px;
   display: flex;
   align-items: center;
   margin-bottom: 0;
@@ -55,7 +64,7 @@ a {
 
 /* ------------------------------    HOME  -------------------------------------- */
 
-  /* HERO PAGE */
+/* HERO PAGE */
 
 .Hero-text {
   width: 700px;
@@ -63,7 +72,7 @@ a {
   text-align: left;
   position: relative;
   z-index: 9999;
-  
+
 }
 
 .Hero .Hero-text h3 {
@@ -82,7 +91,7 @@ a {
   /* margin on top of H1 causes space between navbar and content */
   margin-top: 0;
   font-size: 40pt;
-  
+
 }
 
 
@@ -93,7 +102,8 @@ a {
 }
 
 .resources-intro {
-  background-color: pink;
+  color: white;
+  background-color: #574D68;
   height: 250px;
 }
 
@@ -102,8 +112,9 @@ a {
 }
 
 .resource-arr {
+  margin-top: 150px;
   margin: auto;
-width: 90%;
+  width: 90%;
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
   column-gap: 20px;
