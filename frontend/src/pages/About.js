@@ -5,7 +5,6 @@ function About() {
         <div>
             <div className="about-intro">
             <h1>ABOUT US</h1>
-            <h3></h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
                 <br />
