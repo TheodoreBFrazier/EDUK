@@ -92,6 +92,15 @@ a {
   width: 500px;
 }
 
+.resources-intro {
+  background-color: pink;
+  height: 250px;
+}
+
+.resources-h2 {
+  margin-top: 0;
+}
+
 .resource-arr {
   margin: auto;
 width: 90%;

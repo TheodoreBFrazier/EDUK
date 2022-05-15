@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import SingleResource from "./SingleResource";
 
 
-import { Card } from '@mui/material';
+
 
 const API = process.env.REACT_APP_API_URL;
 
