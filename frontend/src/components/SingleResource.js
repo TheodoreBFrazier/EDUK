@@ -2,14 +2,24 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { Card } from '@mui/material';
+
+var cardStyle = {
+    height: '400px'
+}
+
+
 function SingleResource({ resource }) {
     return (
-        <div className="resource">
+        <div className="resource-card">
+            <Card style={cardStyle} variant="outlined">
             <Link to={`/resources/${resource.resource_id}`} >
 
-                <h1> {resource.resource_name} </h1>
+                <h4> {resource.resource_name} </h4>
+                </Link>
+                <p> {resource.description} </p>
 
-            </Link>
+            </Card>
         </div>
     )
 }
