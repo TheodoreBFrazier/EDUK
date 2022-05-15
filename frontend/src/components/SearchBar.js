@@ -11,7 +11,8 @@ import { InputAdornment } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 
 var textFieldStyle = {
-    width: '350px'
+    margin: '75px',
+    width: '450px'
 }
 
 
@@ -57,10 +58,11 @@ const SearchBar = () => {
                 value={searchInput}
 
                 InputProps={{
+
                     endAdornment: (
                         <InputAdornment>
                             <IconButton>
-                                <SearchIcon/>
+                                <SearchIcon />
                             </IconButton>
                         </InputAdornment>
                     )

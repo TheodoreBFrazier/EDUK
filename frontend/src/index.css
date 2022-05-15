@@ -151,9 +151,11 @@ a {
 
 .search-resource {
   height: 250px;
+  background-color: #e8e9eb;
 }
 
 .resources-searchbar TextField {
+  
   width: 200px;
 }
 
