@@ -18,3 +18,7 @@ npm install
 
 Backend:
 npm install
+
+Heroku:
+
+https://capstone-g5-pursuit.herokuapp.com/

@@ -1,8 +1,7 @@
-
 DROP TABLE IF EXISTS mentors;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS resources;
-DROP TABLE IF EXISTS users_resources;
+DROP TABLE IF EXISTS user_resources;
 
 CREATE TABLE mentors(
     mentor_id SERIAL PRIMARY KEY,
@@ -14,7 +13,6 @@ CREATE TABLE mentors(
 );
 
 --users table
-
 CREATE TABLE users(
     uid SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -25,7 +23,6 @@ CREATE TABLE users(
 );
 
 --resources
-
 CREATE TABLE resources(
     resource_id SERIAL PRIMARY KEY,
     resource_name VARCHAR(100),
