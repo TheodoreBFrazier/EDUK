@@ -1,0 +1,32 @@
+.logoimg {
+	height: 120px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+.navLinks {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+.navLinks a {
+	font-size: 20px;
+	margin: 30px;
+	color: black;
+}
+
+.navigation button a {
+	color: white;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.loginIcon {
+	padding-top: 20px;
+	align-items: center;
+}
