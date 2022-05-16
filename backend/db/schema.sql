@@ -19,6 +19,8 @@ CREATE TABLE users(
     last_name VARCHAR(50) NOT NULL,
     age INT NOT NULL,
     email TEXT,
+    user_name VARCHAR(50) UNIQUE NOT NULL,
+    password TEXT,
     mentor_id INTEGER REFERENCES mentors(mentor_id)
 );
 
