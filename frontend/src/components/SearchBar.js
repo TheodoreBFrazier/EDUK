@@ -54,7 +54,7 @@ const SearchBar = () => {
                 label="Search"
                 type="search"
                 placeholder="Search here"
-                onChance={handleChange}
+                onChange={handleChange}
                 value={searchInput}
 
                 InputProps={{

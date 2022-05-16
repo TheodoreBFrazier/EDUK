@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { Card } from "@mui/material";
 
 var cardStyle = {
-    height: '400px'
+    height: '400px',
+    width: '250px'
 }
 
 function SingleMentor({ mentor }) {

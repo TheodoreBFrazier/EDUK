@@ -170,9 +170,7 @@ a {
   row-gap: 40px;
 }
 
-card {
-  height: "100vh";
-}
+
 
 .resource-arr a {
   text-decoration: none;
@@ -180,4 +178,15 @@ card {
 
 .resource-arr p {
   font-size: 12pt;
+}
+
+.mentors-array {
+  display: grid;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 20px;
+  row-gap: 40px;
 }
