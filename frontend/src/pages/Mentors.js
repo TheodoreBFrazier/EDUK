@@ -1,12 +1,12 @@
 import React from "react";
-import Mentors from "../components/MentorsIndex";
+import MentorIndex from "../components/MentorIndex";
 
 
 function MentorsPage () {
     return (
         <div>
             Mentors
-            <Mentors />
+            <MentorIndex />
         </div>
     )
 }

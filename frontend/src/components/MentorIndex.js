@@ -7,7 +7,7 @@ import SingleMentor from "./SingleMentor";
 
 const API = process.env.REACT_APP_API_URL;
 
-function Mentors() {
+function MentorIndex () {
     const [mentors, setmentors] = useState([])
 
     useEffect(() => {
@@ -35,4 +35,4 @@ function Mentors() {
 
 }
 
-export default Mentors;
+export default MentorIndex;
