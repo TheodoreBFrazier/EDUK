@@ -16,6 +16,7 @@ import Home from "./pages/Home"
 import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
 import About from "./pages/About";
+import MentorsPage from "./pages/Mentors";
 
 //Shows a single resource
 import ShowResource from "./pages/ShowResource"
@@ -32,6 +33,7 @@ function App() {
           <Route path = "/resources/:id" element={<ShowResource/>} />
           <Route path = "/users" element={<UserPortal />} />
           <Route path = "/about" element={<About />} />
+          <Route path = "/mentors" element={<MentorsPage />} />
           </Routes>
         </main>
       </Router>

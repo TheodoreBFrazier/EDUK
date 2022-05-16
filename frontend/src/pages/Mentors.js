@@ -1,13 +1,14 @@
 import React from "react";
+import Mentors from "../components/MentorsIndex";
 
-import { Link } from "react-router-dom";
 
-function MentorsPages () {
+function MentorsPage () {
     return (
         <div>
             Mentors
+            <Mentors />
         </div>
     )
 }
 
-export default MentorsPages;
+export default MentorsPage;

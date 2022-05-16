@@ -22,6 +22,9 @@ export default function NavBar() {
             <Link to="/about">
                 <h3> About </h3>
             </Link>
+            <Link to="/mentors">
+                <h3> Test Mentors </h3>
+            </Link>
 
 
             <Button variant='contained'>

@@ -2,6 +2,7 @@ import React from "react";
 
 import axios from "axios";
 import { useState, useEffect } from "react";
+import SingleMentor from "./SingleMentor";
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -12,6 +13,7 @@ function Mentors() {
     useEffect(() => {
         axios.get(API + "/mentors")
             .then((response) => {
+                console.log(response)
                 setmentors(response.data.result)
             }).catch((error) => {
                 console.log(error)
@@ -23,7 +25,8 @@ function Mentors() {
 
             {mentors.map((mentor) => {
                 //SingleMentor JSX
-            })
+                return <SingleMentor key={mentor.mentor_id} mentor={mentor}/>
+            }) 
 
             }
 
@@ -31,3 +34,5 @@ function Mentors() {
     )
 
 }
+
+export default Mentors;
