@@ -16,6 +16,23 @@ nav {
 	margin: 30px;
 	color: black;
 }
+.navLinks li {
+	text-decoration: none;
+}
+.navLinks .eachLi {
+	list-style: none;
+	margin: 0 10px;
+	transition: 0.1s ease-in-out;
+	font-size: 18px;
+	cursor: pointer;
+	opacity: 0.8;
+}
+.navLinks .mainLi {
+	padding-top: 30px;
+}
+.navLinks .iconLi {
+	padding-top: 10px;
+}
 
 .navigation button a {
 	color: white;
@@ -27,6 +44,6 @@ a {
 }
 
 .loginIcon {
-	padding-top: 20px;
+	padding-top: 14px;
 	align-items: center;
 }

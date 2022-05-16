@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //importing Link function
 import { Link } from "react-router-dom";
 // importing button from material UI
@@ -6,10 +6,31 @@ import { Button } from "@mui/material";
 import "./NavBar.css";
 // import DropDown from "./Dropdown";
 import logo from "../images/logo.png";
+
+import Dropdown from "./Dropdown";
 // login Icon
 import LoginIcon from "@mui/icons-material/Login";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 export default function NavBar() {
+	const [dropdown, setDropdown] = useState(false);
+
+	const onMouseEnter = () => {
+		if (window.innerWidth < 960) {
+			setDropdown(false);
+		} else {
+			setDropdown(true);
+		}
+	};
+
+	const onMouseleave = () => {
+		if (window.innerWidth < 960) {
+			setDropdown(false);
+		} else {
+			setDropdown(false);
+		}
+	};
+
 	return (
 		<nav>
 			<div>
@@ -17,20 +38,29 @@ export default function NavBar() {
 					<img className="logoimg" src={logo} alt="logo" />
 				</Link>
 			</div>
-			<div className="navLinks">
-				<Link to="/resources">
-					<h3> Resources </h3>
-				</Link>
-				<Link to="/about">
-					<h3> About </h3>
-				</Link>
-				<Link to="/users/create">
-					<h3> Users </h3>
-				</Link>
-				<Link to="/users">
-					<LoginIcon className="loginIcon" fontSize="large"></LoginIcon>
-				</Link>
-			</div>
+			<ul className="navLinks">
+				<li
+					className="eachLi mainLi "
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseleave}
+				>
+					<Link to="/resources">
+						Resources <ArrowDropDownIcon></ArrowDropDownIcon>
+					</Link>
+					{dropdown && <Dropdown />}
+				</li>
+				<li className="eachLi mainLi">
+					<Link to="/about">About</Link>
+				</li>
+				<li className="eachLi mainLi">
+					<Link to="/users/create">Users</Link>
+				</li>
+				<li className="eachLi iconLi">
+					<Link to="/users">
+						<LoginIcon className="loginIcon" fontSize="large"></LoginIcon>
+					</Link>
+				</li>
+			</ul>
 		</nav>
 	);
 }
