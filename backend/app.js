@@ -4,6 +4,7 @@ const express = require("express");
 const usersController = require("./controllers/usersControllers.js");
 const resourcesController = require("./controllers/resourcesControllers.js");
 const mentorsController = require("./controllers/mentorsControllers.js");
+const authController = require("./controllers/authController.js");
 
 // CONFIGURATION
 const app = express();
@@ -20,6 +21,9 @@ app.use("/users", usersController);
 app.use("/resources", resourcesController);
 //mentors controller
 app.use("/mentors", mentorsController);
+//auth controller
+app.use("/auth", authController);
+
 require("dotenv").config();
 
 app.get("/", (req, res) => {
