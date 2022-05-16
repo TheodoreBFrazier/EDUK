@@ -22,7 +22,9 @@ export default function NavBar() {
             <Link to="/about">
                 <h3> About </h3>
             </Link>
-
+            <Link to="/users/create">
+                <h3> Users </h3>
+            </Link>
 
             <Button variant='contained'>
                 <Link to="/users"> User Portal</Link>
@@ -30,3 +32,4 @@ export default function NavBar() {
         </nav>
     )
 }
+

@@ -1,6 +1,7 @@
 import axios from 'axios'; 
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import React from 'react';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -11,6 +12,8 @@ function CreateUser(){
         last_name : '',
         age : 0,
         email: '',
+        user_name: '',
+        password:''
     })
 
 
@@ -20,8 +23,7 @@ function CreateUser(){
             .then(
                 ()=>{
                     navigate(`/users`)
-                },
-                (err)=> console.err(err)
+                }
             )
             .catch((c)=> console.warn('catch',c))
     };
@@ -77,6 +79,26 @@ function CreateUser(){
                 type = 'text'
                 onChange={handleTextChange}
                 placeholder='Email'
+                required
+                />
+
+                <label htmlFor='username'>User Name:</label>
+                <input
+                id='user_name'
+                value ={user.user_name}
+                type = 'text'
+                onChange={handleTextChange}
+                placeholder='Username'
+                required
+                />
+
+                <label htmlFor='password'>Password:</label>
+                <input
+                id='password'
+                value ={user.password}
+                type = 'text'
+                onChange={handleTextChange}
+                placeholder='Password'
                 required
                 />
                 
