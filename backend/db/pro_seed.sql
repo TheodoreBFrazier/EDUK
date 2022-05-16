@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1946ebd9bfaab866f014a119836250595f1b9b4e
 INSERT INTO mentors(mentor_fname, mentor_lname, bio, email, speciality) VALUES 
 ('Greg', 'Testo', 'Experienced software entrepreneur extremely passionate about technology. You will find me working on projects using Java, TypeScript, JavaScript, Spring Boot, Angular and React. More recently I’ve been diving into the world of smart contracts, NFTs, blockchain, finTech and cryptocurrencies. ', 'greggggggrrr4556@gmail.com', 'Soft Engineer'),
 ('Nataja', 'Flood', 'I am the Career Service Program Manager at Pursuit, where I help adult learners prepare for their transition into the tech industry through individualized coaching, brand development workshops, and interview preparation sessions grounded in data and research.', 'Natajafffff@gmail.com', 'Career Training'),
@@ -48,4 +51,8 @@ INSERT INTO users_resources(uid, resource_id) VALUES
 (4, 8),
 (5, 3),
 (5, 9),
+<<<<<<< HEAD
 (5, 10);
+=======
+(5, 10);
+>>>>>>> 1946ebd9bfaab866f014a119836250595f1b9b4e

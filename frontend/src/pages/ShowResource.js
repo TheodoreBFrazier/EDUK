@@ -1,3 +1,4 @@
+import React from "react";
 import SingleResource from "../components/SingleResource";
 
 function ShowResource () {
