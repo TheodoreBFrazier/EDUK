@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// import React from "react";
+// import { Link } from "react-router-dom";
 
-function SingleUserView({ user }) {
-    return (
-        <div className="useruserview">
-            
-        </div>
-    )
-}
+// function SingleUserView({ user }) {
+//     return (
+//         <div className="useruserview">
 
-export default SingleUserView
+//         </div>
+//     )
+// }
+
+// export default SingleUserView

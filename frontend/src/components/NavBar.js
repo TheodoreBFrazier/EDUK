@@ -1,35 +1,62 @@
-import React from "react"
-
-//importing Link function
-
-import { Link } from "react-router-dom"
-
-
-// importing button from material UI
-
-import { Button } from "@mui/material"
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
+// import DropDown from "./Dropdown";
+import logo from "../images/logo.png";
+import Dropdown from "./Dropdown";
+// login Icon
+import LoginIcon from "@mui/icons-material/Login";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 export default function NavBar() {
-    return (
-        <nav className="navigation">
-            <Link to="/">
-                <h3> Home </h3>
-            </Link>
-            <Link to="/resources">
-                <h3> Resources </h3>
-            </Link>
-            <Link to="/about">
-                <h3> About </h3>
-            </Link>
-            <Link to="/users/create">
-                <h3> Users </h3>
-            </Link>
+	const [dropdown, setDropdown] = useState(false);
 
-            <Button variant='contained'>
-                <Link to="/users"> User Portal</Link>
-            </Button>
-        </nav>
-    )
+	const onMouseEnter = () => {
+		if (window.innerWidth < 960) {
+			setDropdown(false);
+		} else {
+			setDropdown(true);
+		}
+	};
+
+	const onMouseleave = () => {
+		if (window.innerWidth < 960) {
+			setDropdown(false);
+		} else {
+			setDropdown(false);
+		}
+	};
+
+	return (
+		<nav>
+			<div>
+				<Link to="/">
+					<img className="logoimg" src={logo} alt="logo" />
+				</Link>
+			</div>
+			<ul className="navLinks">
+				<li
+					className="eachLi mainLi "
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseleave}
+				>
+					<Link to="/resources">
+						Resources <ArrowDropDownIcon></ArrowDropDownIcon>
+					</Link>
+					{dropdown && <Dropdown />}
+				</li>
+				<li className="eachLi mainLi">
+					<Link to="/about">About</Link>
+				</li>
+				<li className="eachLi mainLi">
+					<Link to="/users/create">Users</Link>
+				</li>
+				<li className="eachLi iconLi">
+					<Link to="/users">
+						<LoginIcon className="loginIcon" fontSize="large"></LoginIcon>
+					</Link>
+				</li>
+			</ul>
+		</nav>
+	);
 }
-

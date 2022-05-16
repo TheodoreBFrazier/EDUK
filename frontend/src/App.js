@@ -3,11 +3,6 @@ import React from "react";
 //STYLING
 
 import "./App.css";
-
-//Material UI
-
-// import Button from "@material-ui/core/Button";
-
 import NavBar from "./components/NavBar";
 
 // IMPORTING PAGES
