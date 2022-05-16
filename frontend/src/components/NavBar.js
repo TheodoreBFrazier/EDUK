@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-//importing Link function
 import { Link } from "react-router-dom";
-// importing button from material UI
-import { Button } from "@mui/material";
 import "./NavBar.css";
 // import DropDown from "./Dropdown";
 import logo from "../images/logo.png";
-
 import Dropdown from "./Dropdown";
 // login Icon
 import LoginIcon from "@mui/icons-material/Login";
