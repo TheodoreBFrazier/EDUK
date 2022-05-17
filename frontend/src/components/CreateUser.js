@@ -2,6 +2,7 @@ import axios from 'axios';
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import React from 'react';
+import  '../css/CreateUser.css'
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -11,15 +12,15 @@ function CreateUser(){
         first_name : '',
         last_name : '',
         age : 0,
-        email: '',
         user_name: '',
-        password:''
+        password:'',
+        email:''
     })
 
 
     const addUser=()=>{
         axios
-        .post(`${API}/users`, user)
+        .post(`${API}/sign_up`, user)
             .then(
                 ()=>{
                     navigate(`/users`)
@@ -40,70 +41,91 @@ function CreateUser(){
 
     return(
     <div>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor='name'>First Name:</label>
-                <input
-                    id="first_name"
-                    value={user.first_name}
-                    type="text"
-                    onChange={handleTextChange}
-                    placeholder="First Name"
-                    required
-                />
-                
+      <form className="form" onSubmit={handleSubmit}>
+        <div class="title">Welcome to EDUK!</div>
+        <div class="subtitle">Let's create your account!</div>
 
-                <label htmlFor = 'last'>Last Name:</label>
-                <input
-                id='last_name'
-                value ={user.last_name}
-                type = 'text'
-                onChange={handleTextChange}
-                placeholder='Last Name'
-                required
-                />
+        <div class="input-container ic1">
+          <input 
+          id="first_name" 
+          class="input" 
+          type="text" 
+          value={user.first_name}
+          placeholder=" " 
+          onChange={handleTextChange}
+          />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">First name</label>
+        </div>
+        
 
-                <label htmlFor='age'>Age:</label>
-                <input
-                id='age'
-                value ={user.age}
-                type = 'number'
-                onChange={handleTextChange}
-                placeholder='Age'
-                required
-                />
+        <div class="input-container ic2">
+          <input
+           id="last_name"
+            class="input" 
+            type="text" 
+            placeholder=" " 
+            onChange={handleTextChange}
+            value={user.last_name}
+            />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Last name</label>
+        </div>
 
-                <label htmlFor='email'>Email:</label>
-                <input
-                id='email'
-                value ={user.email}
-                type = 'text'
-                onChange={handleTextChange}
-                placeholder='Email'
-                required
-                />
+        <div class="input-container ic2">
+          <input 
+          id="age" 
+          class="input" 
+          type="number" 
+          placeholder=" " 
+          onChange={handleTextChange}
+          value={user.age}
+          />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Age</label>
+        </div>
 
-                <label htmlFor='username'>User Name:</label>
-                <input
-                id='user_name'
-                value ={user.user_name}
-                type = 'text'
-                onChange={handleTextChange}
-                placeholder='Username'
-                required
-                />
+        <div class="input-container ic2">
+          <input 
+          id="user_name" 
+          class="input" 
+          type="text" 
+          placeholder=" " 
+          onChange={handleTextChange}
+          value={user.user_name}
+          />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">User name</label>
+        </div>
 
-                <label htmlFor='password'>Password:</label>
-                <input
-                id='password'
-                value ={user.password}
-                type = 'text'
-                onChange={handleTextChange}
-                placeholder='Password'
-                required
-                />
-                
-                <input type='submit'/>
-        </form>
+        <div class="input-container ic2">
+          <input 
+          id="password" 
+          class="input" 
+          type="text" 
+          placeholder=" " 
+          onChange={handleTextChange}
+          value={user.password}
+          />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Password</label>
+        </div>
+
+        <div class="input-container ic2">
+          <input 
+          id="email" 
+          class="input" 
+          type="text" 
+          placeholder=" " 
+          onChange={handleTextChange}
+          value={user.email}
+          />
+          <div class="cut cut-short"></div>
+          <label for="email" class="placeholder">Email</label>
+        </div>
+        
+        <button type="text" class="submit">submit</button>
+      </form>
     </div>
     )
 }
