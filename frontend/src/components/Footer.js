@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import "./Footer.css";
 
 // const logo = require("../public/log.png");
 
