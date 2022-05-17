@@ -17,6 +17,9 @@ import About from "./pages/About";
 import ShowResource from "./pages/ShowResource";
 import CreateUser from "./components/CreateUser";
 
+import CreateMentor from "./components/CreateMentor";
+import LogInMentor from "./components/LogInMentor";
+
 function App() {
 	return (
 		<div className="App">
@@ -30,6 +33,8 @@ function App() {
 						<Route path="/users" element={<UserPortal />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/users/create" element={<CreateUser />} />
+						{/* <Route path="/mentors/sign_up" element={<CreateMentor />} />
+						<Route path="/mentors/log_in" element={<LogInMentor />} /> */}
 					</Routes>
 				</main>
 				<Footer />

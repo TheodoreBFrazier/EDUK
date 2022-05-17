@@ -10,4 +10,6 @@ const authUser = async(user_name, password) => {
     }
 }
 
-module.exports = {authUser};
+module.exports = {
+    authUser
+};
