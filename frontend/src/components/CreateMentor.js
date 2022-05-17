@@ -14,16 +14,15 @@ function CreateMentor(){
         bio : '',
         email:'',
         speciality: '',
-        password:'',
     })
 
 
     const addMentor=()=>{
         axios
-        .post(`${API}/sign_up`, mentor)
+        .post(`${API}/mentors`, mentor)
             .then(
                 ()=>{
-                    navigate(`/mentors`)
+                    navigate(`/`)
                 }
             )
             .catch((c)=> console.warn('catch',c))
@@ -37,6 +36,7 @@ function CreateMentor(){
     const handleSubmit = (event) =>{
         event.preventDefault();
         addMentor();
+        alert("Thank you for signing up. We'll send you an invite to get started soon!")
     }
 
     return(
@@ -111,18 +111,6 @@ function CreateMentor(){
             <label for="email" class="placeholder">Email</label>
             </div>
 
-            <div class="input-container ic2">
-            <input 
-            id="password" 
-            class="input" 
-            type="text" 
-            placeholder=" " 
-            onChange={handleTextChange}
-            value={mentor.password}
-            />
-            <div class="cut"></div>
-            <label for="password" class="placeholder">Password</label>
-            </div>
 
             <button type="submit" class="submit">submit</button>
         </form>

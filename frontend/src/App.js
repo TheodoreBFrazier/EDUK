@@ -24,7 +24,7 @@ import ContinueLearningPage from "./pages/ContinueLearningPage";
 import LogInUser from "./components/LogInUser";
 
 import CreateMentor from "./components/CreateMentor";
-import LogInMentor from "./components/LogInMentor";
+
 
 function App() {
 	return (
@@ -46,6 +46,7 @@ function App() {
 							element={<ContinueLearningPage />}
 						/>
 						<Route path="/users/login" element={<LogInUser />} />
+						<Route path="/mentors/create" element={<CreateMentor />} />
 					</Routes>
 				</main>
 				<Footer />
