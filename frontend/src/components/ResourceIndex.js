@@ -11,7 +11,7 @@ const API = process.env.REACT_APP_API_URL;
 
 function ResourceIndex () {
     const [resources, setResources] = useState([])
-
+    
     useEffect(() => {
         axios.get(API + "/resources")
             .then((response) => {
@@ -25,7 +25,7 @@ function ResourceIndex () {
     return (
 
         <div className="resource-arr">
-
+            
             {resources.map((resource) => {
                 return <SingleResource key={resource.resource_id} resource={resource} />
             })}

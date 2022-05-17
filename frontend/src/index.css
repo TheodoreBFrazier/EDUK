@@ -1,21 +1,21 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
-
 
 /* TYPOGRAPHY */
 
 /* Importing Font */
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap');
@@ -87,12 +87,46 @@ nav h3 {
 a {
   text-decoration: none;
 }
+/* Regular */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+/* Italics */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,700&display=swap");
+
+h1 {
+	/* font-size: 40pt; */
+	font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+	/* font-size: 32pt; */
+	font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+	/* font-size: 15pt; */
+	font-family: "Open Sans", sans-serif;
+}
+
+h4 {
+	/* font-family: 18pt; */
+	font-family: "Open Sans", sans-serif;
+}
+
+p {
+	/* font-size: 16pt; */
+	font-family: "Open Sans", sans-serif;
+
+}
 
 /* ------------------------------    HOME  -------------------------------------- */
 
 /* HERO PAGE */
 
 .Hero-text {
+
   width: 1000px;
   margin-left: 125px;
   text-align: left;
@@ -114,72 +148,99 @@ a {
   background: -webkit-linear-gradient(#0086d1, #ffc857);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+	width: 700px;
+	margin-left: 125px;
+	text-align: left;
+	position: relative;
+	z-index: 9999;
+}
+
+.Hero .Hero-text h1 {
+	/* Used padding to prevent white space from showing" */
+	font-weight: 700;
+	padding-top: 250px;
+	position: relative;
+	z-index: 9999;
+}
+
+.Hero .Hero-text h1 {
+	background: -webkit-linear-gradient(#574d68, #f3a712);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
 }
 
 .Hero .Hero-text h3 {
-  position: relative;
-  z-index: 9999;
+	position: relative;
+	z-index: 9999;
 }
 
 .Hero {
+
   margin: 0;
   background-color: #1d3461;
   height: 100vh;
+	margin: 0;
+	background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
+	height: 100vh;
 }
-
 
 .Hero-text h1 {
-  /* margin on top of H1 causes space between navbar and content */
-  margin-top: 0;
-  font-size: 40pt;
-
+	/* margin on top of H1 causes space between navbar and content */
+	margin-top: 0;
+	font-size: 40pt;
 }
 
-
 .about-intro {
-  margin-left: 150px;
-  text-align: left;
-  width: 500px;
+	margin-left: 150px;
+	text-align: left;
+	width: 500px;
 }
 
 .resources-intro {
-  color: white;
-  background-color: #574D68;
-  height: 250px;
+	color: white;
+	background-color: #574d68;
+	height: 250px;
 }
 
 .resources-h2 {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 .search-resource {
-  height: 250px;
-  background-color: #e8e9eb;
+	height: 250px;
+	background-color: #e8e9eb;
 }
 
 .resources-searchbar TextField {
-  
-  width: 200px;
+	width: 200px;
 }
 
-.resource-arr {  
-  display: grid;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-  grid-template-columns: 300px 300px 300px 300px;
-  column-gap: 20px;
-  row-gap: 40px;
+.resource-arr {
+	display: grid;
+	justify-content: space-evenly;
+	justify-items: center;
+	align-content: space-evenly;
+	align-items: center;
+	grid-template-columns: 300px 300px 300px 300px;
+	column-gap: 20px;
+	row-gap: 40px;
 }
 
+
+
+
+card {
+	height: "100vh";
+}
 
 
 .resource-arr a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .resource-arr p {
+
   font-size: 12pt;
 }
 
@@ -193,3 +254,5 @@ a {
   column-gap: 20px;
   row-gap: 40px;
 }
+
+
