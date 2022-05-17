@@ -17,11 +17,13 @@ function Home() {
             </div>
             <div className="introduction">
                 <h2>Begin Your Journey</h2>
-                <p>We belive nobody should be left behind. Because of this, we help peoplewho are helping people.
-                    <br />Upstream's impact is greatest when we work as ONE.  </p>
-                <Button variant='contained'>
-                    <Link to="/about"> About Us </Link>
-                </Button>
+                <div className="intro-container">
+                    <img  src="https://nces.ed.gov/images/homepage/coe.jpg" />
+                    <p>The goal of this app is to connect highschool, college students, minority groups and residents of underserved communities to resources that they wouldn’t have access to otherwise.
+                    Whether it be career tips , scholarships , grants, continued learning, programs, etc, We hope to bridge the the knowledge gap within these underserved communities.
+                    We want to eliminate the gatekeeping of much needed information and create a hub/gateway where people can easily find resources they desperately need to improve their quality of life. 
+                    </p>
+                </div>
             </div>
             <div className=""></div>
         </div>

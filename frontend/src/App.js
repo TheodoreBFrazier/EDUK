@@ -9,6 +9,7 @@ import "./App.css";
 // import Button from "@material-ui/core/Button";
 
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 // IMPORTING PAGES
 
@@ -36,6 +37,7 @@ function App() {
 						<Route path="/users/create" element={<CreateUser />} />
 					</Routes>
 				</main>
+				<Footer />
 			</Router>
 		</div>
 	);
