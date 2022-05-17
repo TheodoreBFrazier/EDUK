@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
 import About from "./pages/About";
+import UsersPortal from "./pages/UsersPortal";
 
 //Shows a single resource
 import ShowResource from "./pages/ShowResource";
@@ -28,7 +29,8 @@ function App() {
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/resources/:id" element={<ShowResource />} />
             <Route path="/resources/create" element={<NewResource />} />
-            <Route path="/users" element={<UserPortal />} />
+            <Route path="/users" element={<UsersPortal />} />
+            <Route path="/users/:uid" element={<UserPortal />} />
             <Route path="/about" element={<About />} />
             <Route path="/users/create" element={<CreateUser />} />
           </Routes>

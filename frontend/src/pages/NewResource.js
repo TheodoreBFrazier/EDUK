@@ -1,11 +1,7 @@
 import CreateResource from "../components/createResource";
 
 function NewResource() {
-    return ( 
-       <div>
-
-       </div>>
-     );
+  return <CreateResource />;
 }
 
 export default NewResource;
