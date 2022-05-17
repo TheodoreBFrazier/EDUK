@@ -13,9 +13,15 @@ import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
 import About from "./pages/About";
 
+// rescources pages
+import HighschoolPage from "./pages/HighschoolPage";
+import CollegePage from "./pages/CollegePage";
+
 //Shows a single resource
 import ShowResource from "./pages/ShowResource";
 import CreateUser from "./components/CreateUser";
+import ContinueLearningPage from "./pages/ContinueLearningPage";
+import LogInUser from "./components/LogInUser";
 
 import CreateMentor from "./components/CreateMentor";
 import LogInMentor from "./components/LogInMentor";
@@ -33,8 +39,13 @@ function App() {
 						<Route path="/users" element={<UserPortal />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/users/create" element={<CreateUser />} />
-						{/* <Route path="/mentors/sign_up" element={<CreateMentor />} />
-						<Route path="/mentors/log_in" element={<LogInMentor />} /> */}
+						<Route path="/highschool" element={<HighschoolPage />} />
+						<Route path="/college" element={<CollegePage />} />
+						<Route
+							path="/continuelearning"
+							element={<ContinueLearningPage />}
+						/>
+						<Route path="/users/login" element={<LogInUser />} />
 					</Routes>
 				</main>
 				<Footer />

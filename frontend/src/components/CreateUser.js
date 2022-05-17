@@ -12,9 +12,9 @@ function CreateUser(){
         first_name : '',
         last_name : '',
         age : 0,
+        email:'',
         user_name: '',
-        password:'',
-        email:''
+        password:''
     })
 
 
@@ -95,7 +95,7 @@ function CreateUser(){
           value={user.user_name}
           />
           <div class="cut"></div>
-          <label for="user_name" class="placeholder">User name</label>
+          <label for="username" class="placeholder">User name</label>
         </div>
 
         <div class="input-container ic2">
