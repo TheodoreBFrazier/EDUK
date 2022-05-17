@@ -12,7 +12,7 @@ export default function NavBar() {
 	const [dropdown, setDropdown] = useState(false);
 
 	const onMouseEnter = () => {
-		if (window.innerWidth < 960) {
+		if (window.innerWidth < 600) {
 			setDropdown(false);
 		} else {
 			setDropdown(true);
@@ -20,7 +20,7 @@ export default function NavBar() {
 	};
 
 	const onMouseleave = () => {
-		if (window.innerWidth < 960) {
+		if (window.innerWidth < 600) {
 			setDropdown(false);
 		} else {
 			setDropdown(false);
