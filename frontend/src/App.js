@@ -21,6 +21,7 @@ import CollegePage from "./pages/CollegePage";
 import ShowResource from "./pages/ShowResource";
 import CreateUser from "./components/CreateUser";
 import ContinueLearningPage from "./pages/ContinueLearningPage";
+import LogInUser from "./components/LogInUser";
 
 function App() {
 	return (
@@ -41,6 +42,7 @@ function App() {
 							path="/continuelearning"
 							element={<ContinueLearningPage />}
 						/>
+						<Route path="/users/login" element={<LogInUser />} />
 					</Routes>
 				</main>
 				<Footer />
