@@ -1,7 +1,7 @@
 // import React from "react";
 // import { Link } from "react-router-dom";
 
-// function SingleUser({ user }) {
+// function SingleUserView({ user }) {
 //     return (
 //         <div className="useruserview">
 
@@ -9,4 +9,4 @@
 //     )
 // }
 
-// export default SingleUser
+// export default SingleUserView
