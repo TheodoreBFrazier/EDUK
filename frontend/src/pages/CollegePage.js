@@ -1,8 +1,8 @@
 import React from "react";
-import Resources from "../components/Resources";
+import College from "../components/College";
 import SearchBar from "../components/SearchBar";
 
-function ResourcesPage() {
+export default function CollegePage() {
 	return (
 		<div>
 			<div className="resources-intro">
@@ -26,9 +26,7 @@ function ResourcesPage() {
 			</div>
 			<br />
 			<br />
-			<Resources />
+			<College />
 		</div>
 	);
 }
-
-export default ResourcesPage;

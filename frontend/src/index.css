@@ -81,33 +81,32 @@ p {
 }
 
 .Hero {
-  margin: 0;
-  background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
-  height: 100vh;
-  margin-bottom: 110px;
+	margin: 0;
+	background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
+	height: 100vh;
+	margin-bottom: 110px;
 }
 
 .Hero-text h1 {
-  /* margin on top of H1 causes space between navbar and content */
-  margin-top: 0;
-  font-size: 40pt;
+	/* margin on top of H1 causes space between navbar and content */
+	margin-top: 0;
+	font-size: 40pt;
 }
 
-.introduction h2{
-  text-shadow: 1px 1px 1px rgb(138, 124, 197),
-               2px 2px 1px rgb(71, 136, 180);
+.introduction h2 {
+	text-shadow: 1px 1px 1px rgb(138, 124, 197), 2px 2px 1px rgb(71, 136, 180);
 }
 
 .intro-container {
-  margin: 110px;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+	margin: 110px;
+	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .intro-container p {
-  color:rgb(69, 51, 141);
-  font-size: x-large;
+	color: rgb(69, 51, 141);
+	font-size: x-large;
 }
 
 .about-intro {
@@ -155,6 +154,5 @@ card {
 }
 
 .resource-arr p {
-  font-size: 12pt;
+	font-size: 12pt;
 }
-
