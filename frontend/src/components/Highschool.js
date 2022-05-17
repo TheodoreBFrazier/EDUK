@@ -23,10 +23,10 @@ export default function Highschool() {
 
 	return (
 		<div>
-			<h1>HighSchool</h1>
+			<h1 className="resourceCategory">HighSchool</h1>
 			<section className="highSchoolMain">
 				<div>
-					<h3>Programs</h3>
+					<h2>Programs</h2>
 					<p>
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
@@ -46,7 +46,7 @@ export default function Highschool() {
 			</section>
 			<section className="highSchoolMain">
 				<div>
-					<h3>class</h3>
+					<h2>class</h2>
 					<p>
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
@@ -57,7 +57,7 @@ export default function Highschool() {
 			</section>
 			<section className="highSchoolMain">
 				<div>
-					<h3>scholarship</h3>
+					<h2>scholarship</h2>
 					<p>
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works

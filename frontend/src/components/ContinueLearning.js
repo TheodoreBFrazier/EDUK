@@ -21,7 +21,7 @@ export default function ContinueLearning() {
 	}, []);
 	return (
 		<div>
-			<h1>Continue Learning</h1>
+			<h1 className="resourceCategory">Continue Learning</h1>
 			<section className="highSchoolMain">
 				<div>
 					<h3>Programs</h3>

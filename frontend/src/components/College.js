@@ -21,7 +21,7 @@ export default function College() {
 	}, []);
 	return (
 		<div>
-			<h1>College</h1>
+			<h1 className="resourceCategory">College</h1>
 			<section className="highSchoolMain">
 				<div>
 					<h3>Programs</h3>
