@@ -222,9 +222,9 @@ p {
 	justify-items: center;
 	align-content: space-evenly;
 	align-items: center;
-	grid-template-columns: 300px 300px 300px 300px;
-	column-gap: 20px;
-	row-gap: 40px;
+	grid-template-columns: 250px 250px 250px 250px;
+	column-gap: 10px;
+	row-gap: 80px;
 }
 
 
@@ -254,5 +254,3 @@ card {
   column-gap: 20px;
   row-gap: 40px;
 }
-
-

@@ -12,10 +12,13 @@ import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
 import About from "./pages/About";
 import MentorsPage from "./pages/Mentors";
+import ShowResource from "./pages/ShowResource";
 
 //Shows a single resource
-import ShowResource from "./pages/ShowResource";
+//import ShowResource from "./pages/ShowResource";
 import CreateUser from "./components/CreateUser";
+
+
 
 function App() {
   return (
@@ -26,7 +29,7 @@ function App() {
           <Routes>
           <Route path = "/" element={<Home />} />
           <Route path = "/resources" element={<ResourcesPage/>} />
-          <Route path = "/resources/:id" element={<ShowResource/>} />
+          <Route exact path = "/resources/:resource_id" element={<ShowResource />} />
           <Route path = "/users" element={<UserPortal />} />
           <Route path = "/about" element={<About />} />
           <Route path = "/mentors" element={<MentorsPage />} />
