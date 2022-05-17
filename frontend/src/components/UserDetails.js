@@ -13,12 +13,11 @@ import { useEffect } from 'react';
 const API = process.env.REACT_APP_API_URL;
 
 function userDetails() {
+
     const [user, setUser] = useState({});
+    
     let { userid } = useParams();
     let navigate = useNavigate();
-
-
-
 
     useEffect(() => {
         axios.get(API + "/users/" + id)

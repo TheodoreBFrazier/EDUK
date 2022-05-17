@@ -1,18 +1,21 @@
 import React from "react";
 
+//Link from React 
+
 import { Link } from "react-router-dom"
 
+// Material UI importing 
+
 import { Button } from "@mui/material"
-
-
 
 function Home() {
     return (
         <div className="Home">
+    
             <div className="Hero">
                 <div className="Hero-text">
-                    <h1>TIME TO <em>EVEN THE PLAYING FIELD</em></h1>
-                    <h3>LINKING NYERS TO ESSENTIAL SERVICES  </h3>
+                    <h1>Time to even <br/> the playing field </h1>
+                    <p> Linking New Yorkers to essential services.  </p>
                 </div>
             </div>
             <div className="introduction">

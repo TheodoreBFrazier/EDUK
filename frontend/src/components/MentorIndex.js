@@ -7,7 +7,8 @@ import SingleMentor from "./SingleMentor";
 
 const API = process.env.REACT_APP_API_URL;
 
-function MentorIndex () {
+function MentorIndex() {
+    
     const [mentors, setmentors] = useState([])
 
     useEffect(() => {
@@ -25,14 +26,14 @@ function MentorIndex () {
 
             {mentors.map((mentor) => {
                 //SingleMentor JSX
-                return <SingleMentor key={mentor.mentor_id} mentor={mentor}/>
-            }) 
+                return <SingleMentor key={mentor.mentor_id} mentor={mentor} />
+            })
 
             }
 
         </div>
     )
 
-}
+};
 
 export default MentorIndex;

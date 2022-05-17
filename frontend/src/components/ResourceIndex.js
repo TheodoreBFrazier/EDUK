@@ -2,14 +2,14 @@ import React from "react";
 
 import axios from "axios";
 import { useState, useEffect } from "react";
+
+//Importing the single resource
 import SingleResource from "./SingleResource";
-
-
 
 
 const API = process.env.REACT_APP_API_URL;
 
-function Resources() {
+function ResourceIndex () {
     const [resources, setResources] = useState([])
 
     useEffect(() => {
@@ -36,4 +36,4 @@ function Resources() {
 
 }
 
-export default Resources;
+export default ResourceIndex ;

@@ -1,5 +1,5 @@
 import React from "react"
-import Resources from "../components/Resources"
+import ResourceIndex from "../components/ResourceIndex"
 import SearchBar from "../components/SearchBar"
 
 
@@ -21,7 +21,7 @@ function ResourcesPage() {
             </div>
             <br />
             <br />
-            <Resources />
+            <ResourceIndex />
         </div>
     )
 }

@@ -17,39 +17,33 @@ code {
 
 /* Importing Font */
 
-/* Regular */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap');
-
-/* Italics */
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap');
 
 
 h1 {
-  font-size: 40pt;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 72pt;
+  font-family: 'Abril Fatface', cursive;
 }
 
 h2 {
   font-size: 32pt;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Abril Fatface', cursive;
 }
 
 h3 {
   font-size: 24pt;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Abril Fatface', cursive;
 }
 
 h4 {
   font-family: 18pt;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Abril Fatface', cursive;
 }
 
 p {
   font-size: 16pt;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* NAVIGATION CSS */
@@ -61,11 +55,19 @@ nav {
   align-items: center;
   position: relative;
   margin-bottom: 0;
+  background-color: #fffffc;
 }
 
 nav h3 {
   margin-right: 100px;
   color: #574D68;
+}
+
+/* Relating to the logo */
+
+.logo-text h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #0086d1;
 }
 
 /* Use the class name to edit this button */
@@ -91,7 +93,7 @@ a {
 /* HERO PAGE */
 
 .Hero-text {
-  width: 700px;
+  width: 1000px;
   margin-left: 125px;
   text-align: left;
   position: relative;
@@ -101,14 +103,15 @@ a {
 
 .Hero .Hero-text h1 {
   /* Used padding to prevent white space from showing" */
-  font-weight: 700;
+  font-size: 65pt;
+ letter-spacing: 10px;
   padding-top: 250px;
   position: relative; 
   z-index: 9999;
 }
 
 .Hero .Hero-text h1 {
-  background: -webkit-linear-gradient(#574D68, #f3a712);
+  background: -webkit-linear-gradient(#0086d1, #ffc857);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -120,7 +123,7 @@ a {
 
 .Hero {
   margin: 0;
-  background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
+  background-color: #1d3461;
   height: 100vh;
 }
 

@@ -1,4 +1,7 @@
 import React from "react";
+
+//Importing the index of mentors into the Mentor Page
+
 import MentorIndex from "../components/MentorIndex";
 
 

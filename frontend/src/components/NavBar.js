@@ -4,7 +4,6 @@ import React from "react"
 
 import { Link } from "react-router-dom"
 
-
 // importing button from material UI
 
 import { Button } from "@mui/material"
@@ -14,22 +13,31 @@ export default function NavBar() {
     return (
         <nav className="navigation">
             <Link to="/">
-                <h3> Home </h3>
+                <div className="logo-text">
+                    
+                <h2> EDUK </h2>
+
+                </div>
             </Link>
+
+
             <Link to="/resources">
-                <h3> Resources </h3>
+                
+                <h4> Resources </h4>
             </Link>
+
             <Link to="/about">
-                <h3> About </h3>
+                <h4> About </h4>
             </Link>
+            
             <Link to="/mentors">
-                <h3> Test Mentors </h3>
+                <h4> Test Mentors </h4>
+   
             </Link>
-
-
+            
             <Button variant='contained'>
-                <Link to="/users"> User Portal</Link>
+                <Link to="/users"> MEMBERS </Link>
             </Button>
-        </nav>
+        </nav >
     )
 }

@@ -15,8 +15,6 @@ var textFieldStyle = {
     width: '450px'
 }
 
-
-
 const API = process.env.REACT_APP_API_URL;
 
 const SearchBar = () => {
@@ -58,7 +56,6 @@ const SearchBar = () => {
                 value={searchInput}
 
                 InputProps={{
-
                     endAdornment: (
                         <InputAdornment>
                             <IconButton>
@@ -66,14 +63,10 @@ const SearchBar = () => {
                             </IconButton>
                         </InputAdornment>
                     )
-
                 }}
-
-
             />
-
         </div>
     )
 }
 
-export default SearchBar
+export default SearchBar;
