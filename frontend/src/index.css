@@ -136,17 +136,9 @@ p {
 
 .resource-arr {
 	display: grid;
-	justify-content: space-evenly;
 	justify-items: center;
-	align-content: space-evenly;
-	align-items: center;
-	grid-template-columns: 300px 300px 300px 300px;
-	column-gap: 20px;
-	row-gap: 40px;
-}
-
-card {
-	height: "100vh";
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 60px;
 }
 
 .resource-arr a {

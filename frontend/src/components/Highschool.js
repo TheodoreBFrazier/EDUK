@@ -1,12 +1,26 @@
 import React from "react";
 import "./Highschool.css";
 
-// import axios from "axios";
-// import { useState, useEffect } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import SingleResource from "./SingleResource";
 
-// const API = process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_URL;
 
 export default function Highschool() {
+	const [highschool, setHighschool] = useState([]);
+
+	useEffect(() => {
+		axios
+			.get(API + "/resources")
+			.then((response) => {
+				setHighschool(response.data.result);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, []);
+
 	return (
 		<div>
 			<h1>HighSchool</h1>
@@ -19,7 +33,16 @@ export default function Highschool() {
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{highschool.map((highschool) => {
+						return (
+							<SingleResource
+								key={highschool.resource_id}
+								resource={highschool}
+							/>
+						);
+					})}
+				</div>
 			</section>
 			<section className="highSchoolMain">
 				<div>

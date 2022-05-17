@@ -1,10 +1,24 @@
 import React from "react";
-// import axios from "axios";
-// import { useState, useEffect } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-// const API = process.env.REACT_APP_API_URL;
+import SingleResource from "./SingleResource";
+
+const API = process.env.REACT_APP_API_URL;
 
 export default function College() {
+	const [college, setCollege] = useState([]);
+
+	useEffect(() => {
+		axios
+			.get(API + "/resources")
+			.then((response) => {
+				setCollege(response.data.result);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, []);
 	return (
 		<div>
 			<h1>College</h1>
@@ -17,7 +31,13 @@ export default function College() {
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{college.map((college) => {
+						return (
+							<SingleResource key={college.resource_id} resource={college} />
+						);
+					})}
+				</div>
 			</section>
 			<section className="highSchoolMain">
 				<div>
