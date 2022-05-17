@@ -8,7 +8,7 @@ var cardStyle = {
 	height: "auto",
 	width: "400px",
 	padding: "20px",
-	boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;",
+	boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px",
 };
 
 function SingleResource({ resource }) {

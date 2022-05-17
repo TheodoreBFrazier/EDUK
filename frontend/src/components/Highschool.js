@@ -1,5 +1,5 @@
 import React from "react";
-import "./Highschool.css";
+import "./ResourceCategory.css";
 
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -24,10 +24,11 @@ export default function Highschool() {
 	return (
 		<div>
 			<h1 className="resourceCategory">HighSchool</h1>
+
 			<section className="highSchoolMain">
 				<div>
 					<h2>Programs</h2>
-					<p>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
@@ -44,27 +45,47 @@ export default function Highschool() {
 					})}
 				</div>
 			</section>
+
 			<section className="highSchoolMain">
 				<div>
-					<h2>class</h2>
-					<p>
+					<h2>Class</h2>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{highschool.map((highschool) => {
+						return (
+							<SingleResource
+								key={highschool.resource_id}
+								resource={highschool}
+							/>
+						);
+					})}
+				</div>
 			</section>
+
 			<section className="highSchoolMain">
 				<div>
-					<h2>scholarship</h2>
-					<p>
+					<h2>Scholarship</h2>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{highschool.map((highschool) => {
+						return (
+							<SingleResource
+								key={highschool.resource_id}
+								resource={highschool}
+							/>
+						);
+					})}
+				</div>
 			</section>
 		</div>
 	);

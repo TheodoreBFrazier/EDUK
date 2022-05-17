@@ -1,4 +1,6 @@
 import React from "react";
+import "./ResourceCategory.css";
+
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -25,7 +27,7 @@ export default function College() {
 			<section className="highSchoolMain">
 				<div>
 					<h3>Programs</h3>
-					<p>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
@@ -42,24 +44,36 @@ export default function College() {
 			<section className="highSchoolMain">
 				<div>
 					<h3>class</h3>
-					<p>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{college.map((college) => {
+						return (
+							<SingleResource key={college.resource_id} resource={college} />
+						);
+					})}
+				</div>
 			</section>
 			<section className="highSchoolMain">
 				<div>
 					<h3>scholarship</h3>
-					<p>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{college.map((college) => {
+						return (
+							<SingleResource key={college.resource_id} resource={college} />
+						);
+					})}
+				</div>
 			</section>
 		</div>
 	);

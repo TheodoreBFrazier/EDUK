@@ -1,4 +1,5 @@
 import React from "react";
+import "./ResourceCategory.css";
 
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -25,7 +26,7 @@ export default function ContinueLearning() {
 			<section className="highSchoolMain">
 				<div>
 					<h3>Programs</h3>
-					<p>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
@@ -45,24 +46,42 @@ export default function ContinueLearning() {
 			<section className="highSchoolMain">
 				<div>
 					<h3>class</h3>
-					<p>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{ContinueLearning.map((ContinueLearning) => {
+						return (
+							<SingleResource
+								key={ContinueLearning.resource_id}
+								resource={ContinueLearning}
+							/>
+						);
+					})}
+				</div>
 			</section>
 			<section className="highSchoolMain">
 				<div>
 					<h3>scholarship</h3>
-					<p>
+					<p className="resourceP">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you
 					</p>
 				</div>
-				<div>List of the programs</div>
+				<div className="resource-arr">
+					{ContinueLearning.map((ContinueLearning) => {
+						return (
+							<SingleResource
+								key={ContinueLearning.resource_id}
+								resource={ContinueLearning}
+							/>
+						);
+					})}
+				</div>
 			</section>
 		</div>
 	);
