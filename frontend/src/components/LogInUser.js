@@ -1,23 +1,26 @@
 import axios from "axios"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import react from "react"
+import React from "react"
+import '../css/LogIn.css'
+import { Link } from "react-router-dom";
 
-const APi = Process.env.REACT_APP_API_URL;
+
+const API = process.env.REACT_APP_API_URL;
 
 function LogInUser(){
-    let navigate = useNavigate();
 
     return(
     <div>
-        <form>
+        <form >
             <h3>Login Here</h3>
+            <h4>New to EDUK? Sign up <Link to='/users/create'>here!</Link></h4> 
 
-            <label for="username">Username</label>
-            <input type="text" placeholder="Email or Phone" id="username"/>
+            <label class="login" for="username">Username</label>
+            <input type="text" placeholder="Username" id="user_name" />
 
-            <label for="password">Password</label>
-            <input type="password" placeholder="Password" id="password"/>
+            <label class="login" for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" />
 
             <button>Log In</button>
             <div class="social">

@@ -15,6 +15,7 @@ import About from "./pages/About";
 //Shows a single resource
 import ShowResource from "./pages/ShowResource";
 import CreateUser from "./components/CreateUser";
+import LogInUser from "./components/LogInUser"
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 						<Route path="/users" element={<UserPortal />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/users/create" element={<CreateUser />} />
+						<Route path="/users/login" element={<LogInUser/>} />
 					</Routes>
 				</main>
 			</Router>
