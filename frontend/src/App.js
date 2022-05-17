@@ -4,6 +4,7 @@ import React from "react";
 
 import "./App.css";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 // IMPORTING PAGES
 
@@ -33,6 +34,7 @@ function App() {
 						<Route path="/users/login" element={<LogInUser/>} />
 					</Routes>
 				</main>
+				<Footer />
 			</Router>
 		</div>
 	);
