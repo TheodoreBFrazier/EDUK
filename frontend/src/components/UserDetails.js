@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./userdetails.css";
+import SingleResource from "./SingleResource";
 
 //API
 
@@ -10,6 +11,7 @@ const API = process.env.REACT_APP_API_URL;
 
 function UserDetails() {
   const [user, setUser] = useState({});
+  const [userResources , setUserResources] = useState([]);
   const [showUserDetails, setShowUserDetails] = useState(false);
   let { uid } = useParams();
   //let navigate = useNavigate();
@@ -23,7 +25,18 @@ function UserDetails() {
       .catch((error) => {
         console.log(error);
       });
+
+    axios.get(API + "/users/" + uid + "/resources")
+    .then((response)=>{
+      setUserResources(response.data.result);
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+    
   }, [uid]);
+
+
 
   return (
     <section className="user_details">
@@ -41,7 +54,9 @@ function UserDetails() {
             <div>User Email: {user.email}</div>
             <div>Age: {user.age}</div>
             <div>Mentor: {user.mentor_id}</div>
-            <sectin>User Resources</sectin>
+            <sectin>User Resources:
+              {userResources.map(resource=>(<SingleResource key={resource.resource_id} resource={resource}/>))}
+            </sectin>
           </div>
         ) : (
           ""
