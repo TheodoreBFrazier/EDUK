@@ -1,5 +1,7 @@
+import AllUsers from "../components/AllUsers";
+
 function UsersPortal() {
-  return <div>All users</div>;
+  return <AllUsers />;
 }
 
 export default UsersPortal;

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const API = process.env.REACT_APP_API_URL;
-function CreateResource({ uid }) {
+function CreateResource() {
   const [resource, setResource] = useState({
     resource_name: "",
     description: "",
@@ -12,23 +12,18 @@ function CreateResource({ uid }) {
     url: "",
     isverified: false,
   });
+
   const handleTextChange = (e) => {
     setResource({ ...resource, [e.target.id]: e.target.name });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    //add a new resource to the database
 
-    if (uid) {
-      axios
-        .post(`${API}/users/${uid}/resources`, resource)
-        .then((res) => console.log(res.data.result))
-        .catch((e) => console.log(e));
-    } else {
-      axios
-        .post(`${API}/resources`, resource)
-        .then((res) => console.log(res.data.result))
-        .catch((e) => console.log(e));
-    }
+    axios
+      .post(`${API}/resources`, resource)
+      .then((res) => console.log(res.data.result))
+      .catch((e) => console.log(e));
   };
   return (
     <div>
