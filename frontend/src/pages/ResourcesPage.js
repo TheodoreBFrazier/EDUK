@@ -21,7 +21,6 @@ function ResourcesPage() {
             </div>
             <br />
             <br />
-            <h1>Hi</h1>
             <ResourceIndex />
         </div>
     )
