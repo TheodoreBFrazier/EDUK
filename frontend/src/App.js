@@ -4,7 +4,7 @@ import React from "react";
 
 import "./App.css";
 import NavBar from "./components/NavBar";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 // IMPORTING PAGES
 
@@ -48,7 +48,7 @@ function App() {
 						<Route path="/mentors/create" element={<CreateMentor />} />
 					</Routes>
 				</main>
-				{/* <Footer /> */}
+				<Footer />
 			</Router>
 		</div>
 	);

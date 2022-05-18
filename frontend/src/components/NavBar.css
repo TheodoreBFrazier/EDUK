@@ -17,32 +17,21 @@ nav {
 	font-size: 20px;
 	margin: 30px;
 	color: black;
-}
-.navLinks li {
 	text-decoration: none;
 }
+
 .navLinks .eachLi {
 	list-style: none;
 	margin: 0 10px;
 	transition: 0.1s ease-in-out;
 	font-size: 18px;
 	cursor: pointer;
-	opacity: 0.8;
 }
 .navLinks .mainLi {
 	padding-top: 30px;
 }
 .navLinks .iconLi {
 	padding-top: 10px;
-}
-
-.navigation button a {
-	color: white;
-	text-decoration: none;
-}
-
-a {
-	text-decoration: none;
 }
 
 .loginIcon {
