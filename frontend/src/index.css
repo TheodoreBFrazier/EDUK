@@ -250,6 +250,35 @@ p {
   font-size: 12pt;
 }
 
+
+/* Single resource */
+
+.resource-heading {
+	text-align: left;
+	margin-left: 200px;
+	
+}
+
+.resource-text {
+	text-align: left;
+	margin-left: 275px;
+	height: 590px;
+	width: 700px;
+	background-color: #F4F4F4;
+}
+
+.resource-text p {
+	padding-top: 100px;
+	padding-left: 50px;
+	text-align: left;
+	margin-left: 50 px;
+}
+
+
+	/* background-color: #F4F4F4; */
+
+
+
 .mentors-array {
   display: grid;
   justify-content: space-evenly;

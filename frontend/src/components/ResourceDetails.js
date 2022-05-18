@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom"
 import axios from "axios";
+import Resource from "./Resource";
 
 
 
@@ -26,11 +27,14 @@ function ResourceDetails() {
 
 
     return <article>
- 
-            <Link to={`/resources/${resource.resource_id}`} >
-                <h4> {resource.resource_name} </h4>
-            </Link>
+
+        <div className="resource-heading">
+            <h1> {resource.resource_name} </h1>
+            <h3>{resource.start_datetime} - {resource.end_datetime}</h3>
+        </div>
+        <div className="resource-text">
             <p> {resource.description} </p>
+        </div>
 
     </article>
 
