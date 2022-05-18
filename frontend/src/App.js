@@ -12,7 +12,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
-import About from "./pages/About";
 import MentorsPage from "./pages/Mentors";
 import ShowResource from "./pages/ShowResource";
 import UsersPortal from "./pages/UsersPortal";
@@ -30,38 +29,36 @@ import ContinueLearningPage from "./pages/ContinueLearningPage";
 import CreateUser from "./components/CreateUser";
 import NewResource from "./pages/NewResource";
 
-
-
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <NavBar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/resources" element={<ResourcesPage />} />
-            <Route path="/resources/:id" element={<ShowResource />} />
-            <Route path="/resources/create" element={<NewResource />} />
-            <Route path="/users" element={<UsersPortal />} />
-            <Route path="/users/login" element={<LogInUser />} />
-            <Route path="/users/:uid/" element={<UserPortal />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/users/create" element={<CreateUser />} />
-            <Route path="/highschool" element={<HighschoolPage />} />
-            <Route path="/college" element={<CollegePage />} />
-            <Route
-              path="/continuelearning"
-              element={<ContinueLearningPage />}
-            />
-            <Route path="/mentors" element={<AllMentors/>} />
-            <Route path="/mentors/create" element={<CreateMentor />} />
-          </Routes>
-        </main>
-        {/* <Footer /> */}
-      </Router>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+				<NavBar />
+				<main>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/resources" element={<ResourcesPage />} />
+						<Route path="/resources/:id" element={<ShowResource />} />
+						<Route path="/resources/create" element={<NewResource />} />
+						<Route path="/users" element={<UsersPortal />} />
+						<Route path="/users/login" element={<LogInUser />} />
+						<Route path="/users/:uid/" element={<UserPortal />} />
+						<Route path="/about" element={<About />} />
+						<Route path="/users/create" element={<CreateUser />} />
+						<Route path="/highschool" element={<HighschoolPage />} />
+						<Route path="/college" element={<CollegePage />} />
+						<Route
+							path="/continuelearning"
+							element={<ContinueLearningPage />}
+						/>
+						<Route path="/mentors" element={<AllMentors />} />
+						<Route path="/mentors/create" element={<CreateMentor />} />
+					</Routes>
+				</main>
+				{/* <Footer /> */}
+			</Router>
+		</div>
+	);
 }
 
 export default App;
