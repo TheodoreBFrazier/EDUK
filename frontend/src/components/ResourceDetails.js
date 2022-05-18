@@ -32,13 +32,21 @@ function ResourceDetails() {
             <h1> {resource.resource_name} </h1>
             <h3>{resource.start_datetime} - {resource.end_datetime}</h3>
         </div>
+        <br />
+			<br />
         <div className="resource-text">
             <p> {resource.description} </p>
+            <div class="visit-site-button">
+<button className>
+    Visit {resource.resource_name}
+</button>
+            </div>
         </div>
         <br />
 			<br />
 			<br />
-
+            <br />
+			<br />
     </article>
 
 }
