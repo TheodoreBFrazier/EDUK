@@ -9,7 +9,8 @@ CREATE TABLE mentors(
     mentor_lname VARCHAR(50),
     bio TEXT,
     email TEXT,
-    speciality TEXT
+    speciality TEXT,
+    isVerified BOOLEAN DEFAULT FALSE
 );
 
 --users table

@@ -24,6 +24,7 @@ import ContinueLearningPage from "./pages/ContinueLearningPage";
 import LogInUser from "./components/LogInUser";
 
 import CreateMentor from "./components/CreateMentor";
+import MentorToVerify from "./pages/MentorToVerify";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
 						/>
 						<Route path="/users/login" element={<LogInUser />} />
 						<Route path="/mentors/create" element={<CreateMentor />} />
+						<Route path="/mentors/pending" element={<MentorToVerify />} />
 					</Routes>
 				</main>
 				<Footer />

@@ -22,6 +22,7 @@ function CreateMentor(){
         .post(`${API}/mentors`, mentor)
             .then(
                 ()=>{
+                    alert("Thank you for signing up. We'll send you an invite to get started soon!")
                     navigate(`/`)
                 }
             )
@@ -36,7 +37,6 @@ function CreateMentor(){
     const handleSubmit = (event) =>{
         event.preventDefault();
         addMentor();
-        alert("Thank you for signing up. We'll send you an invite to get started soon!")
     }
 
     return(
