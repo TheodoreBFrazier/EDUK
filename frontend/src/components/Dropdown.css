@@ -5,6 +5,7 @@
 	list-style: none;
 	text-align: start;
 	background-color: white;
+	translation: all 0.3s ease-in;
 }
 
 .dropdown-menu li {
@@ -17,4 +18,11 @@
 }
 .dropdown-menu.clicked {
 	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.dropdown-menu {
+		right: 200px;
+		width: 250px;
+	}
 }

@@ -25,7 +25,6 @@ import LogInUser from "./components/LogInUser";
 
 import CreateMentor from "./components/CreateMentor";
 
-
 function App() {
 	return (
 		<div className="App">
