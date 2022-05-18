@@ -38,9 +38,9 @@ export default function RightNav({ open }) {
 	return (
 		<Ul open={open} className="navLinks">
 			<li
-				className="eachLi mainLi"
-				onMouseEnter={onMouseEnter}
-				onMouseLeave={onMouseleave}
+				className="eachLi mainLi "
+				onClick={dropdown ? onMouseleave : onMouseEnter}
+				// onClick={onMouseleave}
 			>
 				<Link to="/resources">
 					Resources <ArrowDropDownIcon></ArrowDropDownIcon>
