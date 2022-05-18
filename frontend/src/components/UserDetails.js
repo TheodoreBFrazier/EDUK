@@ -1,42 +1,50 @@
-
 import React from "react";
-import {useState, useEffect} from "React";
+import { useState, useEffect } from "React";
 
 import { Link, useParams, useNavigate } from "react-router-dom";
 
 import axios from "axios";
-import { useEffect } from 'react';
-
 
 //API
 
 const API = process.env.REACT_APP_API_URL;
 
-function userDetails() {
-    const [user, setUser] = useState({});
-    let { userid } = useParams();
-    let navigate = useNavigate();
+function UserDetails() {
+  const [user, setUser] = useState({});
+  const [showUserDetails, setShowUserDetails] = useState(false);
+  let { uid } = useParams();
+  let navigate = useNavigate();
 
+  useEffect(() => {
+    axios
+      .get(API + "/users/" + id)
+      .then((response) => {
+        setUser(response.data.result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [uid]);
 
-
-
-    useEffect(() => {
-        axios.get(API + "/users/" + id)
-            .then((response) => {
-                setUser(response.data);
-            }).catch((error) => {
-                console.log(error)
-            })
-    }, [userid]);
-
-
-    return <article>
-        <div>
-            <h1>Hi</h1>
-        </div>
-    </article>
-
-
+  return (
+    <section>
+      <div>User Name: {user.user_name}</div>
+      <div>
+        {showUserDetails ? (
+          <>
+            <div>First Name: {user.first_name}</div>
+            <div>Last Name: {user.last_name}</div>
+            <div>Age: {user.age}</div>
+            <div>Mentor: {user.mentor_id}</div>
+          </>
+        ) : (
+          <button onClick={() => setShowUserDetails(!showUserDetails)}>
+            User Details
+          </button>
+        )}
+      </div>
+    </section>
+  );
 }
 
-export default userDetails;
+export default UserDetails;
