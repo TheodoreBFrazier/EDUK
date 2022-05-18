@@ -1,0 +1,17 @@
+.user_details{
+    width: 25%;
+    margin: auto;
+    text-align: justify;
+   margin-top: 100px;
+   margin-bottom: 200px;
+   background-color: whitesmoke;
+}
+.user_details button{
+    background-color: skyblue;
+}
+.user_details .welcome{
+    margin-bottom: 10px;
+}
+.user_details .details{
+    margin-top: 15px;
+}

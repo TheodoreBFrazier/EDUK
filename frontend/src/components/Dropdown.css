@@ -10,6 +10,7 @@
 .dropdown-menu li {
 	cursor: pointer;
 	padding: 5px;
+	font-size: 10px;
 }
 
 .dropdown-menu li:hover {
@@ -17,4 +18,11 @@
 }
 .dropdown-menu.clicked {
 	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.dropdown-menu {
+		right: 200px;
+		width: 300px;
+	}
 }
