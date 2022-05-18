@@ -10,9 +10,11 @@ import { InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 var textFieldStyle = {
+
 	margin: "75px",
 	width: "450px",
 };
+
 
 const API = process.env.REACT_APP_API_URL;
 
