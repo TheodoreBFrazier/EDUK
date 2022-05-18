@@ -12,7 +12,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const Ul = styled.ul`
 	@media (max-width: 768px) {
 		flex-flow: column nowrap;
-		background-color: rgb(225, 225, 225);
+		background-color: rgb(239 239 239);
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		top: 0;
@@ -28,19 +28,11 @@ export default function RightNav({ open }) {
 	const [dropdown, setDropdown] = useState(false);
 
 	const onMouseEnter = () => {
-		// if (window.innerWidth < 600) {
-		// 	setDropdown(false);
-		// } else {
 		setDropdown(true);
-		// }
 	};
 
 	const onMouseleave = () => {
-		// if (window.innerWidth < 600) {
 		setDropdown(false);
-		// } else {
-		// setDropdown(false);
-		// }
 	};
 	return (
 		<Ul open={open} className="navLinks">

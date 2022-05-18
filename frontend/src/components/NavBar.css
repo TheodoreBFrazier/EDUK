@@ -10,7 +10,6 @@ nav {
 }
 .navLinks {
 	display: flex;
-	/* justify-content: space-between; */
 	flex-flow: row nowrap;
 	text-align: center;
 }
@@ -50,16 +49,3 @@ a {
 	padding-top: 14px;
 	align-items: center;
 }
-
-/* @media only screen and (max-width: 768px) {
-	.navLinks {
-		flex-flow: column nowrap;
-		background-color: rgb(225, 225, 225);
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 100vh;
-		width: 200px;
-		padding-top: 3.5rem;
-	}
-} */
