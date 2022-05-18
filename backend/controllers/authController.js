@@ -11,7 +11,7 @@ auth.post("/sign_up", async (req, res) => {
     if (createdUser.uid) {
       res.json({ success: true, result: createdUser });
     } else
-      res.status(500).json({ success: false, error: "unable to create user..." });
+      res.status(500).json({ success: false, error: createdUser });
   });
 
 //Login a exsiting user

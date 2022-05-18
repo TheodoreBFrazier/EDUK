@@ -26,4 +26,4 @@ function ResourcesPage() {
     )
 }
 
-export default ResourcesPage
+export default ResourcesPage;
