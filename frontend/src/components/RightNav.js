@@ -40,7 +40,6 @@ export default function RightNav({ open }) {
 			<li
 				className="eachLi mainLi "
 				onClick={dropdown ? onMouseleave : onMouseEnter}
-				// onClick={onMouseleave}
 			>
 				<Link to="/resources">
 					Resources <ArrowDropDownIcon></ArrowDropDownIcon>
