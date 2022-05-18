@@ -21,6 +21,16 @@ export default function College() {
 				console.log(error);
 			});
 	}, []);
+
+	let collegeProgram = college.filter((high) => {
+		return high.resource_category === "Program" && high.isverified === true;
+	});
+	let collegeClasses = college.filter((high) => {
+		return high.resource_category === "Class" && high.isverified === true;
+	});
+	let collegeScholarship = college.filter((high) => {
+		return high.resource_category === "Scholarship" && high.isverified === true;
+	});
 	return (
 		<div>
 			<h1 className="resourceCategory">College</h1>
@@ -34,7 +44,7 @@ export default function College() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{college.map((college) => {
+					{collegeProgram.map((college) => {
 						return (
 							<SingleResource key={college.resource_id} resource={college} />
 						);
@@ -51,7 +61,7 @@ export default function College() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{college.map((college) => {
+					{collegeClasses.map((college) => {
 						return (
 							<SingleResource key={college.resource_id} resource={college} />
 						);
@@ -68,7 +78,7 @@ export default function College() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{college.map((college) => {
+					{collegeScholarship.map((college) => {
 						return (
 							<SingleResource key={college.resource_id} resource={college} />
 						);
