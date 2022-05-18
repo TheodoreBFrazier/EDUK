@@ -1,37 +1,35 @@
-import React from "react";
+//ALL users component
 
+import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import SingleUserView from "./SingleUserPage";
+import User from "./User";
+import "./allusers.css";
 
 const API = process.env.REACT_APP_API_URL;
 
 function AllUsers() {
-    const [users, setUsers] = useState([]) //Set state to empty array
+  const [users, setUsers] = useState([]); //Set state to empty array
 
-    useEffect(() => {
-        axios.get(API + "/users")
-            .then((response) => {
-                console.log(response)
-                setUsers(response.data.result);
-            }).catch((error) => {
-                console.log(error)
-            })
-    }, [])
+  useEffect(() => {
+    axios
+      .get(API + "/users")
+      .then((response) => {
+        console.log(response);
+        setUsers(response.data.result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-
-    return (
-        <div className="user">
-            <section>
-                <tbody className="users-arr">
-                    {users.map((user) => {
-                        return <SingleUserView key={user.id} user={user} />
-                    })}
-                </tbody>
-            </section>
-        </div>
-    )
-
+  return (
+    <section className="users">
+      {users.map((user) => {
+        return <User key={user.uid} user={user} />;
+      })}
+    </section>
+  );
 }
 
 export default AllUsers;

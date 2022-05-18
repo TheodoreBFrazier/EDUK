@@ -30,24 +30,28 @@ function ResourceDetails() {
 
         <div className="resource-heading">
             <h1> {resource.resource_name} </h1>
-            <h3>{resource.start_datetime} - {resource.end_datetime}</h3>
+            <h4>{resource.start_datetime} - {resource.end_datetime}</h4>
         </div>
         <br />
-			<br />
+        <br />
         <div className="resource-text">
             <p> {resource.description} </p>
             <div class="visit-site-button">
-<button className>
-    Visit {resource.resource_name}
-</button>
+                <Link to={`/resources/${resource.resource_url}`}>
+                    <button className>
+                        Visit {resource.resource_name}
+                    </button>
+                </Link>
             </div>
         </div>
+        <div className="resource-photo">
+        </div>
         <br />
-			<br />
-			<br />
-            <br />
-			<br />
-    </article>
+        <br />
+        <br />
+        <br />
+        <br />
+    </article >
 
 }
 

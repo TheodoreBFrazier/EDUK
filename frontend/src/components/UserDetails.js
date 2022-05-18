@@ -1,41 +1,69 @@
-
 import React from "react";
-import {useState, useEffect} from "React";
-
+import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-
 import axios from "axios";
-import { useEffect } from 'react';
-
+import "./userdetails.css";
+import SingleResource from "./SingleResource";
 
 //API
 
 const API = process.env.REACT_APP_API_URL;
 
-function userDetails() {
+function UserDetails() {
+  const [user, setUser] = useState({});
+  const [userResources , setUserResources] = useState([]);
+  const [showUserDetails, setShowUserDetails] = useState(false);
+  let { uid } = useParams();
+  //let navigate = useNavigate();
 
-    const [user, setUser] = useState({});
+  useEffect(() => {
+    axios
+      .get(API + "/users/" + uid)
+      .then((response) => {
+        setUser(response.data.result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    axios.get(API + "/users/" + uid + "/resources")
+    .then((response)=>{
+      setUserResources(response.data.result);
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
     
-    let { userid } = useParams();
-    let navigate = useNavigate();
-
-    useEffect(() => {
-        axios.get(API + "/users/" + id)
-            .then((response) => {
-                setUser(response.data);
-            }).catch((error) => {
-                console.log(error)
-            })
-    }, [userid]);
+  }, [uid]);
 
 
-    return <article>
-        <div>
-            <h1>Hi</h1>
-        </div>
-    </article>
 
-
+  return (
+    <section className="user_details">
+      <div className="welcome">
+        <strong>Welcome {user.first_name} !!!</strong>
+      </div>
+      <div>
+        <button onClick={() => setShowUserDetails(!showUserDetails)}>
+          User Details
+        </button>
+        {showUserDetails ? (
+          <div className="details">
+            <div>First Name: {user.first_name}</div>
+            <div>Last Name: {user.last_name}</div>
+            <div>User Email: {user.email}</div>
+            <div>Age: {user.age}</div>
+            <div>Mentor: {user.mentor_id}</div>
+            <sectin>User Resources:
+              {userResources.map(resource=>(<SingleResource key={resource.resource_id} resource={resource}/>))}
+            </sectin>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    </section>
+  );
 }
 
-export default userDetails;
+export default UserDetails;
