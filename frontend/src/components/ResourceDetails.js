@@ -35,6 +35,9 @@ function ResourceDetails() {
         <div className="resource-text">
             <p> {resource.description} </p>
         </div>
+        <br />
+			<br />
+			<br />
 
     </article>
 

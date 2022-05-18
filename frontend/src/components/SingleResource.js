@@ -20,7 +20,11 @@ function SingleResource({ resource }) {
 				</Link>
 				<p> {resource.description} </p>
 			</Card>
+			<br />
+			<br />
+			<br />
 		</div>
+
 	);
 }
 
