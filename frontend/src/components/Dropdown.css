@@ -5,12 +5,12 @@
 	list-style: none;
 	text-align: start;
 	background-color: white;
-	translation: all 0.3s ease-in;
 }
 
 .dropdown-menu li {
 	cursor: pointer;
 	padding: 5px;
+	font-size: 10px;
 }
 
 .dropdown-menu li:hover {
@@ -23,6 +23,6 @@
 @media only screen and (max-width: 768px) {
 	.dropdown-menu {
 		right: 200px;
-		width: 250px;
+		width: 300px;
 	}
 }
