@@ -1,8 +1,8 @@
 import React from "react";
-import Resources from "../components/Resources";
+import ContinueLearning from "../components/ContinueLearning";
 import SearchBar from "../components/SearchBar";
 
-function ResourcesPage() {
+export default function ContinueLearningPage() {
 	return (
 		<div>
 			<div className="resources-intro">
@@ -26,9 +26,7 @@ function ResourcesPage() {
 			</div>
 			<br />
 			<br />
-			<Resources />
+			<ContinueLearning />
 		</div>
 	);
 }
-
-export default ResourcesPage;

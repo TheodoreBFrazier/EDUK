@@ -4,6 +4,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import User from "./User";
+import "./allusers.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -25,7 +26,7 @@ function AllUsers() {
   return (
     <section className="users">
       {users.map((user) => {
-        return <User key={user.id} user={user} />;
+        return <User key={user.uid} user={user} />;
       })}
     </section>
   );

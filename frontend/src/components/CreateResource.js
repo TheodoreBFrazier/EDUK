@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios";
 import { useState } from "react";
 
@@ -32,7 +33,7 @@ function CreateResource() {
         <br />
         <input
           id="resource_name"
-          value={resource_name}
+          value={resource.resource_name}
           onChange={handleTextChange}
           type="text"
         />
@@ -41,7 +42,7 @@ function CreateResource() {
         <br />
         <textarea
           id="description"
-          value={description}
+          value={resource.description}
           onChange={handleTextChange}
         />
         <br />
@@ -49,7 +50,7 @@ function CreateResource() {
         <br />
         <input
           id="resource_category"
-          value={resource_category}
+          value={resource.resource_category}
           onChange={handleTextChange}
           type="text"
         />
@@ -58,7 +59,7 @@ function CreateResource() {
         <br />
         <input
           id="start_datetime"
-          value={start_datetime}
+          value={resource.start_datetime}
           onChange={handleTextChange}
           type="text"
         />
@@ -67,16 +68,21 @@ function CreateResource() {
         <br />
         <input
           id="end_datetime"
-          value={start_datetime}
+          value={resource.end_datetime}
           onChange={handleTextChange}
           type="text"
         />
         <br />
         <label htmlFor="url">Link</label>
         <br />
-        <input id="url" value={url} onChange={handleTextChange} type="text" />
+        <input
+          id="url"
+          value={resource.url}
+          onChange={handleTextChange}
+          type="text"
+        />
         <br />
-        <input type={submit} />
+        <input type="submit" />
       </form>
     </div>
   );

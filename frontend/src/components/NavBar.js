@@ -49,7 +49,10 @@ export default function NavBar() {
 					<Link to="/about">About</Link>
 				</li>
 				<li className="eachLi mainLi">
-					<Link to="/users/create">Users</Link>
+					<Link to="/users/login">Users</Link>
+				</li>
+				<li className="eachLi mainLi">
+					<Link to="/mentors/create">Mentors</Link>
 				</li>
 				<li className="eachLi iconLi">
 					<Link to="/users">

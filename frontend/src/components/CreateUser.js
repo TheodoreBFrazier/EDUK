@@ -12,15 +12,15 @@ function CreateUser(){
         first_name : '',
         last_name : '',
         age : 0,
+        email:'',
         user_name: '',
-        password:'',
-        email:''
+        password:''
     })
 
 
     const addUser=()=>{
         axios
-        .post(`${API}/sign_up`, user)
+        .post(`${API}/auth/sign_up`, user)
             .then(
                 ()=>{
                     navigate(`/users`)
@@ -82,7 +82,7 @@ function CreateUser(){
           value={user.age}
           />
           <div class="cut"></div>
-          <label for="lastname" class="placeholder">Age</label>
+          <label for="age" class="placeholder">Age</label>
         </div>
 
         <div class="input-container ic2">
@@ -95,7 +95,7 @@ function CreateUser(){
           value={user.user_name}
           />
           <div class="cut"></div>
-          <label for="lastname" class="placeholder">User name</label>
+          <label for="username" class="placeholder">User name</label>
         </div>
 
         <div class="input-container ic2">
@@ -108,7 +108,7 @@ function CreateUser(){
           value={user.password}
           />
           <div class="cut"></div>
-          <label for="lastname" class="placeholder">Password</label>
+          <label for="password" class="placeholder">Password</label>
         </div>
 
         <div class="input-container ic2">
@@ -124,7 +124,7 @@ function CreateUser(){
           <label for="email" class="placeholder">Email</label>
         </div>
         
-        <button type="text" class="submit">submit</button>
+        <button type="text" class="submit">Submit</button>
       </form>
     </div>
     )

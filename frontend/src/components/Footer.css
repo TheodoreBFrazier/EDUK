@@ -1,84 +1,84 @@
 /* ------------------------------    FOOTER  -------------------------------------- */
 .footer-container {
-   /* position:fixed;
    bottom:0;
    width:100%;
-   height: 60px; */
-   display: grid;
-   grid-template-rows: repeat(2, 1fr);
+   height: 60px;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	/* position: fixed; */
+	/* bottom: 0; */
+	/* width: 100%; */
+	/* height: 2.5rem; */
 }
 
 .footer-logo {
-    width: 70px;
-    border-radius: 50px;
-  }
-  
-  
-  .footer-container-one {
-    padding-top: 15px;
-    height: 20vh;
-    display: flex; 
-    justify-content: space-around; 
-    background-color: rgb(137, 209, 229); 
-    bottom:0;
-    width:100%;
-    /* position: fixed; */
-    
-  }
-  
-  .footer-container-two {
-    /* display: flex; 
+	width: 70px;
+	border-radius: 50px;
+}
+
+.footer-container-one {
+	padding-top: 15px;
+	height: 20vh;
+	display: flex;
+	justify-content: space-around;
+	background-color: rgb(137, 209, 229);
+	bottom: 0;
+	width: 100%;
+	/* position: fixed; */
+}
+
+.footer-container-two {
+	/* display: flex; 
     justify-content: space-around;  */
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 15px;
-    background-color: rgb(229, 232, 217); 
-    /* position:absolute; */
-   bottom:0;
-   width:100%;
-   height: 30px;
-   /* position: fixed; */
-    
-  }
-  
-  .box-list {
-    list-style: none;
-  }
-  
-  li {
-    margin-top: 10px;
-    margin-right: 40px;
-  }
-  
-  .footer-logo {
-    margin-top: 20px;
-  }
-  
-  .footer-right {
-    margin-top: 10px;
-  }
-  
-  .fa {
-    padding: 6px;
-    font-size: 20px;
-    width: 20px;
-    margin-left: 50px;
-    border-radius: 50%;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: 10px;
+	padding: 15px;
+	font-size: 15px;
+	background-color: rgb(229, 232, 217);
+	/* position:absolute; */
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	/* position: fixed; */
+}
+
+.box-list {
+	list-style: none;
+}
+
+li {
+	margin-top: 10px;
+	margin-right: 40px;
+}
+
+.footer-logo {
+	margin-top: 20px;
+}
+
+.footer-right {
+	margin-top: 10px;
+}
+
+.fa {
+	padding: 6px;
+	font-size: 20px;
+	width: 20px;
+	margin-left: 50px;
+	border-radius: 50%;
+}
+
+.fa-facebook {
+	background: #3b5998;
+	color: white;
+}
+
+.fa-twitter {
+	background: #55acee;
+	color: white;
+}
+
+.fa-linkedin {
+	background: #007bb5;
+	color: white;
+}
