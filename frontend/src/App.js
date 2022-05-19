@@ -60,7 +60,7 @@ function App() {
 			      <Route path="/pendings" element={<Pendings />} />
           </Routes>
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );

@@ -1,5 +1,4 @@
 import React from "react"
-// import ResourceIndex from "../components/ResourceIndex"
 import Resources from "../components/Resources"
 import SearchBar from "../components/SearchBar"
 

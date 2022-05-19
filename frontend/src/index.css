@@ -49,7 +49,6 @@ p {
 /* NAVIGATION CSS */
 
 nav {
-  margin-left: 125px;
   height: 125px;
   display: flex;
   align-items: center;

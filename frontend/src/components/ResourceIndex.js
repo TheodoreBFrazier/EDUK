@@ -1,44 +1,44 @@
-import React from "react";
+// import React from "react";
 
-import axios from "axios";
-import { useState, useEffect } from "react";
-
-
-//Importing the single resource
-
-import Resource from "./Resource";
+// import axios from "axios";
+// import { useState, useEffect } from "react";
 
 
-const API = process.env.REACT_APP_API_URL;
+// //Importing the single resource
 
-function ResourceIndex() {
-    const [resources, setResources] = useState([])
+// import SingleResource from "./SingleResource";
 
 
-    useEffect(() => {
-        axios.get(API + "/resources")
-            .then((response) => {
-                console.log(response)
-                setResources(response.data.result);
-            }).catch((error) => {
-                console.log(error)
-            })
-    }, [])
+// const API = process.env.REACT_APP_API_URL;
+
+// function ResourceIndex() {
+//     const [resources, setResources] = useState([])
+
+
+//     useEffect(() => {
+//         axios.get(API + "/resources")
+//             .then((response) => {
+//                 console.log(response)
+//                 setResources(response.data.result);
+//             }).catch((error) => {
+//                 console.log(error)
+//             })
+//     }, [])
 
     
 
-    return (
+//     return (
 
-        <div className="resource-arr">
+//         <div className="resource-arr">
             
-            {resources.filter(resource => resource.is_verified).map((resource) => {
-                return <SingleResource key={resource.resource_id} resource={resource} />
-            })}
+//             {resources.filter(resource => resource.is_verified).map((resource) => {
+//                 return <SingleResource key={resource.resource_id} resource={resource} />
+//             })}
 
-        </div>
+//         </div>
 
-    )
+//     )
 
-}
+// }
 
-export default ResourceIndex;
+// export default ResourceIndex;
