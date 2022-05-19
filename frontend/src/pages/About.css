@@ -1,0 +1,58 @@
+.about {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    transition-property: opacity, left;
+    /* transition-duration: 3s, 5s, 2s, 1s;     */
+ }
+
+h2 {
+    padding-top: 50px;
+    font-weight: bolder;
+    color: royalblue;
+    border-bottom: 10px groove blue;
+    border-radius: 10px 30px;
+    width: 250px;
+    text-align: center;
+}
+
+.about-container-one {
+	margin-left: 150px;
+	text-align: left;
+	width: 500px;
+}
+
+.about-container-two {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin: 50px; */
+    list-style: none;
+    margin-bottom: 100px;
+    
+}
+
+.about-container-two h2 {
+    margin: auto;
+}
+
+.about-container-two img {
+    width: 380px;
+    height: 300px;
+}
+
+.about-container-two p {
+    text-align: left;
+}
+
+
+.teammate {
+    padding: 50px;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+

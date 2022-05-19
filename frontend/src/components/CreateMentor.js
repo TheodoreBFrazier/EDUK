@@ -9,8 +9,8 @@ const API = process.env.REACT_APP_API_URL;
 function CreateMentor() {
   let navigate = useNavigate();
   const [mentor, setMentor] = useState({
-    first_name: "",
-    last_name: "",
+    mentor_fname: "",
+    mentor_lname: "",
     bio: "",
     email: "",
     speciality: "",
@@ -45,10 +45,10 @@ function CreateMentor() {
 
         <div class="input-container ic1">
           <input
-            id="first_name"
+            id="mentor_fname"
             class="input"
             type="text"
-            value={mentor.first_name}
+            value={mentor.mentor_fname}
             placeholder=" "
             onChange={handleTextChange}
           />
@@ -60,12 +60,12 @@ function CreateMentor() {
 
         <div class="input-container ic2">
           <input
-            id="last_name"
+            id="mentor_lname"
             class="input"
             type="text"
             placeholder=" "
             onChange={handleTextChange}
-            value={mentor.last_name}
+            value={mentor.mentor_lname}
           />
           <div class="cut"></div>
           <label for="lastname" class="placeholder">
