@@ -15,7 +15,7 @@ import UserPortal from "./pages/UserPortal";
 import UsersPortal from "./pages/UsersPortal";
 import LogInUser from "./components/LogInUser";
 import CreateMentor from "./components/CreateMentor";
-import AllMentors from "./components/AllMentors";
+import MentorsPage from "./pages/MentorsPage";
 
 // rescources pages
 import HighschoolPage from "./pages/HighschoolPage";
@@ -49,7 +49,7 @@ function App() {
               path="/continuelearning"
               element={<ContinueLearningPage />}
             />
-            <Route path="/mentors" element={<AllMentors/>} />
+            <Route path="/mentors" element={<MentorsPage/>} />
             <Route path="/mentors/create" element={<CreateMentor />} />
           </Routes>
         </main>

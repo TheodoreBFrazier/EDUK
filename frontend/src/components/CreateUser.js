@@ -102,7 +102,7 @@ function CreateUser(){
           <input 
           id="password" 
           class="input" 
-          type="text" 
+          type="password" 
           placeholder=" " 
           onChange={handleTextChange}
           value={user.password}

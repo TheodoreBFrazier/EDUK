@@ -40,7 +40,7 @@ function CreateMentor() {
   return (
     <div>
       <form className="form" onSubmit={handleSubmit}>
-        <div class="title">Welcome to EDUK!</div>
+        <div class="title">Become a Mentor at EDUK!</div>
         <div class="subtitle">Let's create your account!</div>
 
         <div class="input-container ic1">
