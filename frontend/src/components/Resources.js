@@ -2,19 +2,16 @@ import React from "react";
 
 import axios from "axios";
 import { useState, useEffect } from "react";
+import SingleResource from "./SingleResource";
 
 
-//Importing the single resource
-
-import Resource from "./Resource";
 
 
 const API = process.env.REACT_APP_API_URL;
 
-function ResourceIndex() {
+function Resources() {
     const [resources, setResources] = useState([])
-
-
+    
     useEffect(() => {
         axios.get(API + "/resources")
             .then((response) => {
@@ -25,13 +22,11 @@ function ResourceIndex() {
             })
     }, [])
 
-    
-
     return (
 
         <div className="resource-arr">
             
-            {resources.filter(resource => resource.is_verified).map((resource) => {
+            {resources.filter(resource=>resource.is_verified).map((resource) => {
                 return <SingleResource key={resource.resource_id} resource={resource} />
             })}
 
@@ -41,4 +36,4 @@ function ResourceIndex() {
 
 }
 
-export default ResourceIndex;
+export default Resources;

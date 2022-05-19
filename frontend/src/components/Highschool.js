@@ -21,6 +21,16 @@ export default function Highschool() {
 			});
 	}, []);
 
+	let highschoolPrograms = highschool.filter((high) => {
+		return high.resource_category === "Program" && high.isverified === true;
+	});
+	let highschoolClasses = highschool.filter((high) => {
+		return high.resource_category === "Class" && high.isverified === true;
+	});
+	let highschoolScholarship = highschool.filter((high) => {
+		return high.resource_category === "Scholarship" && high.isverified === true;
+	});
+	console.log(highschoolPrograms);
 	return (
 		<div>
 			<h1 className="resourceCategory">HighSchool</h1>
@@ -35,7 +45,7 @@ export default function Highschool() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{highschool.map((highschool) => {
+					{highschoolPrograms.map((highschool) => {
 						return (
 							<SingleResource
 								key={highschool.resource_id}
@@ -56,7 +66,7 @@ export default function Highschool() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{highschool.map((highschool) => {
+					{highschoolClasses.map((highschool) => {
 						return (
 							<SingleResource
 								key={highschool.resource_id}
@@ -77,7 +87,7 @@ export default function Highschool() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{highschool.map((highschool) => {
+					{highschoolScholarship.map((highschool) => {
 						return (
 							<SingleResource
 								key={highschool.resource_id}

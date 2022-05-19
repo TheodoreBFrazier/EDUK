@@ -234,6 +234,7 @@ p {
 }
 
 .resource-arr {
+	padding-bottom: 100px;
 	display: grid;
 	justify-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
