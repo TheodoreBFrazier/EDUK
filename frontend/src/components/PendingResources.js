@@ -56,13 +56,6 @@ function PendingResources (){
                 <thead>
                     
                     <tr>
-                    {/* resource_name VARCHAR(100),
-    description TEXT,
-    resource_category VARCHAR(100),
-    start_datetime TEXT,
-    end_datetime TEXT,
-    url TEXT NOT NULL,
-    is_verified  */}
                         <th>Resource Name</th>
                         <th>Description</th>
                         <th>Category</th>
