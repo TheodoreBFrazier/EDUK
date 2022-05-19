@@ -12,7 +12,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
-import About from "./pages/About";
 import MentorsPage from "./pages/Mentors";
 import ShowResource from "./pages/ShowResource";
 import UsersPortal from "./pages/UsersPortal";
@@ -58,7 +57,7 @@ function App() {
             />
             <Route path="/mentors" element={<AllMentors/>} />
             <Route path="/mentors/create" element={<CreateMentor />} />
-			<Route path="/pendings" element={<Pendings />} />
+			      <Route path="/pendings" element={<Pendings />} />
           </Routes>
         </main>
         {/* <Footer /> */}
