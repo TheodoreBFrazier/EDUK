@@ -25,8 +25,8 @@ import ContinueLearningPage from "./pages/ContinueLearningPage";
 //Shows a single resource
 import ShowResource from "./pages/ShowResource";
 import CreateUser from "./components/CreateUser";
-import CreateMentor from "./components/CreateMentor";
-import MentorToVerify from "./pages/MentorToVerify";
+
+import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
             />
             <Route path="/mentors" element={<AllMentors/>} />
             <Route path="/mentors/create" element={<CreateMentor />} />
-			<Route path="/mentors/pending" element={<MentorToVerify />} />
+			<Route path="/pendings" element={<Pendings />} />
           </Routes>
         </main>
         {/* <Footer /> */}

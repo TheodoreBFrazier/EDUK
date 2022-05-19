@@ -22,11 +22,13 @@ function Resources() {
             })
     }, [])
 
+    
+
     return (
 
         <div className="resource-arr">
             
-            {resources.map((resource) => {
+            {resources.filter(resource => resource.is_verified).map((resource) => {
                 return <SingleResource key={resource.resource_id} resource={resource} />
             })}
 

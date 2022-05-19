@@ -54,9 +54,9 @@ function UserDetails() {
             <div>User Email: {user.email}</div>
             <div>Age: {user.age}</div>
             <div>Mentor: {user.mentor_id}</div>
-            <sectin>User Resources:
+            <section>User Resources:
               {userResources.map(resource=>(<SingleResource key={resource.resource_id} resource={resource}/>))}
-            </sectin>
+            </section>
           </div>
         ) : (
           ""

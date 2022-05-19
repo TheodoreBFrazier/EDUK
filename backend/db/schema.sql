@@ -10,7 +10,7 @@ CREATE TABLE mentors(
     bio TEXT,
     email TEXT,
     speciality TEXT,
-    isVerified BOOLEAN DEFAULT FALSE
+    is_verified BOOLEAN DEFAULT FALSE
 );
 
 --users table
@@ -34,7 +34,7 @@ CREATE TABLE resources(
     start_datetime TEXT,
     end_datetime TEXT,
     url TEXT NOT NULL,
-    isVerified BOOLEAN DEFAULT FALSE
+    is_verified BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE users_resources(
