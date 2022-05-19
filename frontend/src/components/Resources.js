@@ -26,7 +26,7 @@ function Resources() {
 
         <div className="resource-arr">
             
-            {resources.filter(resource=>resource.is_verified).map((resource) => {
+            {resources.map((resource) => {
                 return <SingleResource key={resource.resource_id} resource={resource} />
             })}
 
