@@ -9,7 +9,8 @@ CREATE TABLE mentors(
     mentor_lname VARCHAR(50),
     bio TEXT,
     email TEXT,
-    speciality TEXT
+    speciality TEXT,
+    is_verified BOOLEAN DEFAULT FALSE
 );
 
 --users table
@@ -19,6 +20,8 @@ CREATE TABLE users(
     last_name VARCHAR(50) NOT NULL,
     age INT NOT NULL,
     email TEXT,
+    user_name VARCHAR(50) UNIQUE NOT NULL,
+    password TEXT,
     mentor_id INTEGER REFERENCES mentors(mentor_id)
 );
 
@@ -31,7 +34,7 @@ CREATE TABLE resources(
     start_datetime TEXT,
     end_datetime TEXT,
     url TEXT NOT NULL,
-    isVerified BOOLEAN DEFAULT FALSE
+    is_verified BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE users_resources(

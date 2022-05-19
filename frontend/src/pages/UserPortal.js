@@ -1,12 +1,8 @@
-import AllUsers from "../components/AllUsers"
+import React from "react";
+import UserDetails from "../components/UserDetails";
 
 function UserPortal() {
-    return (
-        <div>
-            Welcome User!!!
-            <AllUsers/>
-        </div>
-    )
+  return <UserDetails />;
 }
 
-export default UserPortal
+export default UserPortal;

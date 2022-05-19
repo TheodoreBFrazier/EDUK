@@ -1,21 +1,22 @@
 \c data_dev;
 
 
-INSERT INTO mentors(mentor_fname, mentor_lname, bio, email, speciality) VALUES 
-('Greg', 'Testo', 'Experienced software entrepreneur extremely passionate about technology. You will find me working on projects using Java, TypeScript, JavaScript, Spring Boot, Angular and React. More recently I’ve been diving into the world of smart contracts, NFTs, blockchain, finTech and cryptocurrencies. ', 'greggggggrrr4556@gmail.com', 'Soft Engineer'),
-('Nataja', 'Flood', 'I am the Career Service Program Manager at Pursuit, where I help adult learners prepare for their transition into the tech industry through individualized coaching, brand development workshops, and interview preparation sessions grounded in data and research.', 'Natajafffff@gmail.com', 'Career Training'),
-('Lakisha', 'Gonsalves', 'My greatest strength is my ability to believe. To believe that potential is everywhere, that growth is never complete, and that everyone deserves equitable access to education.', 'LaKESHAAAAAA@gmail.com', 'Soft Skills'),
-('Lillian', 'Schenck', 'I am a seasoned educational leader with significant success and experience as an instructional coach and public school administrator. My expertise lies in leading schools in achieving a rigorous academic and cultural vision through targeted teacher coaching and development, the organization and facilitation of job-embedded professional development, participation as a curriculum liason and thought partner, organizing and ensuring the dissemination of observational feedback and support, and creating a positive and proactive school culture informed by a growth mindset. ', 'Liiiiilian@gmail.com', 'Nursing');
+INSERT INTO mentors(mentor_fname, mentor_lname, bio, email, speciality, is_verified) VALUES 
+('Greg', 'Testo', 'Experienced software entrepreneur extremely passionate about technology. You will find me working on projects using Java, TypeScript, JavaScript, Spring Boot, Angular and React. More recently I’ve been diving into the world of smart contracts, NFTs, blockchain, finTech and cryptocurrencies. ', 'greggggggrrr4556@gmail.com', 'Soft Engineer', true),
+('Nataja', 'Flood', 'I am the Career Service Program Manager at Pursuit, where I help adult learners prepare for their transition into the tech industry through individualized coaching, brand development workshops, and interview preparation sessions grounded in data and research.', 'Natajafffff@gmail.com', 'Career Training', true),
+('Lakisha', 'Gonsalves', 'My greatest strength is my ability to believe. To believe that potential is everywhere, that growth is never complete, and that everyone deserves equitable access to education.', 'LaKESHAAAAAA@gmail.com', 'Soft Skills', true),
+('Lillian', 'Schenck', 'I am a seasoned educational leader with significant success and experience as an instructional coach and public school administrator. My expertise lies in leading schools in achieving a rigorous academic and cultural vision through targeted teacher coaching and development, the organization and facilitation of job-embedded professional development, participation as a curriculum liason and thought partner, organizing and ensuring the dissemination of observational feedback and support, and creating a positive and proactive school culture informed by a growth mindset. ', 'Liiiiilian@gmail.com', 'Nursing', true),
+('Jess', 'Lam', 'I am a seasoned educational leader with significant success and experience as an instructional coach and public school administrator. My expertise lies in leading schools in achieving a rigorous academic and cultural vision through targeted teacher coaching and development, the organization and facilitation of job-embedded professional development, participation as a curriculum liason and thought partner, organizing and ensuring the dissemination of observational feedback and support, and creating a positive and proactive school culture informed by a growth mindset. ', 'Jesss@gmail.com', 'Math', false);
 
-INSERT INTO users (mentor_id, first_name, last_name, age, email) VALUES
-(1, 'Nima', 'Sherpa', 20, 'nimaSherpa123@gmail.com'),
-(2, 'David', 'Vidals', 25, 'DavidVVVV333@gmail.com'),
-(1, 'Lili', 'Huang', 60, 'lilyhuang1111@gmail.com'),
-(3, 'Mukayila', 'Alao', 35, 'MKalao888@gmail.com'),
-(2, 'Theodore', 'Frazier', 40, 'theodoreFF1@gmail.com'),
-(4, 'Samantha', 'Shapland', 18, 'SamShapland789@gmail.com');
+INSERT INTO users (mentor_id, first_name, last_name, age, email, user_name, password) VALUES
+(1, 'Nima', 'Sherpa', 20, 'nimaSherpa123@gmail.com', 'ninan', '12345'),
+(2, 'David', 'Vidals', 25, 'DavidVVVV333@gmail.com', 'ddddvidiall', '12345'),
+(1, 'Lili', 'Huang', 60, 'lilyhuang1111@gmail.com', 'lililihuang', '12345'),
+(3, 'Mukayila', 'Alao', 35, 'MKalao888@gmail.com', 'mula', '12345'),
+(2, 'Theodore', 'Frazier', 40, 'theodoreFF1@gmail.com', 'thfrazi', '12345'),
+(4, 'Samantha', 'Shapland', 18, 'SamShapland789@gmail.com', 'samanthasssss', '12345');
 
-INSERT INTO resources(resource_name, description, resource_category, start_datetime, end_datetime, url, isVerified) VALUES
+INSERT INTO resources(resource_name, description, resource_category, start_datetime, end_datetime, url, is_verified) VALUES
 ('Project Basta', 'To create a bridge of opportunity  between employers and first-generation college goers of color to increase knowledge workforce diversity at all levels.', 'Program', 'N/A', 'N/A', 'https://projectbasta.com/', true),
 ('Bottom Line', 'Bottom Line has addressed the low college graduation rates of first-generation students from low-income backgrounds. Our organization was founded on the belief that students need a mentor and a guide during the college application process and throughout college to succeed. By providing consistent one-on-one support, Bottom Line has helped thousands of first-generation students from low-income backgrounds stay in college and complete their degrees. ', 'Program', 'N/A', 'N/A', 'https://www.bottomline.org/', true),
 ('Pursuit', 'We train adults with the most need and potential to get their first tech jobs, advance in their careers, and become the next generation of leaders in tech.', 'Program', 'Feb 24 2022 05:00 PM (EST)', 'Jun 20 2022 11:59 PM (EDT)', 'https://www.pursuit.org/ ', true),

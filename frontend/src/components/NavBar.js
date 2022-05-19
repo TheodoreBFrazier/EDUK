@@ -1,19 +1,20 @@
-//importing Link function
-
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
+// import DropDown from "./Dropdown";
+import logo from "../images/logo.png";
+// hamburger
+import Burger from "./Burger.js";
 
 export default function NavBar() {
-    return (
-        <nav className="navigation">
-            <Link to="/">
-                <h3> NYC Rose 🌹</h3>
-            </Link>
-            <Link to="/resources">
-                <h3> Resources 🌹</h3>
-            </Link>
-            <button>
-              <Link to = "/users"> User Portal</Link>
-            </button>
-        </nav>
-    )
+	return (
+		<nav>
+			<div>
+				<Link to="/">
+					<img className="logoimg" src={logo} alt="logo" />
+				</Link>
+			</div>
+			<Burger />
+		</nav>
+	);
 }
