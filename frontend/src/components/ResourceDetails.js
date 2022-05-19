@@ -3,7 +3,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom"
 import axios from "axios";
-import Resource from "./Resource";
 
 
 
@@ -30,7 +29,6 @@ function ResourceDetails() {
 
         <div className="resource-heading">
             <h1> {resource.resource_name} </h1>
-            <h4>{resource.start_datetime} - {resource.end_datetime}</h4>
         </div>
         <br />
         <br />
