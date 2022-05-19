@@ -13,6 +13,10 @@ CREATE TABLE mentors(
 );
 
 --users table
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1946ebd9bfaab866f014a119836250595f1b9b4e
 CREATE TABLE users(
     uid SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -23,6 +27,10 @@ CREATE TABLE users(
 );
 
 --resources
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1946ebd9bfaab866f014a119836250595f1b9b4e
 CREATE TABLE resources(
     resource_id SERIAL PRIMARY KEY,
     resource_name VARCHAR(100),
@@ -37,4 +45,11 @@ CREATE TABLE resources(
 CREATE TABLE users_resources(
     uid INTEGER REFERENCES users(uid) ON DELETE CASCADE,
     resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE
+<<<<<<< HEAD
 );
+
+
+
+=======
+);
+>>>>>>> 1946ebd9bfaab866f014a119836250595f1b9b4e

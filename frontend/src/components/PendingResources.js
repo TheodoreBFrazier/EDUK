@@ -56,11 +56,12 @@ function PendingResources (){
                 <thead>
                     
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Bio</th>
-                        <th>Email</th>
-                        <th>Speciality</th>
+                        <th>Resource Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Start_datetime</th>
+                        <th>End_datetime</th>
+                        <th>Url</th>
                         <th>Is Verfified</th>
                         <th></th>
                     </tr>
