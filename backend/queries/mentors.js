@@ -34,8 +34,8 @@ const createMentor = async(mentor)=> {
 // Update a mentor
 const updateMentor = async(mid, mentor)=> {
     try {
-        const updatedMentor = await db.one("UPDATE mentors SET mentor_fname=$1, mentor_lname=$2, bio=$3, email=$4, speciality=$5 WHERE mentor_id=$6 RETURNING *",
-        [mentor.mentor_fname, mentor.mentor_lname, mentor.bio, mentor.email, mentor.speciality,mid]);
+        const updatedMentor = await db.one("UPDATE mentors SET mentor_fname=$1, mentor_lname=$2, bio=$3, email=$4, speciality=$5, is_verified=$6 WHERE mentor_id=$7 RETURNING *",
+        [mentor.mentor_fname, mentor.mentor_lname, mentor.bio, mentor.email, mentor.speciality,mentor.is_verified, mid]);
         return updatedMentor;
     } catch (error) {
         return error;

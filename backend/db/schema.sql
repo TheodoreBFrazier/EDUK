@@ -1,4 +1,4 @@
-firastDROP DATABASE IF EXISTS data_dev;
+DROP DATABASE IF EXISTS data_dev;
 CREATE DATABASE data_dev;
 
 \c data_dev;
@@ -9,7 +9,8 @@ CREATE TABLE mentors(
     mentor_lname VARCHAR(50),
     bio TEXT,
     email TEXT,
-    speciality TEXT
+    speciality TEXT,
+    is_verified BOOLEAN DEFAULT FALSE
 );
 
 --users table
@@ -33,7 +34,7 @@ CREATE TABLE resources(
     start_datetime TEXT,
     end_datetime TEXT,
     url TEXT NOT NULL,
-    isVerified BOOLEAN DEFAULT FALSE
+    is_verified BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE users_resources(
