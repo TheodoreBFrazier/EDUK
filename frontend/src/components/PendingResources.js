@@ -56,11 +56,19 @@ function PendingResources (){
                 <thead>
                     
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Bio</th>
-                        <th>Email</th>
-                        <th>Speciality</th>
+                    {/* resource_name VARCHAR(100),
+    description TEXT,
+    resource_category VARCHAR(100),
+    start_datetime TEXT,
+    end_datetime TEXT,
+    url TEXT NOT NULL,
+    is_verified  */}
+                        <th>Resource Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Start_datetime</th>
+                        <th>End_datetime</th>
+                        <th>Url</th>
                         <th>Is Verfified</th>
                         <th></th>
                     </tr>
