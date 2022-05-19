@@ -20,6 +20,17 @@ export default function ContinueLearning() {
 				console.log(error);
 			});
 	}, []);
+
+	let ContinueLearningPrograms = ContinueLearning.filter((high) => {
+		return high.resource_category === "Program" && high.isverified === true;
+	});
+	let ContinueLearningClasses = ContinueLearning.filter((high) => {
+		return high.resource_category === "Class" && high.isverified === true;
+	});
+	let ContinueLearningScholarhip = ContinueLearning.filter((high) => {
+		return high.resource_category === "Scholarship" && high.isverified === true;
+	});
+
 	return (
 		<div>
 			<h1 className="resourceCategory">Continue Learning</h1>
@@ -33,7 +44,7 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{ContinueLearning.map((ContinueLearning) => {
+					{ContinueLearningPrograms.map((ContinueLearning) => {
 						return (
 							<SingleResource
 								key={ContinueLearning.resource_id}
@@ -53,7 +64,7 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{ContinueLearning.map((ContinueLearning) => {
+					{ContinueLearningClasses.map((ContinueLearning) => {
 						return (
 							<SingleResource
 								key={ContinueLearning.resource_id}
@@ -73,7 +84,7 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{ContinueLearning.map((ContinueLearning) => {
+					{ContinueLearningScholarhip.map((ContinueLearning) => {
 						return (
 							<SingleResource
 								key={ContinueLearning.resource_id}

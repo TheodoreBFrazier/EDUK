@@ -1,49 +1,52 @@
 .logoimg {
 	height: 120px;
+	margin: 0;
 }
 
 nav {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
+	height: 125px;
+	align-items: center;
+	background-color: #fffffc;
 }
 .navLinks {
 	display: flex;
-	justify-content: space-between;
+	flex-flow: row nowrap;
 	text-align: center;
+	padding-top: 40px;
 }
+
 .navLinks a {
 	font-size: 20px;
 	margin: 30px;
 	color: black;
-}
-.navLinks li {
 	text-decoration: none;
 }
+
 .navLinks .eachLi {
 	list-style: none;
 	margin: 0 10px;
 	transition: 0.1s ease-in-out;
 	font-size: 18px;
 	cursor: pointer;
-	opacity: 0.8;
 }
 .navLinks .mainLi {
 	padding-top: 30px;
 }
 .navLinks .iconLi {
-	padding-top: 10px;
-}
-
-.navigation button a {
-	color: white;
 	text-decoration: none;
-}
 
-a {
+	padding-top: 10px;
+	height: 2em;
+	text-align: center;
+}
+.navLinks li a {
 	text-decoration: none;
 }
 
 .loginIcon {
-	padding-top: 14px;
-	align-items: center;
+	height: 2em;
+	padding-top: 50px;
 }

@@ -22,6 +22,7 @@ function SingleResource({ resource }) {
 				<p> {resource.description} </p>
 			</Card>
 		</div>
+
 	);
 }
 

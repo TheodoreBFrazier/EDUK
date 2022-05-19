@@ -1,84 +1,178 @@
 /* ------------------------------    FOOTER  -------------------------------------- */
-.footer-container {
-   bottom:0;
-   width:100%;
-   height: 60px;
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	/* position: fixed; */
-	/* bottom: 0; */
-	/* width: 100%; */
-	/* height: 2.5rem; */
-}
+/* .footer-container {
+    bottom:0;
+    width:100%;
+    height: 60px;
+     display: grid;
+     grid-template-rows: repeat(2, 1fr);
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     height: 2.5rem;
+ }
+ 
+ .footer-logo {
+     width: 70px;
+     border-radius: 50px;
+ }
+ 
+ .footer-container-one {
+     padding-top: 15px;
+     height: 20vh;
+     display: flex;
+     justify-content: space-around;
+     background-color: rgb(137, 209, 229);
+     bottom: 0;
+     width: 100%;
+     position: fixed;
+ }
+ 
+ .footer-container-two {
+     display: flex; 
+     justify-content: space-around; 
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     border-radius: 10px;
+     padding: 15px;
+     font-size: 15px;
+     background-color: rgb(229, 232, 217);
+     bottom: 0;
+     width: 100%;
+     height: 30px;
+     
+ }
+ 
+ .box-list {
+     list-style: none;
+ }
+ 
+ li {
+     margin-top: 10px;
+     margin-right: 40px;
+ }
+ 
+ .footer-logo {
+     margin-top: 20px;
+ }
+ 
+ .footer-right {
+     margin-top: 10px;
+ }
+ 
+ .fa {
+     padding: 6px;
+     font-size: 20px;
+     width: 20px;
+     margin-left: 50px;
+     border-radius: 50%;
+ }
+ 
+ .fa-facebook {
+     background: #3b5998;
+     color: white;
+ }
+ 
+ .fa-twitter {
+     background: #55acee;
+     color: white;
+ }
+ 
+ .fa-linkedin {
+     background: #007bb5;
+     color: white;
+ } */
 
-.footer-logo {
-	width: 70px;
-	border-radius: 50px;
-}
-
-.footer-container-one {
-	padding-top: 15px;
-	height: 20vh;
-	display: flex;
-	justify-content: space-around;
-	background-color: rgb(137, 209, 229);
-	bottom: 0;
-	width: 100%;
-	/* position: fixed; */
-}
-
-.footer-container-two {
-	/* display: flex; 
-    justify-content: space-around;  */
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	border-radius: 10px;
-	padding: 15px;
-	font-size: 15px;
-	background-color: rgb(229, 232, 217);
-	/* position:absolute; */
-	bottom: 0;
-	width: 100%;
-	height: 30px;
-	/* position: fixed; */
-}
-
-.box-list {
-	list-style: none;
-}
-
-li {
-	margin-top: 10px;
-	margin-right: 40px;
-}
-
-.footer-logo {
-	margin-top: 20px;
-}
-
-.footer-right {
-	margin-top: 10px;
-}
-
-.fa {
-	padding: 6px;
-	font-size: 20px;
-	width: 20px;
-	margin-left: 50px;
-	border-radius: 50%;
-}
-
-.fa-facebook {
-	background: #3b5998;
-	color: white;
-}
-
-.fa-twitter {
-	background: #55acee;
-	color: white;
-}
-
-.fa-linkedin {
-	background: #007bb5;
-	color: white;
-}
+/* //// */
+ .footer-dark {
+    margin-top: -50px;
+    width:100%;
+    font-weight: bold;
+    padding:50px 0;
+    background-color: rgb(177, 228, 242);
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:15px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.7;
+    text-decoration: underline;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+      padding-left: 42%;
+    text-align: center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    margin:0 8px;
+    opacity:0.75;
+    background: #465c8c;
+    color: white;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }

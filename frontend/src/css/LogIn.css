@@ -14,25 +14,25 @@ form{
     padding: 50px 35px;
     z-index: -1; 
 }
-form *{
-    font-family: 'Poppins',sans-serif;
-    color: #f7f2f2;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
+form * {
+	font-family: "Poppins", sans-serif;
+	color: #f7f2f2;
+	letter-spacing: 0.5px;
+	outline: none;
+	border: none;
 }
-form h3{
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 42px;
-    text-align: center;
+form h3 {
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 42px;
+	text-align: center;
 }
 
 .login {
-    display: block;
-    margin-top: 30px;
-    font-size: 24px;
-    font-weight: 500;
+	display: block;
+	margin-top: 30px;
+	font-size: 24px;
+	font-weight: 500;
 }
 
 input{
@@ -63,8 +63,5 @@ button{
 }
 
 #password{
-    color: black;
-}
-#username{
     color: black;
 }

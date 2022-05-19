@@ -106,7 +106,7 @@ const deleteResource = async (uid, resource_id) => {
 const updateResource = async (resource_id, resource) => {
   try {
     const updatedResource = await db.one(
-      "UPDATE resources SET resource_name=$1, description=$2, resource_category=$3, start_datetime=$4, end_datetime=$5, url=$6 WHERE resource_id=$7 RETURNING *",
+      "UPDATE resources SET resource_name=$1, description=$2, resource_category=$3, start_datetime=$4, end_datetime=$5, url=$6, is_verified=$7 WHERE resource_id=$8 RETURNING *",
       [
         resource.resource_name,
         resource.description,
@@ -114,6 +114,7 @@ const updateResource = async (resource_id, resource) => {
         resource.start_datetime,
         resource.end_datetime,
         resource.url,
+        resource.is_verified,
         resource_id,
       ]
     );
