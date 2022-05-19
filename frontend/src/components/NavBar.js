@@ -1,32 +1,20 @@
-import React from "react"
-
-//importing Link function
-
-import { Link } from "react-router-dom"
-
-
-// importing button from material UI
-
-import { Button } from "@mui/material"
-
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
+// import DropDown from "./Dropdown";
+import logo from "../images/logo.png";
+// hamburger
+import Burger from "./Burger.js";
 
 export default function NavBar() {
-    return (
-        <nav className="navigation">
-            <Link to="/">
-                <h3> Home </h3>
-            </Link>
-            <Link to="/resources">
-                <h3> Resources </h3>
-            </Link>
-            <Link to="/about">
-                <h3> About </h3>
-            </Link>
-
-
-            <Button variant='contained'>
-                <Link to="/users"> User Portal</Link>
-            </Button>
-        </nav>
-    )
+	return (
+		<nav>
+			<div>
+				<Link to="/">
+					<img className="logoimg" src={logo} alt="logo" />
+				</Link>
+			</div>
+			<Burger />
+		</nav>
+	);
 }
