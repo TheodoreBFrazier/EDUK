@@ -1,5 +1,6 @@
 .logoimg {
 	height: 120px;
+	margin: 0;
 }
 
 nav {
@@ -14,6 +15,7 @@ nav {
 	display: flex;
 	flex-flow: row nowrap;
 	text-align: center;
+	padding-top: 40px;
 }
 
 .navLinks a {
@@ -34,10 +36,17 @@ nav {
 	padding-top: 30px;
 }
 .navLinks .iconLi {
+	text-decoration: none;
+
 	padding-top: 10px;
+	height: 2em;
+	text-align: center;
+}
+.navLinks li a {
+	text-decoration: none;
 }
 
 .loginIcon {
-	padding-top: 14px;
-	align-items: center;
+	height: 2em;
+	padding-top: 50px;
 }
