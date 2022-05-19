@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const API = process.env.REACT_APP_API_URL;
@@ -11,11 +12,12 @@ function CreateResource() {
     start_datetime: "",
     end_datetime: "",
     url: "",
-    isverified: false,
+    is_verified: false,
   });
 
+  const navigate = useNavigate();
   const handleTextChange = (e) => {
-    setResource({ ...resource, [e.target.id]: e.target.name });
+    setResource({ ...resource, [e.target.id]: e.target.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +25,7 @@ function CreateResource() {
 
     axios
       .post(`${API}/resources`, resource)
-      .then((res) => console.log(res.data.result))
+      .then((res) => navigate("/resources"))
       .catch((e) => console.log(e));
   };
   return (
@@ -46,7 +48,7 @@ function CreateResource() {
           onChange={handleTextChange}
         />
         <br />
-        <label htmlFor="category">Resource Category</label>
+        <label htmlFor="resource_category">Resource Category</label>
         <br />
         <input
           id="resource_category"

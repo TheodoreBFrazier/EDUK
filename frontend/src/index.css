@@ -16,77 +16,33 @@ code {
 
 /* Importing Font */
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap");
 
 h1 {
-  font-size: 72pt;
-  font-family: 'Abril Fatface', cursive;
+	font-size: 72pt;
+	font-family: "Abril Fatface", cursive;
 }
 
 h2 {
-  font-size: 32pt;
-  font-family: 'Abril Fatface', cursive;
+	font-size: 32pt;
+	font-family: "Abril Fatface", cursive;
 }
 
 h3 {
-  font-size: 24pt;
-  font-family: 'Abril Fatface', cursive;
+	font-size: 24pt;
+	font-family: "Abril Fatface", cursive;
 }
 
 h4 {
-  font-family: 18pt;
-  font-family: 'Abril Fatface', cursive;
+	font-family: 18pt;
+	font-family: "Abril Fatface", cursive;
 }
 
 p {
-  font-size: 16pt;
-  font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	font-family: "Roboto", sans-serif;
 }
 
-/* NAVIGATION CSS */
-
-nav {
-  margin-left: 125px;
-  height: 125px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-bottom: 0;
-  background-color: #fffffc;
-}
-
-nav h3 {
-  margin-right: 100px;
-  color: #574D68;
-}
-
-/* Relating to the logo */
-
-.logo-text h2 {
-  font-family: 'Roboto', sans-serif;
-  color: #0086d1;
-}
-
-/* Use the class name to edit this button */
-.navigation Button {
-  color: white;
-  background-color: #f3a712;
-  height: 50px;
-  width: 150px;
-  margin-left: 500px;
-}
-
-.navigation Button a {
-  color: white;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-}
 /* Regular */
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap");
@@ -118,7 +74,6 @@ h4 {
 p {
 	/* font-size: 16pt; */
 	font-family: "Open Sans", sans-serif;
-
 }
 
 /* ------------------------------    HOME  -------------------------------------- */
@@ -126,48 +81,24 @@ p {
 /* HERO PAGE */
 
 .Hero-text {
-
-  width: 1000px;
-  margin-left: 125px;
-  text-align: left;
-  position: relative;
-  z-index: 9999;
-
-}
-
-.Hero .Hero-text h1 {
-  /* Used padding to prevent white space from showing" */
-  font-size: 65pt;
- letter-spacing: 10px;
-  padding-top: 250px;
-  position: relative; 
-  z-index: 9999;
-}
-
-.Hero .Hero-text h1 {
-  background: -webkit-linear-gradient(#0086d1, #ffc857);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-	width: 700px;
+	width: 1000px;
 	margin-left: 125px;
 	text-align: left;
 	position: relative;
-	z-index: 2;
-}
-
-.Hero .Hero-text h1 {
-	/* Used padding to prevent white space from showing" */
-	font-weight: 700;
-	padding-top: 250px;
-	position: relative;
-	z-index: 3;
+	z-index: 9;
 }
 
 .Hero .Hero-text h1 {
 	background: -webkit-linear-gradient(#574d68, #f3a712);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
+	width: 700px;
+	margin-left: 125px;
+	text-align: left;
+	padding-top: 250px;
+	font-weight: 700;
+	position: relative;
+	z-index: 2;
 }
 
 .Hero .Hero-text h3 {
@@ -176,10 +107,9 @@ p {
 }
 
 .Hero {
-
-  margin: 0;
-  background-color: #1d3461;
-  height: 100vh;
+	margin: 0;
+	background-color: #1d3461;
+	height: 100vh;
 	margin: 0;
 	background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
 	height: 100vh;
@@ -234,29 +164,26 @@ p {
 }
 
 .resource-arr {
+	padding-bottom: 100px;
 	display: grid;
 	justify-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
 	row-gap: 60px;
 }
 
-
 .resource-arr a {
 	text-decoration: none;
 }
 
 .resource-arr p {
-
-  font-size: 12pt;
+	font-size: 12pt;
 }
-
 
 /* Single resource */
 
 .resource-heading {
 	text-align: left;
 	margin-left: 200px;
-	
 }
 
 .resource-text {
@@ -264,7 +191,7 @@ p {
 	margin-left: 275px;
 	height: 500px;
 	width: 1100px;
-	background-color: #F4F4F4;
+	background-color: #f4f4f4;
 }
 
 .resource-text p {
@@ -273,7 +200,6 @@ p {
 	padding-right: 250px;
 	text-align: left;
 	margin-left: 50 px;
-
 }
 
 .visit-site-button {
@@ -281,18 +207,15 @@ p {
 	width: 250px;
 }
 
-
-	/* background-color: #F4F4F4; */
-
-
+/* background-color: #F4F4F4; */
 
 .mentors-array {
-  display: grid;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-  grid-template-columns: 300px 300px 300px;
-  column-gap: 20px;
-  row-gap: 40px;
+	display: grid;
+	justify-content: space-evenly;
+	justify-items: center;
+	align-content: space-evenly;
+	align-items: center;
+	grid-template-columns: 300px 300px 300px;
+	column-gap: 20px;
+	row-gap: 40px;
 }

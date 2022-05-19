@@ -2,9 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 //STYLING
 
-import "./App.css";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 // IMPORTING PAGES
 
@@ -12,12 +11,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
-import MentorsPage from "./pages/Mentors";
+// import MentorsPage from "./pages/Mentors";
 import ShowResource from "./pages/ShowResource";
 import UsersPortal from "./pages/UsersPortal";
 import LogInUser from "./components/LogInUser";
 import CreateMentor from "./components/CreateMentor";
 import AllMentors from "./components/AllMentors";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // rescources pages
 import HighschoolPage from "./pages/HighschoolPage";
@@ -27,6 +27,8 @@ import ContinueLearningPage from "./pages/ContinueLearningPage";
 //Shows a single resource
 //import ShowResource from "./pages/ShowResource";
 import CreateUser from "./components/CreateUser";
+
+import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 
 function App() {
@@ -53,6 +55,7 @@ function App() {
 						/>
 						<Route path="/mentors" element={<AllMentors />} />
 						<Route path="/mentors/create" element={<CreateMentor />} />
+						<Route path="/pendings" element={<Pendings />} />
 					</Routes>
 				</main>
 				{/* <Footer /> */}
