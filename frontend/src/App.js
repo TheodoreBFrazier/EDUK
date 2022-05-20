@@ -36,23 +36,27 @@ import CreateUser from "./components/CreateUser";
 import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 
-import Footer from "./components/Footer";
+//import Footer from "./components/Footer";
 
 function App() {
-  const [logText, setLogText] = useState("Log In");
+  const [logText, setLogText] = useState(
+    localStorage.getItem("userId") ? "Log Out" : "Log In"
+  );
   return (
     <div className="App">
       <Router>
-        <NavBar />
+        <NavBar logText={logText} setLogText={setLogText} />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resources" element={<ResourcesPage />} />
-            <Route path="/resources/:id" element={<ShowResource />} />
+            <Route path="/resources/:resource_id" element={<ShowResource />} />
             <Route path="/resources/create" element={<NewResource />} />
             <Route path="/users" element={<UsersPortal />} />
-            <Route path="/users/login" element={<LogInUser />} />
-            <Route path="/users/logout" element={<Navigate to="/" replace />} />
+            <Route
+              path="/users/login"
+              element={<LogInUser setLogText={setLogText} />}
+            />
             <Route path="/users/:uid/" element={<UserPortal />} />
             <Route path="/about" element={<About />} />
             <Route path="/users/create" element={<CreateUser />} />

@@ -1,60 +1,79 @@
 import React from "react";
-
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Resource from "./Resource";
-
-
+import Button from "@mui/material/Button";
+import "./ResourceCategory.css";
 
 const API = process.env.REACT_APP_API_URL;
 
 function ResourceDetails() {
-    const [resource, setResource] = useState({});
-    let { resource_id } = useParams();
+	const [resource, setResource] = useState([]);
+	let { resource_id } = useParams();
 
+	const navigate = useNavigate();
 
-    useEffect(() => {
-        axios.get(API + "/resources/" + resource_id)
-            .then((response) => {
-                console.log(response)
-                setResource(response.data.result)
-                console.log(setResource)
-            }).catch((error) => {
-                console.log(error);
-            })
-    }, [resource_id]);
+	let userId = localStorage.getItem("userId");
+	console.log(userId);
 
+	useEffect(() => {
+		axios
+			.get(API + "/resources/" + resource_id)
+			.then((response) => {
+				setResource(response.data.result);
+				console.log(setResource);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, [resource_id]);
 
-    return <article>
+	// adding the resource to the particular user
+	const addResource = () => {
+		axios
+			.post(`${API}/users/${userId}/resources`, {
+				uid: userId,
+				resource_id: resource_id,
+			})
+			.then(() => navigate(`/resources/${resource_id}`))
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 
-        <div className="resource-heading">
-            <h1> {resource.resource_name} </h1>
-            <h4>{resource.start_datetime} - {resource.end_datetime}</h4>
-        </div>
-        <br />
-        <br />
-        <div className="resource-text">
-            <p> {resource.description} </p>
-            <div class="visit-site-button">
-                <Link to={`/resources/${resource.resource_url}`}>
-                    <button className>
-                        Visit {resource.resource_name}
-                    </button>
-                </Link>
-            </div>
-        </div>
-        <div className="resource-photo">
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    </article >
-
+	return (
+		<div>
+			<div className="resource-heading">
+				<h1> {resource.resource_name} </h1>
+				<h5>
+					{resource.start_datetime} - {resource.end_datetime}
+				</h5>
+			</div>
+			<br />
+			<br />
+			<div className="resource-text">
+				<p> {resource.description} </p>
+				<div className="resourceMainBtn">
+					<div className="visit-site-button">
+						<a target="blank" href={resource.url}>
+							<Button variant="contained" size="small">
+								Visit {resource.resource_name}
+							</Button>
+						</a>
+					</div>
+					<div>
+						<Button
+							onClick={() => addResource()}
+							variant="contained"
+							size="small"
+						>
+							Add resource
+						</Button>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
-
-
-export default ResourceDetails
+export default ResourceDetails;
