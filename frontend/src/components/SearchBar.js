@@ -31,31 +31,52 @@ const SearchBar = () => {
 			.catch((error) => {
 				console.log(error);
 			});
-	}, []);
+	}, [resources]);
 
-	const [searchInput, setSeachInput] = useState("");
+	const [searchInput, setSearchInput] = useState("");
 
-	const handleChange = (event) => {
-		event.preventDefault();
-		setSeachInput(event.target.value);
-	};
-
-	if (searchInput.length > 0) {
-		resources.filter((resource) => {
-			return resource.resource_category.match(searchInput);
-		});
+	function resourceSearchArray(property) {
+		let filteredData = resources.filter((resource) => {
+			if (property.input === "") {
+				return resource
+			}
+			else {
+				return resource.text.toLowerCaser().includes(property.input)
+			}
+		})
 	}
+	//const handleChange = (event) => {
+	//event.preventDefault();
+	//let input
+	//setSearchInput(event.target.value.tolowercase());
+	//};
+
+	//if (searchInput.length > 0) {
+	//resources.filter((resource) => {
+	//return resource.resource_category.match(searchInput);
+	//});
+	//}
 
 	return (
 		<div className="resources-searchbar">
+
+<ul>
+	{resourceSearchArray.map((result) => 
+	(<li key = {result.resource_name}> </li>)
+	)}
+</ul>
+
+
+
+
 			<TextField
 				style={textFieldStyle}
 				id="filled_basic"
 				label="Search"
 				type="search"
 				placeholder="Search here"
-				onChange={handleChange}
-				value={searchInput}
+				//onChange={handleChange}
+				//value={searchInput}
 				InputProps={{
 					endAdornment: (
 						<InputAdornment position='start'>

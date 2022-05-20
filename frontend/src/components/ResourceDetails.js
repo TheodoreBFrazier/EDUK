@@ -34,7 +34,7 @@ function ResourceDetails() {
         <br />
         <div className="resource-text">
             <p> {resource.description} </p>
-            <div class="visit-site-button">
+            <div className="visit-site-button">
                 <Link to={`/resources/${resource.resource_url}`}>
                     <button className>
                         Visit {resource.resource_name}
