@@ -42,7 +42,6 @@ function LogInUser(){
     <div>
         <form onSubmit={handleSubmit}>
             <h3>Login Here</h3>
-            <h4>New to EDUK? Sign up <Link to='/users/create'>here!</Link></h4> 
 
             <label class="login" for="username">Username</label>
             <input type="text" placeholder="Username" id="user_name" onChange={handleChange} value={user.user_name}/>
@@ -51,10 +50,8 @@ function LogInUser(){
             <input type="password" placeholder="Password" id="password" onChange={handleChange} value={user.password}/>
 
             <button>Log In</button>
-            <div class="social">
-            <div class="go"><i class="fab fa-google"></i>  Google</div>
-            <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-            </div>
+            <Link to='/users/create'><button>New to EDUK? Sign up here!</button></Link>
+
         </form>
     </div>
     )
