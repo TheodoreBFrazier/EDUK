@@ -1,6 +1,6 @@
 
 form{
-    height: 52%;
+    height: 56%;
     width: 60%;
     background-color: #4cadde;
     position: absolute;
@@ -51,7 +51,7 @@ input{
     color: #11374e6f;
 }
 button{
-    margin-top: 40px;
+    /* margin-top: 40px; */
     width: 100%;
     background-color: #1f56e3b2;
     color: #ffffff;

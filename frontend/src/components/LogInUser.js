@@ -29,7 +29,7 @@ function LogInUser(){
     }
 
     const handleChange =(event)=>{
-        setUser({... user, [event.target.id]: event.target.value})
+        setUser({...user, [event.target.id]: event.target.value})
     }
 
     const handleSubmit=(event)=>{
@@ -49,7 +49,7 @@ function LogInUser(){
             <label class="login" for="password">Password</label>
             <input type="password" placeholder="Password" id="password" onChange={handleChange} value={user.password}/>
 
-            <button>Log In</button>
+            <button >Log In</button>
             <Link to='/users/create'><button>New to EDUK? Sign up here!</button></Link>
 
         </form>
