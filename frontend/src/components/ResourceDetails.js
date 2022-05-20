@@ -31,14 +31,15 @@ function ResourceDetails() {
 	// adding the resource to the particular user
 	const addResource = () => {
 		axios
-			.post(`${API}/users/${userId}/resources`, userId, resource_id)
+			.post(`${API}/users/${userId}/resources`, {
+				uid: userId,
+				resource_id: resource_id,
+			})
 			.then(() => navigate(`/resources/${resource_id}`))
 			.catch((error) => {
 				console.log(error);
 			});
 	};
-
-	console.log(resource);
 
 	return (
 		<div>
