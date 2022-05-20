@@ -146,18 +146,30 @@ p {
 
 .resources-intro {
 	color: white;
-	background-color: #574d68;
-	height: 250px;
+	background-color: #011638;
+	height: 300px;
+	
+}
+
+.resources-intro-text {
+	margin: auto;
+	width: 800px;
 }
 
 .resources-h2 {
 	margin-top: 0;
+	text-align: center;
+}
+
+.resources-p {
+	text-align: left;
 }
 
 .search-resource {
 	height: 250px;
 	background-color: #e8e9eb;
 }
+
 
 .resources-searchbar TextField {
 	width: 200px;
