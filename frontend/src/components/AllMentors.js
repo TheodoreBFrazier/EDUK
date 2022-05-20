@@ -12,8 +12,8 @@ function AllMentors(){
         axios
           .get(API + "/mentors")
           .then((response) => {
-            console.log(response);
-            setMentors(response.data.result);
+            const mentors = response.data.result.filter(mentor => mentor.is_verified);
+            setMentors(mentors);
           })
           .catch((error) => {
             console.log(error);

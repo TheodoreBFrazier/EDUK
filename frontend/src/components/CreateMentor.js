@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import "../css/CreateUser.css";
+// import "../css/CreateUser.css";
 
 const API = process.env.REACT_APP_API_URL;
 

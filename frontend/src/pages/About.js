@@ -5,37 +5,36 @@ function About() {
 	return (
 		<div className="about">
 			<div className="about-container-one">
-				<h1 className='text-primary'>About Us</h1>
-				<br />
-				
 				<div className="valueNmission">
-					<h2>Our Values</h2>
-					<br />
+					
 					<p>
+						<h2 id="our_values">Our Values</h2>
+						<br />
 						We assume responsibility for our collective strength by developing relationships, building diverse and inclusive coalitions, and challenging one another to be our best. We act with empathy and extend grace to ourselves and others.
+						We accelerate each other and are accountable to each other to deliver on our vision.
 					</p>
-					{/* <img src="https://images.squarespace-cdn.com/content/v1/5d26ea9f65132d0001a99d08/1603103998537-XDZCOWZK5I512W7CDJD9/Our+Core+Values.png" alt="value" /> */}
+					<img src="https://blog.vantagecircle.com/content/images/2019/07/company-core-values.png" alt="value" />
 				</div>
 
 				<div className="valueNmission">
-					{/* <img src="https://images.squarespace-cdn.com/content/v1/5d26ea9f65132d0001a99d08/1603103998537-XDZCOWZK5I512W7CDJD9/Our+Core+Values.png" alt="value" /> */}
-					<h2>Mission and Vision</h2>
-					<br />
 					<p>
-						Our goal is to connect highschool, college students,
-						minority groups and residents of underserved communities to
-						resources that they wouldn’t have access to otherwise. Whether it be
-						career tips , scholarships , grants, continued learning, programs,
-						etc, We hope to bridge the the knowledge gap within these
+						<h2 id="our_mission">Mission & Vision</h2>
+						<br />
+						Our goal is to connect high school, college students,
+						minorities and residents of underserved communities with
+						resources they can't get elsewhere. 
+						Whether it's be career skills , scholarships , grants, continued learning, programs,
+						etc., we want to bridge the the knowledge gap within these
 						underserved communities. We want to eliminate the gatekeeping of
-						much needed information and create a gateway where people can
+						much needed information and create a portal where people can
 						easily find resources they desperately need to improve their quality
 						of life.
 					</p>
+					<img src="https://i0.wp.com/www.kouya.net/wp-content/uploads/2019/09/mission-900x450.jpg?fit=900%2C450&ssl=1" alt="mission" />
 				</div>
 				
 			</div>
-			<div className="about-container-two">
+			<div className="about-container-two" id="our_team">
 			<h2>Our Team</h2>
 				<ul className="teammates">
 					<li className="teammate">
@@ -54,13 +53,13 @@ function About() {
 					</li>
 					<li className="teammate">
 						<img src="https://www.hydrocarbons-technology.com/wp-content/uploads/sites/9/2020/09/shutterstock_1152185600-1440x1008-1-857x600.jpg" width = "500px" alt="Mukayila" />
-						<p><h3>Mukayila</h3>
+						<p><h3>Mukayila Alao</h3>
 						<br />
 						Software engineering is all what I am passionate about now. I graduated from my University as a computer Networks and maintenance engineer. I will finish by saying that technology is driving our lives today and I can't wait to land my first job and contribute. 
 						</p>
 					</li>
 					<li className="teammate">
-						<p><h3>Nima</h3>
+						<p><h3>Nima Sherpa</h3>
 						<br />
 						I am a Full-Stack Developer who loves creating projects and implementing new ideas . I am always seeking to expand my knowledge on tech , Ability to learn and implement new technologies quickly.
 						</p>
@@ -68,7 +67,7 @@ function About() {
 					</li>
 					<li className="teammate">
 						<img src="https://image.cnbcfm.com/api/v1/image/105510591-1539718864161tech-drivers-mezz-2018.jpg?v=1539718880" width = "500px"  alt="Theodore" />
-						<p><h3>Theodore</h3>
+						<p><h3>Theodore Frazier</h3>
 						<br />
 						I joined a 12-month, Google-funded software engineering fellowship with a 9% acceptance rate whose graduates have been hired as developers at leading companies such as Pinterest, JP Morgan, and Spotify. 
 						</p>

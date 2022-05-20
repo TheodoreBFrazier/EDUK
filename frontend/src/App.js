@@ -31,6 +31,10 @@ import CreateUser from "./components/CreateUser";
 import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 
+import Footer from "./components/Footer";
+
+
+
 function App() {
 	return (
 		<div className="App">
@@ -58,7 +62,7 @@ function App() {
 						<Route path="/pendings" element={<Pendings />} />
 					</Routes>
 				</main>
-				{/* <Footer /> */}
+				<Footer />
 			</Router>
 		</div>
 	);
