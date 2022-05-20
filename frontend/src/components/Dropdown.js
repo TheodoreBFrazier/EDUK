@@ -9,10 +9,7 @@ export default function DropDown() {
 
 	return (
 		<>
-			<ul
-				onClick={handleClick}
-				className={click ? "dropdown-menu clicked" : "dropdown-menu"}
-			>
+			<ul onClick={handleClick} className={click ? "dropM clicked" : "dropM"}>
 				{MenuItems.map((item, index) => {
 					return (
 						<li key={index}>

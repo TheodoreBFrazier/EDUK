@@ -31,10 +31,10 @@ export default function RightNav({ open }) {
 	const onMouseEnter = () => {
 		setDropdown(true);
 	};
-
 	const onMouseleave = () => {
 		setDropdown(false);
 	};
+
 	return (
 		<Ul open={open} className="navLinks">
 			<li

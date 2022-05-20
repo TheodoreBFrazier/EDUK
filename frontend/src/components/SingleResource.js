@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Card } from "@mui/material";
 
 var cardStyle = {
-	height: "auto",
+	height: "600px",
 	width: "400px",
 	padding: "20px",
 	boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px",

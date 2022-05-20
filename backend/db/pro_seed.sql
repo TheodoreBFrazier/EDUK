@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 1946ebd9bfaab866f014a119836250595f1b9b4e
 INSERT INTO mentors(mentor_fname, mentor_lname, bio, email, speciality) VALUES 
 ('Greg', 'Testo', 'Experienced software entrepreneur extremely passionate about technology. You will find me working on projects using Java, TypeScript, JavaScript, Spring Boot, Angular and React. More recently I’ve been diving into the world of smart contracts, NFTs, blockchain, finTech and cryptocurrencies. ', 'greggggggrrr4556@gmail.com', 'Soft Engineer'),
 ('Nataja', 'Flood', 'I am the Career Service Program Manager at Pursuit, where I help adult learners prepare for their transition into the tech industry through individualized coaching, brand development workshops, and interview preparation sessions grounded in data and research.', 'Natajafffff@gmail.com', 'Career Training'),
@@ -17,7 +14,7 @@ INSERT INTO users (mentor_id, first_name, last_name, age, email) VALUES
 (2, 'Theodore', 'Frazier', 40, 'theodoreFF1@gmail.com'),
 (4, 'Samantha', 'Shapland', 18, 'SamShapland789@gmail.com');
 
-INSERT INTO resources(resource_name, description, resource_category, start_datetime, end_datetime, url, isVerified) VALUES
+INSERT INTO resources(resource_name, description, resource_category, start_datetime, end_datetime, url, is_verified) VALUES
 ('Project Basta', 'To create a bridge of opportunity  between employers and first-generation college goers of color to increase knowledge workforce diversity at all levels.', 'Program', 'N/A', 'N/A', 'https://projectbasta.com/', true),
 ('Bottom Line', 'Bottom Line has addressed the low college graduation rates of first-generation students from low-income backgrounds. Our organization was founded on the belief that students need a mentor and a guide during the college application process and throughout college to succeed. By providing consistent one-on-one support, Bottom Line has helped thousands of first-generation students from low-income backgrounds stay in college and complete their degrees. ', 'Program', 'N/A', 'N/A', 'https://www.bottomline.org/', true),
 ('Pursuit', 'We train adults with the most need and potential to get their first tech jobs, advance in their careers, and become the next generation of leaders in tech.', 'Program', 'Feb 24 2022 05:00 PM (EST)', 'Jun 20 2022 11:59 PM (EDT)', 'https://www.pursuit.org/ ', true),
@@ -51,8 +48,4 @@ INSERT INTO users_resources(uid, resource_id) VALUES
 (4, 8),
 (5, 3),
 (5, 9),
-<<<<<<< HEAD
 (5, 10);
-=======
-(5, 10);
->>>>>>> 1946ebd9bfaab866f014a119836250595f1b9b4e
