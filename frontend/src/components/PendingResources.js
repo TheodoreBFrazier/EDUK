@@ -71,6 +71,7 @@ function PendingResources() {
 								<td>{resource.resource_name}</td>
 								<td>{resource.description}</td>
 								<td>{resource.resource_category}</td>
+								<td>{resource.start_datetime}</td>
 								<td>{resource.end_datetime}</td>
 								<td>{resource.url}</td>
 								<td>

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import React from "react";
 //STYLING
 
@@ -48,6 +48,7 @@ function App() {
 						<Route path="/resources/create" element={<NewResource />} />
 						<Route path="/users" element={<UsersPortal />} />
 						<Route path="/users/login" element={<LogInUser />} />
+						<Route path="/users/logout" element={<Navigate to="/" replace />} />
 						<Route path="/users/:uid/" element={<UserPortal />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/users/create" element={<CreateUser />} />
@@ -62,7 +63,7 @@ function App() {
 						<Route path="/pendings" element={<Pendings />} />
 					</Routes>
 				</main>
-				<Footer />
+				{/* <Footer /> */}
 			</Router>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import axios from 'axios'; 
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React from 'react';
 import  '../css/CreateUser.css'
 
@@ -44,7 +45,7 @@ function CreateUser(){
       <form className="form" onSubmit={handleSubmit}>
         <div class="title">Welcome to EDUK!</div>
         <div class="subtitle">Let's create your account!</div>
-
+        <div>Already signed up? <Link to="/users/login"> Please log in here!</Link></div>
         <div class="input-container ic1">
           <input 
           id="first_name" 
