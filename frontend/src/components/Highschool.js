@@ -80,7 +80,7 @@ export default function Highschool() {
 			<section className="highSchoolMain">
 				<div>
 					<h2>Scholarship</h2>
-					<p className="resourceP">
+					<p className="resource">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you

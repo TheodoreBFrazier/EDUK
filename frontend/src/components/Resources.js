@@ -26,10 +26,16 @@ function Resources() {
 	return (
 		<div className="resource-arr">
 			{resources.map((resource) => {
+
 				return (
-					<SingleResource key={resource.resource_id} resource={resource} />
+					<SingleResource 
+					key={resource.resource_id} 
+					resource={resource}
+					/>
 				);
-			})}
+			})
+			
+			}
 		</div>
 	);
 }

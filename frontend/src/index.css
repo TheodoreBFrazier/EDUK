@@ -182,7 +182,6 @@ p {
 }
 
 .resource-arr {
-	background-color: pink;
 	padding-bottom: 100px;
 	display: grid;
 	justify-items: center;

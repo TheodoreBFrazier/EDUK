@@ -31,6 +31,10 @@ import CreateUser from "./components/CreateUser";
 import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 
+import Footer from "./components/Footer";
+
+
+
 function App() {
 	return (
 		<div className="App">

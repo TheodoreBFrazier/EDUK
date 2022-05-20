@@ -1,7 +1,7 @@
 import React from "react"
-import Resources from "../components/Resources"
 //import Resources from "../components/Resources"
-import SearchBar from "../components/SearchBar"
+import Resources from "../components/Resources";
+import SearchBar from "../components/SearchBar";
 
 
 function ResourcesPage() {
@@ -24,10 +24,9 @@ function ResourcesPage() {
 			</div>
 			<div className="search-resource">
 				<SearchBar />
-			</div>
-			<br />
-			<br />
+			
 			<Resources />
+			</div >
 		</div>
 	);
 }
