@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-
+import Button from "@mui/material/Button";
 import styled from "styled-components";
-
-// login Icon
-import LoginIcon from "@mui/icons-material/Login";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Ul = styled.ul`
@@ -15,7 +12,7 @@ const Ul = styled.ul`
 		background-color: rgb(247 247 247);
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-		top: 0;
+		top: 30px;
 		right: 0;
 		height: 100vh;
 		width: 240px;
@@ -35,6 +32,7 @@ export default function RightNav({ open }) {
 		setDropdown(false);
 	};
 
+
 	return (
 		<Ul open={open} className="navLinks">
 			<li
@@ -42,7 +40,7 @@ export default function RightNav({ open }) {
 				onClick={dropdown ? onMouseleave : onMouseEnter}
 			>
 				<Link to="/resources">
-					Resources <ArrowDropDownIcon></ArrowDropDownIcon>
+					Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
 				</Link>
 				{dropdown && <Dropdown />}
 			</li>
@@ -50,16 +48,28 @@ export default function RightNav({ open }) {
 				<Link to="/about">About</Link>
 			</li>
 			<li className="eachLi mainLi">
-				<Link to="/users/login">Users</Link>
+				<Link to="/users">Users</Link>
 			</li>
 			<li className="eachLi mainLi">
 				<Link to="/mentors/create">Mentors</Link>
 			</li>
-			<li className="eachLi iconLi">
-				<Link to="/users">
-					<LoginIcon className="loginIcon" fontSize="large"></LoginIcon>
-				</Link>
-			</li>
+			<div>
+				{
+					localStorage.getItem("userId")  ? (
+								<Link to="/users/logout">
+									<Button className="logoutIcon" variant="outlined" size="medium" >
+									"Log Out"
+									</Button>
+								</Link>
+							 ) 
+					:
+					 (<Link to="/users/login">
+							<Button className="loginIcon" variant="outlined" size="medium" >
+								"Log In"
+							</Button>
+						</Link>)
+				}
+			</div>
 		</Ul>
 	);
 }

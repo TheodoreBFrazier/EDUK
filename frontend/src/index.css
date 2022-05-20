@@ -76,7 +76,7 @@ p {
 	font-family: "Open Sans", sans-serif;
 }
 
-/* ------------------------------    HOME  -------------------------------------- */
+------------------------------    HOME  --------------------------------------
 
 /* HERO PAGE */
 
@@ -123,7 +123,9 @@ p {
 }
 
 .introduction h2 {
-	text-shadow: 1px 1px 1px rgb(138, 124, 197), 2px 2px 1px rgb(71, 136, 180);
+	text-align: center;
+	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
+	font-weight: bolder ;
 }
 
 .intro-container {
@@ -136,13 +138,27 @@ p {
 .intro-container p {
 	color: rgb(69, 51, 141);
 	font-size: x-large;
+	margin-left: 50px;
 }
 
-.about-intro {
-	margin-left: 150px;
-	text-align: left;
-	width: 500px;
-}
+@media (max-width:1024px) {
+	.introduction h2{
+		margin: 50px 0 50px 0px;
+    }
+
+	.intro-container {
+		margin-top: 30px;
+		align-items: center;
+		display: list-item;
+		list-style: none;
+		
+	}
+
+	.intro-container img {
+		margin-bottom: 30px;;
+		width: 80%;
+	}
+  }
 
 .resources-intro {
 	color: white;

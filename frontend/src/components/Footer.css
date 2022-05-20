@@ -84,25 +84,30 @@
 
 /* //// */
  .footer-dark {
-    margin-top: -50px;
+    margin-top: auto;
     width:100%;
     font-weight: bold;
-    padding:50px 0;
+    padding: 3em;
     background-color: rgb(177, 228, 242);
   }
   
   .footer-dark h3 {
     margin-top:0;
     margin-bottom:12px;
-    font-weight:bold;
-    font-size:16px;
+    font-weight:bolder;
+    font-size:18px;
+  }
+
+  .footer-dark .row{
+    margin-left: auto;
+    text-align: center;
   }
   
   .footer-dark ul {
     padding:0;
     list-style:none;
     line-height:1.6;
-    font-size:15px;
+    font-size:17px;
     margin-bottom:0;
   }
   
@@ -135,12 +140,12 @@
   
   .footer-dark .item.text p {
     opacity:0.7;
+    font-size:17px;
     text-decoration: underline;
     margin-bottom:0;
   }
   
   .footer-dark .item.social {
-      padding-left: 42%;
     text-align: center;
   }
   

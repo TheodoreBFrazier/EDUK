@@ -9,57 +9,63 @@ import { useEffect } from "react";
 //import { InputAdornment } from "@mui/material";
 //import SearchIcon from "@mui/icons-material/Search";
 
-//var textFieldStyle = {
+var textFieldStyle = {
+  margin: "75px",
+  width: "450px",
+};
 
-	//margin: "75px",
-	//width: "450px",
-//};
+const API = process.env.REACT_APP_API_URL;
 
+const SearchBar = () => {
+  const [resources, setResources] = useState([]);
 
-function SearchBar() {
-	const [resources, setResources] = useState([]);
+  useEffect(() => {
+    axios
+      .get(API + "/resources")
+      .then((response) => {
+        console.log(response);
+        setResources(response.data.result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-	useEffect(() => {
-		axios
-			.get(API + "/resources")
-			.then((response) => {
-				console.log(response);
-				setResources(response.data.result);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}, []);
+  const [searchInput, setSeachInput] = useState("");
 
+  const handleChange = (event) => {
+    event.preventDefault();
+    setSeachInput(event.target.value);
+  };
 
-	//const [searchInput, setSearchInput] = useState("");
+  if (searchInput.length > 0) {
+    resources.filter((resource) => {
+      return resource.resource_category.match(searchInput);
+    });
+  }
 
-	//function resourceSearchArray(property) {
-	//let filteredData = resources.filter((resource) => {
-	//if (property.input === "") {
-	//return resource
-	//}
-	//else {
-	//return resource.text.toLowerCaser().includes(property.input)
-	//}
-	//})
-	//}
-	//const handleChange = (event) => {
-	//event.preventDefault();
-	//let input
-	//setSearchInput(event.target.value.tolowercase());
-	//};
-
-	//if (searchInput.length > 0) {
-	//resources.filter((resource) => {
-	//return resource.resource_category.match(searchInput);
-	//});
-	//}
-	return (
-		<div className="resources-searchbar">
-
-		</div>
-	);
+  return (
+    <div className="resources-searchbar">
+      <TextField
+        style={textFieldStyle}
+        id="filled_basic"
+        label="Search"
+        type="search"
+        placeholder="Search here"
+        onChange={handleChange}
+        value={searchInput}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="start">
+              <IconButton>
+                <SearchIcon />
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+      />
+    </div>
+  );
 };
 
 export default SearchBar;

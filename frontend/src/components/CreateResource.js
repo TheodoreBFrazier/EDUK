@@ -30,7 +30,7 @@ function CreateResource() {
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="resource_name">Resource Name</label>
         <br />
         <input

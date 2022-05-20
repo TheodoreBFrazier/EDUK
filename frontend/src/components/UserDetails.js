@@ -41,28 +41,40 @@ function UserDetails() {
   return (
     <section className="user_details">
       <div className="welcome">
-        <strong>Welcome {user.first_name} !!!</strong>
-      </div>
-      <div>
-        <button onClick={() => setShowUserDetails(!showUserDetails)}>
-          User Details
-        </button>
-        {showUserDetails ? (
-          <div className="details">
-            <div>First Name: {user.first_name}</div>
-            <div>Last Name: {user.last_name}</div>
-            <div>User Email: {user.email}</div>
-            <div>Age: {user.age}</div>
-            <div>Mentor: {user.mentor_id}</div>
-            <section>User Resources:
-              {userResources.map(resource=>(<SingleResource key={resource.resource_id} resource={resource}/>))}
-            </section>
+
+        <aside class="profile-card" >
+          <header>
+            <a>
+              <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" />
+            </a>
+
+            <h1>
+              Welcome {user.first_name} {user.last_name}!
+            </h1>
+
+            <h2>
+             "A step closer to your dreams"
+             </h2>
+
+          </header>
+
+
+          <div class="profile-bio">
+            <p>
+            Username : {user.user_name} <br/>
+            Age : {user.age} <br/>
+            Mentor ID: {user.mentor_id} <br/>
+            Email : {user.email}
+            </p>
           </div>
-        ) : (
-          ""
-        )}
-      </div>
-    </section>
+          <section>
+             User Resources:
+              {userResources.map(resource=>(<SingleResource key={resource.resource_id} resource={resource}/>))}
+          </section>
+        </aside>
+
+    </div>
+  </section>
   );
 }
 
