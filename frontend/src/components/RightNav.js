@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -32,6 +32,7 @@ export default function RightNav({ open }) {
 		setDropdown(false);
 	};
 
+
 	return (
 		<Ul open={open} className="navLinks">
 			<li
@@ -47,16 +48,28 @@ export default function RightNav({ open }) {
 				<Link to="/about">About</Link>
 			</li>
 			<li className="eachLi mainLi">
-				<Link to="/users/login">Users</Link>
+				<Link to="/users">Users</Link>
 			</li>
 			<li className="eachLi mainLi">
 				<Link to="/mentors/create">Mentors</Link>
 			</li>
-			<Link to="/users">
-				<Button className="loginIcon" variant="outlined" size="medium">
-					Log in
-				</Button>
-			</Link>
+			<div>
+				{
+					localStorage.getItem("userId")  ? (
+								<Link to="/users/logout">
+									<Button className="logoutIcon" variant="outlined" size="medium" >
+									"Log Out"
+									</Button>
+								</Link>
+							 ) 
+					:
+					 (<Link to="/users/login">
+							<Button className="loginIcon" variant="outlined" size="medium" >
+								"Log In"
+							</Button>
+						</Link>)
+				}
+			</div>
 		</Ul>
 	);
 }
