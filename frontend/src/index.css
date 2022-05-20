@@ -125,7 +125,7 @@ p {
 .introduction h2 {
 	text-align: center;
 	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
-	font-weight: bolder ;
+	font-weight: bolder;
 }
 
 .intro-container {
@@ -141,38 +141,39 @@ p {
 	margin-left: 50px;
 }
 
-@media (max-width:1024px) {
-	.introduction h2{
+@media (max-width: 1024px) {
+	.introduction h2 {
 		margin: 50px 0 50px 0px;
-    }
+	}
 
 	.intro-container {
 		margin-top: 30px;
 		align-items: center;
 		display: list-item;
 		list-style: none;
-		
 	}
 
 	.intro-container img {
-		margin-bottom: 30px;;
+		margin-bottom: 30px;
 		width: 80%;
 	}
-  }
+}
 
 .resources-intro {
 	color: white;
 	background-color: #574d68;
-	height: 250px;
+	text-align: center;
+	padding: 30px;
 }
 
 .resources-h2 {
-	margin-top: 0;
+	margin: 30px;
 }
 
 .search-resource {
 	height: 250px;
 	background-color: #e8e9eb;
+	text-align: center;
 }
 
 .resources-searchbar TextField {
@@ -193,29 +194,6 @@ p {
 
 .resource-arr p {
 	font-size: 12pt;
-}
-
-/* Single resource */
-
-.resource-heading {
-	text-align: left;
-	margin-left: 200px;
-}
-
-.resource-text {
-	text-align: left;
-	margin-left: 275px;
-	height: 500px;
-	width: 1100px;
-	background-color: #f4f4f4;
-}
-
-.resource-text p {
-	padding-top: 100px;
-	padding-left: 50px;
-	padding-right: 250px;
-	text-align: left;
-	margin-left: 50 px;
 }
 
 .visit-site-button {
