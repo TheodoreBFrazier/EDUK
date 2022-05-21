@@ -51,13 +51,14 @@ export default function RightNav({ open, logText, setLogText }) {
         <Link to="/about">About</Link>
       </li>
       <li className="eachLi mainLi">
-        <Link to="/users">Users</Link>
+        <Link to="/dashbord">Dashbord</Link>
       </li>
       <li className="eachLi mainLi">
         <Link to="/mentors/create">Mentors</Link>
       </li>
       <div>
-        {localStorage.getItem("userId") ? (
+        {localStorage.getItem("userId") &&
+        !isNaN(localStorage.getItem("userId")) ? (
           <Link to="/">
             <Button
               className="logoutIcon"

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import "../css/LogIn.css";
 import { Link } from "react-router-dom";
+import Error from "./Error";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -13,17 +14,30 @@ function LogInUser({ setLogText }) {
     user_name: "",
     password: "",
   });
+  //show error to user
+  const [error, setError] = useState("");
 
   const logIn = () => {
+    setError("");
     axios
       .post(`${API}/auth/login`, user)
       .then((res) => {
-        const userId = res.data.result;
-        localStorage.setItem("userId", `${userId}`);
-        setLogText("Log Out");
-        navigate(`/users/${userId}`);
+        const userInfo = res.data.result;
+        const userId = userInfo.uid;
+        if (!isNaN(userId)) {
+          console.log(userInfo);
+          setError("");
+          localStorage.setItem("userId", `${userId}`);
+          setLogText("Log Out");
+          if (!userInfo.is_admin) navigate(`/users/${userId}`);
+          if (userInfo.is_admin) navigate("/admin");
+        }
       })
-      .catch((c) => console.log("catch", c.response && c.response.data));
+      .catch((c) => {
+        if (c.response && c.response.data) {
+          setError(c.response.data.error);
+        }
+      });
   };
 
   const handleChange = (event) => {
@@ -37,6 +51,7 @@ function LogInUser({ setLogText }) {
 
   return (
     <div>
+      {error ? <Error error={error} /> : ""}
       <form onSubmit={handleSubmit}>
         <h3>Login Here</h3>
 

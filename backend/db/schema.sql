@@ -21,7 +21,8 @@ CREATE TABLE users(
     age INT NOT NULL,
     email TEXT,
     user_name VARCHAR(50) UNIQUE NOT NULL,
-    password TEXT,
+    password TEXT NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE,
     mentor_id INTEGER REFERENCES mentors(mentor_id)
 );
 
