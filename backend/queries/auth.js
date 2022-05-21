@@ -7,12 +7,11 @@ const authUser = async (user_name, password) => {
       "SELECT * FROM users WHERE user_name=$1",
       user_name
     );
-    bcrypt.compare(password, user.password, (error, isCorrect) => {
-      if (error) {
-        return new Error("Invalid password!!");
-      }
+
+    const match = await bcrypt.compare(password, user.password);
+    if (match) {
       return user.uid;
-    });
+    }
   } catch (error) {
     return error;
   }

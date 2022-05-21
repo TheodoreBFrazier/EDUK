@@ -22,12 +22,12 @@ auth.post("/login", async (req, res) => {
   const { user_name, password } = req.body;
   const id = await authUser(user_name, password);
 
-  if (id) {
+  if (!isNaN(id)) {
     res.json({ success: true, result: id });
   } else
     res
       .status(500)
-      .json({ success: false, error: "incorrect user_name or password" });
+      .json({ success: false, error: "Incorrect Username or Password" });
 });
 
 module.exports = auth;
