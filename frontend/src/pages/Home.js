@@ -1,4 +1,5 @@
 import React from "react";
+import Resources from "../components/Resources";
 
 function Home() {
 	return (
@@ -29,6 +30,7 @@ function Home() {
 						easily find resources they desperately need to improve their quality
 						of life.
 					</p>
+					<Resources />
 				</div>
 			</div>
 		</div>

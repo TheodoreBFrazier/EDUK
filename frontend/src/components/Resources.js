@@ -13,11 +13,12 @@ function Resources() {
 		axios
 			.get(API + "/resources")
 			.then((response) => {
-				const allResources = response.data.result.filter(
-					(resource) => resource.is_verified
-				);
-				setResources(allResources);
+				setResources(response.data.result);
+				//const allResources = response.data.result.filter(
+					//(resource) => resource.is_verified
 			})
+				//setResources(allResources);
+				//console.log(allResources)
 			.catch((error) => {
 				console.log(error);
 			});
@@ -26,7 +27,6 @@ function Resources() {
 	return (
 		<div className="resource-arr">
 			{resources.map((resource) => {
-
 				return (
 					<SingleResource 
 					key={resource.resource_id} 

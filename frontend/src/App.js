@@ -1,5 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import React, { useState } from "react";
 //STYLING
 
 import NavBar from "./components/NavBar";
@@ -31,42 +36,45 @@ import CreateUser from "./components/CreateUser";
 import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 
-import Footer from "./components/Footer";
-
-
+//import Footer from "./components/Footer";
 
 function App() {
-	return (
-		<div className="App">
-			<Router>
-				<NavBar />
-				<main>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/resources" element={<ResourcesPage />} />
-						<Route path="/resources/:resource_id/" element={<ShowResource />} />
-						<Route path="/resources/create" element={<NewResource />} />
-						<Route path="/users" element={<UsersPortal />} />
-						<Route path="/users/login" element={<LogInUser />} />
-						<Route path="/users/logout" element={<Navigate to="/" replace />} />
-						<Route path="/users/:uid/" element={<UserPortal />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/users/create" element={<CreateUser />} />
-						<Route path="/highschool" element={<HighschoolPage />} />
-						<Route path="/college" element={<CollegePage />} />
-						<Route
-							path="/continuelearning"
-							element={<ContinueLearningPage />}
-						/>
-						<Route path="/mentors" element={<AllMentors />} />
-						<Route path="/mentors/create" element={<CreateMentor />} />
-						<Route path="/pendings" element={<Pendings />} />
-					</Routes>
-				</main>
-				{/* <Footer /> */}
-			</Router>
-		</div>
-	);
+  const [logText, setLogText] = useState(
+    localStorage.getItem("userId") ? "Log Out" : "Log In"
+  );
+  return (
+    <div className="App">
+      <Router>
+        <NavBar logText={logText} setLogText={setLogText} />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/resources/:resource_id/" element={<ShowResource />} />
+            <Route path="/resources/create" element={<NewResource />} />
+            <Route path="/users" element={<UsersPortal />} />
+            <Route
+              path="/users/login"
+              element={<LogInUser setLogText={setLogText} />}
+            />
+            <Route path="/users/:uid/" element={<UserPortal />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/users/create" element={<CreateUser />} />
+            <Route path="/highschool" element={<HighschoolPage />} />
+            <Route path="/college" element={<CollegePage />} />
+            <Route
+              path="/continuelearning"
+              element={<ContinueLearningPage />}
+            />
+            <Route path="/mentors" element={<AllMentors />} />
+            <Route path="/mentors/create" element={<CreateMentor />} />
+            <Route path="/pendings" element={<Pendings />} />
+          </Routes>
+        </main>
+        {/* <Footer /> */}
+      </Router>
+    </div>
+  );
 }
 
 export default App;
