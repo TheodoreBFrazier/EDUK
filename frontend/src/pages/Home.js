@@ -5,9 +5,7 @@ function Home() {
 		<div className="Home">
 			<div className="Hero">
 				<div className="Hero-text">
-					<h1>
-						TIME TO <em>EVEN THE PLAYING FIELD</em>
-					</h1>
+					<h1>TIME TO EVEN THE PLAYING FIELD</h1>
 					<h3>LINKING NYERS TO ESSENTIAL SERVICES </h3>
 				</div>
 			</div>

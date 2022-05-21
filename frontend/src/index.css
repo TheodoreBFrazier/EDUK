@@ -18,7 +18,7 @@ code {
 
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap");
 
-h1 {
+/* h1 {
 	font-size: 72pt;
 	font-family: "Abril Fatface", cursive;
 }
@@ -41,7 +41,7 @@ h4 {
 p {
 	font-size: 16pt;
 	font-family: "Roboto", sans-serif;
-}
+} */
 
 /* Regular */
 
@@ -51,68 +51,35 @@ p {
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,700&display=swap");
 
-h1 {
-	/* font-size: 40pt; */
-	font-family: "Open Sans", sans-serif;
-}
-
-h2 {
-	/* font-size: 32pt; */
-	font-family: "Open Sans", sans-serif;
-}
-
-h3 {
-	/* font-size: 15pt; */
-	font-family: "Open Sans", sans-serif;
-}
-
-h4 {
-	/* font-family: 18pt; */
-	font-family: "Open Sans", sans-serif;
-}
-
-p {
-	/* font-size: 16pt; */
-	font-family: "Open Sans", sans-serif;
-}
-
 ------------------------------    HOME  --------------------------------------
 
 /* HERO PAGE */
 
 .Hero-text {
-	width: 1000px;
-	margin-left: 125px;
-	text-align: left;
-	position: relative;
+	/* width: 1000px; */
 	z-index: 9;
 }
 
 .Hero .Hero-text h1 {
-	background: -webkit-linear-gradient(#574d68, #f3a712);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	width: 700px;
-	margin-left: 125px;
+	font: bold 60px Poppins, sans-serif;
+	margin-left: 100px;
 	text-align: left;
-	padding-top: 250px;
-	font-weight: 700;
+	padding-top: 100px;
+	font-weight: 600;
 	position: relative;
 	z-index: 2;
 }
 
 .Hero .Hero-text h3 {
+	margin-left: 100px;
 	position: relative;
 	z-index: 9;
 }
 
 .Hero {
 	margin: 0;
-	background-color: #1d3461;
 	height: 100vh;
-	margin: 0;
 	background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
-	height: 100vh;
 	margin-bottom: 110px;
 }
 
@@ -125,7 +92,6 @@ p {
 .introduction h2 {
 	text-align: center;
 	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
-	font-weight: bolder;
 }
 
 .intro-container {
@@ -136,72 +102,34 @@ p {
 }
 
 .intro-container p {
-	color: rgb(69, 51, 141);
-	font-size: x-large;
-	margin-left: 50px;
+	color: black;
+	font-size: 25px;
+	font-family: sans-serif;
+}
+
+@media (max-width: 750px) {
+	.intro-container p {
+		font-size: 15px;
+	}
 }
 
 @media (max-width: 1024px) {
-	.introduction h2 {
-		margin: 50px 0 50px 0px;
-	}
-
 	.intro-container {
 		margin-top: 30px;
-		align-items: center;
 		display: list-item;
 		list-style: none;
 	}
 
 	.intro-container img {
+		height: 200px;
 		margin-bottom: 30px;
-		width: 80%;
 	}
-}
-
-.resources-intro {
-	color: white;
-	background-color: #574d68;
-	text-align: center;
-	padding: 30px;
-}
-
-.resources-h2 {
-	margin: 30px;
-}
-
-.search-resource {
-	height: 250px;
-	background-color: #e8e9eb;
-	text-align: center;
-}
-
-.resources-searchbar TextField {
-	width: 200px;
-}
-
-.resource-arr {
-	padding-bottom: 100px;
-	display: grid;
-	justify-items: center;
-	grid-template-columns: 1fr 1fr 1fr;
-	row-gap: 60px;
-}
-
-.resource-arr a {
-	text-decoration: none;
-}
-
-.resource-arr p {
-	font-size: 12pt;
 }
 
 .visit-site-button {
 	padding-left: 50px;
 	width: 250px;
 }
-
-/* background-color: #F4F4F4; */
 
 .mentors-array {
 	display: grid;

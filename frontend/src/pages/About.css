@@ -1,103 +1,88 @@
 .about {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
 }
 
 .about h2 {
-    padding-top: 50px;
-    font-weight: bolder;
-    color: royalblue;
-    border-bottom: 10px groove blue;
-    border-radius: 10px 30px;
-    width: 250px;
-    text-align: center;
-}
-
-.about h2:hover{
-    font-size: 1.5cm;
+	padding-top: 50px;
+	font-weight: bolder;
+	color: royalblue;
+	border-bottom: 4px groove royalblue;
+	border-radius: 5px 10px;
+	width: 250px;
+	text-align: center;
 }
 
 .about-container-one {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
 	margin: auto;
 	text-align: center;
 	width: 70%;
-    padding-bottom: 60px;
+	padding-bottom: 60px;
+	left: 20px;
 }
 
-.valueNmission {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.valueNmission img{
-    padding: 20px 10px 20px 10px;
-    margin: 150px 0 0 80px;
-    width: 300px;
-    height: 350px;
-    border-width: 3em;
-    border-style:double;
-    border-color: rgb(125, 190, 234);
+.valueNmission img {
+	padding: 20px 10px 20px 10px;
+	margin: 150px 0 0 80px;
+	width: 300px;
+	height: 350px;
+	border-width: 3em;
+	border: 1px solid black;
+	border-color: rgb(125, 190, 234);
 }
 
 .about-container-two {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    list-style: none;
-    margin-bottom: 100px;
-    
+	padding-top: 40px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(1fr 1fr);
+	list-style: none;
+	margin-bottom: 100px;
 }
 
 .about-container-two h2 {
-    margin: auto;
+	margin: auto;
 }
 
-.about-container-two img{
-    width: 380px;
-    height: 300px;
-}
-
-.about-container-two p {
-    text-align: left;
+.about-container-two img {
+	width: 380px;
+	height: 300px;
 }
 
 .teammate {
-    padding: 50px;
-    margin: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+	padding: 50px;
+	margin: 30px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
-.about p {
-    text-align: left;
+@media (max-width: 767px) {
+	.valueNmission {
+		display: table-column;
+		font-style: oblique;
+	}
+	.valueNmission img {
+		display: none;
+	}
 }
 
+@media (max-width: 1024px) {
+	.about-container-two img {
+		width: 280px;
+		height: 200px;
+	}
 
-@media (max-width:767px) {
-    .valueNmission {
-        display:table-column;
-        font-style: oblique;
-    }
-    .valueNmission  img {
-        display: none;
-    }
-  }
-
-
-  @media (max-width:1024px) {
-    .about-container-two img{
-        width: 280px;
-        height: 200px;
-    }
-    
-    .teammate {
-        padding: 20px;
-        margin: 50px;
-        display: list-item;
-        border: 20px ridge rgb(47, 125, 204);
-        list-style: none;
-    }
-  }
+	.teammate {
+		padding: 20px;
+		display: list-item;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		list-style: none;
+	}
+	.about h2 {
+		margin-bottom: 20px;
+	}
+}

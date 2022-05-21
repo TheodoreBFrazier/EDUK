@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -25,10 +25,10 @@ const Ul = styled.ul`
 export default function RightNav({ open, logText, setLogText }) {
 	const [dropdown, setDropdown] = useState(false);
 
-	const onMouseEnter = () => {
+	const onMouseClick = () => {
 		setDropdown(true);
 	};
-	const onMouseleave = () => {
+	const onMouseUnclick = () => {
 		setDropdown(false);
 	};
 	const logOut = () => {
@@ -40,7 +40,7 @@ export default function RightNav({ open, logText, setLogText }) {
 		<Ul open={open} className="navLinks">
 			<li
 				className="eachLi mainLi "
-				onClick={dropdown ? onMouseleave : onMouseEnter}
+				onClick={dropdown ? onMouseUnclick : onMouseClick}
 			>
 				<Link to="/resources">
 					Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
@@ -59,12 +59,7 @@ export default function RightNav({ open, logText, setLogText }) {
 			<div className="loginIcon">
 				{localStorage.getItem("userId") ? (
 					<Link to="/">
-						<Button
-							// className="loginIcon"
-							variant="outlined"
-							size="medium"
-							onClick={logOut}
-						>
+						<Button variant="outlined" size="medium" onClick={logOut}>
 							{logText}
 						</Button>
 					</Link>
