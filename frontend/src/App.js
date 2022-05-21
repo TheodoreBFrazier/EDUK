@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 //STYLING
 
@@ -37,7 +32,7 @@ import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 import AdminPage from "./pages/AdminPage";
 
-//import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   const [logText, setLogText] = useState(

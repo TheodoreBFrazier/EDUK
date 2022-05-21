@@ -4,6 +4,7 @@
 }
 
 nav {
+	padding-right: 40px;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -19,7 +20,6 @@ nav {
 }
 
 .navLinks a {
-	font-size: 20px;
 	margin: 30px;
 	color: black;
 	text-decoration: none;
@@ -48,5 +48,6 @@ nav {
 
 .loginIcon {
 	height: 2em;
-	padding-top: 50px;
+	padding-top: 20px;
+	width: 8em;
 }
