@@ -11,6 +11,8 @@ auth.post("/sign_up", async (req, res) => {
   const hashedpassword = await bcrypt.hash(password, 10);
   const user = req.body;
   user.password = hashedpassword;
+  //grant admin role to a user
+  user.is_admin = user.user_name.toLowerCase() === "administrator";
   const createdUser = await createUser(user);
   if (createdUser.uid) {
     res.json({ success: true, result: createdUser });
