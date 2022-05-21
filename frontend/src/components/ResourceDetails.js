@@ -42,7 +42,7 @@ function ResourceDetails() {
 	};
 
 	return (
-		<div>
+		<div classname="mainResourceDetails">
 			<div className="resource-heading">
 				<h1> {resource.resource_name} </h1>
 				<h5>

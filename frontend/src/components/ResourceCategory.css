@@ -4,6 +4,9 @@
 	text-align: center;
 }
 
+.mainResourceDetails {
+	background-color: blue;
+}
 .resourceCategory {
 	margin: 40px;
 	font-size: 2em;
@@ -85,4 +88,25 @@
 
 .resource-arr p {
 	font-size: 12pt;
+}
+@media (max-width: 1200px) {
+	.resource-text {
+		height: 300px;
+		width: 800px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.resource-arr {
+		grid-template-columns: 1fr 1fr;
+	}
+	.resource-text {
+		height: 300px;
+		width: 600px;
+	}
+}
+@media (max-width: 768px) {
+	.resource-arr {
+		grid-template-columns: 1fr;
+	}
 }

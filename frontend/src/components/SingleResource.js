@@ -10,7 +10,7 @@ var cardStyle = {
 	width: "400px",
 	padding: "20px",
 	boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px",
-	display: "inline-block",
+	// display: "inline-block",
 };
 
 function SingleResource({ resource }) {
