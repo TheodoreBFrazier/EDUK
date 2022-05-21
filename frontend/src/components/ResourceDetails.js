@@ -42,15 +42,13 @@ function ResourceDetails() {
 	};
 
 	return (
-		<div classname="mainResourceDetails">
+		<div>
 			<div className="resource-heading">
 				<h1> {resource.resource_name} </h1>
 				<h5>
 					{resource.start_datetime} - {resource.end_datetime}
 				</h5>
 			</div>
-			<br />
-			<br />
 			<div className="resource-text">
 				<p> {resource.description} </p>
 				<div className="resourceMainBtn">

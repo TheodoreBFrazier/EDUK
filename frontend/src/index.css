@@ -21,31 +21,6 @@ code {
 
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap");
 
-/* h1 {
-	font-size: 72pt;
-	font-family: "Abril Fatface", cursive;
-}
-
-h2 {
-	font-size: 32pt;
-	font-family: "Abril Fatface", cursive;
-}
-
-h3 {
-	font-size: 24pt;
-	font-family: "Abril Fatface", cursive;
-}
-
-h4 {
-	font-family: 18pt;
-	font-family: "Abril Fatface", cursive;
-}
-
-p {
-	font-size: 16pt;
-	font-family: "Roboto", sans-serif;
-} */
-
 /* Regular */
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap");
@@ -59,37 +34,54 @@ p {
 /* HERO PAGE */
 
 .Hero-text {
-	/* width: 1000px; */
 	z-index: 9;
 }
 
 .Hero .Hero-text h1 {
+	color: white;
 	font: bold 60px Poppins, sans-serif;
-	margin-left: 100px;
-	text-align: left;
-	padding-top: 100px;
+	text-align: center;
+	padding-top: 300px;
 	font-weight: 600;
 	position: relative;
 	z-index: 2;
 }
 
 .Hero .Hero-text h3 {
-	margin-left: 100px;
+	text-align: center;
 	position: relative;
 	z-index: 9;
+	color: white;
 }
 
 .Hero {
 	margin: 0;
 	height: 100vh;
-	background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
+	/* background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg"); */
 	margin-bottom: 110px;
+	background-color: #cccccc;
+	background-size: cover;
 }
 
 .Hero-text h1 {
-	/* margin on top of H1 causes space between navbar and content */
 	margin-top: 0;
 	font-size: 40pt;
+}
+.joinUs {
+	margin: 30px;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+}
+.joinus div {
+	margin: 30px;
+}
+.joinUs h3 {
+	color: white;
+}
+.joinUs a {
+	color: white;
+	text-decoration: none;
 }
 
 .introduction h2 {
@@ -112,6 +104,16 @@ p {
 
 @media (max-width: 750px) {
 	.intro-container p {
+		font-size: 15px;
+	}
+	.Hero .Hero-text h1 {
+		font-size: 40px;
+	}
+
+	.Hero .Hero-text h3 {
+		font-size: 20px;
+	}
+	.joinUs h3 {
 		font-size: 15px;
 	}
 }
@@ -140,7 +142,6 @@ p {
 	justify-items: center;
 	align-content: space-evenly;
 	align-items: center;
-	grid-template-columns: 300px 300px 300px;
 	column-gap: 20px;
 	row-gap: 40px;
 }
