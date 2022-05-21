@@ -1,14 +1,28 @@
 import React from "react";
+import '../css/Mentor.css'
 
 function Mentor({mentor}){
 
     return(
         <div>
-            <h3>{mentor.mentor_fname}</h3>
-            <h3>{mentor.mentor_lname}</h3>
-            <div>{mentor.bio}</div>
-            <div>{mentor.email}</div>
-            <div>{mentor.specialty}</div>
+            <ul class="cards">
+                <li>
+                    <div class="card">
+                        <img src="../logo.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                            <img class="card__thumb" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">{mentor.mentor_fname} {mentor.mentor_lname}</h3>
+                                <span class="card__tagline">{mentor.email}</span>            
+                                <span class="card__status">{mentor.speciality}</span>
+                            </div>
+                            </div>
+                            <p class="card__description">{mentor.bio}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     )
 }

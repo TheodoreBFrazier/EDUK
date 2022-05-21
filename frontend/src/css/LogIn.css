@@ -1,17 +1,18 @@
-form {
-	height: 55%;
-	width: 60%;
-	background-color: #4cadde;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	top: 50%;
-	left: 50%;
-	border-radius: 10px;
-	backdrop-filter: blur(10px);
-	border: 2px solid rgba(255, 255, 255, 0.1);
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-	padding: 50px 35px;
-	z-index: -1;
+
+form{
+    height: 52%;
+    width: 60%;
+    background-color: #4cadde;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(1,2,4,0.7);
+    padding: 50px 35px;
+    z-index: -1; 
 }
 form * {
 	font-family: "Poppins", sans-serif;
@@ -34,57 +35,33 @@ form h3 {
 	font-weight: 500;
 }
 
-input {
-	display: block;
-	height: 50px;
-	width: 100%;
-	background-color: rgba(242, 242, 242, 0.68);
-	border-radius: 3px;
-	padding: 0 10px;
-	margin-top: 8px;
-	font-size: 14px;
-	font-weight: 300;
+input{
+    display: block;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
 }
-::placeholder {
-	color: #683c3c;
+::placeholder{
+    color: #11374e6f;
 }
-button {
-	margin-top: 50px;
-	width: 100%;
-	background-color: #1f56e3b2;
-	color: #ffffff;
-	padding: 15px 0;
-	font-size: 18px;
-	font-weight: 600;
-	border-radius: 5px;
-	cursor: pointer;
+button{
+    margin-top: 40px;
+    width: 100%;
+    background-color: #1f56e3b2;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.social {
-	margin-top: 30px;
-	display: flex;
-}
-.social div {
-	background: red;
-	width: 150px;
-	border-radius: 3px;
-	padding: 5px 10px 10px 5px;
-	background-color: rgba(255, 255, 255, 0.27);
-	color: #ffffff;
-	text-align: center;
-	justify-content: center;
-}
-.social div:hover {
-	background-color: rgba(255, 255, 255, 0.47);
-}
-.social .fb {
-	margin-left: 25px;
-}
-.social i {
-	margin-right: 4px;
-}
-#password {
-	color: black;
-}
-#username {
-	color: black;
+
+#password{
+    color: black;
 }

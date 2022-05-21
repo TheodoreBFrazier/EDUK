@@ -13,8 +13,10 @@ function Resources() {
 		axios
 			.get(API + "/resources")
 			.then((response) => {
-				console.log(response);
-				setResources(response.data.result);
+				const allResources = response.data.result.filter(
+					(resource) => resource.is_verified
+				);
+				setResources(allResources);
 			})
 			.catch((error) => {
 				console.log(error);
