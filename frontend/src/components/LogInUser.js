@@ -22,12 +22,15 @@ function LogInUser({ setLogText }) {
     axios
       .post(`${API}/auth/login`, user)
       .then((res) => {
-        const userId = res.data.result;
+        const userInfo = res.data.result;
+        const userId = userInfo.uid;
         if (!isNaN(userId)) {
+          console.log(userInfo);
           setError("");
           localStorage.setItem("userId", `${userId}`);
           setLogText("Log Out");
-          navigate(`/users/${userId}`);
+          if (!userInfo.is_admin) navigate(`/users/${userId}`);
+          if (userInfo.is_admin) navigate("/admin");
         }
       })
       .catch((c) => {

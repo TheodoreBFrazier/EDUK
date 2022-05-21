@@ -22,10 +22,10 @@ auth.post("/sign_up", async (req, res) => {
 //Login a exsiting user
 auth.post("/login", async (req, res) => {
   const { user_name, password } = req.body;
-  const id = await authUser(user_name, password);
+  const userInfo = await authUser(user_name, password);
 
-  if (!isNaN(id)) {
-    res.json({ success: true, result: id });
+  if (!isNaN(userInfo.uid)) {
+    res.json({ success: true, result: userInfo });
   } else
     res
       .status(500)

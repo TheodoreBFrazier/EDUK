@@ -10,7 +10,12 @@ const authUser = async (user_name, password) => {
 
     const match = await bcrypt.compare(password, user.password);
     if (match) {
-      return user.uid;
+      const userInfo = {
+        uid: user.uid,
+        user_name: user.user_name,
+        is_admin: user.is_admin,
+      };
+      return userInfo;
     }
   } catch (error) {
     return error;

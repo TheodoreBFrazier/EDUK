@@ -53,9 +53,9 @@ function App() {
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/resources/:resource_id" element={<ShowResource />} />
             <Route path="/resources/create" element={<NewResource />} />
-            <Route path="/admin" element={<AdminPage />}>
-              <Route path="/users" element={<UsersPortal />} />
-              <Route path="/pendings" element={<Pendings />} />
+            <Route path="admin" element={<AdminPage />}>
+              <Route path="users" element={<UsersPortal />} />
+              <Route path="pendings" element={<Pendings />} />
             </Route>
 
             <Route
