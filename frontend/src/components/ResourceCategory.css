@@ -4,6 +4,10 @@
 	text-align: center;
 }
 
+.mainResourceDetails {
+	width: 80%;
+	text-align: center;
+}
 .resourceCategory {
 	margin: 40px;
 	font-size: 2em;
@@ -27,11 +31,13 @@
 /* Single resource */
 
 .resource-heading {
-	margin-left: 300px;
+	margin-left: 200px;
 }
 
 .resource-text {
-	margin-left: 275px;
+	margin-left: 200px;
+	align-items: center;
+	text-align: center;
 	height: 500px;
 	width: 1100px;
 	background-color: #f4f4f4;
@@ -46,4 +52,68 @@
 
 .resource-card h4 {
 	margin-bottom: 30px;
+}
+
+/* resource into  */
+
+.resources-intro {
+	color: white;
+	background-color: #574d68;
+	text-align: center;
+	padding: 30px;
+}
+
+.resources-h2 {
+	margin: 30px;
+}
+
+.search-resource {
+	height: 250px;
+	background-color: #e8e9eb;
+	text-align: center;
+}
+
+.resources-searchbar TextField {
+	width: 200px;
+}
+
+.resource-arr {
+	padding-bottom: 100px;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 60px;
+}
+
+.resource-arr a {
+	text-decoration: none;
+}
+
+.resource-arr p {
+	font-size: 12pt;
+}
+@media (max-width: 1200px) {
+	.resource-text {
+		height: 300px;
+		width: 800px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.resource-arr {
+		grid-template-columns: 1fr 1fr;
+	}
+	.resource-text {
+		height: 300px;
+		width: 600px;
+	}
+}
+@media (max-width: 768px) {
+	.resource-arr {
+		grid-template-columns: 1fr;
+	}
+	.resource-text {
+		height: 300px;
+		width: 400px;
+	}
 }
