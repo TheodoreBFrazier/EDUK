@@ -8,28 +8,47 @@ import SingleResource from "./SingleResource";
 const API = process.env.REACT_APP_API_URL;
 
 export default function ContinueLearning() {
-	const [ContinueLearning, setContinueLearning] = useState([]);
+	const [continueLearningPrograms, setContinueLearningPrograms] = useState([]);
+	const [continueLearningClasses, setContinueLearningClasses] = useState([]);
+	const [continueLearningScholarhip, setContinueLearningScholarhip] = useState(
+		[]
+	);
 
 	useEffect(() => {
 		axios
 			.get(API + "/resources")
 			.then((response) => {
-				setContinueLearning(response.data.result);
+				const program = response.data.result.filter(
+					(high) =>
+						high.resource_category === "Program" && high.isverified === true
+				);
+				setContinueLearningPrograms(program);
+				const classes = response.data.result.filter(
+					(high) =>
+						high.resource_category === "Class" && high.isverified === true
+				);
+				setContinueLearningClasses(classes);
+				const scholarship = response.data.result.filter(
+					(high) =>
+						high.resource_category === "Scholarship" && high.isverified === true
+				);
+				setContinueLearningScholarhip(scholarship);
+				// setContinueLearning(response.data.result);
 			})
 			.catch((error) => {
 				console.log(error);
 			});
 	}, []);
 
-	let ContinueLearningPrograms = ContinueLearning.filter((high) => {
-		return high.resource_category === "Program" && high.isverified === true;
-	});
-	let ContinueLearningClasses = ContinueLearning.filter((high) => {
-		return high.resource_category === "Class" && high.isverified === true;
-	});
-	let ContinueLearningScholarhip = ContinueLearning.filter((high) => {
-		return high.resource_category === "Scholarship" && high.isverified === true;
-	});
+	// let ContinueLearningPrograms = ContinueLearning.filter((high) => {
+	// 	return high.resource_category === "Program" && high.isverified === true;
+	// });
+	// let ContinueLearningClasses = ContinueLearning.filter((high) => {
+	// 	return high.resource_category === "Class" && high.isverified === true;
+	// });
+	// let ContinueLearningScholarhip = ContinueLearning.filter((high) => {
+	// 	return high.resource_category === "Scholarship" && high.isverified === true;
+	// });
 
 	return (
 		<div>
@@ -44,7 +63,7 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{ContinueLearningPrograms.map((ContinueLearning) => {
+					{continueLearningPrograms.map((ContinueLearning) => {
 						return (
 							<SingleResource
 								key={ContinueLearning.resource_id}
@@ -64,7 +83,7 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{ContinueLearningClasses.map((ContinueLearning) => {
+					{continueLearningClasses.map((ContinueLearning) => {
 						return (
 							<SingleResource
 								key={ContinueLearning.resource_id}
@@ -84,7 +103,7 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{ContinueLearningScholarhip.map((ContinueLearning) => {
+					{continueLearningScholarhip.map((ContinueLearning) => {
 						return (
 							<SingleResource
 								key={ContinueLearning.resource_id}

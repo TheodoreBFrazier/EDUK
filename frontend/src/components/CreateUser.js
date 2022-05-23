@@ -1,9 +1,9 @@
-import axios from 'axios'; 
-import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import React from 'react';
-import  '../css/CreateUser.css'
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import React from "react";
+import "../css/CreateUser.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -41,6 +41,9 @@ function CreateUser() {
       <form className="form" onSubmit={handleSubmit}>
         <div className="title">Welcome to EDUK!</div>
         <div className="subtitle">Let's create your account!</div>
+        <div>
+          Already signed Up? <Link to="/users/login">Login Here</Link>
+        </div>
 
         <div className="input-container ic1">
           <input

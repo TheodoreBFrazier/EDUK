@@ -49,8 +49,6 @@ function ResourceDetails() {
 					{resource.start_datetime} - {resource.end_datetime}
 				</h5>
 			</div>
-			<br />
-			<br />
 			<div className="resource-text">
 				<p> {resource.description} </p>
 				<div className="resourceMainBtn">

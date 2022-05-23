@@ -55,11 +55,12 @@ function PendingResources() {
 				<thead>
 					<tr>
 						<th>Resource Name</th>
-						<th>Description</th>
+						
 						<th>Category</th>
 						<th>Start_datetime</th>
 						<th>End_datetime</th>
 						<th>Url</th>
+						<th>Description</th>
 						<th>Is Verfified</th>
 						<th></th>
 					</tr>
@@ -69,11 +70,12 @@ function PendingResources() {
 						return (
 							<tr>
 								<td>{resource.resource_name}</td>
-								<td>{resource.description}</td>
+								
 								<td>{resource.resource_category}</td>
 								<td>{resource.start_datetime}</td>
 								<td>{resource.end_datetime}</td>
 								<td>{resource.url}</td>
+								<td>{resource.description}</td>
 								<td>
 									<button onClick={() => handleApprove(resource)}>
 										Approve

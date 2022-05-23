@@ -48,16 +48,16 @@ function PendingMentors() {
 
 	return (
 		<>
-			<h1>Please update the mentor and resource status, thank you!</h1>
+			
 			<br />
 			<Table striped bordered hover variant="dark">
 				<thead>
 					<tr>
 						<th>First Name</th>
 						<th>Last Name</th>
-						<th>Bio</th>
 						<th>Email</th>
 						<th>Speciality</th>
+						<th>Bio</th>
 						<th>Is Verfified</th>
 						<th></th>
 					</tr>
@@ -66,11 +66,11 @@ function PendingMentors() {
 					{MentorChecklist.map((mentor) => {
 						return (
 							<tr>
-								<td>{mentor.mentor_fname}</td>
+								<td>{mentor.mentor_fname ? mentor.mentor_fname : "N/A"}</td>
 								<td>{mentor.mentor_lname}</td>
-								<td>{mentor.bio}</td>
 								<td>{mentor.email}</td>
 								<td>{mentor.speciality}</td>
+								<td>{mentor.bio}</td>
 								<td>
 									<button onClick={() => handleApprove(mentor)}>Approve</button>
 
