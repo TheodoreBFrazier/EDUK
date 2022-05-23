@@ -21,14 +21,15 @@ CREATE TABLE users(
     age INT NOT NULL,
     email TEXT,
     user_name VARCHAR(50) UNIQUE NOT NULL,
-    password TEXT,
+    password TEXT NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE,
     mentor_id INTEGER REFERENCES mentors(mentor_id)
 );
 
 --resources
 CREATE TABLE resources(
     resource_id SERIAL PRIMARY KEY,
-    resource_name VARCHAR(100),
+    resource_name VARCHAR(100) NOT NULL,
     description TEXT,
     resource_category VARCHAR(100),
     start_datetime TEXT,

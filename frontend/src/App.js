@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 //STYLING
 
@@ -35,8 +30,9 @@ import CreateUser from "./components/CreateUser";
 
 import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
+import AdminPage from "./pages/AdminPage";
 
-//import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   const [logText, setLogText] = useState(
@@ -52,7 +48,11 @@ function App() {
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/resources/:resource_id/" element={<ShowResource />} />
             <Route path="/resources/create" element={<NewResource />} />
-            <Route path="/users" element={<UsersPortal />} />
+            <Route path="admin" element={<AdminPage />}>
+              <Route path="users" element={<UsersPortal />} />
+              <Route path="pendings" element={<Pendings />} />
+            </Route>
+
             <Route
               path="/users/login"
               element={<LogInUser setLogText={setLogText} />}
@@ -68,7 +68,6 @@ function App() {
             />
             <Route path="/mentors" element={<AllMentors />} />
             <Route path="/mentors/create" element={<CreateMentor />} />
-            <Route path="/pendings" element={<Pendings />} />
           </Routes>
         </main>
         {/* <Footer /> */}
