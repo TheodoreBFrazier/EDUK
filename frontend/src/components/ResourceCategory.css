@@ -69,12 +69,9 @@
 
 .search-resource {
 	height: 250px;
-	background-color: #e8e9eb;
-	text-align: center;
-}
-
-.resources-searchbar TextField {
-	width: 200px;
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
 }
 
 .resource-arr {

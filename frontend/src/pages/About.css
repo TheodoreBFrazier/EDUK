@@ -6,12 +6,12 @@
 
 .about h2 {
 	padding-top: 50px;
-	font-weight: bolder;
-	color: royalblue;
-	border-bottom: 4px groove royalblue;
+	/* color: royalblue; */
+	/* border-bottom: 4px solid rgb(33, 86, 219); */
 	border-radius: 5px 10px;
 	width: 250px;
 	text-align: center;
+	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
 }
 
 .about-container-one {
@@ -36,7 +36,7 @@
 
 .about-container-two {
 	padding-top: 40px;
-	width: 100%;
+	/* width: 100%; */
 	display: grid;
 	grid-template-columns: repeat(1fr 1fr);
 	list-style: none;

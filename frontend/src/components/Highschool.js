@@ -22,13 +22,15 @@ export default function Highschool() {
 	}, []);
 
 	let highschoolPrograms = highschool.filter((high) => {
-		return high.resource_category === "Program" && high.isverified === true;
+		return high.resource_category === "Program" && high.is_verified === true;
 	});
 	let highschoolClasses = highschool.filter((high) => {
-		return high.resource_category === "Class" && high.isverified === true;
+		return high.resource_category === "Class" && high.is_verified === true;
 	});
 	let highschoolScholarship = highschool.filter((high) => {
-		return high.resource_category === "Scholarship" && high.isverified === true;
+		return (
+			high.resource_category === "Scholarship" && high.is_verified === true
+		);
 	});
 	console.log(highschoolPrograms);
 	return (
