@@ -22,11 +22,9 @@ function ResourcesPage() {
 					</p>
 				</div>
 			</div>
-			<div className="search-resource">
-				<SearchBar />
-			
+
 			<Resources />
-			</div >
+	
 		</div>
 	);
 }
