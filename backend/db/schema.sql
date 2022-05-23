@@ -29,7 +29,7 @@ CREATE TABLE users(
 --resources
 CREATE TABLE resources(
     resource_id SERIAL PRIMARY KEY,
-    resource_name VARCHAR(100),
+    resource_name VARCHAR(100) NOT NULL,
     description TEXT,
     resource_category VARCHAR(100),
     start_datetime TEXT,
