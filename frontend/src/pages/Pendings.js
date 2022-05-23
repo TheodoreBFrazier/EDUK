@@ -1,19 +1,19 @@
 import PendingMentors from "../components/PendingMentors";
 import PendingResources from "../components/PendingResources";
 import React from "react";
+import "../components/Admin.css"
 
-
-function MentorToVerify(){
-
-
+function ToVerify(){
     return(
-        <div>
+        <div className="admin_pendings">
+            <h2>Mentors Table</h2>
             <PendingMentors />
-            <br />
-            <br />
+            <hr />
+            <hr />
+            <h2>Resources Table</h2>
             <br />
             <PendingResources />
         </div>
     )
 }
-export default MentorToVerify;
+export default ToVerify;
