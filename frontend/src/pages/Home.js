@@ -1,5 +1,4 @@
 import React from "react";
-import Resources from "../components/Resources";
 import Background from "../images/home.jpg";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
@@ -45,7 +44,6 @@ function Home() {
 						easily find resources they desperately need to improve their quality
 						of life.
 					</p>
-					<Resources />
 				</div>
 			</div>
 		</div>
