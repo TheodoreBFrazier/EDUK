@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React from "react";
 import "../css/CreateUser.css";
+import Error from "./Error";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -17,6 +18,7 @@ function CreateUser() {
     user_name: "",
     password: "",
   });
+  const [error, setError] = useState("");
 
   const addUser = () => {
     axios
@@ -24,7 +26,9 @@ function CreateUser() {
       .then(() => {
         navigate(`/users`);
       })
-      .catch((c) => console.warn("catch", c));
+      .catch((c) => {
+        if (c.response) setError(c.response.data.error);
+      });
   };
 
   const handleTextChange = (event) => {
@@ -38,6 +42,7 @@ function CreateUser() {
 
   return (
     <div>
+      {error ? <Error error={error} /> : ""}
       <form className="form" onSubmit={handleSubmit}>
         <div className="title">Welcome to EDUK!</div>
         <div className="subtitle">Let's create your account!</div>

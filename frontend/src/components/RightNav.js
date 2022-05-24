@@ -12,7 +12,7 @@ const Ul = styled.ul`
 		background-color: rgb(247 247 247);
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-		top: 30px;
+		top: 25px;
 		right: 0;
 		height: 100vh;
 		width: 240px;
@@ -22,41 +22,95 @@ const Ul = styled.ul`
 	}
 `;
 
-export default function RightNav({ open, logText, setLogText }) {
-	const [dropdown, setDropdown] = useState(false);
-
-	const onMouseClick = () => {
-		setDropdown(true);
-	};
-	const onMouseUnclick = () => {
-		setDropdown(false);
-	};
+export default function RightNav({
+	open,
+	setOpen,
+	logText,
+	setLogText,
+	click,
+	handleClick,
+	toggleDropdownOpen,
+	toggleOpen,
+	dropdown,
+	onMouseClick,
+	onMouseUnclick,
+	// setDropdown,
+	// toggleMouseClick,
+}) {
 	const logOut = () => {
 		localStorage.clear();
 		setLogText("Log In");
 	};
+	// const onMouseEnter = () => {
+	// 	if (window.innerWidth < 760) {
+	// 		setDropdown(false);
+	// 	}
+	// };
+
+	// const onMouseLeave = () => {
+	// 	if (window.innerWidth < 760) {
+	// 		setDropdown(false);
+	// 	} else {
+	// 		setDropdown(false);
+	// 	}
+	// };
 
 	return (
 		<Ul open={open} className="navLinks">
 			<li
 				className="eachLi mainLi "
 				onClick={dropdown ? onMouseUnclick : onMouseClick}
+				// onMouseEnter={onMouseEnter}
+				// onMouseLeave={onMouseLeave}
 			>
 				<Link to="/resources">
 					Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
 				</Link>
-				{dropdown && <Dropdown />}
+				{dropdown && (
+					<Dropdown
+						handleClick={handleClick}
+						click={click}
+						open={open}
+						toggleOpen={toggleOpen}
+						toggleDropdownOpen={toggleDropdownOpen}
+						setOpen={setOpen}
+					/>
+				)}
 			</li>
-			<li className="eachLi mainLi">
+			<li
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+				}}
+				className="eachLi mainLi"
+			>
 				<Link to="/about">About</Link>
 			</li>
-			<li className="eachLi mainLi">
+			<li
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+				}}
+				className="eachLi mainLi"
+			>
 				<Link to="/users">Users</Link>
 			</li>
-			<li className="eachLi mainLi">
+			<li
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+				}}
+				className="eachLi mainLi"
+			>
 				<Link to="/mentors/create">Mentors</Link>
 			</li>
-			<div className="loginIcon">
+			<div
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+				}}
+				className="loginIcon"
+			>
 				{localStorage.getItem("userId") ? (
 					<Link to="/">
 						<Button variant="outlined" size="medium" onClick={logOut}>
