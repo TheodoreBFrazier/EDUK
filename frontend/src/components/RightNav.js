@@ -35,11 +35,11 @@ export default function RightNav({ open, logText, setLogText }) {
     localStorage.clear();
     setLogText("Log In");
   };
-  //get userId from localStorage
+  //get userId from local storage
   const userId = localStorage.getItem("userId");
 
-  //user data
-
+  //user data from local storage
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
   return (
     <Ul open={open} className="navLinks">
       <li
@@ -55,8 +55,8 @@ export default function RightNav({ open, logText, setLogText }) {
         <Link to="/about">About</Link>
       </li>
       <li className="eachLi mainLi">
-        {!isNaN(userId) ? (
-          <Link to={`/users/${userId}`}>Dashboard</Link>
+        {userInfo && userInfo.is_admin && !isNaN(userId) ? (
+          <Link to={`/users/${userId}`}>Admin Page</Link>
         ) : (
           <Link to={`/users/${userId}`}>Dashboard</Link>
         )}
