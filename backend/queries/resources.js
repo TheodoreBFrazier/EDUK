@@ -48,6 +48,7 @@ const getOneResource = async (uid, resource_id) => {
 const createResource = async (uid, resource) => {
 	try {
 		//add uid and resource_id into the join table(user add a resource to his profile)
+		console.log(resource);
 		if (uid) {
 			const user_resource = await db.one(
 				"INSERT INTO users_resources(uid, resource_id) VALUES($1,$2) RETURNING*",
@@ -59,12 +60,12 @@ const createResource = async (uid, resource) => {
 		//create a new resource
 		else {
 			const createdResouce = await db.one(
-				"INSERT INTO resources(resource_name,description,resource_category,resourceFor,start_datetime, end_datetime, url) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *",
+				"INSERT INTO resources(resource_name,description,resource_category,resourcefor,start_datetime, end_datetime, url) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *",
 				[
 					resource.resource_name,
 					resource.description,
 					resource.resource_category,
-					resource.resourceFor,
+					resource.resourcefor,
 					resource.start_datetime,
 					resource.end_datetime,
 					resource.url,
@@ -105,14 +106,15 @@ const deleteResource = async (uid, resource_id) => {
 // update a resources
 
 const updateResource = async (resource_id, resource) => {
+	console.log(resource);
 	try {
 		const updatedResource = await db.one(
-			"UPDATE resources SET resource_name=$1, description=$2, resource_category=$3, resourceFor=4, start_datetime=$5, end_datetime=$6, url=$7, is_verified=$8 WHERE resource_id=$9 RETURNING *",
+			"UPDATE resources SET resource_name=$1, description=$2, resource_category=$3, resourcefor=$4, start_datetime=$5, end_datetime=$6, url=$7, is_verified=$8 WHERE resource_id=$9 RETURNING *",
 			[
 				resource.resource_name,
 				resource.description,
 				resource.resource_category,
-				resource.resourceFor,
+				resource.resourcefor,
 				resource.start_datetime,
 				resource.end_datetime,
 				resource.url,

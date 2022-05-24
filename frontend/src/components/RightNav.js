@@ -34,8 +34,8 @@ export default function RightNav({
 	dropdown,
 	onMouseClick,
 	onMouseUnclick,
-	// setDropdown,
-	// toggleMouseClick,
+	setDropdown,
+	toggleMouseClick,
 }) {
 	const logOut = () => {
 		localStorage.clear();
@@ -44,22 +44,26 @@ export default function RightNav({
 	// const onMouseEnter = () => {
 	// 	if (window.innerWidth < 760) {
 	// 		setDropdown(false);
+	// 	} else {
+	// 		setDropdown(true);
 	// 	}
 	// };
 
 	// const onMouseLeave = () => {
-	// 	if (window.innerWidth < 760) {
+	// 	if (window.innerWidth > 760) {
 	// 		setDropdown(false);
 	// 	} else {
-	// 		setDropdown(false);
+	// 		setDropdown(true);
 	// 	}
 	// };
 
 	return (
 		<Ul open={open} className="navLinks">
 			<li
-				className="eachLi mainLi "
+				className="eachLi mainLi dropLi"
 				onClick={dropdown ? onMouseUnclick : onMouseClick}
+				// onMouseEnter={dropdown ? onMouseUnclick : onMouseClick}
+				// onMouseLeave={dropdown ? onMouseUnclick : onMouseClick}
 				// onMouseEnter={onMouseEnter}
 				// onMouseLeave={onMouseLeave}
 			>
