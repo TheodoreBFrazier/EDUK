@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./userdetails.css";
 import SingleResource from "./SingleResource";
@@ -12,7 +12,7 @@ const API = process.env.REACT_APP_API_URL;
 function UserDetails() {
   const [user, setUser] = useState({});
   const [userResources, setUserResources] = useState([]);
-  const [showUserDetails, setShowUserDetails] = useState(false);
+  // const [showUserDetails, setShowUserDetails] = useState(false);
   let { uid } = useParams();
   //let navigate = useNavigate();
 
@@ -41,8 +41,11 @@ function UserDetails() {
       <div className="welcome">
         <aside className="profile-card">
           <header>
-            <a>
-              <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" />
+            <a href="#">
+              <img
+                src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                alt="profile-img"
+              />
             </a>
 
             <h1>

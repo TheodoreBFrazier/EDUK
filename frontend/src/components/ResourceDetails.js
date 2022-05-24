@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Button from "@mui/material/Button";
 import "./ResourceCategory.css";
@@ -14,7 +14,7 @@ function ResourceDetails() {
   const [showMessage, setShowMessage] = useState(false);
   let { resource_id } = useParams();
 
-  const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
   let userId = localStorage.getItem("userId");
   console.log(userId);
