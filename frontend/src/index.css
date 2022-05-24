@@ -19,15 +19,42 @@ code {
 
 /* Importing Font */
 
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap");
 
 /* Regular */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
 /* Italics */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap');
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+	font-family: 'Roboto', sans-serif;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
 
 ------------------------------    HOME  --------------------------------------
 
