@@ -30,7 +30,7 @@ import CreateUser from "./components/CreateUser";
 
 import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
-import EditResource from "./pages/EditResource";
+// import EditResource from "./pages/EditResource";
 import AdminPage from "./pages/AdminPage";
 
 // import Footer from "./components/Footer";
@@ -49,7 +49,7 @@ function App() {
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/resources/:resource_id" element={<ShowResource />} />
             <Route path="/resources/:resource_id/edit" element={<EditResource />} />
-            <Route path="/resources/create" element={<NewResource />} />
+            {/* <Route path="/resources/create" element={<NewResource />} /> */}
             <Route path="admin" element={<AdminPage />}>
               <Route path="users" element={<UsersPortal />} />
               <Route path="pendings" element={<Pendings />} />
