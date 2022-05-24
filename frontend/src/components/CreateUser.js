@@ -21,10 +21,11 @@ function CreateUser() {
   const [error, setError] = useState("");
 
   const addUser = () => {
+    setError("");
     axios
       .post(`${API}/auth/sign_up`, user)
       .then(() => {
-        navigate(`/users`);
+        navigate(`/users/login`);
       })
       .catch((c) => {
         if (c.response) setError(c.response.data.error);
