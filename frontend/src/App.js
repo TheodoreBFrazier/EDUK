@@ -16,7 +16,7 @@ import ShowResource from "./pages/ShowResource";
 import UsersPortal from "./pages/UsersPortal";
 import LogInUser from "./components/LogInUser";
 import CreateMentor from "./components/CreateMentor";
-import AllMentors from "./components/AllMentors";
+import MentorsPage from "./pages/MentorsPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // rescources pages
@@ -66,7 +66,7 @@ function App() {
               path="/continuelearning"
               element={<ContinueLearningPage />}
             />
-            <Route path="/mentors" element={<AllMentors />} />
+            <Route path="/mentors" element={<MentorsPage />} />
             <Route path="/mentors/create" element={<CreateMentor />} />
           </Routes>
         </main>
