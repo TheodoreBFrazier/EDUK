@@ -117,6 +117,8 @@ p {
 	background-color: Transparent;
 	background-repeat: no-repeat;
 	text-decoration: none; 
+	transition-duration: .6s;
+  transition-timing-function: ease;
 }
 
 
@@ -134,7 +136,7 @@ p {
 	display: block;
 	margin: 0 auto;
 	position: relative;
-	transition: all 280ms ease-in-out;
+	transition: all ms ease-in-out;
 	width: 0;
 }
 
@@ -143,13 +145,13 @@ p {
 	backface-visibility: hidden;
 	border-color: #fff;
 	transition: width 380ms ease-in-out;
-	width: 70%;
+	width: 100%;
 }
 
 .joinUs button:hover:before {
 	bottom: auto;
 	top: 0;
-	width: 70%;
+	width: 100%;
 }
 
 
