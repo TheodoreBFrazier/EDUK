@@ -63,7 +63,11 @@ function UserDetails() {
           <section>
             User Resources:
             {userResources.map((resource) => (
-              <SingleResource key={resource.resource_id} resource={resource} />
+              <SingleResource
+                key={resource.resource_id}
+                resource={resource}
+                showDelete={true}
+              />
             ))}
           </section>
         </aside>
