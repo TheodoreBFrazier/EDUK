@@ -63,7 +63,6 @@ function LogInUser({ setLogText }) {
         </label>
         <input
           type="text"
-          placeholder="Username"
           id="user_name"
           onChange={handleChange}
           value={user.user_name}
@@ -74,7 +73,6 @@ function LogInUser({ setLogText }) {
         </label>
         <input
           type="password"
-          placeholder="Password"
           id="password"
           onChange={handleChange}
           value={user.password}

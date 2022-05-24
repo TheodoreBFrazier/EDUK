@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-// import "../css/CreateUser.css";
+import "../css/CreateUser.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -40,83 +40,75 @@ function CreateMentor() {
   return (
     <div id="volunteers">
       <form className="form" onSubmit={handleSubmit}>
-        <div class="title">Become a Mentor at EDUK!</div>
         <div class="subtitle">Let's create your account!</div>
+        <div class="title">Become a Mentor at EDUK!</div>
+        
 
-        <div class="input-container ic1">
+      
+          <label for="firstname" class="placeholder">
+            First Name
+          </label>
           <input
             id="mentor_fname"
             class="input"
             type="text"
             value={mentor.mentor_fname}
-            placeholder=" "
+            // placeholder=" "
             onChange={handleTextChange}
           />
-          <div class="cut"></div>
-          <label for="firstname" class="placeholder">
-            First Name
-          </label>
-        </div>
+   
 
-        <div class="input-container ic2">
+    
+          <label for="lastname" class="placeholder">
+            Last Name
+          </label>
           <input
             id="mentor_lname"
             class="input"
             type="text"
-            placeholder=" "
             onChange={handleTextChange}
             value={mentor.mentor_lname}
           />
-          <div class="cut"></div>
-          <label for="lastname" class="placeholder">
-            Last Name
-          </label>
-        </div>
+      
 
-        <div class="input-container ic2">
+
+          <label for="bio" class="placeholder">
+            Bio
+          </label>
           <input
             id="bio"
             class="input"
             type="text"
-            placeholder=" "
             onChange={handleTextChange}
             value={mentor.bio}
           />
-          <div class="cut"></div>
-          <label for="bio" class="placeholder">
-            Bio
-          </label>
-        </div>
 
-        <div class="input-container ic2">
+
+   
+          <label for="speciality" class="placeholder">
+            Speciality
+          </label>
           <input
             id="speciality"
             class="input"
             type="text"
-            placeholder=" "
             onChange={handleTextChange}
             value={mentor.speciality}
           />
-          <div class="cut"></div>
-          <label for="speciality" class="placeholder">
-            Speciality
-          </label>
-        </div>
 
-        <div class="input-container ic2">
+
+     
+          <label for="email" class="placeholder">
+            Email
+          </label>
           <input
             id="email"
             class="input"
             type="text"
-            placeholder=" "
             onChange={handleTextChange}
             value={mentor.email}
           />
-          <div class="cut cut-short"></div>
-          <label for="email" class="placeholder">
-            Email
-          </label>
-        </div>
+
 
         <button type="submit" class="submit">
           submit
