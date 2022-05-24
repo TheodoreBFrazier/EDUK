@@ -25,7 +25,12 @@ function CreateResource() {
 
     axios
       .post(`${API}/resources`, resource)
-      .then((res) => navigate("/resources"))
+      .then((res) => {
+        alert(
+          "Thank you for adding a new resource. We appreciate your support."
+        );
+        navigate("/resources")
+      })
       .catch((e) => console.log(e));
   };
   return (

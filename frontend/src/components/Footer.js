@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
@@ -10,9 +11,15 @@ export default function Footer() {
 		// 				<h4> About us </h4>
 		// 			</Link>
 		// 			<ul className="box-list">
-		// 				<li>Our Team</li>
-		// 				<li>Our Values</li>
-		// 				<li>Mission and Vision</li>
+		// 				<li>
+ 		// 					<a href="/about#our_team">Our Team</a>
+ 		// 				</li>
+ 		// 				<li>
+ 		// 					<a href="/about#our_values">Our Values</a>
+ 		// 				</li>
+ 		// 				<li>
+ 		// 					<a href="/about#our_mission">Mission and Vision</a>
+ 		// 				</li>
 		// 			</ul>
 		// 		</div>
 		// 		<div className="footer-box">
@@ -31,7 +38,7 @@ export default function Footer() {
 		// 			<h4> Contact Us </h4>
 
 		// 			<ul className="box-list">
-		// 				<li>NYC ROSE Headquarters</li>
+		// 				<li>EDUK Headquarters</li>
 		// 				<li>123 West 123rd street, #123</li>
 		// 				<li>New York, NY 1234</li>
 		// 			</ul>
@@ -49,7 +56,7 @@ export default function Footer() {
 		// 	</div>
 		// 	<div className="footer-container-two">
 		// 		<div className="footer-right">
-		// 			Copyright NYC_ROSE.com 2022. All rights reserved.
+		// 			Copyright EDUK.com 2022. All rights reserved.
 		// 		</div>
 		// 		<div className="icons">
 		// 			<a href="#" className="fa fa-facebook"></a>
