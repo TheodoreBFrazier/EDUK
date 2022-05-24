@@ -32,6 +32,7 @@ CREATE TABLE resources(
     resource_name VARCHAR(100) NOT NULL,
     description TEXT,
     resource_category VARCHAR(100),
+    resourceFor TEXT [],
     start_datetime TEXT,
     end_datetime TEXT,
     url TEXT NOT NULL,
