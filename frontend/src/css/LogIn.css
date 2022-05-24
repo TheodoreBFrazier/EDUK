@@ -1,36 +1,12 @@
 
-form{
-    height: 56%;
-    width: 60%;
-    background-color: #4cadde;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 20px rgba(1,2,4,0.7);
-    padding: 50px 35px;
-    z-index: -1; 
-}
-form * {
-	font-family: "Poppins", sans-serif;
-	color: #f7f2f2;
-	letter-spacing: 0.5px;
-	outline: none;
-	border: none;
-}
 form h3 {
 	font-size: 40px;
 	font-weight: 800;
-	line-height: 42px;
 	text-align: center;
 }
 
 .login {
-	display: block;
-	margin-top: 30px;
+	margin-top: 20px;
 	font-size: 24px;
 	font-weight: 500;
 }
@@ -47,11 +23,9 @@ input{
     font-weight: 300;
     color: black;
 }
-::placeholder{
-    color: #11374e6f;
-}
+
 button{
-    /* margin-top: 40px; */
+
     width: 100%;
     background-color: #1f56e3b2;
     color: #ffffff;
