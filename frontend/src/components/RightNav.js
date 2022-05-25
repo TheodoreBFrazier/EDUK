@@ -82,7 +82,9 @@ export default function RightNav({
         }}
         className="eachLi mainLi"
       >
-        {userInfo && userInfo.is_admin && !isNaN(userId) ? (
+        {!userInfo ? (
+          ""
+        ) : userInfo.is_admin && !isNaN(userId) ? (
           <Link to={`/users/${userId}`}>Admin Page</Link>
         ) : (
           <Link to={`/users/${userId}`}>Dashboard</Link>
