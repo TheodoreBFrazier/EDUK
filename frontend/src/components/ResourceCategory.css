@@ -22,7 +22,7 @@
 
 .resourceMainBtn {
 	display: flex;
-	align-items: left;
+	justify-content: center;
 }
 .resourceMainBtn div {
 	margin: 20px;
@@ -31,23 +31,21 @@
 /* Single resource */
 
 .resource-heading {
-	margin-left: 200px;
+	margin: 40px;
+	margin-left: 300px;
 }
 
 .resource-text {
-	margin-left: 200px;
-	align-items: center;
 	text-align: center;
-	height: 500px;
-	width: 1100px;
-	background-color: #f4f4f4;
+	height: auto;
+	width: 1000px;
+	margin-left: 200px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .resource-text p {
-	padding-top: 100px;
-	padding-left: 50px;
-	padding-right: 250px;
+	text-align: left;
+	padding: 100px;
 }
 
 .resource-card h4 {
@@ -90,28 +88,30 @@
 .resource-arr p {
 	font-size: 12pt;
 }
-@media (max-width: 1200px) {
-	.resource-text {
-		height: 300px;
-		width: 800px;
-	}
-}
 
 @media (max-width: 1024px) {
 	.resource-arr {
 		grid-template-columns: 1fr 1fr;
 	}
 	.resource-text {
-		height: 300px;
-		width: 600px;
+		margin-left: 60px;
+		height: auto;
+		width: 400px;
+	}
+	.resource-heading {
+		margin-left: 60px;
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.resource-arr {
 		grid-template-columns: 1fr;
 	}
 	.resource-text {
-		height: 300px;
+		height: auto;
 		width: 400px;
+		margin-left: 10px;
+	}
+	.resource-heading {
+		margin-left: 30px;
 	}
 }
