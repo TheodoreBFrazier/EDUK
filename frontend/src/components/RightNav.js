@@ -34,27 +34,12 @@ export default function RightNav({
   dropdown,
   onMouseClick,
   onMouseUnclick,
-  // setDropdown,
-  // toggleMouseClick,
 }) {
   const logOut = () => {
     localStorage.clear();
     setLogText("Log In");
   };
-  // const onMouseEnter = () => {
-  // 	if (window.innerWidth < 760) {
-  // 		setDropdown(false);
-  // 	}
-  // };
 
-  // const onMouseLeave = () => {
-  // 	if (window.innerWidth < 760) {
-  // 		setDropdown(false);
-  // 	} else {
-  // 		setDropdown(false);
-  // 	}
-  // };
-  //get userId from local storage
   const userId = localStorage.getItem("userId");
 
   //user data from local storage
@@ -65,8 +50,6 @@ export default function RightNav({
       <li
         className="eachLi mainLi "
         onClick={dropdown ? onMouseUnclick : onMouseClick}
-        // onMouseEnter={onMouseEnter}
-        // onMouseLeave={onMouseLeave}
       >
         <Link to="/resources">
           Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
@@ -112,11 +95,7 @@ export default function RightNav({
         }}
         className="eachLi mainLi"
       >
-        {userId && !isNaN(userId) ? (
-          <Link to="/mentors">Mentors</Link>
-        ) : (
-          <Link to="/mentors/create">Mentors</Link>
-        )}
+        <Link to="/mentors/create">Mentors</Link>
       </li>
       <div
         onClick={() => {

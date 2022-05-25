@@ -55,16 +55,17 @@ export default function Burger({ logText, setLogText }) {
 	};
 
 	const toggleMouseClick = () => {
-		return dropdown ? onMouseUnclick : onMouseClick;
+		dropdown ? onMouseUnclick() : onMouseClick();
 	};
 	const handleClick = () => setClick(!click);
 
 	const toggleOpen = () => {
+		setDropdown(false);
 		setOpen(!open);
 	};
 
 	const toggleDropdownOpen = () => {
-		setClick(false);
+		setClick(!click);
 	};
 	return (
 		<>
@@ -73,7 +74,7 @@ export default function Burger({ logText, setLogText }) {
 				onClick={() => {
 					toggleOpen();
 					toggleDropdownOpen();
-					toggleMouseClick();
+					// toggleMouseClick();
 				}}
 				className="mainHam"
 			>

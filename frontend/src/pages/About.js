@@ -15,7 +15,10 @@ function About() {
 						extend grace to ourselves and others. We accelerate each other and
 						are accountable to each other to deliver on our vision.
 					</div>
-					{/* <img src="https://blog.vantagecircle.com/content/images/2019/07/company-core-values.png" alt="value" /> */}
+					{/* <img
+						src="https://blog.vantagecircle.com/content/images/2019/07/company-core-values.png"
+						alt="value"
+					/> */}
 				</div>
 
 				<div className="valueNmission">
@@ -31,7 +34,10 @@ function About() {
 						portal where people can easily find resources they desperately need
 						to improve their quality of life.
 					</div>
-					{/* <img src="https://i0.wp.com/www.kouya.net/wp-content/uploads/2019/09/mission-900x450.jpg?fit=900%2C450&ssl=1" alt="mission" /> */}
+					{/* <img
+						src="https://i0.wp.com/www.kouya.net/wp-content/uploads/2019/09/mission-900x450.jpg?fit=900%2C450&ssl=1"
+						alt="mission"
+					/> */}
 				</div>
 			</div>
 			<div className="about-container-two" id="our_team">

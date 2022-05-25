@@ -23,14 +23,24 @@ export default function College() {
 	}, []);
 
 	let collegeProgram = college.filter((high) => {
-		return high.resource_category === "Program" && high.is_verified === true;
+		return (
+			high.resource_category === "Program" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("college")
+		);
 	});
 	let collegeClasses = college.filter((high) => {
-		return high.resource_category === "Class" && high.is_verified === true;
+		return (
+			high.resource_category === "Class" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("college")
+		);
 	});
 	let collegeScholarship = college.filter((high) => {
 		return (
-			high.resource_category === "Scholarship" && high.is_verified === true
+			high.resource_category === "Scholarship" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("college")
 		);
 	});
 	return (
