@@ -1,7 +1,5 @@
 import React from "react";
 import Background from "../images/home.jpg";
-import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
 
 function Home() {
 	return (
@@ -10,19 +8,6 @@ function Home() {
 				<div className="Hero-text">
 					<h1>TIME TO EVEN THE PLAYING FIELD</h1>
 					<h3>LINKING NYERS TO ESSENTIAL SERVICES </h3>
-				</div>
-				<div className="joinUs">
-					<div>
-						<h3>Join us become a</h3>
-					</div>
-
-					<div>
-						<Link to="/mentors/create">
-							<Button color="secondary" variant="text" size="large">
-								Mentor
-							</Button>
-						</Link>
-					</div>
 				</div>
 			</div>
 			<div className="introduction">

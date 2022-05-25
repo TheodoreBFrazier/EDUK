@@ -17,7 +17,7 @@ import UsersPortal from "./pages/UsersPortal";
 import LogInUser from "./components/LogInUser";
 import CreateMentor from "./components/CreateMentor";
 import AllMentors from "./components/AllMentors";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // rescources pages
 import HighschoolPage from "./pages/HighschoolPage";

@@ -14,12 +14,11 @@ nav {
 .navLinks {
 	display: flex;
 	flex-flow: row nowrap;
-	text-align: center;
 	padding-top: 40px;
 }
 
 .navLinks a {
-	margin: 30px;
+	margin: 18px;
 	color: black;
 	text-decoration: none;
 }
