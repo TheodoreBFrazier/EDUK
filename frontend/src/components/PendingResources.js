@@ -70,7 +70,7 @@ function PendingResources() {
 						return (
 							<tr>
 								<td>{resource.resource_name}</td>
-								<td>{resource.resourcefor ? resource.resourcefor.join(" & ") : ""}</td>
+								<td>{resource.resourcefor.length ? resource.resourcefor.filter(ele=>ele!=="null").join(" & ") : ""}</td>
 								<td>{resource.resource_category}</td>
 								<td>{resource.start_datetime}</td>
 								<td>{resource.end_datetime}</td>
