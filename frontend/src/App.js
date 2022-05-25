@@ -17,7 +17,7 @@ import UsersPortal from "./pages/UsersPortal";
 import LogInUser from "./components/LogInUser";
 import CreateMentor from "./components/CreateMentor";
 import AllMentors from "./components/AllMentors";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // rescources pages
 import HighschoolPage from "./pages/HighschoolPage";
@@ -48,8 +48,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/resources/:resource_id" element={<ShowResource />} />
-            <Route path="/resources/:resource_id/edit" element={<EditResource />} />
-            {/* <Route path="/resources/create" element={<NewResource />} /> */}
+            {/* <Route path="/resources/:resource_id/edit" element={<EditResource />} /> */}
+            <Route path="/resources/create" element={<NewResource />} />
             <Route path="admin" element={<AdminPage />}>
               <Route path="users" element={<UsersPortal />} />
               <Route path="pendings" element={<Pendings />} />
