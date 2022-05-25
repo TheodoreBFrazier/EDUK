@@ -8,7 +8,7 @@ import Error from "./Error";
 
 const API = process.env.REACT_APP_API_URL;
 
-function LogInUser({ setLogText }) {
+function LogInUser({ setLogText, mentors }) {
   let navigate = useNavigate();
   const [user, setUser] = useState({
     user_name: "",
@@ -31,6 +31,12 @@ function LogInUser({ setLogText }) {
           localStorage.setItem("userId", `${userId}`);
           //set userInfo in localStage
           localStorage.setItem("userInfo", JSON.stringify(userInfo));
+          if (userInfo.mentor_id) {
+            const mentor = mentors.find(
+              (el) => el.mentor_id === userInfo.mentor_id
+            );
+            localStorage.setItem("userMentor", JSON.stringify(mentor));
+          }
           setLogText("Log Out");
           if (!userInfo.is_admin) navigate(`/users/${userId}`);
           if (userInfo.is_admin) navigate("/admin");

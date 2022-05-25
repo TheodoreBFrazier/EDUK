@@ -14,11 +14,12 @@ const authUser = async (user_name, password) => {
         uid: user.uid,
         user_name: user.user_name,
         is_admin: user.is_admin,
+        mentor_id: user.mentor_id,
       };
       return userInfo;
     }
-  } catch (error) {
-    return error;
+  } catch (e) {
+    return { error: "Username doesn't exist..." };
   }
 };
 
