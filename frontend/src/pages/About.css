@@ -1,7 +1,10 @@
+
+
 .about {
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
+	background-color: #14213D;
 }
 
 .about h2 {
@@ -11,7 +14,11 @@
 	border-radius: 5px 10px;
 	width: 250px;
 	text-align: center;
-	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
+	color: white;
+}
+
+.about p {
+	color: white;
 }
 
 .about-container-one {
