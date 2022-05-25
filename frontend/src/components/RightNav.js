@@ -75,49 +75,59 @@ export default function RightNav({
         <Link to="/about">About</Link>
       </li>
 
-      <li
-        onClick={() => {
-          toggleOpen();
-          toggleDropdownOpen();
-        }}
-        className="eachLi mainLi"
-      >
-        {userInfo && userInfo.is_admin && !isNaN(userId) ? (
-          <Link to={`/users/${userId}`}>Admin Page</Link>
-        ) : (
-          <Link to={`/users/${userId}`}>Dashboard</Link>
-        )}
-      </li>
-      <li
-        onClick={() => {
-          toggleOpen();
-          toggleDropdownOpen();
-        }}
-        className="eachLi mainLi"
-      >
-        <Link to="/mentors/create">Mentors</Link>
-      </li>
-      <div
-        onClick={() => {
-          toggleOpen();
-          toggleDropdownOpen();
-        }}
-        className="loginIcon"
-      >
-        {localStorage.getItem("userId") ? (
-          <Link to="/">
-            <Button variant="outlined" size="medium" onClick={logOut}>
-              {logText}
-            </Button>
-          </Link>
-        ) : (
-          <Link to="/users/login">
-            <Button variant="outlined" size="medium">
-              {logText}
-            </Button>
-          </Link>
-        )}
-      </div>
-    </Ul>
-  );
+			<li
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+				}}
+				className="eachLi mainLi"
+			>
+				{userInfo && userInfo.is_admin && !isNaN(userId) ? (
+					<Link to={`/users/${userId}`}>Admin Page</Link>
+				) : (
+					<Link to={`/users/${userId}`}>Dashboard</Link>
+				)}
+			</li>
+			<li
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+				}}
+				className="eachLi mainLi"
+			>
+				<Link to="/mentors/create">Mentors</Link>
+			</li>
+			<div
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+				}}
+				className="loginIcon"
+			>
+				{localStorage.getItem("userId") ? (
+					<Link to="/">
+						<Button  						
+						variant="outlined" size="medium" onClick={logOut}>
+							{logText}
+						</Button>
+					</Link>
+				) : (
+					<Link to="/users/login">
+						<Button 
+
+style={{
+	backgroundColor: "#FCA311",
+	fontSize: "18px"
+}}
+						
+						
+						
+						variant="contained" size="medium">
+							{logText}
+						</Button>
+					</Link>
+				)}
+			</div>
+		</Ul>
+	);
 }
