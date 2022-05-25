@@ -7,31 +7,35 @@ import SingleResource from "./SingleResource";
 const API = process.env.REACT_APP_API_URL;
 
 function Resources() {
-	const [resources, setResources] = useState([]);
+  const [resources, setResources] = useState([]);
 
-	useEffect(() => {
-		axios
-			.get(API + "/resources")
-			.then((response) => {
-				const allResources = response.data.result.filter(
-					(resource) => resource.is_verified
-				);
-				setResources(allResources);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}, []);
+  useEffect(() => {
+    axios
+      .get(API + "/resources")
+      .then((response) => {
+        const allResources = response.data.result.filter(
+          (resource) => resource.is_verified
+        );
+        setResources(allResources);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-	return (
-		<div className="resource-arr">
-			{resources.map((resource) => {
-				return (
-					<SingleResource key={resource.resource_id} resource={resource} />
-				);
-			})}
-		</div>
-	);
+  return (
+    <div className="resource-arr">
+      {resources.map((resource) => {
+        return (
+          <SingleResource
+            key={resource.resource_id}
+            resource={resource}
+            showDelete={false}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default Resources;

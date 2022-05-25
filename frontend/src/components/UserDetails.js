@@ -8,13 +8,33 @@ import SingleResource from "./SingleResource";
 //API
 
 const API = process.env.REACT_APP_API_URL;
+const userId = localStorage.getItem("userId");
 
 function UserDetails() {
   const [user, setUser] = useState({});
   const [userResources, setUserResources] = useState([]);
+  //show Message
+  const [showMessage, setShowMessage] = useState(false);
   // const [showUserDetails, setShowUserDetails] = useState(false);
   let { uid } = useParams();
   //let navigate = useNavigate();
+
+  //mentor info
+  const mentor = JSON.parse(localStorage.getItem("userMentor"));
+
+  //handle remove a resource from user profile
+  const removeResource = (rid) => {
+    axios
+      .delete(`${API}/users/${userId}/resources/${rid}`)
+      .then((res) => {
+        setShowMessage(true);
+        const newResources = userResources.filter(
+          (el) => el.resource_id !== rid
+        );
+        setUserResources(newResources);
+      })
+      .catch((e) => console.log(e));
+  };
 
   useEffect(() => {
     axios
@@ -41,13 +61,12 @@ function UserDetails() {
       <div className="welcome">
         <aside className="profile-card">
           <header>
-            <a href="#">
+            <a href="#!">
               <img
                 src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
                 alt="profile-img"
               />
             </a>
-
             <h1>
               Welcome {user.first_name} {user.last_name}!
             </h1>
@@ -59,17 +78,20 @@ function UserDetails() {
             <p>
               Username : {user.user_name} <br />
               Age : {user.age} <br />
-              Mentor ID: {user.mentor_id} <br />
+              Mentor Name: {mentor ? mentor.mentor_fname : ""}{" "}
+              {mentor ? mentor.mentor_lname : ""} <br />
               Email : {user.email}
             </p>
           </div>
           <section>
-            User Resources:
+            <strong>User Resources:</strong>
             {userResources.map((resource) => (
               <SingleResource
                 key={resource.resource_id}
                 resource={resource}
                 showDelete={true}
+                removeResource={removeResource}
+                showMessage={showMessage}
               />
             ))}
           </section>
