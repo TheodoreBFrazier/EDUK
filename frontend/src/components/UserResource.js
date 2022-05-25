@@ -12,7 +12,9 @@ var cardStyle = {
   boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px",
 };
 
-function SingleResource({ resource }) {
+//need to add a boolean in order to not show delete button on resources page
+
+function UserResource({ resource, removeResource }) {
   return (
     <div className="resource-card">
       <Card style={cardStyle} variant="outlined">
@@ -25,9 +27,18 @@ function SingleResource({ resource }) {
             View
           </Button>
         </Link>
+
+        <Button
+          color="error"
+          variant="contained"
+          size="small"
+          onClick={() => removeResource(resource.resource_id)}
+        >
+          Delete
+        </Button>
       </Card>
     </div>
   );
 }
 
-export default SingleResource;
+export default UserResource;

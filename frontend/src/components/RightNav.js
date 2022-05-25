@@ -95,7 +95,11 @@ export default function RightNav({
         }}
         className="eachLi mainLi"
       >
-        <Link to="/mentors/create">Mentors</Link>
+        {userId && !isNaN(userId) ? (
+          <Link to="/mentors">Mentors</Link>
+        ) : (
+          <Link to="/mentors/create">Mentors</Link>
+        )}
       </li>
       <div
         onClick={() => {
