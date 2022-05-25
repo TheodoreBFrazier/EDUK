@@ -44,7 +44,7 @@ function ResourceDetails() {
 	};
 
 	return (
-		<div>
+		<div className="rD">
 			<div className="resource-heading">
 				<h1> {resource.resource_name} </h1>
 			</div>
