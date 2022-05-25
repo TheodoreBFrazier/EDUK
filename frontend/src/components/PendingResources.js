@@ -55,8 +55,8 @@ function PendingResources() {
 				<thead>
 					<tr>
 						<th>Resource Name</th>
-						
 						<th>Category</th>
+						<th>For</th>
 						<th>Start_datetime</th>
 						<th>End_datetime</th>
 						<th>Url</th>
@@ -70,7 +70,7 @@ function PendingResources() {
 						return (
 							<tr>
 								<td>{resource.resource_name}</td>
-								
+								<td>{resource.resourcefor ? resource.resourcefor.join(" & ") : ""}</td>
 								<td>{resource.resource_category}</td>
 								<td>{resource.start_datetime}</td>
 								<td>{resource.end_datetime}</td>

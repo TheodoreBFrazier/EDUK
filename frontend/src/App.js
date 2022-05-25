@@ -70,7 +70,7 @@ function App() {
             <Route path="/mentors/create" element={<CreateMentor />} />
           </Routes>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );
