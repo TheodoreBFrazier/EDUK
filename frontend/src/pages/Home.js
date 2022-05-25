@@ -31,9 +31,9 @@ function Home() {
 							src="https://nces.ed.gov/images/homepage/coe.jpg"
 						/>
 						<p>
-							The goal of this app is to connect highschool, college students,
+							The goal of EDUK to connect highschool, college students,
 							minority groups and residents of underserved communities to
-							resources that they wouldn’t have access to otherwise. Whether it be
+							resources that they wouldn’t have access to otherwise. <br /> <br /> Whether it be
 							career tips , scholarships , grants, continued learning, programs,
 							etc, We hope to bridge the the knowledge gap within these
 							underserved communities. We want to eliminate the gatekeeping of

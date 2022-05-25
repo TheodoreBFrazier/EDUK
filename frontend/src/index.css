@@ -165,9 +165,8 @@ p {
 	text-decoration: none;
 }
 
-.introduction h2 {
+.introduction h1 {
 	text-align: center;
-	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
 }
 
 .intro-container {
@@ -227,4 +226,8 @@ p {
 	align-items: center;
 	column-gap: 20px;
 	row-gap: 40px;
+}
+
+.resources-intro {
+	background-image: url ("https://childrensnational.org/-/media/cnhs-site/images/careers-and-training/gme/residency/pediatrics/launch-track-residents.jpg?h=400&la=en&w=600&hash=CF941CE970B09BAD8C7AAC22AC313764A822D015");
 }
