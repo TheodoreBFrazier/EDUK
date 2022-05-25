@@ -57,10 +57,11 @@
 /* resource into  */
 
 .resources-intro {
-	color: white;
-	background-color: #574d68;
+	height: 600px;
+	background-color: yellow;
+	background-repeat: no-repeat;
+	background-size: 900px;
 	text-align: center;
-	padding: 30px;
 }
 
 .resources-h2 {

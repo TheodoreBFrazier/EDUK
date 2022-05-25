@@ -1,7 +1,10 @@
+
+
 .about {
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
+	background-color: #14213D;
 }
 
 .about h2 {

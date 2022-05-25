@@ -64,7 +64,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resources" element={<ResourcesPage />} />
-            <Route path="/resources/:resource_id" element={<ShowResource />} />
+            <Route path="/resources/:resource_id/" element={<ShowResource />} />
             <Route path="/resources/create" element={<NewResource />} />
             <Route path="admin" element={<AdminPage />}>
               <Route path="users" element={<UsersPortal />} />

@@ -118,7 +118,14 @@ export default function RightNav({
           </Link>
         ) : (
           <Link to="/users/login">
-            <Button variant="outlined" size="medium">
+            <Button
+              variant="outlined"
+              size="medium"
+              style={{
+                backgroundColor: "#FCA311",
+                fontSize: "18px",
+              }}
+            >
               {logText}
             </Button>
           </Link>
