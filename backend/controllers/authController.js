@@ -16,7 +16,10 @@ auth.post("/sign_up", async (req, res) => {
   const createdUser = await createUser(user);
   if (createdUser.uid) {
     res.json({ success: true, result: createdUser });
-  } else res.status(500).json({ success: false, error: createdUser });
+  } else
+    res
+      .status(500)
+      .json({ success: false, error: "Error/Username already exist" });
 });
 
 //Login a exsiting user

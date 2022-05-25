@@ -32,7 +32,6 @@ export default function Highschool() {
 			high.resource_category === "Scholarship" && high.is_verified === true
 		);
 	});
-	console.log(highschoolPrograms);
 	return (
 		<div>
 			<h1 className="resourceCategory">HighSchool</h1>
