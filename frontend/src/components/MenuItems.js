@@ -14,4 +14,9 @@ export const MenuItems = [
 		path: "/continuelearning",
 		name: "dropdown-link",
 	},
+	{
+		title: "Add resource",
+		path: "/resources/create",
+		name: "dropdown-link",
+	},
 ];

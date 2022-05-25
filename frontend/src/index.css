@@ -67,24 +67,9 @@ code {
 	margin-top: 0;
 	font-size: 40pt;
 }
-.joinUs {
-	margin: 30px;
-	padding: 30px;
-	display: flex;
-	justify-content: center;
-}
-.joinus div {
-	margin: 30px;
-}
-.joinUs h3 {
-	color: white;
-}
-.joinUs a {
-	color: white;
-	text-decoration: none;
-}
 
 .introduction h2 {
+	font-size: 30px;
 	text-align: center;
 	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
 }
