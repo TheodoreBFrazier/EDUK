@@ -90,6 +90,7 @@
 .resource-arr p {
 	font-size: 12pt;
 }
+
 @media (max-width: 1200px) {
 	.resource-text {
 		height: 300px;
