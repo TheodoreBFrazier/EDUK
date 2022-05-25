@@ -113,13 +113,23 @@ export default function RightNav({
 			>
 				{localStorage.getItem("userId") ? (
 					<Link to="/">
-						<Button variant="outlined" size="medium" onClick={logOut}>
+						<Button  						
+						variant="outlined" size="medium" onClick={logOut}>
 							{logText}
 						</Button>
 					</Link>
 				) : (
 					<Link to="/users/login">
-						<Button variant="outlined" size="medium">
+						<Button 
+
+style={{
+	backgroundColor: "#FCA311",
+	fontSize: "18px"
+}}
+						
+						
+						
+						variant="contained" size="medium">
 							{logText}
 						</Button>
 					</Link>
