@@ -20,18 +20,23 @@ export default function ContinueLearning() {
 			.then((response) => {
 				const program = response.data.result.filter(
 					(high) =>
-						high.resource_category === "Program" && high.is_verified === true
+						high.resource_category === "Program" &&
+						high.is_verified === true &&
+						high.resourcefor.includes("continue learning")
 				);
 				setContinueLearningPrograms(program);
 				const classes = response.data.result.filter(
 					(high) =>
-						high.resource_category === "Class" && high.is_verified === true
+						high.resource_category === "Class" &&
+						high.is_verified === true &&
+						high.resourcefor.includes("continue learning")
 				);
 				setContinueLearningClasses(classes);
 				const scholarship = response.data.result.filter(
 					(high) =>
 						high.resource_category === "Scholarship" &&
-						high.is_verified === true
+						high.is_verified === true &&
+						high.resourcefor.includes("continue learning")
 				);
 				setContinueLearningScholarhip(scholarship);
 				// setContinueLearning(response.data.result);
