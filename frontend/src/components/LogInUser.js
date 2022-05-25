@@ -25,9 +25,12 @@ function LogInUser({ setLogText }) {
         const userInfo = res.data.result;
         const userId = userInfo.uid;
         if (!isNaN(userId)) {
-          console.log(userInfo);
+          // console.log(userInfo);
           setError("");
+          //set userId in localStorage
           localStorage.setItem("userId", `${userId}`);
+          //set userInfo in localStage
+          localStorage.setItem("userInfo", JSON.stringify(userInfo));
           setLogText("Log Out");
           if (!userInfo.is_admin) navigate(`/users/${userId}`);
           if (userInfo.is_admin) navigate("/admin");
@@ -55,23 +58,21 @@ function LogInUser({ setLogText }) {
       <form onSubmit={handleSubmit}>
         <h3>Login Here</h3>
 
-        <label class="login" for="username">
+        <label className="login" for="username">
           Username
         </label>
         <input
           type="text"
-          placeholder="Username"
           id="user_name"
           onChange={handleChange}
           value={user.user_name}
         />
 
-        <label class="login" for="password">
+        <label className="login" for="password">
           Password
         </label>
         <input
           type="password"
-          placeholder="Password"
           id="password"
           onChange={handleChange}
           value={user.password}

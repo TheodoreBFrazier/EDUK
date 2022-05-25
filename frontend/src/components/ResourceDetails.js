@@ -1,20 +1,22 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Button from "@mui/material/Button";
 import "./ResourceCategory.css";
+import SuccessMessage from "./SucccesMessage";
 
 const API = process.env.REACT_APP_API_URL;
 
 function ResourceDetails() {
 	const [resource, setResource] = useState([]);
+	//show message after adding a resource
+	const [showMessage, setShowMessage] = useState(false);
 	let { resource_id } = useParams();
 
-	const navigate = useNavigate();
+	//   const navigate = useNavigate();
 
 	let userId = localStorage.getItem("userId");
-	console.log(userId);
 
 	useEffect(() => {
 		axios
@@ -35,7 +37,7 @@ function ResourceDetails() {
 				uid: userId,
 				resource_id: resource_id,
 			})
-			.then(() => navigate(`/resources/${resource_id}`))
+			.then(() => setShowMessage(true))
 			.catch((error) => {
 				console.log(error);
 			});
@@ -65,6 +67,7 @@ function ResourceDetails() {
 							Add resource
 						</Button>
 					</div>
+					<div>{showMessage ? <SuccessMessage /> : ""}</div>
 				</div>
 			</div>
 		</div>

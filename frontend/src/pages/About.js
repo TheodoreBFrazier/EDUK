@@ -41,7 +41,10 @@ function About() {
 						portal where people can easily find resources they desperately need
 						to improve their quality of life.
 					</div>
-					{/* <img src="https://i0.wp.com/www.kouya.net/wp-content/uploads/2019/09/mission-900x450.jpg?fit=900%2C450&ssl=1" alt="mission" /> */}
+					{/* <img
+						src="https://i0.wp.com/www.kouya.net/wp-content/uploads/2019/09/mission-900x450.jpg?fit=900%2C450&ssl=1"
+						alt="mission"
+					/> */}
 				</div>
 
 

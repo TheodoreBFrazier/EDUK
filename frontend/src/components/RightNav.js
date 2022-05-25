@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -54,6 +54,11 @@ export default function RightNav({
 	// 		setDropdown(false);
 	// 	}
 	// };
+	//get userId from local storage
+	const userId = localStorage.getItem("userId");
+
+	//user data from local storage
+	const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 	return (
 		<Ul open={open} className="navLinks">
@@ -86,6 +91,7 @@ export default function RightNav({
 			>
 				<Link to="/about">About</Link>
 			</li>
+
 			<li
 				onClick={() => {
 					toggleOpen();
@@ -93,7 +99,11 @@ export default function RightNav({
 				}}
 				className="eachLi mainLi"
 			>
-				<Link to="/users">Users</Link>
+				{userInfo && userInfo.is_admin && !isNaN(userId) ? (
+					<Link to={`/users/${userId}`}>Admin Page</Link>
+				) : (
+					<Link to={`/users/${userId}`}>Dashboard</Link>
+				)}
 			</li>
 			<li
 				onClick={() => {
