@@ -7,7 +7,7 @@ import SingleResource from "./SingleResource";
 const API = process.env.REACT_APP_API_URL;
 
 function Resources() {
-	const [resources, setResources] = useState([]);
+  const [resources, setResources] = useState([]);
 
 	useEffect(() => {
 		axios

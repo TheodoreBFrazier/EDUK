@@ -40,77 +40,66 @@ function CreateMentor() {
   return (
     <div id="volunteers">
       <form className="form" onSubmit={handleSubmit}>
-        <div class="subtitle">Let's create your account!</div>
-        <div class="title">Become a Mentor at EDUK!</div>
-        
+        <div className="subtitle">Let's create your account!</div>
+        <div className="title">Become a Mentor at EDUK!</div>
 
-      
-          <label for="firstname" class="placeholder">
-            First Name
-          </label>
-          <input
-            id="mentor_fname"
-            class="input"
-            type="text"
-            value={mentor.mentor_fname}
-            // placeholder=" "
-            onChange={handleTextChange}
-          />
-   
+        <label htmlFor="firstname" className="placeholder">
+          First Name
+        </label>
+        <input
+          id="mentor_fname"
+          className="input"
+          type="text"
+          value={mentor.mentor_fname}
+          // placeholder=" "
+          onChange={handleTextChange}
+        />
 
-    
-          <label for="lastname" class="placeholder">
-            Last Name
-          </label>
-          <input
-            id="mentor_lname"
-            class="input"
-            type="text"
-            onChange={handleTextChange}
-            value={mentor.mentor_lname}
-          />
-      
+        <label htmlFor="lastname" className="placeholder">
+          Last Name
+        </label>
+        <input
+          id="mentor_lname"
+          className="input"
+          type="text"
+          onChange={handleTextChange}
+          value={mentor.mentor_lname}
+        />
 
+        <label htmlFor="bio" className="placeholder">
+          Bio
+        </label>
+        <input
+          id="bio"
+          className="input"
+          type="text"
+          onChange={handleTextChange}
+          value={mentor.bio}
+        />
 
-          <label for="bio" class="placeholder">
-            Bio
-          </label>
-          <input
-            id="bio"
-            class="input"
-            type="text"
-            onChange={handleTextChange}
-            value={mentor.bio}
-          />
+        <label htmlFor="speciality" className="placeholder">
+          Speciality
+        </label>
+        <input
+          id="speciality"
+          className="input"
+          type="text"
+          onChange={handleTextChange}
+          value={mentor.speciality}
+        />
 
+        <label htmlFor="email" className="placeholder">
+          Email
+        </label>
+        <input
+          id="email"
+          className="input"
+          type="text"
+          onChange={handleTextChange}
+          value={mentor.email}
+        />
 
-   
-          <label for="speciality" class="placeholder">
-            Speciality
-          </label>
-          <input
-            id="speciality"
-            class="input"
-            type="text"
-            onChange={handleTextChange}
-            value={mentor.speciality}
-          />
-
-
-     
-          <label for="email" class="placeholder">
-            Email
-          </label>
-          <input
-            id="email"
-            class="input"
-            type="text"
-            onChange={handleTextChange}
-            value={mentor.email}
-          />
-
-
-        <button type="submit" class="submit">
+        <button type="submit" className="submit">
           submit
         </button>
       </form>
