@@ -15,9 +15,9 @@ function SingleMentor({ mentor }) {
             <Card style={cardStyle} variant="outlined">
                 <Link to={`/mentors/${mentor.mentor_id}`} >
 
-                <h4> {mentor.mentor_fname} {mentor.mentor_lname} </h4>
-<p> {mentor.speciality}</p>
-                 </Link>
+                    <h4> {mentor.mentor_fname} {mentor.mentor_lname} </h4>
+                    <p> {mentor.speciality}</p>
+                </Link>
             </Card>
         </div>
     )
