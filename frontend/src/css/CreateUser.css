@@ -14,7 +14,7 @@ form {
   label {
     grid-column: 1 / 2;
     color: white;
-    font-size: 20px
+    font-size: 20px;
 }
  
 input,
