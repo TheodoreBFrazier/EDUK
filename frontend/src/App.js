@@ -23,7 +23,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // rescources pages
 import HighschoolPage from "./pages/HighschoolPage";
 import CollegePage from "./pages/CollegePage";
-import ContinueLearningPage from "./pages/ContinueLearningPage";
+import ContinuedLearningPage from "./pages/ContinuedLearningPage";
 
 //Shows a single resource
 //import ShowResource from "./pages/ShowResource";
@@ -81,8 +81,8 @@ function App() {
             <Route path="/highschool" element={<HighschoolPage />} />
             <Route path="/college" element={<CollegePage />} />
             <Route
-              path="/continuelearning"
-              element={<ContinueLearningPage />}
+              path="/continuedlearning"
+              element={<ContinuedLearningPage />}
             />
             <Route
               path="/mentors"

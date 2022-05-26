@@ -9,7 +9,7 @@ function CreateResource() {
 	// check box
 	const [highSchool, setHighSchool] = useState(false);
 	const [college, setCollege] = useState(false);
-	const [continueLearning, setContinueLearning] = useState(false);
+	const [continuedLearning, setContinuedLearning] = useState(false);
 
 	// all state to send
 	const [resource, setResource] = useState({
@@ -33,8 +33,8 @@ function CreateResource() {
 	} else {
 		resource.resourcefor[1] = "null";
 	}
-	if (continueLearning) {
-		resource.resourcefor[2] = "continue learning";
+	if (continuedLearning) {
+		resource.resourcefor[2] = "continued learning";
 	} else {
 		resource.resourcefor[2] = "null";
 	}
@@ -100,14 +100,14 @@ function CreateResource() {
 						onChange={(e) => setCollege(e.target.checked)}
 					/>
 
-					<label className="labelResource" htmlFor="continueLearning">
-						Continue Learning
+					<label className="labelResource" htmlFor="continuedLearning">
+						Continued Learning
 					</label>
 					<input
-						id="continueLearning"
+						id="continuedLearning"
 						type="checkbox"
-						name="continueLearning"
-						onChange={(e) => setContinueLearning(e.target.checked)}
+						name="continuedLearning"
+						onChange={(e) => setContinuedLearning(e.target.checked)}
 					/>
 				</div>
 

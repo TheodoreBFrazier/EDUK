@@ -34,11 +34,14 @@ p {
   margin: 0px;
 }
 
+.user_details {
+  margin-top: 300px;
+}
 .profile-card {
   background: #FFB300;
   /* width: 50%;
   height: 56px; */
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   z-index: -1;
