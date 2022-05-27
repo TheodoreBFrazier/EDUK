@@ -8,13 +8,19 @@
 }
 
 .about h2 {
-	padding-top: 50px;
-	color: royalblue;
-	border-bottom: 4px solid rgb(33, 86, 219);
+	margin: auto;
+	color: white;
+	padding-top: 50px;	
 	border-radius: 5px 10px;
 	width: 250px;
 	text-align: center;
-	font-size: 30px;
+}
+
+.about p{
+	width: 65%;
+	margin: auto;
+	color: white;
+	text-align: center;
 }
 
 .about-container-one {

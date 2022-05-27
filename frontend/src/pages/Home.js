@@ -25,7 +25,7 @@ function Home() {
 				</div>
 			</div>
 			<div className="introduction">
-				<h2>Begin Your Journey</h2>
+				<h1>Begin Your Journey</h1>
 				<div className="intro-container">
 					<img
 						alt="homeimg"
