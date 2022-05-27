@@ -13,7 +13,7 @@ function Admin() {
         <Link to="/admin/users">All Users</Link>
         <Link to="/admin/resources_usage">Resources Usage</Link>
       </div>
-      {/* <h1>Please update the mentor and resource status, thank you!</h1> */}
+      
       <Outlet />
     </div>
   );

@@ -24,7 +24,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // rescources pages
 import HighschoolPage from "./pages/HighschoolPage";
 import CollegePage from "./pages/CollegePage";
-import ContinueLearningPage from "./pages/ContinueLearningPage";
+import ContinuedLearningPage from "./pages/ContinuedLearningPage";
 
 //Shows a single resource
 //import ShowResource from "./pages/ShowResource";
@@ -34,7 +34,7 @@ import Pendings from "./pages/Pendings";
 import NewResource from "./pages/NewResource";
 import AdminPage from "./pages/AdminPage";
 
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 //API
 const API = process.env.REACT_APP_API_URL;
 function App() {
@@ -83,8 +83,8 @@ function App() {
             <Route path="/highschool" element={<HighschoolPage />} />
             <Route path="/college" element={<CollegePage />} />
             <Route
-              path="/continuelearning"
-              element={<ContinueLearningPage />}
+              path="/continuedlearning"
+              element={<ContinuedLearningPage />}
             />
             <Route
               path="/mentors"
@@ -93,7 +93,7 @@ function App() {
             <Route path="/mentors/create" element={<NewMentor />} />
           </Routes>
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );

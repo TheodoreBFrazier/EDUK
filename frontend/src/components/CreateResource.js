@@ -2,13 +2,14 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Button from "@mui/material/Button";
 
 const API = process.env.REACT_APP_API_URL;
 function CreateResource() {
 	// check box
 	const [highSchool, setHighSchool] = useState(false);
 	const [college, setCollege] = useState(false);
-	const [continueLearning, setContinueLearning] = useState(false);
+	const [continuedLearning, setContinuedLearning] = useState(false);
 
 	// all state to send
 	const [resource, setResource] = useState({
@@ -32,8 +33,8 @@ function CreateResource() {
 	} else {
 		resource.resourcefor[1] = "null";
 	}
-	if (continueLearning) {
-		resource.resourcefor[2] = "continue learning";
+	if (continuedLearning) {
+		resource.resourcefor[2] = "continued learning";
 	} else {
 		resource.resourcefor[2] = "null";
 	}
@@ -54,90 +55,88 @@ function CreateResource() {
 
 	return (
 		<div>
-			<form className="form" onSubmit={handleSubmit}>
-				<label htmlFor="resource_name">Resource Name</label>
-				<br />
+			<h1> Add resource</h1>
+			<form onSubmit={handleSubmit}>
 				<input
 					id="resource_name"
+					placeholder="Resource Name"
 					value={resource.resource_name}
 					onChange={handleTextChange}
 					type="text"
 				/>
-				<br />
-				<label htmlFor="description">Resource Description</label>
-				<br />
 				<textarea
 					id="description"
+					placeholder="Resource Description"
 					value={resource.description}
 					onChange={handleTextChange}
 				/>
-				<br />
-				<label htmlFor="resource_category">Resource Category</label>
-				<br />
 				<input
 					id="resource_category"
+					placeholder="Resource Category"
 					value={resource.resource_category}
 					onChange={handleTextChange}
 					type="text"
 				/>
-				<br />
+
+				{/* check box  */}
+				<div>
+					<label className="labelResource" htmlFor="highschool">
+						High School
+					</label>
+					<input
+						id="highschool"
+						value="highschool"
+						type="checkbox"
+						onChange={(e) => setHighSchool(e.target.checked)}
+					/>
+
+					<label className="labelResource" htmlFor="college">
+						College
+					</label>
+					<input
+						id="college"
+						type="checkbox"
+						name="college"
+						onChange={(e) => setCollege(e.target.checked)}
+					/>
+
+					<label className="labelResource" htmlFor="continuedLearning">
+						Continued Learning
+					</label>
+					<input
+						id="continuedLearning"
+						type="checkbox"
+						name="continuedLearning"
+						onChange={(e) => setContinuedLearning(e.target.checked)}
+					/>
+				</div>
 
 				{/* check box  */}
 
-				<label htmlFor="highschool">High School</label>
-				<input
-					id="highschool"
-					value="highschool"
-					type="checkbox"
-					onChange={(e) => setHighSchool(e.target.checked)}
-				/>
-
-				<label htmlFor="college">College</label>
-				<input
-					id="college"
-					type="checkbox"
-					name="college"
-					onChange={(e) => setCollege(e.target.checked)}
-				/>
-
-				<label htmlFor="continueLearning">Continue Learning</label>
-				<input
-					id="continueLearning"
-					type="checkbox"
-					name="continueLearning"
-					onChange={(e) => setContinueLearning(e.target.checked)}
-				/>
-
-				{/* check box  */}
-
-				<label htmlFor="start_datetime">Start Date and Time</label>
-				<br />
 				<input
 					id="start_datetime"
+					placeholder="Date and Time"
 					value={resource.start_datetime}
 					onChange={handleTextChange}
 					type="text"
 				/>
-				<br />
-				<label htmlFor="end_datetime">End Date and Time</label>
-				<br />
 				<input
 					id="end_datetime"
+					placeholder="End Date and Time"
 					value={resource.end_datetime}
 					onChange={handleTextChange}
 					type="text"
 				/>
-				<br />
-				<label htmlFor="url">Link</label>
-				<br />
 				<input
 					id="url"
+					placeholder="Url"
 					value={resource.url}
 					onChange={handleTextChange}
 					type="text"
 				/>
-				<br />
-				<input type="submit" />
+				<Button type="submit" variant="contained">
+					Submit
+				</Button>
 			</form>
 		</div>
 	);

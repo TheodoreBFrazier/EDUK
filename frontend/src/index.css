@@ -60,6 +60,9 @@ p {
 
 ------------------------------ HOME --------------------------------------
 /* HERO PAGE */
+/* .home {
+	position: relative;
+} */
 
 .Hero-text {
 	z-index: 9;
@@ -71,13 +74,13 @@ p {
 	text-align: center;
 	padding-top: 300px;
 	font-weight: 600;
-	position: relative;
+	/* position: relative; */
 	z-index: 2;
 }
 
 .Hero .Hero-text h3 {
 	text-align: center;
-	position: relative;
+	/* position: relative; */
 	z-index: 9;
 	color: white;
 }

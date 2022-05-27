@@ -55,14 +55,13 @@ function PendingResources() {
         <thead>
           <tr>
             <th>Resource Name</th>
-
             <th>Category</th>
+            <th>For</th>
             <th>Start_datetime</th>
             <th>End_datetime</th>
             <th>Url</th>
             <th>Description</th>
             <th>Is Verfified</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -70,7 +69,13 @@ function PendingResources() {
             return (
               <tr>
                 <td>{resource.resource_name}</td>
-
+                <td>
+                  {resource.resourcefor.length
+                    ? resource.resourcefor
+                        .filter((ele) => ele !== "null")
+                        .join(" & ")
+                    : ""}
+                </td>
                 <td>{resource.resource_category}</td>
                 <td>{resource.start_datetime}</td>
                 <td>{resource.end_datetime}</td>

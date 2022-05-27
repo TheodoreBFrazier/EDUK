@@ -10,8 +10,8 @@ export const MenuItems = [
 		name: "dropdown-link",
 	},
 	{
-		title: "Continue learning",
-		path: "/continuelearning",
+		title: "Continued learning",
+		path: "/continuedlearning",
 		name: "dropdown-link",
 	},
 	{
