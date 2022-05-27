@@ -8,17 +8,13 @@ function Admin() {
       <h1>Welcome EDUK Admin!</h1>
       <br />
       <div className="admin_nav">
-       
-          <Link to="/admin/pendings">Pending Lists</Link>
-        
-          <Link to="/admin/users">All Users</Link>
-          
+        <Link to="/admin/pendings">Pending Lists</Link>
+
+        <Link to="/admin/users">All Users</Link>
+        <Link to="/admin/resources_usage">Resources Usage</Link>
       </div>
       {/* <h1>Please update the mentor and resource status, thank you!</h1> */}
       <Outlet />
-      <br />
-      <br />
-      <h2>Please update mentors and resources status, thank you!</h2>
     </div>
   );
 }

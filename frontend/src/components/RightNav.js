@@ -85,7 +85,7 @@ export default function RightNav({
         {!userInfo ? (
           ""
         ) : userInfo.is_admin && !isNaN(userId) ? (
-          <Link to={`/users/${userId}`}>Admin Page</Link>
+          <Link to="admin">Admin Page</Link>
         ) : (
           <Link to={`/users/${userId}`}>Dashboard</Link>
         )}

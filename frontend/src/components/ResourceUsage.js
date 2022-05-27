@@ -15,7 +15,10 @@ function ResourceUsage({ resource }) {
       <h3>
         Resource({resource.resource_id}) {resource.resource_name}
       </h3>
-      <div>Number of users: {resourceUsersN}</div>
+      <div>
+        <strong>Number of users:</strong>{" "}
+        <span className="admin-resource-span">{resourceUsersN}</span>
+      </div>
     </div>
   );
 }
