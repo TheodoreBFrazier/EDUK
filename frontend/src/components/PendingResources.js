@@ -62,7 +62,6 @@ function PendingResources() {
 						<th>Url</th>
 						<th>Description</th>
 						<th>Is Verfified</th>
-						<th></th>
 					</tr>
 				</thead>
 				<tbody>
