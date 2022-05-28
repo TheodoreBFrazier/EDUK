@@ -46,21 +46,16 @@ function ResourcesUsage() {
           <ResourceUsage key={resource.resource_id} resource={resource} />
         ))}
       </div>
-      {/* <h3 className="main-usage-h3"> The Most useful resource(s):</h3>
-      <h4>Resource Name: {fresource.resource_name}</h4>
-      <h4>Total Users: {fresource.nbr}</h4> */}
-
       <div class="card text-center">
-  <div class="card-header">
-  <h3 className="bg-info" > The Most useful resource(s):</h3>
-  </div>
-  <div class="card-body">
-    <h4 class="card-title"><strong>Resource Name:</strong> {fresource.resource_name}</h4>
-    <br />
-    <h4><strong>Total Users: </strong>{fresource.nbr}</h4>
-  </div>
-  
-</div>
+        <div class="card-header">
+          <h3 className="bg-info" > The Most useful resource(s):</h3>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><strong>Resource Name:</strong> {fresource.resource_name}</h4>
+          <br />
+          <h4><strong>Total Users: </strong>{fresource.nbr}</h4>
+        </div>
+      </div>
     </section>
   );
 }

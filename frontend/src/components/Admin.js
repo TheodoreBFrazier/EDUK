@@ -5,15 +5,22 @@ import "./Admin.css";
 function Admin() {
   return (
     <div className="admin">
-      <h1>Welcome EDUK Admin!</h1>
+      <h1 id="admin-page-title">Welcome EDUK Admin!</h1>
       <br />
-      <div className="admin_nav">
+      {/* <div className="admin_nav">
         <Link to="/admin/pendings">Pending Lists</Link>
 
         <Link to="/admin/users">All Users</Link>
         <Link to="/admin/resources_usage">Resources Usage</Link>
-      </div>
+      </div> */}
       
+      <nav class="navbar navbar-light">
+        <Link to="/admin/pendings">Pending Lists</Link>
+        <Link to="/admin/users">All Users</Link>
+        <Link to="/admin/resources_usage">Resources Usage</Link>
+
+      </nav>
+
       <Outlet />
     </div>
   );

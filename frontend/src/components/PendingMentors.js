@@ -58,7 +58,6 @@ function PendingMentors() {
             <th>Speciality</th>
             <th>Bio</th>
             <th>Is Verfified</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
