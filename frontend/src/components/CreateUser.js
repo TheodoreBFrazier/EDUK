@@ -45,9 +45,13 @@ function CreateUser() {
     <div>
       {error ? <Error error={error} /> : ""}
       <form className="create-user-form" onSubmit={handleSubmit}>
-         <div className="subtitle">Let's create your account!</div>
+      <div className="title">Welcome to EDUK!</div>
+         {/* <h2 className="subtitle">Let's create your account!</h2> */}
          <div>
-           <div className="title">Welcome to EDUK!</div>
+           <br />
+           <br />
+           <br />
+         <div className="subtitle">Let's create your account!</div>
           Already signed Up? <Link to="/users/login">Login Here</Link>
 
         </div>

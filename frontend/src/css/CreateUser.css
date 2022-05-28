@@ -2,7 +2,7 @@ form {
 	background-color: #4cadde;
 	border-radius: 20px;
 	box-sizing: border-box;
-	height: 750px;
+	height: auto;
 	padding: 20px;
 	display: grid;
 	grid-template-columns: 200px 1fr;
