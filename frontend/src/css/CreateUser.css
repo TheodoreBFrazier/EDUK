@@ -7,6 +7,12 @@ form {
 	display: grid;
 	grid-template-columns: 200px 1fr;
 	grid-gap: 50px;
+	margin-top: 80px;
+    width: 50vw; 
+    margin-left : 25vw;
+    font-weight: bolder ;
+    padding-bottom: 150px;
+	margin-bottom: 100px;
 }
 
 label {

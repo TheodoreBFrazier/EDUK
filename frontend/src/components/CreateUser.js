@@ -44,19 +44,15 @@ function CreateUser() {
   return (
     <div>
       {error ? <Error error={error} /> : ""}
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="create-user-form" onSubmit={handleSubmit}>
          <div className="subtitle">Let's create your account!</div>
          <div>
            <div className="title">Welcome to EDUK!</div>
           Already signed Up? <Link to="/users/login">Login Here</Link>
 
         </div>
-        
-       
-        
-
-      
-          <label htmlFor="first_name" className="placeholder">
+  
+          <label htmlFor="first_name" >
             First name
           </label>
           <input
@@ -70,7 +66,7 @@ function CreateUser() {
      
 
  
-          <label htmlFor="lastname" className="placeholder">
+          <label htmlFor="lastname" >
             Last name
           </label>
           <input
@@ -80,12 +76,7 @@ function CreateUser() {
             onChange={handleTextChange}
             value={user.last_name}
             />
-     
-          
-
-
-  
-          <label htmlFor="age" className="placeholder">
+          <label htmlFor="age" >
             Age
           </label>
           <input
@@ -95,12 +86,7 @@ function CreateUser() {
             onChange={handleTextChange}
             value={user.age}
           />
-
-          
-
-
-
-          <label htmlFor="username" className="placeholder">
+          <label htmlFor="username" >
             User name
           </label>
           <input
@@ -110,10 +96,7 @@ function CreateUser() {
             onChange={handleTextChange}
             value={user.user_name}
           />
-
-
-
-          <label htmlFor="password" className="placeholder">
+          <label htmlFor="password" >
             Password
           </label>
           <input
@@ -123,10 +106,7 @@ function CreateUser() {
             onChange={handleTextChange}
             value={user.password}
           />
-
-
-      
-          <label htmlFor="email" className="placeholder">
+          <label htmlFor="email" >
             Email
           </label>
           <input
@@ -136,8 +116,6 @@ function CreateUser() {
             onChange={handleTextChange}
             value={user.email}
           />
-
-
         <button type="text" className="submit">
           Submit
         </button>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import GeneralSuccessM from "./GeneralSuccessM";
-import "../css/Mentor.css";
+// import "../css/Mentor.css";
 
 const API = process.env.REACT_APP_API_URL;
 function Mentor({ mentor }) {
@@ -57,7 +57,10 @@ function Mentor({ mentor }) {
             <div className="card__content">
               <div>
                 <p className="card__title">
-                  {mentor.mentor_fname} {mentor.mentor_lname}
+                  {mentor.mentor_fname} 
+                </p>
+                <p className="card__title">
+                {mentor.mentor_lname}
                 </p>
                 <p className="card__speciality">{mentor.speciality}</p>
                 <p className="card__email">{mentor.email}</p>
