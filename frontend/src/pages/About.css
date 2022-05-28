@@ -1,17 +1,26 @@
+
+
 .about {
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
+	background-color: #14213D;
 }
 
 .about h2 {
-	padding-top: 50px;
-	/* color: royalblue; */
-	/* border-bottom: 4px solid rgb(33, 86, 219); */
+	margin: auto;
+	color: white;
+	padding-top: 50px;	
 	border-radius: 5px 10px;
 	width: 250px;
 	text-align: center;
-	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
+}
+
+.about p{
+	width: 65%;
+	margin: auto;
+	color: white;
+	text-align: center;
 }
 
 .about-container-one {
@@ -19,7 +28,7 @@
 	grid-template-columns: repeat(1, 1fr);
 	margin: auto;
 	text-align: center;
-	width: 70%;
+	width: 80%;
 	padding-bottom: 60px;
 	left: 20px;
 }
@@ -38,7 +47,7 @@
 	padding-top: 40px;
 	/* width: 100%; */
 	display: grid;
-	grid-template-columns: repeat(1fr 1fr);
+	grid-template-columns: repeat(2fr 1fr);
 	list-style: none;
 	margin-bottom: 100px;
 }

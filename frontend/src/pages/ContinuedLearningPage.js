@@ -1,8 +1,8 @@
 import React from "react";
-import ContinueLearning from "../components/ContinueLearning";
+import ContinuedLearning from "../components/ContinuedLearning";
 import SearchBar from "../components/SearchBar";
 
-export default function ContinueLearningPage() {
+export default function ContinuedLearningPage() {
 	return (
 		<div>
 			<div className="resources-intro">
@@ -26,7 +26,7 @@ export default function ContinueLearningPage() {
 			</div>
 			<br />
 			<br />
-			<ContinueLearning />
+			<ContinuedLearning />
 		</div>
 	);
 }

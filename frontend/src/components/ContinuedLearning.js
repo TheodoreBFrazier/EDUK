@@ -8,9 +8,9 @@ import SingleResource from "./SingleResource";
 const API = process.env.REACT_APP_API_URL;
 
 export default function ContinueLearning() {
-	const [continueLearningPrograms, setContinueLearningPrograms] = useState([]);
-	const [continueLearningClasses, setContinueLearningClasses] = useState([]);
-	const [continueLearningScholarhip, setContinueLearningScholarhip] = useState(
+	const [continuedLearningPrograms, setContinuedLearningPrograms] = useState([]);
+	const [continuedLearningClasses, setContinuedLearningClasses] = useState([]);
+	const [continuedLearningScholarhip, setContinuedLearningScholarhip] = useState(
 		[]
 	);
 
@@ -20,21 +20,26 @@ export default function ContinueLearning() {
 			.then((response) => {
 				const program = response.data.result.filter(
 					(high) =>
-						high.resource_category === "Program" && high.is_verified === true
+						high.resource_category === "Program" &&
+						high.is_verified === true &&
+						high.resourcefor.includes("continued learning")
 				);
-				setContinueLearningPrograms(program);
+				setContinuedLearningPrograms(program);
 				const classes = response.data.result.filter(
 					(high) =>
-						high.resource_category === "Class" && high.is_verified === true
+						high.resource_category === "Class" &&
+						high.is_verified === true &&
+						high.resourcefor.includes("continued learning")
 				);
-				setContinueLearningClasses(classes);
+				setContinuedLearningClasses(classes);
 				const scholarship = response.data.result.filter(
 					(high) =>
 						high.resource_category === "Scholarship" &&
-						high.is_verified === true
+						high.is_verified === true &&
+						high.resourcefor.includes("continued learning")
 				);
-				setContinueLearningScholarhip(scholarship);
-				// setContinueLearning(response.data.result);
+				setContinuedLearningScholarhip(scholarship);
+				// setContinuedLearning(response.data.result);
 			})
 			.catch((error) => {
 				console.log(error);
@@ -53,7 +58,7 @@ export default function ContinueLearning() {
 
 	return (
 		<div>
-			<h1 className="resourceCategory">Continue Learning</h1>
+			<h1 className="resourceCategory">Continued Learning</h1>
 			<section className="highSchoolMain">
 				<div>
 					<h3>Programs</h3>
@@ -64,11 +69,11 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{continueLearningPrograms.map((ContinueLearning) => {
+					{continuedLearningPrograms.map((ContinuedLearning) => {
 						return (
 							<SingleResource
-								key={ContinueLearning.resource_id}
-								resource={ContinueLearning}
+								key={ContinuedLearning.resource_id}
+								resource={ContinuedLearning}
 							/>
 						);
 					})}
@@ -84,11 +89,11 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{continueLearningClasses.map((ContinueLearning) => {
+					{continuedLearningClasses.map((ContinuedLearning) => {
 						return (
 							<SingleResource
-								key={ContinueLearning.resource_id}
-								resource={ContinueLearning}
+								key={ContinuedLearning.resource_id}
+								resource={ContinuedLearning}
 							/>
 						);
 					})}
@@ -104,11 +109,11 @@ export default function ContinueLearning() {
 					</p>
 				</div>
 				<div className="resource-arr">
-					{continueLearningScholarhip.map((ContinueLearning) => {
+					{continuedLearningScholarhip.map((ContinuedLearning) => {
 						return (
 							<SingleResource
-								key={ContinueLearning.resource_id}
-								resource={ContinueLearning}
+								key={ContinuedLearning.resource_id}
+								resource={ContinuedLearning}
 							/>
 						);
 					})}

@@ -1,4 +1,41 @@
+<<<<<<< HEAD
 
+=======
+.create-resource{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.create-resource-form {
+  padding-top: 120px;
+  height: auto;
+}
+
+.create-resource h1 {
+  color: #4cadde;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.create-resource-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:20px;
+}
+
+/* .reate-resource-btn {
+  border: 2px solid red;
+  background-color: brown;
+  width: 10px;
+} */
+
+
+
+
+
+
+/* 
+>>>>>>> 7e42f204353c48e37b327566088ef1f59d5580a6
 
 .form {
     background-color: #4cadde;

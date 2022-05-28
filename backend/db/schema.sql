@@ -32,6 +32,7 @@ CREATE TABLE resources(
     resource_name VARCHAR(100) NOT NULL,
     description TEXT,
     resource_category VARCHAR(100),
+    resourceFor TEXT [],
     start_datetime TEXT,
     end_datetime TEXT,
     url TEXT NOT NULL,
@@ -40,7 +41,8 @@ CREATE TABLE resources(
 
 CREATE TABLE users_resources(
     uid INTEGER REFERENCES users(uid) ON DELETE CASCADE,
-    resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE
+    resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE,
+    UNIQUE(uid,resource_id)
 );
 
 

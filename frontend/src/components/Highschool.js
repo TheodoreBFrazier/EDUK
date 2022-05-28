@@ -22,14 +22,24 @@ export default function Highschool() {
 	}, []);
 
 	let highschoolPrograms = highschool.filter((high) => {
-		return high.resource_category === "Program" && high.is_verified === true;
+		return (
+			high.resource_category === "Program" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("highschool")
+		);
 	});
 	let highschoolClasses = highschool.filter((high) => {
-		return high.resource_category === "Class" && high.is_verified === true;
+		return (
+			high.resource_category === "Class" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("highschool")
+		);
 	});
 	let highschoolScholarship = highschool.filter((high) => {
 		return (
-			high.resource_category === "Scholarship" && high.is_verified === true
+			high.resource_category === "Scholarship" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("highschool")
 		);
 	});
 	return (
@@ -81,7 +91,7 @@ export default function Highschool() {
 			<section className="highSchoolMain">
 				<div>
 					<h2>Scholarship</h2>
-					<p className="resourceP">
+					<p className="resource">
 						The Programs are listed for high school students in need for
 						programs <br /> to excel in technical skills and soft skills works
 						that demand you

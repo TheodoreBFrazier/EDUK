@@ -2,8 +2,11 @@
 	box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7e42f204353c48e37b327566088ef1f59d5580a6
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -28,19 +31,49 @@ code {
 
 /* Importing Font */
 
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap");
 
 /* Regular */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
 /* Italics */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap');
 
-------------------------------    HOME  --------------------------------------
+h1 {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
+}
 
+h2 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+	font-family: 'Roboto', sans-serif;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
+------------------------------ HOME --------------------------------------
 /* HERO PAGE */
+/* .home {
+	position: relative;
+} */
 
 .Hero-text {
 	z-index: 9;
@@ -52,13 +85,13 @@ code {
 	text-align: center;
 	padding-top: 300px;
 	font-weight: 600;
-	position: relative;
+	/* position: relative; */
 	z-index: 2;
 }
 
 .Hero .Hero-text h3 {
 	text-align: center;
-	position: relative;
+	/* position: relative; */
 	z-index: 9;
 	color: white;
 }
@@ -76,26 +109,78 @@ code {
 	margin-top: 0;
 	font-size: 40pt;
 }
+
 .joinUs {
 	margin: 30px;
 	padding: 30px;
 	display: flex;
 	justify-content: center;
 }
+
 .joinus div {
 	margin: 30px;
 }
-.joinUs h3 {
-	color: white;
+
+
+/* Making button lettes spread out on hover*/
+
+.joinUs button {
+	color: #57A773;
+	cursor: pointer;
+	border: none;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	text-decoration: none; 
+	transition-duration: .6s;
+  transition-timing-function: ease;
 }
+
+.joinUs button h3 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+.joinUs button:hover,
+.joinUs button:active {
+	letter-spacing: 5px;
+}
+
+.joinUs button:after,
+.joinUs button:before {
+	backface-visibility: hidden;
+	border: 1px solid #57A773;
+	bottom: 0px;
+	content: ' '; 
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	transition: all ms ease-in-out;
+	width: 0;
+}
+
+.joinUs button:hover:after,
+.joinUs button:hover:before {
+	backface-visibility: hidden;
+	border-color: #57A773;
+	transition: width 380ms ease-in-out;
+	width: 100%;
+}
+
+.joinUs button:hover:before {
+	bottom: auto;
+	top: 0;
+	width: 100%;
+}
+
+
+
 .joinUs a {
-	color: white;
 	text-decoration: none;
 }
 
-.introduction h2 {
+.introduction h1 {
 	text-align: center;
-	text-shadow: 1px 1px 1px rgb(33, 86, 219), 2px 2px 1px rgb(71, 136, 180);
 }
 
 .intro-container {
@@ -115,6 +200,7 @@ code {
 	.intro-container p {
 		font-size: 15px;
 	}
+
 	.Hero .Hero-text h1 {
 		font-size: 40px;
 	}
@@ -122,6 +208,7 @@ code {
 	.Hero .Hero-text h3 {
 		font-size: 20px;
 	}
+
 	.joinUs h3 {
 		font-size: 15px;
 	}
@@ -153,4 +240,8 @@ code {
 	align-items: center;
 	column-gap: 20px;
 	row-gap: 40px;
+}
+
+.resources-intro {
+	background-image: url ("https://childrensnational.org/-/media/cnhs-site/images/careers-and-training/gme/residency/pediatrics/launch-track-residents.jpg?h=400&la=en&w=600&hash=CF941CE970B09BAD8C7AAC22AC313764A822D015");
 }

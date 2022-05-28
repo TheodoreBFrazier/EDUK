@@ -5,75 +5,88 @@
 	font-weight: bold;
 	padding: 50px 20px 15px 20px;
 	background-color: rgb(177, 228, 242);
+<<<<<<< HEAD
 }
 
 
 .footer-dark h3 {
+=======
+	}
+	
+	
+	.footer-dark h3 {
+>>>>>>> 7e42f204353c48e37b327566088ef1f59d5580a6
 	margin-top: 0;
 	margin-bottom: 12px;
 	font-weight: bolder;
 	font-size: 18px;
-}
-
-.footer-dark .row {
+	}
+	
+	.footer-dark .row {
 	margin-left: auto;
 	text-align: center;
-}
-
-.footer-dark ul {
+	}
+	
+	.footer-dark ul {
 	padding: 0;
 	list-style: none;
 	line-height: 1.6;
 	font-size: 17px;
 	margin-bottom: 0;
+<<<<<<< HEAD
 }
 
 .footer-dark ul a {
+=======
+	}
+	
+	.footer-dark ul a {
+>>>>>>> 7e42f204353c48e37b327566088ef1f59d5580a6
 	color: inherit;
 	text-decoration: none;
 	opacity: 0.6;
-}
-
-.footer-dark ul a:hover {
+	}
+	
+	.footer-dark ul a:hover {
 	opacity: 0.9;
-}
-
-@media (max-width: 767px) {
+	}
+	
+	@media (max-width: 767px) {
 	.footer-dark .item:not(.social) {
 		text-align: center;
 		padding-bottom: 20px;
 	}
-}
-
-.footer-dark .item.text {
+	}
+	
+	.footer-dark .item.text {
 	margin-bottom: 36px;
-}
-
-@media (max-width: 767px) {
+	}
+	
+	@media (max-width: 767px) {
 	.footer-dark .item.text {
 		margin-bottom: 0;
 	}
-}
-
-.footer-dark .item.text p {
+	}
+	
+	.footer-dark .item.text p {
 	opacity: 0.7;
 	font-size: 17px;
 	text-decoration: underline;
 	margin-bottom: 0;
-}
-
-.footer-dark .item.social {
+	}
+	
+	.footer-dark .item.social {
 	text-align: center;
-}
-
-@media (max-width: 991px) {
+	}
+	
+	@media (max-width: 991px) {
 	.footer-dark .item.social {
 		text-align: center;
 		margin-top: 20px;
 	}
-}
-
-.footer-dark .item.social > a {
+	}
+	
+	.footer-dark .item.social > a {
 	font-size: 20px;
 	width: 36px;
 	height: 36px;
@@ -81,23 +94,29 @@
 	display: inline-block;
 	text-align: center;
 	border-radius: 50%;
+<<<<<<< HEAD
 
 	box-shadow:0 0 0 1px rgba(255,255,255,0.4);
 
+=======
+	
+	box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+	
+>>>>>>> 7e42f204353c48e37b327566088ef1f59d5580a6
 	margin: 0 8px;
 	opacity: 0.75;
 	background: #465c8c;
 	color: white;
-}
-
-.footer-dark .item.social > a:hover {
+	}
+	
+	.footer-dark .item.social > a:hover {
 	opacity: 0.9;
-}
-
-.footer-dark .copyright {
+	}
+	
+	.footer-dark .copyright {
 	text-align: center;
 	padding-top: 24px;
 	opacity: 0.3;
 	font-size: 13px;
 	margin-bottom: 0;
-}
+	}
