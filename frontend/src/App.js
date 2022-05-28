@@ -12,7 +12,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ResourcesPage from "./pages/ResourcesPage";
 import UserPortal from "./pages/UserPortal";
-// import MentorsPage from "./pages/Mentors";
+//resources usage page
+import ResourcesUsagePage from "./pages/ResourcesUsage";
 import ShowResource from "./pages/ShowResource";
 import UsersPortal from "./pages/UsersPortal";
 import LogInUser from "./components/LogInUser";
@@ -67,6 +68,7 @@ function App() {
             <Route path="/resources/:resource_id/" element={<ShowResource />} />
             <Route path="/resources/create" element={<NewResource />} />
             <Route path="admin" element={<AdminPage />}>
+              <Route path="Resources_Usage" element={<ResourcesUsagePage />} />
               <Route path="users" element={<UsersPortal />} />
               <Route path="pendings" element={<Pendings />} />
             </Route>

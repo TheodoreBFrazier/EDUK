@@ -7,7 +7,7 @@ function AllMentors({ mentors }) {
     <section className="users">
       <ul>
         {mentors.map((mentor) => {
-          return <Mentor key={mentors.mentor_id} mentor={mentor} />;
+          return <Mentor key={mentor.mentor_id} mentor={mentor} />;
         })}
       </ul>
     </section>

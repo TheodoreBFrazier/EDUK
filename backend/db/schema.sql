@@ -41,7 +41,8 @@ CREATE TABLE resources(
 
 CREATE TABLE users_resources(
     uid INTEGER REFERENCES users(uid) ON DELETE CASCADE,
-    resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE
+    resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE,
+    UNIQUE(uid,resource_id)
 );
 
 

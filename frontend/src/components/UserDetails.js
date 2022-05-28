@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./userdetails.css";
-import SingleResource from "./SingleResource";
+//message component
+import GeneralSuccessM from "./GeneralSuccessM";
+import UserResource from "./UserResource";
 
 //API
 
@@ -85,13 +87,17 @@ function UserDetails() {
           </div>
           <section>
             <strong>User Resources:</strong>
+            {showMessage ? (
+              <GeneralSuccessM message={"Deleted Succesfully!!!"} />
+            ) : (
+              ""
+            )}
             {userResources.map((resource) => (
-              <SingleResource
+              <UserResource
                 key={resource.resource_id}
                 resource={resource}
                 showDelete={true}
                 removeResource={removeResource}
-                showMessage={showMessage}
               />
             ))}
           </section>
