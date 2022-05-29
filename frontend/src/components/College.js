@@ -50,9 +50,9 @@ export default function College() {
 				<div>
 					<h3>Programs</h3>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						The Programs are listed for college students in need for programs{" "}
+						<br /> to excel in technical skills and soft skills works that
+						demand you .
 					</p>
 				</div>
 				<div className="resource-arr">
@@ -67,9 +67,8 @@ export default function College() {
 				<div>
 					<h3>class</h3>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						Classes that help college students with skills and events that is in
+						demand <br /> and take your skills to next level .
 					</p>
 				</div>
 				<div className="resource-arr">
@@ -84,9 +83,9 @@ export default function College() {
 				<div>
 					<h3>scholarship</h3>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						Scholarship for college students that are looking for help and might
+						not have the information , <br /> we have collected scholarship that
+						are important to you .
 					</p>
 				</div>
 				<div className="resource-arr">

@@ -50,9 +50,9 @@ export default function Highschool() {
 				<div>
 					<h2>Programs</h2>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
+						The Programs are listed for High school students in need for
 						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						that demand you .
 					</p>
 				</div>
 				<div className="resource-arr">
@@ -71,9 +71,8 @@ export default function Highschool() {
 				<div>
 					<h2>Class</h2>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						Classes that help High school students with skills and events that
+						is in demand <br /> and take your skills to next level .
 					</p>
 				</div>
 				<div className="resource-arr">
@@ -92,9 +91,9 @@ export default function Highschool() {
 				<div>
 					<h2>Scholarship</h2>
 					<p className="resource">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						Scholarship for High school students that are looking for help and
+						might not have the information , <br /> we have collected
+						scholarship that are important to you .
 					</p>
 				</div>
 				<div className="resource-arr">
