@@ -12,17 +12,13 @@ export default function ContinuedLearningPage() {
 				<h4>
 					Elevate yourself by new learning skills and knowledge. <br />
 					that will allow you to stay competitive in today's fast-paced <br />
-					economy. quis nostrud exercitation ullamco laboris
-					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in{" "}
-					<br />
+					economy. quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+					ea commodo consequat. Duis aute irure dolor in <br />
 					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa <br />
 					qui officia deserunt mollit anim id est laborum."
 				</h4>
-			</div>
-			<div className="search-resource">
-				<SearchBar />
 			</div>
 			<br />
 			<br />

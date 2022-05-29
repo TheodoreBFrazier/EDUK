@@ -90,7 +90,7 @@ export default function Highschool() {
 			<section className="highSchoolMain">
 				<div>
 					<h2>Scholarship</h2>
-					<p className="resource">
+					<p className="resourceP">
 						Scholarship for High school students that are looking for help and
 						might not have the information , <br /> we have collected
 						scholarship that are important to you .

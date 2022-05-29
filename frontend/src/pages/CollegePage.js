@@ -21,9 +21,9 @@ export default function CollegePage() {
 					qui officia deserunt mollit anim id est laborum."
 				</h4>
 			</div>
-			<div className="search-resource">
+			{/* <div className="search-resource">
 				<SearchBar />
-			</div>
+			</div> */}
 			<br />
 			<br />
 			<College />
