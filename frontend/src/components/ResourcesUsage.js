@@ -40,15 +40,22 @@ function ResourcesUsage() {
 
   return (
     <section className="main-usage">
-      <h2 className="main-usage-h2">How useful are our resources?</h2>
+      <h3 className="main-usage-h3">How useful are our resources?</h3>
       <div className="main-usage-resources">
         {resources.map((resource) => (
           <ResourceUsage key={resource.resource_id} resource={resource} />
         ))}
       </div>
-      <h3 className="main-usage-h3"> The Most useful resource(s):</h3>
-      <h4>Resource Name: {fresource.resource_name}</h4>
-      <h4>Total Users: {fresource.nbr}</h4>
+      <div class="card text-center">
+        <div class="card-header">
+          <h3 className="bg-info" > The Most useful resource(s):</h3>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><strong>Resource Name:</strong> {fresource.resource_name}</h4>
+          <br />
+          <h4><strong>Total Users: </strong>{fresource.nbr}</h4>
+        </div>
+      </div>
     </section>
   );
 }

@@ -2,7 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import "../css/CreateUser.css";
+import { Form, Button } from "react-bootstrap";
+import "../css/createMentor.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -38,71 +39,70 @@ function CreateMentor() {
   };
 
   return (
-    <div id="volunteers">
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="subtitle">Let's create your account!</div>
-        <div className="title">Become a Mentor at EDUK!</div>
+    <div className="create-mentor-form">
+      <h2>Let's create your account!</h2>
+      <div id="volunteers">
+        <form className="form" onSubmit={handleSubmit}>
+          <div className="title">Become a Mentor at EDUK!</div>
+          <label htmlFor="firstname" >
+            First Name
+          </label>
+          <input
+            id="mentor_fname"
+            className="input"
+            type="text"
+            value={mentor.mentor_fname}
+            onChange={handleTextChange}
+          />
 
-        <label htmlFor="firstname" className="placeholder">
-          First Name
-        </label>
-        <input
-          id="mentor_fname"
-          className="input"
-          type="text"
-          value={mentor.mentor_fname}
-          // placeholder=" "
-          onChange={handleTextChange}
-        />
+          <label htmlFor="lastname" >
+            Last Name
+          </label>
+          <input
+            id="mentor_lname"
+            className="input"
+            type="text"
+            onChange={handleTextChange}
+            value={mentor.mentor_lname}
+          />
 
-        <label htmlFor="lastname" className="placeholder">
-          Last Name
-        </label>
-        <input
-          id="mentor_lname"
-          className="input"
-          type="text"
-          onChange={handleTextChange}
-          value={mentor.mentor_lname}
-        />
+          <label htmlFor="speciality" >
+            Speciality
+          </label>
+          <input
+            id="speciality"
+            className="input"
+            type="text"
+            onChange={handleTextChange}
+            value={mentor.speciality}
+          />
 
-        <label htmlFor="bio" className="placeholder">
-          Bio
-        </label>
-        <input
-          id="bio"
-          className="input"
-          type="text"
-          onChange={handleTextChange}
-          value={mentor.bio}
-        />
+          <label htmlFor="email" >
+            Email
+          </label>
+          <input
+            id="email"
+            className="input"
+            type="text"
+            onChange={handleTextChange}
+            value={mentor.email}
+          />
 
-        <label htmlFor="speciality" className="placeholder">
-          Speciality
-        </label>
-        <input
-          id="speciality"
-          className="input"
-          type="text"
-          onChange={handleTextChange}
-          value={mentor.speciality}
-        />
-
-        <label htmlFor="email" className="placeholder">
-          Email
-        </label>
-        <input
-          id="email"
-          className="input"
-          type="text"
-          onChange={handleTextChange}
-          value={mentor.email}
-        />
-
-        <button type="submit" className="submit">
-          submit
-        </button>
-      </form>
+          <label htmlFor="bio" >
+            Bio
+          </label>
+          <textarea
+            id="bio"
+            className="input"
+            type="text"
+            onChange={handleTextChange}
+            value={mentor.bio}
+          />
+          <button type="submit" className="submit">
+            submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

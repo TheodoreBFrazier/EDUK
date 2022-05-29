@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Button from "@mui/material/Button";
+import "../css/createResource.css";
 
 const API = process.env.REACT_APP_API_URL;
 function CreateResource() {
@@ -54,9 +55,12 @@ function CreateResource() {
 	};
 
 	return (
-		<div>
-			<h1> Add resource</h1>
-			<form onSubmit={handleSubmit}>
+		<div className="create-resource">
+			<h1>Thank you for Adding Resource!</h1>
+			<form onSubmit={handleSubmit} className="create-resource-form">
+				<label htmlFor="resource_name">
+				Resource Name
+				</label>
 				<input
 					id="resource_name"
 					placeholder="Resource Name"
@@ -64,12 +68,10 @@ function CreateResource() {
 					onChange={handleTextChange}
 					type="text"
 				/>
-				<textarea
-					id="description"
-					placeholder="Resource Description"
-					value={resource.description}
-					onChange={handleTextChange}
-				/>
+
+				<label htmlFor="resource_category">
+				Resource Category
+				</label>
 				<input
 					id="resource_category"
 					placeholder="Resource Category"
@@ -78,48 +80,33 @@ function CreateResource() {
 					type="text"
 				/>
 
-				{/* check box  */}
-				<div>
-					<label className="labelResource" htmlFor="highschool">
-						High School
-					</label>
-					<input
-						id="highschool"
-						value="highschool"
-						type="checkbox"
-						onChange={(e) => setHighSchool(e.target.checked)}
-					/>
+				<label htmlFor="resource_description">
+				Resource Description
+				</label>
+				<textarea
+					id="resource_description"
+					placeholder="Resource Description"
+					value={resource.description}
+					onChange={handleTextChange}
+				/>
 
-					<label className="labelResource" htmlFor="college">
-						College
-					</label>
-					<input
-						id="college"
-						type="checkbox"
-						name="college"
-						onChange={(e) => setCollege(e.target.checked)}
-					/>
+				
 
-					<label className="labelResource" htmlFor="continuedLearning">
-						Continued Learning
-					</label>
-					<input
-						id="continuedLearning"
-						type="checkbox"
-						name="continuedLearning"
-						onChange={(e) => setContinuedLearning(e.target.checked)}
-					/>
-				</div>
-
-				{/* check box  */}
-
+				
+				<label htmlFor="start_datetime">
+				Start Date and Time
+				</label>
 				<input
 					id="start_datetime"
-					placeholder="Date and Time"
+					placeholder="Start Date and Time"
 					value={resource.start_datetime}
 					onChange={handleTextChange}
 					type="text"
 				/>
+
+				<label htmlFor="end_datetime">
+				End Date and Time
+				</label>
 				<input
 					id="end_datetime"
 					placeholder="End Date and Time"
@@ -127,6 +114,10 @@ function CreateResource() {
 					onChange={handleTextChange}
 					type="text"
 				/>
+
+				<label htmlFor="url">
+				URL
+				</label>
 				<input
 					id="url"
 					placeholder="Url"
@@ -134,11 +125,52 @@ function CreateResource() {
 					onChange={handleTextChange}
 					type="text"
 				/>
-				<Button type="submit" variant="contained">
-					Submit
+
+				{/* check box  */}
+				<div className="create-resource-checkboxes">
+				
+						<label className="labelResource" htmlFor="highschool">
+						High School
+						</label>
+						<input
+							id="highschool"
+							value="highschool"
+							type="checkbox"
+							onChange={(e) => setHighSchool(e.target.checked)}
+						/>
+					
+						<label className="labelResource" htmlFor="college">
+							College
+						</label>
+						<input
+							id="college"
+							type="checkbox"
+							name="college"
+							onChange={(e) => setCollege(e.target.checked)}
+						/>
+					
+						<label className="labelResource" htmlFor="continuedLearning">
+							Continued Learning
+						</label>
+						<input
+							id="continuedLearning"
+							type="checkbox"
+							name="continuedLearning"
+							onChange={(e) => setContinuedLearning(e.target.checked)}
+						/>
+					
+				</div>
+				{/* check box  */}
+				
+				<Button type="submit" variant="contained" className="create-resource-btn">
+					<h3>Submit</h3>
 				</Button>
 			</form>
 		</div>
+
+
+
+
 	);
 }
 

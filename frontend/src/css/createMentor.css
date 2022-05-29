@@ -1,0 +1,16 @@
+.create-mentor-form {
+    margin-top: 80px;
+    text-align: center;
+    font-weight: bolder ;
+}
+
+.create-mentor-form h2 {
+    color: #4cadde;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.create-mentor-form .title:hover {
+    color: rgb(102, 213, 236);
+}
+
+

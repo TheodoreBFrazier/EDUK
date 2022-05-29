@@ -1,30 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Tangerine&display=swap');
 
+.main-usage-h3, .bg-info{
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+}
 
 .main-usage{
     display: grid;
     grid-template-columns: 1fr;
+    margin: 60px;
 }
-.main-usage-resources{
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
+
 .main-usage-resources > *{
-    border: 2px solid black;
-    background-color: grey;
     box-shadow: 2px 5px gray;
 }
-.main-usage-h2{
-    margin-top: 50px;
+
+.card-body {
+    margin: 20px;
+    padding: 10px;
 }
-.main-usage-h3{
-    margin-top: 50px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 50px;
+
+.main-usage-resources{
+    margin-top: 100px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 85px;
+    
 }
+
 .admin-resource-span{
-    font-size: 45px;
-    color: whitesmoke;
+    font-size: 30px;
+    /* color: whitesmoke; */
 }
