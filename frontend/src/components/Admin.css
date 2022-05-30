@@ -1,35 +1,23 @@
-.admin {
-    padding-top: 50px;
-    margin: 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-};
-
-.admin_nav {
-	display: flex;
-	flex-flow: row nowrap;
-}
-
-h1 {
-    font-weight: bolder;
-}
-
-.admin_nav a {
-
-	font-size: 45px;
+.navbar a {
+	font-size: 35px;
     font-weight: bold;
-	margin: 100px;
 	color: rgb(241, 243, 248);
-    text-align: center;
 	text-decoration:none;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXTrqbCLRsQzLenrndd1IiHphijOs43Kwopg&usqp=CAU);
 }
 
+.admin {
+    position: relative;
+    padding: 50px 100px;
+    margin: 50px;
+    text-align: center;
+};
 
+.admin_pendings {
+    margin-top: 40px;
+}
 .admin_pendings h2{
     margin-top: 80px;
-    text-shadow: 8cm;
     font-style: italic;
 }
 

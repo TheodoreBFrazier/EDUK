@@ -1,3 +1,4 @@
+import React from "react";
 import UpdateUser from "../components/UpdateUser.js";
 
 function EditUser(){

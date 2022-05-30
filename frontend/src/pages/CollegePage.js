@@ -1,6 +1,6 @@
 import React from "react";
 import College from "../components/College";
-import SearchBar from "../components/SearchBar";
+// import SearchBar from "../components/SearchBar";
 
 export default function CollegePage() {
 	return (
@@ -10,20 +10,14 @@ export default function CollegePage() {
 				<br />
 				<h2 className="resources-h2">Find Your Calling</h2>
 				<h4>
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in{" "}
-					<br />
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa <br />
-					qui officia deserunt mollit anim id est laborum."
+					We have collected resources that are needed for a college students to
+					take their skills to the next level <br /> programs , class ,
+					scholarship that will help you shape your future .
 				</h4>
 			</div>
-			<div className="search-resource">
+			{/* <div className="search-resource">
 				<SearchBar />
-			</div>
+			</div> */}
 			<br />
 			<br />
 			<College />

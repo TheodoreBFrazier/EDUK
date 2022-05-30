@@ -80,7 +80,10 @@ users.post("/:uid/resources", async (req, res) => {
   const resource = req.body;
   const user_resource = await createResource(uid, resource);
   if (user_resource.uid) res.json({ success: true, result: user_resource });
-  else res.status(500).json({ success: false, error: user_resource });
+  else
+    res
+      .status(500)
+      .json({ success: false, error: "You already had the resource..." });
 });
 
 //delete User

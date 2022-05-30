@@ -6,7 +6,7 @@ import SingleResource from "./SingleResource";
 
 const API = process.env.REACT_APP_API_URL;
 
-function Resources() {
+export default function Resources() {
 	const [resources, setResources] = useState([]);
 
 	useEffect(() => {
@@ -33,5 +33,3 @@ function Resources() {
 		</div>
 	);
 }
-
-export default Resources;
