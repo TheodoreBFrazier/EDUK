@@ -75,21 +75,30 @@ export default function RightNav({
 				<Link to="/about">About</Link>
 			</li>
 
-			<li
-				onClick={() => {
-					toggleOpen();
-					toggleDropdownOpen();
-				}}
-				className="eachLi mainLi"
-			>
-				{!userInfo ? (
-					""
-				) : userInfo.is_admin && !isNaN(userId) ? (
+			{!userInfo ? (
+				""
+			) : userInfo.is_admin && !isNaN(userId) ? (
+				<li
+					onClick={() => {
+						toggleOpen();
+						toggleDropdownOpen();
+					}}
+					className="eachLi mainLi"
+				>
 					<Link to="admin">Admin Page</Link>
-				) : (
+				</li>
+			) : (
+				<li
+					onClick={() => {
+						toggleOpen();
+						toggleDropdownOpen();
+					}}
+					className="eachLi mainLi"
+				>
 					<Link to={`/users/${userId}`}>Dashboard</Link>
-				)}
-			</li>
+				</li>
+			)}
+
 			<li
 				onClick={() => {
 					toggleOpen();
@@ -119,10 +128,10 @@ export default function RightNav({
 				) : (
 					<Link to="/users/login">
 						<Button
-							variant="outlined"
+							variant="contained"
 							size="medium"
 							style={{
-								backgroundColor: "#FCA311",
+								background_color: "rgb(22 38 85)",
 								fontSize: "18px",
 							}}
 						>

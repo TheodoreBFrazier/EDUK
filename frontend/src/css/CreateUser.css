@@ -3,28 +3,28 @@ form {
 	border-radius: 20px;
 	box-sizing: border-box;
 	height: auto;
-	padding: 20px;
+	padding: 10px;
 	display: grid;
-	grid-template-columns: 200px 1fr;
-	grid-gap: 50px;
+	/* grid-template-columns: 1fr 1fr; */
+	grid-gap: 10px;
 	margin-top: 80px;
-    width: 50vw; 
-    margin-left : 25vw;
-    font-weight: bolder ;
-    padding-bottom: 150px;
+	/* width: 50vw; */
+	/* margin-left: 25vw; */
+	font-weight: bolder;
+	padding-bottom: 150px;
 	margin-bottom: 100px;
 }
 
-label {
+/* label {
 	grid-column: 1 / 2;
 	color: white;
 	font-size: 20px;
-}
-
+} */
+/* 
 input,
 button {
 	grid-column: 2 / 3;
-}
+} */
 
 .title {
 	color: #eee;
