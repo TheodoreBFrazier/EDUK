@@ -1,8 +1,7 @@
-import React from "react"
+import React from "react";
 //import Resources from "../components/Resources"
 import Resources from "../components/Resources";
-import SearchBar from "../components/SearchBar";
-
+// import SearchBar from "../components/SearchBar";
 
 function ResourcesPage() {
 	return (
@@ -10,21 +9,18 @@ function ResourcesPage() {
 			<div className="resources-intro">
 				<br />
 				<br />
-				<div className="resources-intro-text">
-					<h1 className="resources-h2">Find Your Calling</h1>
-					<p className="resources-p">
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-						nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
-						<br />
-						<br />
-					</p>
-				</div>
+				<h2 className="resources-h2">Find Your Calling</h2>
+				<h4>
+					All resources has been resarched and verified information for classes
+					, programs and scholarship <br /> for anyone trying to aquire new
+					skills needs information and what is possible , making the field
+					available for all .
+					<br />
+					<br />
+				</h4>
 			</div>
 
 			<Resources />
-	
 		</div>
 	);
 }

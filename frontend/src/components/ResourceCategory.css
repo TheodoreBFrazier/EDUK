@@ -4,20 +4,31 @@
 	text-align: center;
 }
 
+.subHeaderResources {
+	color: #666;
+	display: inline-block;
+	margin: 0;
+	text-transform: uppercase;
+}
+.subHeaderResources:after {
+	display: block;
+	content: "";
+	border-bottom: solid 3px #1b1b1b;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+.subHeaderResources:hover:after {
+	transform: scaleX(1);
+}
+.subHeaderResources.fromLeft:after {
+	transform-origin: 0% 50%;
+}
+
 .mainResourceDetails {
 	width: 80%;
 	text-align: center;
 }
-.resourceCategory {
-	margin: 40px;
-	font-size: 2em;
-	text-align: center;
-	background: -webkit-linear-gradient(#dfdfdf, #bebebe);
-	height: 60px;
-	align-items: center;
-	padding: 10px;
-	border-radius: 10px;
-}
+
 .resourceP {
 	margin-top: 2em;
 	margin-bottom: 4em;
@@ -60,9 +71,13 @@
 /* resource into  */
 
 .resources-intro {
-	height: 600px;
+	margin-bottom: 2em;
+	height: 400px;
 	text-align: center;
 	background-image: linear-gradient(60deg, #ffb800, #ffffff);
+}
+.resources-intro h4 {
+	line-height: 1.5em;
 }
 
 .resources-h2 {

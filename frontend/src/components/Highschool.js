@@ -44,11 +44,9 @@ export default function Highschool() {
 	});
 	return (
 		<div>
-			<h1 className="resourceCategory">HighSchool</h1>
-
 			<section className="highSchoolMain">
 				<div>
-					<h2>Programs</h2>
+					<h2 className="subHeaderResources">Programs</h2>
 					<p className="resourceP">
 						The Programs are listed for High school students in need for
 						programs <br /> to excel in technical skills and soft skills works
@@ -69,7 +67,7 @@ export default function Highschool() {
 
 			<section className="highSchoolMain">
 				<div>
-					<h2>Class</h2>
+					<h2 className="subHeaderResources">Class</h2>
 					<p className="resourceP">
 						Classes that help High school students with skills and events that
 						is in demand <br /> and take your skills to next level .
@@ -89,7 +87,7 @@ export default function Highschool() {
 
 			<section className="highSchoolMain">
 				<div>
-					<h2>Scholarship</h2>
+					<h2 className="subHeaderResources">Scholarship</h2>
 					<p className="resourceP">
 						Scholarship for High school students that are looking for help and
 						might not have the information , <br /> we have collected

@@ -45,10 +45,9 @@ export default function College() {
 	});
 	return (
 		<div>
-			<h1 className="resourceCategory">College</h1>
 			<section className="highSchoolMain">
 				<div>
-					<h3>Programs</h3>
+					<h3 className="subHeaderResources">Programs</h3>
 					<p className="resourceP">
 						The Programs are listed for college students in need for programs{" "}
 						<br /> to excel in technical skills and soft skills works that
@@ -65,7 +64,7 @@ export default function College() {
 			</section>
 			<section className="highSchoolMain">
 				<div>
-					<h3>class</h3>
+					<h3 className="subHeaderResources">class</h3>
 					<p className="resourceP">
 						Classes that help college students with skills and events that is in
 						demand <br /> and take your skills to next level .
@@ -81,7 +80,7 @@ export default function College() {
 			</section>
 			<section className="highSchoolMain">
 				<div>
-					<h3>scholarship</h3>
+					<h3 className="subHeaderResources">scholarship</h3>
 					<p className="resourceP">
 						Scholarship for college students that are looking for help and might
 						not have the information , <br /> we have collected scholarship that

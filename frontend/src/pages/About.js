@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import { Card, Typography } from "@mui/material";
 //importing the styles from MATERIAL UI
-import { withStyles } from "@mui/material";
+// import { withStyles } from "@mui/material";
 
 //For faces for headshots
 import { CardMedia } from "@mui/material";
@@ -10,28 +10,21 @@ import { CardMedia } from "@mui/material";
 import { CardContent } from "@mui/material";
 
 const cardStyle = {
-	margin: 'auto',
+	margin: "auto",
 	height: "600px",
 	width: "75%",
 	padding: "20px",
 	boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px",
 	// display: "inline-block",
-	display: 'flex',
-	justifyContent: 'center'
-}
-
-
-
-
-
+	display: "flex",
+	justifyContent: "center",
+};
 
 function About() {
 	return (
 		<div className="about">
-
 			<div className="valueNmission">
 				<div>
-
 					<h2 id="our_values">Our Values</h2>
 					<br />
 					<p>
@@ -43,8 +36,6 @@ function About() {
 					</p>
 				</div>
 			</div>
-
-
 
 			<div className="valueNmission">
 				<div>
@@ -67,13 +58,9 @@ function About() {
 					/> */}
 			</div>
 
-
 			<h2>Our Team</h2>
 
-
-
 			<Card style={cardStyle} variant="outlined">
-
 				<CardMedia
 					component="img"
 					height="auto"
@@ -82,22 +69,17 @@ function About() {
 				/>
 
 				<CardContent>
-					<Typography variant="h3">
-						David Vidals
-					</Typography>
-					<br />
-					I joined Pursuit to jumpstart my career into coding and
-					start creating and helping people. I hope to once day create an
-					app/website that can help under served communities in New York. A
-					fun Fact about me is that I love play video games.
+					<Typography variant="h3">David Vidals</Typography>
+					<br />I joined Pursuit to jumpstart my career into coding and start
+					creating and helping people. I hope to once day create an app/website
+					that can help under served communities in New York. A fun Fact about
+					me is that I love play video games.
 				</CardContent>
-
 			</Card>
 
 			<br />
 
 			<Card style={cardStyle} variant="outlined">
-
 				<CardMedia
 					component="img"
 					height="auto"
@@ -105,30 +87,19 @@ function About() {
 					alt="Lili-headshot"
 				/>
 
-
 				<CardContent>
-
-					<Typography variant="h3">
-						Lili Huang
-					</Typography>
-
-
-					<br />
-					I am a full stack developer. I wanted to become a software
+					<Typography variant="h3">Lili Huang</Typography>
+					<br />I am a full stack developer. I wanted to become a software
 					engineer because it can be creative which means I am able to solve
 					problems by putting myself in the users’ shoes and providing a
-					solution. The ability to be creative in my work is what truly
-					empowers me to move forward and keep learning as an engineer.
-
+					solution. The ability to be creative in my work is what truly empowers
+					me to move forward and keep learning as an engineer.
 				</CardContent>
-			</Card >
-
-
+			</Card>
 
 			<br />
 
 			<Card style={cardStyle} variant="outlined">
-
 				<CardMedia
 					component="img"
 					height="auto"
@@ -136,28 +107,19 @@ function About() {
 					alt="MK-headshot"
 				/>
 
-
 				<CardContent>
-
-					<Typography variant="h3">
-						Mukayila Alao
-					</Typography>
-
-
+					<Typography variant="h3">Mukayila Alao</Typography>
 					<br />
 					Software engineering is all what I am passionate about now. I
-					graduated from my University as a computer Networks and
-					maintenance engineer. I will finish by saying that technology is
-					driving our lives today and I can't wait to land my first job and
-					contribute.
+					graduated from my University as a computer Networks and maintenance
+					engineer. I will finish by saying that technology is driving our lives
+					today and I can't wait to land my first job and contribute.
 				</CardContent>
-			</Card >
+			</Card>
 
 			<br />
 
 			<Card style={cardStyle} variant="outlined">
-
-
 				<CardMedia
 					component="img"
 					height="auto"
@@ -166,24 +128,16 @@ function About() {
 				/>
 
 				<CardContent>
-					<Typography variant="h3">
-						Nima Sherpa
-					</Typography>
-
-					<br />
-					I am a Full-Stack Developer who loves creating projects and
-					implementing new ideas . I am always seeking to expand my
-					knowledge on tech , Ability to learn and implement new
-					technologies quickly.
-
-
+					<Typography variant="h3">Nima Sherpa</Typography>
+					<br />I am a Full-Stack Developer who loves creating projects and
+					implementing new ideas . I am always seeking to expand my knowledge on
+					tech , Ability to learn and implement new technologies quickly.
 				</CardContent>
-			</Card >
+			</Card>
 
 			<br />
 
 			<Card style={cardStyle} variant="outlined">
-
 				<CardMedia
 					component="img"
 					height="auto"
@@ -192,23 +146,14 @@ function About() {
 				/>
 
 				<CardContent>
-
-					<Typography variant="h3">
-						Theodore Frazier
-					</Typography>
-
-
-					<br />
-					I joined a 12-month, Google-funded software engineering
-					fellowship with a 9% acceptance rate whose graduates have been
-					hired as developers at leading companies such as Pinterest, JP
-					Morgan, and Spotify.
-
-					</CardContent>
-
-			</Card >
-
-		</div >
+					<Typography variant="h3">Theodore Frazier</Typography>
+					<br />I joined a 12-month, Google-funded software engineering
+					fellowship with a 9% acceptance rate whose graduates have been hired
+					as developers at leading companies such as Pinterest, JP Morgan, and
+					Spotify.
+				</CardContent>
+			</Card>
+		</div>
 	);
 }
 
