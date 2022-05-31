@@ -85,7 +85,9 @@ function UserDetails() {
 					</p>
 				</div>
 				<section className="userDetailsSection">
-					<div>User Resources:</div>
+					<h2 className="subHeaderResources" style={{ margin: "40px" }}>
+						User Resources
+					</h2>
 					{showMessage ? (
 						<GeneralSuccessM message={"Deleted Succesfully!!!"} />
 					) : (
