@@ -25,14 +25,11 @@ function ImageUpload({ setOwner }) {
     axios
       .post(`${urlForTheRequest}`, formData)
       .then((res) => {
-        //get file name and path from backend
-        // const { fileName, filePath } = res.data;
-        // setUploadedFile({ fileName, filePath });
-        if (owner) {
-          const owner = res.data;
-          localStorage.setItem(`${owner.ownerName}`, `${owner.filePath}`);
-          setOwner(res.data);
-        }
+        // if (owner) {
+        //   const owner = res.data;
+        //   localStorage.setItem(`${owner.ownerName}`, `${owner.filePath}`);
+        //   setOwner(res.data);
+        // }
         const navUrl = uid
           ? `/users/${uid}`
           : mentor_id

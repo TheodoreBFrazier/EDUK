@@ -47,6 +47,11 @@ CREATE TABLE users_resources(
     resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE,
     UNIQUE(uid,resource_id)
 );
-
+-- save owners images
+CREATE TABLE photos(
+    photo_id SERIAL PRIMARY KEY,
+    owner_name VARCHAR(50) NOT NULL,
+    photo TEXT NOT NULL
+);
 
 

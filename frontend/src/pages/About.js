@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
+import axios from "axios";
 import { Card, Typography } from "@mui/material";
 //importing the styles from MATERIAL UI
 // import { withStyles } from "@mui/material";
@@ -20,15 +21,52 @@ const cardStyle = {
   display: "flex",
   justifyContent: "center",
 };
-
-function About({ owner }) {
+//api
+const API = process.env.REACT_APP_API_URL;
+function About() {
   const navigate = useNavigate();
-  //get those info from local storage as we are not using any table to use our infos
-  const david = localStorage.getItem("david");
-  const mukayila = localStorage.getItem("mukayila");
-  const lili = localStorage.getItem("lili");
-  const theodore = localStorage.getItem("theodore");
-  const nima = localStorage.getItem("nima");
+  //get each person photo
+  const [lili, setLili] = useState(
+    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
+  );
+  const [mukayila, setMukayila] = useState(
+    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
+  );
+  const [nima, setNima] = useState(
+    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
+  );
+  const [david, setDavid] = useState(
+    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
+  );
+  const [theodore, setTheodore] = useState(
+    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
+  );
+
+  useEffect(() => {
+    axios
+      .get(`${API}/owners/photos`)
+      .then((res) => {
+        // get each person photo
+        const arr = res.data.result;
+        console.log(arr);
+        const davidObj = arr.find((owner) => owner.owner_name === "david");
+        const liliObj = arr.find((owner) => owner.owner_name === "lili");
+        const theodoreObj = arr.find(
+          (owner) => owner.owner_name === "theodore"
+        );
+        const mukayilaObj = arr.find(
+          (owner) => owner.owner_name === "mukayila"
+        );
+        const nimaObj = arr.find((owner) => owner.owner_name === "nima");
+        console.log(mukayilaObj);
+        setDavid(davidObj.photo);
+        setMukayila(mukayilaObj.photo);
+        setLili(liliObj.photo);
+        setNima(nimaObj.photo);
+        setTheodore(theodoreObj.photo);
+      })
+      .catch((e) => console.log(e));
+  }, []);
   return (
     <div className="about">
       <div className="valueNmission">
@@ -73,13 +111,7 @@ function About({ owner }) {
           onClick={() => navigate("/owners/david/upload")}
           component="img"
           height="auto"
-          image={
-            owner.ownerName && owner.ownerName === "david"
-              ? owner.filePath
-              : david
-              ? david
-              : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-          }
+          image={david}
           alt="David-headshot"
         />
 
@@ -99,13 +131,7 @@ function About({ owner }) {
           onClick={() => navigate("/owners/lili/upload")}
           component="img"
           height="auto"
-          image={
-            owner.ownerName && owner.ownerName === "lili"
-              ? owner.filePath
-              : lili
-              ? lili
-              : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-          }
+          image={lili}
           alt="Lili-headshot"
         />
 
@@ -126,13 +152,7 @@ function About({ owner }) {
           onClick={() => navigate("/owners/mukayila/upload")}
           component="img"
           height="auto"
-          image={
-            owner.ownerName && owner.ownerName === "mukayila"
-              ? owner.filePath
-              : mukayila
-              ? mukayila
-              : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-          }
+          image={mukayila}
           alt="MK-headshot"
         />
 
@@ -153,13 +173,7 @@ function About({ owner }) {
           onClick={() => navigate("/owners/nima/upload")}
           component="img"
           height="auto"
-          image={
-            owner.ownerName && owner.ownerName === "nima"
-              ? owner.filePath
-              : nima
-              ? nima
-              : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-          }
+          image={nima}
           alt="Nima-headshot"
         />
 
@@ -178,13 +192,7 @@ function About({ owner }) {
           onClick={() => navigate("/owners/theodore/upload")}
           component="img"
           height="auto"
-          image={
-            owner.ownerName && owner.ownerName === "theodore"
-              ? owner.filePath
-              : theodore
-              ? theodore
-              : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-          }
+          image={theodore}
           alt="Theodore-headshot"
         />
 

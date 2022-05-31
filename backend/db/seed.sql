@@ -56,3 +56,11 @@ INSERT INTO users_resources(uid, resource_id) VALUES
 (5, 3),
 (5, 9),
 (5, 10);
+
+INSERT INTO photos(owner_name,photo)
+VALUES
+('david','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png'),
+('mukayila','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png'),
+('lili','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png'),
+('theodore','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png'),
+('nima','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png');
