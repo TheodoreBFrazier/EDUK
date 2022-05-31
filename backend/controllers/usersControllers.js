@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 
 const users = express.Router();
 //const resourcesController = require("./resourcesControllers.js");
@@ -108,6 +109,7 @@ users.delete("/:uid/resources/:resource_id", async (req, res) => {
 users.put("/:uid", async (req, res) => {
   const { uid } = req.params;
   const user = req.body;
+
   const updatedUser = await updateUser(uid, user);
   if (updatedUser.uid) {
     res.json({ success: true, result: updatedUser });
@@ -115,6 +117,40 @@ users.put("/:uid", async (req, res) => {
     res
       .status(500)
       .json({ success: false, error: `unable to update user ${uid}` });
+});
+//update user image
+users.post("/:uid/upload", async (req, res) => {
+  const { uid } = req.params;
+  if (!req.files) {
+    console.log("No file uploaded");
+    return res.status(400).json({ success: false, error: "No file uploaded" });
+  }
+  const file = req.files.file;
+  let reqPath = path.join(__dirname, "../..");
+  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send(err);
+    }
+    const user = await getOneUser(uid);
+
+    if (user.uid) {
+      user.user_image = `/assets/${file.name}`;
+      console.log(user);
+      var updatedUser = await updateUser(uid, user);
+    }
+
+    try {
+      console.log(updatedUser);
+      if (updatedUser.uid)
+        return res.json({
+          fileName: file.name,
+          filePath: `/assets/${file.name}`,
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 });
 
 module.exports = users;

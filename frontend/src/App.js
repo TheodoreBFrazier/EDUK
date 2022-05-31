@@ -19,6 +19,7 @@ import UsersPortal from "./pages/UsersPortal";
 import LogInUser from "./components/LogInUser";
 import NewMentor from "./pages/NewMentor";
 import MentorsPage from "./pages/MentorsPage";
+import Uploader from "./pages/Uploader";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // rescources pages
@@ -78,6 +79,7 @@ function App() {
               element={<LogInUser setLogText={setLogText} mentors={mentors} />}
             />
             <Route path="/users/:uid/" element={<UserPortal />} />
+            <Route path="/users/:uid/upload" element={<Uploader />} />
             <Route path="/about" element={<About />} />
             <Route path="/users/create" element={<CreateUser />} />
             <Route path="/highschool" element={<HighschoolPage />} />
@@ -90,6 +92,7 @@ function App() {
               path="/mentors"
               element={<MentorsPage mentors={mentors} />}
             />
+            <Route path="/mentors/:mentor_id/upload" element={<Uploader />} />
             <Route path="/mentors/create" element={<NewMentor />} />
           </Routes>
         </main>
