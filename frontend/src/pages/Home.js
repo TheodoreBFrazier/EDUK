@@ -8,7 +8,7 @@ const HorizontalRule = ({ color }) => (
 			color: color,
 			backgroundColor: color,
 			height: 5,
-			width: 100,
+			width: '300px',
 		}}
 	/>
 );
@@ -63,23 +63,32 @@ function Home() {
 						SERVICES WITH YOU IN MIND
 					</h1>
 
-					<HorizontalRule color="black" />
+					<br />
 
+					<div className="rule">
+						<HorizontalRule color="black" />
+					</div>
+
+
+					<br />
+					<br />
 					<div className="services-icons">
 						<div className="icons-mentor">
 							<img src="https://cdn-icons-png.flaticon.com/128/767/767388.png" alt="helping" />
-
+							<br />
+							<br />
 							<p> A selection of mentors <br />
-								to help you achieve your gails <br />
+								to help you achieve your goals <br />
 							</p>
 
 						</div>
 
 						<div className="icons-mentor">
 							<img src="https://cdn-icons-png.flaticon.com/128/767/767388.png" alt="helping" />
-
+							<br />
+							<br />
 							<p> A selection of mentors <br />
-								to help you achieve your gails <br />
+								to help you achieve your goals <br />
 							</p>
 
 						</div>
@@ -87,21 +96,13 @@ function Home() {
 
 						<div className="icons-resources">
 							<img src="https://cdn-icons-png.flaticon.com/128/500/500425.png" alt="resources" />
-
+							<br />
+							<br />
 							<p> A selection of mentors <br />
-								to help you achieve your gails <br />
+								to help you achieve your goals <br />
 							</p>
 
 						</div>
-
-						<div className="icons-resources">
-							<img src="https://cdn-icons-png.flaticon.com/128/500/500425.png" alt="resources" />
-
-							<p> A selection of mentors <br />
-								to help you achieve your gails <br />
-							</p>
-
-						</div>						
 
 					</div>
 
