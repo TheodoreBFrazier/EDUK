@@ -47,7 +47,7 @@ mentors.post("/", async (req, res) => {
   }
 });
 //update mentor image
-//update user image
+
 mentors.post("/:mentor_id/upload", async (req, res) => {
   const { mentor_id } = req.params;
   if (!req.files) {

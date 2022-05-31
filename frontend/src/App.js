@@ -39,6 +39,8 @@ import Footer from "./components/Footer";
 //API
 const API = process.env.REACT_APP_API_URL;
 function App() {
+  //owners photo update state
+  const [owner, setOwner] = useState({});
   //mentors info
   const [mentors, setMentors] = useState([]);
 
@@ -80,7 +82,7 @@ function App() {
             />
             <Route path="/users/:uid/" element={<UserPortal />} />
             <Route path="/users/:uid/upload" element={<Uploader />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About owner={owner} />} />
             <Route path="/users/create" element={<CreateUser />} />
             <Route path="/highschool" element={<HighschoolPage />} />
             <Route path="/college" element={<CollegePage />} />
@@ -94,6 +96,10 @@ function App() {
             />
             <Route path="/mentors/:mentor_id/upload" element={<Uploader />} />
             <Route path="/mentors/create" element={<NewMentor />} />
+            <Route
+              path="/owners/:owner/upload"
+              element={<Uploader setOwner={setOwner} />}
+            />
           </Routes>
         </main>
         <Footer />
