@@ -48,7 +48,7 @@ function About() {
       .then((res) => {
         // get each person photo
         const arr = res.data.result;
-        console.log(arr);
+
         const davidObj = arr.find((owner) => owner.owner_name === "david");
         const liliObj = arr.find((owner) => owner.owner_name === "lili");
         const theodoreObj = arr.find(
@@ -58,7 +58,7 @@ function About() {
           (owner) => owner.owner_name === "mukayila"
         );
         const nimaObj = arr.find((owner) => owner.owner_name === "nima");
-        console.log(mukayilaObj);
+
         setDavid(davidObj.photo);
         setMukayila(mukayilaObj.photo);
         setLili(liliObj.photo);
