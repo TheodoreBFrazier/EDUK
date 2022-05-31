@@ -5,17 +5,16 @@
 	height: auto;
 	padding: 10px;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 10px;
-	margin-top: 80px;
-	width: 50vw;
-	margin-left: 25vw;
-	font-weight: bolder;
+	/* grid-template-columns: 1fr 1fr; */
+/* grid-gap: 10px;
+	margin-top: 80px; */
+/* width: 50vw; */
+/* margin-left: 25vw; */
+/* font-weight: bolder;
 	padding-bottom: 150px;
-	margin-bottom: 100px;
-}
+	margin-bottom: 100px; */
 
-label {
+/* label {
 	grid-column: 1 / 2;
 	color: white;
 	font-size: 20px;
@@ -77,4 +76,4 @@ button {
 
 .submit:active {
 	background-color: #06b;
-} */
+}  */
