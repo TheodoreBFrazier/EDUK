@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import { Form, Button } from "react-bootstrap";
 import "../css/createMentor.css";
 
 const API = process.env.REACT_APP_API_URL;
@@ -41,7 +40,6 @@ function CreateMentor() {
   return (
     <div className="create-mentor-form">
       <h2>Let's create your account!</h2>
-      {/* <div> */}
 	  <div className="create-mentor-form-title">Become a Mentor at EDUK!</div>
         <form className="mentor-form" onSubmit={handleSubmit}>
           
@@ -108,7 +106,6 @@ function CreateMentor() {
             Submit
           </button>
         </form>
-      {/* </div> */}
     </div>
   );
 }
