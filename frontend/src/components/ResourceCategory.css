@@ -64,6 +64,11 @@
 	padding: 100px;
 }
 
+/* .resource-card {
+	display: flex;
+	justify-content: center;
+} */
+
 .resource-card h4 {
 	margin-bottom: 30px;
 }

@@ -8,7 +8,8 @@ import { Card } from "@mui/material";
 var cardStyle = {
 	height: "auto",
 	width: "400px",
-	padding: "20px",
+	padding: "40px",
+	margin: "20px",
 	boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px",
 };
 
@@ -23,7 +24,11 @@ function UserResource({ resource, removeResource }) {
 				</Link>
 				<p> {resource.description} </p>
 				<Link to={`/resources/${resource.resource_id}`}>
-					<Button variant="contained" size="small">
+					<Button
+						style={{ width: "40px", margin: "10px" }}
+						variant="contained"
+						size="small"
+					>
 						View
 					</Button>
 				</Link>
@@ -32,6 +37,7 @@ function UserResource({ resource, removeResource }) {
 					color="error"
 					variant="contained"
 					size="small"
+					style={{ width: "40px", margin: "10px" }}
 					onClick={() => removeResource(resource.resource_id)}
 				>
 					Delete
