@@ -18,12 +18,12 @@
 	grid-column: 1 / 2;
 	color: white;
 	font-size: 20px;
-} */
-/* 
+}
+
 input,
 button {
 	grid-column: 2 / 3;
-} */
+}
 
 .title {
 	color: #eee;
@@ -76,4 +76,4 @@ button {
 
 .submit:active {
 	background-color: #06b;
-}
+}  */
