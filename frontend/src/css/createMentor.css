@@ -1,7 +1,19 @@
-.create-mentor-form {
+/* .create-mentor-form {
+    
     margin-top: 80px;
     text-align: center;
+    font-size: large;
     font-weight: bolder ;
+    width: 700px;
+    height: auto;
+}
+
+.mentor-form {
+    margin-top: 40px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
 }
 
 .create-mentor-form h2 {
@@ -9,8 +21,23 @@
     font-weight: bolder;
     font-size: 40px;
 }
+
+.create-mentor-form input {
+    width: 300px;
+    align-items: center;
+    align-self: center;
+   
+}
+
+.mentor-form button {
+    width: 100px;
+    background-color: green;
+    align-items: center;
+    align-self: center;
+   
+}
 .create-mentor-form .title:hover {
     color: rgb(102, 213, 236);
 }
 
-
+ */
