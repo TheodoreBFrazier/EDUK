@@ -23,24 +23,35 @@ export default function College() {
 	}, []);
 
 	let collegeProgram = college.filter((high) => {
-		return high.resource_category === "Program" && high.isverified === true;
+		return (
+			high.resource_category === "Program" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("college")
+		);
 	});
 	let collegeClasses = college.filter((high) => {
-		return high.resource_category === "Class" && high.isverified === true;
+		return (
+			high.resource_category === "Class" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("college")
+		);
 	});
 	let collegeScholarship = college.filter((high) => {
-		return high.resource_category === "Scholarship" && high.isverified === true;
+		return (
+			high.resource_category === "Scholarship" &&
+			high.is_verified === true &&
+			high.resourcefor.includes("college")
+		);
 	});
 	return (
 		<div>
-			<h1 className="resourceCategory">College</h1>
 			<section className="highSchoolMain">
 				<div>
-					<h3>Programs</h3>
+					<h3 className="subHeaderResources">Programs</h3>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						The Programs are listed for college students in need for programs{" "}
+						<br /> to excel in technical skills and soft skills works that
+						demand you .
 					</p>
 				</div>
 				<div className="resource-arr">
@@ -53,11 +64,10 @@ export default function College() {
 			</section>
 			<section className="highSchoolMain">
 				<div>
-					<h3>class</h3>
+					<h3 className="subHeaderResources">class</h3>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						Classes that help college students with skills and events that is in
+						demand <br /> and take your skills to next level .
 					</p>
 				</div>
 				<div className="resource-arr">
@@ -70,11 +80,11 @@ export default function College() {
 			</section>
 			<section className="highSchoolMain">
 				<div>
-					<h3>scholarship</h3>
+					<h3 className="subHeaderResources">scholarship</h3>
 					<p className="resourceP">
-						The Programs are listed for high school students in need for
-						programs <br /> to excel in technical skills and soft skills works
-						that demand you
+						Scholarship for college students that are looking for help and might
+						not have the information , <br /> we have collected scholarship that
+						are important to you .
 					</p>
 				</div>
 				<div className="resource-arr">

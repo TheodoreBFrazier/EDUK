@@ -1,0 +1,65 @@
+
+
+.mentor-list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 5rem;
+  width: 80%;
+  margin: 5% auto;
+  
+}
+
+
+  /* .card__content {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none; 
+    border: 2px solid red;
+  } */
+  
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: black;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+  font-size: medium;
+}     
+
+.card__email{
+  font-style: italic;
+}
+
+.card__speciality{
+  font-style: italic;
+}
+.card__full__name{
+  font-style: bold;
+  font-size:33px;
+}
+
+.card__thumb, .card__content__one, .showMessage{
+  text-align: center;
+}
+
+.whole__card button:hover{
+  font-size: larger;
+}
+
+@media (max-width: 912px) {
+  .mentor-list {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .mentor-list {
+    display: block;
+  }
+}

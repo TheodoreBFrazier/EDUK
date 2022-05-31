@@ -40,20 +40,64 @@ const StyledBurger = styled.div`
 	}
 `;
 
-export default function Burger() {
+export default function Burger({ logText, setLogText }) {
+	// drop down functionality
+	const [dropdown, setDropdown] = useState(false);
 	const [open, setOpen] = useState(false);
+	// state for the drop down close or open
+	const [click, setClick] = useState(false);
+
+	const onMouseClick = () => {
+		setDropdown(true);
+	};
+	const onMouseUnclick = () => {
+		setDropdown(false);
+	};
+
+	const toggleMouseClick = () => {
+		dropdown ? onMouseUnclick() : onMouseClick();
+	};
+	const handleClick = () => setClick(!click);
+
+	const toggleOpen = () => {
+		setDropdown(false);
+		setOpen(!open);
+	};
+
+	const toggleDropdownOpen = () => {
+		setClick(!click);
+	};
 	return (
 		<>
 			<StyledBurger
 				open={open}
-				onClick={() => setOpen(!open)}
+				onClick={() => {
+					toggleOpen();
+					toggleDropdownOpen();
+					// toggleMouseClick();
+				}}
 				className="mainHam"
 			>
 				<div />
 				<div />
 				<div />
 			</StyledBurger>
-			<RightNav open={open} />
+			<RightNav
+				handleClick={handleClick}
+				click={click}
+				open={open}
+				setOpen={setOpen}
+				logText={logText}
+				setLogText={setLogText}
+				setClick={setClick}
+				toggleDropdownOpen={toggleDropdownOpen}
+				toggleOpen={toggleOpen}
+				dropdown={dropdown}
+				onMouseClick={onMouseClick}
+				onMouseUnclick={onMouseUnclick}
+				toggleMouseClick={toggleMouseClick}
+				setDropdown={setDropdown}
+			/>
 		</>
 	);
 }

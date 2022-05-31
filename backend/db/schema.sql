@@ -21,16 +21,18 @@ CREATE TABLE users(
     age INT NOT NULL,
     email TEXT,
     user_name VARCHAR(50) UNIQUE NOT NULL,
-    password TEXT,
+    password TEXT NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE,
     mentor_id INTEGER REFERENCES mentors(mentor_id)
 );
 
 --resources
 CREATE TABLE resources(
     resource_id SERIAL PRIMARY KEY,
-    resource_name VARCHAR(100),
+    resource_name VARCHAR(100) NOT NULL,
     description TEXT,
     resource_category VARCHAR(100),
+    resourceFor TEXT [],
     start_datetime TEXT,
     end_datetime TEXT,
     url TEXT NOT NULL,
@@ -39,7 +41,8 @@ CREATE TABLE resources(
 
 CREATE TABLE users_resources(
     uid INTEGER REFERENCES users(uid) ON DELETE CASCADE,
-    resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE
+    resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE,
+    UNIQUE(uid,resource_id)
 );
 
 

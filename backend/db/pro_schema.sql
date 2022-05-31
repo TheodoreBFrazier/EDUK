@@ -31,10 +31,13 @@ CREATE TABLE resources(
     start_datetime TEXT,
     end_datetime TEXT,
     url TEXT NOT NULL,
-    isVerified BOOLEAN DEFAULT FALSE
+    is_verified BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE users_resources(
     uid INTEGER REFERENCES users(uid) ON DELETE CASCADE,
     resource_id INTEGER REFERENCES resources(resource_id) ON DELETE CASCADE
 );
+
+
+

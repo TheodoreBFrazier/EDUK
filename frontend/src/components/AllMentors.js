@@ -1,14 +1,15 @@
 import React from "react";
-import { useState } from "react";
+import "../css/Mentor.css";
+import Mentor from "./Mentor.js";
 
-function AllMentors(){
-    const [mentors, setMentors] = useState([]);
-
-    return(
-        <div>
-            {mentors.map}
-        </div>
-    )
+function AllMentors({ mentors }) {
+  return (
+    <section className="mentor-list">
+        {mentors.map((mentor) => {
+          return <Mentor key={mentor.mentor_id} mentor={mentor} />;
+        })}
+    </section>
+  );
 }
 
 export default AllMentors;

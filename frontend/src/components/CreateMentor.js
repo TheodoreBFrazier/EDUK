@@ -2,15 +2,16 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import "../css/CreateUser.css";
+import { Form, Button } from "react-bootstrap";
+import "../css/createMentor.css";
 
 const API = process.env.REACT_APP_API_URL;
 
 function CreateMentor() {
   let navigate = useNavigate();
   const [mentor, setMentor] = useState({
-    first_name: "",
-    last_name: "",
+    mentor_fname: "",
+    mentor_lname: "",
     bio: "",
     email: "",
     speciality: "",
@@ -38,90 +39,76 @@ function CreateMentor() {
   };
 
   return (
-    <div>
-      <form className="form" onSubmit={handleSubmit}>
-        <div class="title">Welcome to EDUK!</div>
-        <div class="subtitle">Let's create your account!</div>
-
-        <div class="input-container ic1">
-          <input
-            id="first_name"
-            class="input"
-            type="text"
-            value={mentor.first_name}
-            placeholder=" "
-            onChange={handleTextChange}
-          />
-          <div class="cut"></div>
-          <label for="firstname" class="placeholder">
+    <div className="create-mentor-form">
+      <h2>Let's create your account!</h2>
+      {/* <div> */}
+	  <div className="create-mentor-form-title">Become a Mentor at EDUK!</div>
+        <form className="mentor-form" onSubmit={handleSubmit}>
+          
+          <label htmlFor="firstname" >
             First Name
           </label>
-        </div>
-
-        <div class="input-container ic2">
           <input
-            id="last_name"
-            class="input"
+            id="mentor_fname"
+            className="input"
             type="text"
-            placeholder=" "
+            value={mentor.mentor_fname}
+			// placeholder="Please Enter First Name"
             onChange={handleTextChange}
-            value={mentor.last_name}
           />
-          <div class="cut"></div>
-          <label for="lastname" class="placeholder">
+
+          <label htmlFor="lastname" >
             Last Name
           </label>
-        </div>
-
-        <div class="input-container ic2">
           <input
-            id="bio"
-            class="input"
+            id="mentor_lname"
+            className="input"
             type="text"
-            placeholder=" "
             onChange={handleTextChange}
-            value={mentor.bio}
+            value={mentor.mentor_lname}
+			// placeholder="Please Enter Last Name"
           />
-          <div class="cut"></div>
-          <label for="bio" class="placeholder">
-            Bio
-          </label>
-        </div>
 
-        <div class="input-container ic2">
-          <input
-            id="speciality"
-            class="input"
-            type="text"
-            placeholder=" "
-            onChange={handleTextChange}
-            value={mentor.speciality}
-          />
-          <div class="cut"></div>
-          <label for="speciality" class="placeholder">
+          <label htmlFor="speciality" >
             Speciality
           </label>
-        </div>
-
-        <div class="input-container ic2">
           <input
-            id="email"
-            class="input"
+            id="speciality"
+            className="input"
             type="text"
-            placeholder=" "
             onChange={handleTextChange}
-            value={mentor.email}
+            value={mentor.speciality}
+			// placeholder="Please Enter Speciality"
           />
-          <div class="cut cut-short"></div>
-          <label for="email" class="placeholder">
+
+          <label htmlFor="email" >
             Email
           </label>
-        </div>
+          <input
+            id="email"
+            className="input"
+            type="text"
+            onChange={handleTextChange}
+            value={mentor.email}
+			// placeholder="Please Enter Email Address"
+          />
 
-        <button type="submit" class="submit">
-          submit
-        </button>
-      </form>
+          <label htmlFor="bio" >
+            Bio
+          </label>
+          <textarea
+            id="bio"
+            className="input"
+            type="text"
+            onChange={handleTextChange}
+            value={mentor.bio}
+			// placeholder="Please Enter Bio"
+          />
+          <button type="submit" className="create-mentor-submit">
+            Submit
+          </button>
+        </form>
+      {/* </div> */}
     </div>
   );
 }

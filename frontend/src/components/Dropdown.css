@@ -1,28 +1,29 @@
-.dropdown-menu {
+.dropM {
 	width: 290px;
 	position: absolute;
-	top: 90px;
+	top: 120px;
 	list-style: none;
 	text-align: start;
 	background-color: white;
 }
 
-.dropdown-menu li {
+.dropM li {
 	cursor: pointer;
 	padding: 5px;
 	font-size: 10px;
 }
 
-.dropdown-menu li:hover {
+.dropM li:hover {
 	background-color: silver;
 }
-.dropdown-menu.clicked {
+
+.dropM.clicked {
 	display: none;
 }
 
 @media only screen and (max-width: 768px) {
-	.dropdown-menu {
-		right: 200px;
-		width: 300px;
+	.dropM {
+		right: 180px;
+		width: 240px;
 	}
 }

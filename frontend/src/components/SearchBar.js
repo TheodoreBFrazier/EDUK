@@ -9,13 +9,6 @@ import { IconButton } from "@mui/material";
 import { InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-var textFieldStyle = {
-
-	margin: "75px",
-	width: "450px",
-};
-
-
 const API = process.env.REACT_APP_API_URL;
 
 const SearchBar = () => {
@@ -49,7 +42,6 @@ const SearchBar = () => {
 	return (
 		<div className="resources-searchbar">
 			<TextField
-				style={textFieldStyle}
 				id="filled_basic"
 				label="Search"
 				type="search"
@@ -58,7 +50,7 @@ const SearchBar = () => {
 				value={searchInput}
 				InputProps={{
 					endAdornment: (
-						<InputAdornment position='start'>
+						<InputAdornment position="start">
 							<IconButton>
 								<SearchIcon />
 							</IconButton>

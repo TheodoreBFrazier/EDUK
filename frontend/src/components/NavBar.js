@@ -6,15 +6,15 @@ import logo from "../images/logo.png";
 // hamburger
 import Burger from "./Burger.js";
 
-export default function NavBar() {
-	return (
-		<nav>
-			<div>
-				<Link to="/">
-					<img className="logoimg" src={logo} alt="logo" />
-				</Link>
-			</div>
-			<Burger />
-		</nav>
-	);
+export default function NavBar({ logText, setLogText }) {
+  return (
+    <nav>
+      <div>
+        <Link to="/">
+          <img className="logoimg" src={logo} alt="logo" />
+        </Link>
+      </div>
+      <Burger logText={logText} setLogText={setLogText} />
+    </nav>
+  );
 }

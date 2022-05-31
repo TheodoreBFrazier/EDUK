@@ -6,21 +6,23 @@ import SingleResource from "./SingleResource";
 
 const API = process.env.REACT_APP_API_URL;
 
-function Resources() {
+export default function Resources() {
   const [resources, setResources] = useState([]);
 
   useEffect(() => {
     axios
       .get(API + "/resources")
       .then((response) => {
-        console.log(response);
-        setResources(response.data.result);
+        const allResources = response.data.result.filter(
+          (resource) => resource.is_verified
+        );
+        setResources(allResources);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-  //const recomResources = resources.filter((resource) => resource.is_verified);
+
   return (
     <div className="resource-arr">
       {resources.map((resource) => {
@@ -31,5 +33,3 @@ function Resources() {
     </div>
   );
 }
-
-export default Resources;
