@@ -10,7 +10,8 @@ CREATE TABLE mentors(
     bio TEXT,
     email TEXT,
     speciality TEXT,
-    is_verified BOOLEAN DEFAULT FALSE
+    is_verified BOOLEAN DEFAULT FALSE,
+    mentor_image TEXT DEFAULT NULL
 );
 
 --users table
@@ -23,7 +24,9 @@ CREATE TABLE users(
     user_name VARCHAR(50) UNIQUE NOT NULL,
     password TEXT NOT NULL,
     is_admin BOOLEAN DEFAULT FALSE,
-    mentor_id INTEGER REFERENCES mentors(mentor_id)
+    mentor_id INTEGER REFERENCES mentors(mentor_id),
+    user_image TEXT DEFAULT NULL
+
 );
 
 --resources
