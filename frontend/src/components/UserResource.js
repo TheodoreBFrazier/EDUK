@@ -32,6 +32,7 @@ function UserResource({ resource, removeResource }) {
           color="error"
           variant="contained"
           size="small"
+          style={{ width: "40px" }}
           onClick={() => removeResource(resource.resource_id)}
         >
           Delete

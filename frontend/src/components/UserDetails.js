@@ -29,11 +29,11 @@ function UserDetails() {
     axios
       .delete(`${API}/users/${userId}/resources/${rid}`)
       .then((res) => {
-        setShowMessage(true);
         const newResources = userResources.filter(
           (el) => el.resource_id !== rid
         );
         setUserResources(newResources);
+        setShowMessage(true);
       })
       .catch((e) => console.log(e));
   };
@@ -96,7 +96,6 @@ function UserDetails() {
               <UserResource
                 key={resource.resource_id}
                 resource={resource}
-                showDelete={true}
                 removeResource={removeResource}
               />
             ))}
