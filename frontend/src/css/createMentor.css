@@ -23,8 +23,6 @@
     padding: 25px;
     font-size: 35px;
     color:#72bde3;
-    /* background-color: antiquewhite; */
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
 }
 
 .create-mentor-form-title:hover {
@@ -60,7 +58,6 @@
     background-color: #4cadde;
     margin: auto;
     color:rgb(228, 235, 236);
-    /* border-color: rgb(243, 222, 196); */
     border: 3px solid antiquewhite;
     border-radius: 10px;
    

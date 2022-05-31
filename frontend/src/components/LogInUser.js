@@ -59,36 +59,28 @@ function LogInUser({ setLogText, mentors }) {
 	};
 
 	return (
-		<div>
+		<div className="user-login-form">
 			{error ? <Error error={error} /> : ""}
-			<form onSubmit={handleSubmit}>
-				<h3>Login Here</h3>
-
-				{/* <label className="login" for="username">
-          Username
-        </label> */}
+			<form onSubmit={handleSubmit} className="login-form">
+				<h2>Login Here</h2>
 				<input
-					placeholder="Username"
+					placeholder="Please Enter Username"
 					type="text"
 					id="user_name"
 					onChange={handleChange}
 					value={user.user_name}
 				/>
-
-				{/* <label className="login" for="password">
-          Password
-        </label> */}
 				<input
-					placeholder="password"
+					placeholder="Please Enter Password"
 					type="password"
 					id="password"
 					onChange={handleChange}
 					value={user.password}
 				/>
 
-				<button>Log In</button>
+				<button className="login-submit">Log In</button>
 				<Link to="/users/create">
-					<button>New to EDUK? Sign up here!</button>
+					<button className="sign-up-submit">New to EDUK? Sign up here!</button>
 				</Link>
 			</form>
 		</div>
