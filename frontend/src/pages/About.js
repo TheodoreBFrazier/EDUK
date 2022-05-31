@@ -23,6 +23,12 @@ const cardStyle = {
 
 function About({ owner }) {
   const navigate = useNavigate();
+  //get those info from local storage as we are not using any table to use our infos
+  const david = localStorage.getItem("david");
+  const mukayila = localStorage.getItem("mukayila");
+  const lili = localStorage.getItem("lili");
+  const theodore = localStorage.getItem("theodore");
+  const nima = localStorage.getItem("nima");
   return (
     <div className="about">
       <div className="valueNmission">
@@ -70,6 +76,8 @@ function About({ owner }) {
           image={
             owner.ownerName && owner.ownerName === "david"
               ? owner.filePath
+              : david
+              ? david
               : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
           }
           alt="David-headshot"
@@ -94,6 +102,8 @@ function About({ owner }) {
           image={
             owner.ownerName && owner.ownerName === "lili"
               ? owner.filePath
+              : lili
+              ? lili
               : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
           }
           alt="Lili-headshot"
@@ -119,6 +129,8 @@ function About({ owner }) {
           image={
             owner.ownerName && owner.ownerName === "mukayila"
               ? owner.filePath
+              : mukayila
+              ? mukayila
               : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
           }
           alt="MK-headshot"
@@ -144,6 +156,8 @@ function About({ owner }) {
           image={
             owner.ownerName && owner.ownerName === "nima"
               ? owner.filePath
+              : nima
+              ? nima
               : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
           }
           alt="Nima-headshot"
@@ -167,6 +181,8 @@ function About({ owner }) {
           image={
             owner.ownerName && owner.ownerName === "theodore"
               ? owner.filePath
+              : theodore
+              ? theodore
               : "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
           }
           alt="Theodore-headshot"
