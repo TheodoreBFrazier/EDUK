@@ -41,9 +41,10 @@ function CreateMentor() {
   return (
     <div className="create-mentor-form">
       <h2>Let's create your account!</h2>
-      <div id="volunteers">
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="title">Become a Mentor at EDUK!</div>
+      {/* <div> */}
+	  <div className="create-mentor-form-title">Become a Mentor at EDUK!</div>
+        <form className="mentor-form" onSubmit={handleSubmit}>
+          
           <label htmlFor="firstname" >
             First Name
           </label>
@@ -52,6 +53,7 @@ function CreateMentor() {
             className="input"
             type="text"
             value={mentor.mentor_fname}
+			// placeholder="Please Enter First Name"
             onChange={handleTextChange}
           />
 
@@ -64,6 +66,7 @@ function CreateMentor() {
             type="text"
             onChange={handleTextChange}
             value={mentor.mentor_lname}
+			// placeholder="Please Enter Last Name"
           />
 
           <label htmlFor="speciality" >
@@ -75,6 +78,7 @@ function CreateMentor() {
             type="text"
             onChange={handleTextChange}
             value={mentor.speciality}
+			// placeholder="Please Enter Speciality"
           />
 
           <label htmlFor="email" >
@@ -86,6 +90,7 @@ function CreateMentor() {
             type="text"
             onChange={handleTextChange}
             value={mentor.email}
+			// placeholder="Please Enter Email Address"
           />
 
           <label htmlFor="bio" >
@@ -97,12 +102,13 @@ function CreateMentor() {
             type="text"
             onChange={handleTextChange}
             value={mentor.bio}
+			// placeholder="Please Enter Bio"
           />
-          <button type="submit" className="submit">
-            submit
+          <button type="submit" className="create-mentor-submit">
+            Submit
           </button>
         </form>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
