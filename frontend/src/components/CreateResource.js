@@ -11,18 +11,25 @@ function CreateResource() {
 	const [highSchool, setHighSchool] = useState(false);
 	const [college, setCollege] = useState(false);
 	const [continuedLearning, setContinuedLearning] = useState(false);
+	const [resourceCategory, setResourceCategory] = useState("Program");
+
+	// select drop down
+	const options = ["Program", "Class", "Scholarship"];
+	// option state
 
 	// all state to send
 	const [resource, setResource] = useState({
 		resource_name: "",
-		description: "",
-		resource_category: "",
-		resourcefor: [],
 		start_datetime: "",
 		end_datetime: "",
 		url: "",
+		description: "",
+		resource_category: "",
+		resourcefor: [],
 		is_verified: false,
 	});
+
+	resource.resource_category = resourceCategory;
 
 	if (highSchool) {
 		resource.resourcefor[0] = "highschool";
@@ -45,6 +52,10 @@ function CreateResource() {
 		setResource({ ...resource, [e.target.id]: e.target.value });
 	};
 
+	const selectChange = (e) => {
+		setResourceCategory(e.target.value);
+	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		//add a new resource to the database
@@ -63,15 +74,6 @@ function CreateResource() {
 						id="resource_name"
 						placeholder="Resource Name"
 						value={resource.resource_name}
-						onChange={handleTextChange}
-						type="text"
-					/>
-				</div>
-				<div>
-					<input
-						id="resource_category"
-						placeholder="Resource Category"
-						value={resource.resource_category}
 						onChange={handleTextChange}
 						type="text"
 					/>
@@ -108,11 +110,22 @@ function CreateResource() {
 
 				<div>
 					<textarea
-						id="resource_description"
+						id="description"
 						placeholder="Resource Description"
 						value={resource.description}
 						onChange={handleTextChange}
+						type="text"
 					/>
+				</div>
+
+				{/* options  */}
+
+				<div className="select-container">
+					<select onChange={selectChange}>
+						{options.map((option) => (
+							<option value={option}>{option}</option>
+						))}
+					</select>
 				</div>
 
 				{/* check box  */}

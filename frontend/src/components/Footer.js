@@ -38,10 +38,10 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div class="col-md-6 item text">
+            <div className="col-md-6 item text">
               <h3>Contact Us</h3>
               <p>EDUK Heaquarters</p>
-              <p>123 West 123r street, #123</p>
+              <p>123 West 123rd street, #123</p>
               <p>New York, NY 1234</p>
             </div>
 
