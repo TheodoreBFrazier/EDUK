@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import "../css/imageupload.css";
+import { Button } from "@mui/material";
+
+var buttonStyle = {
+  height: '400px',
+  width: '250px'
+}
 
 const API = process.env.REACT_APP_API_URL;
 function ImageUpload({ setOwner }) {
@@ -20,8 +26,8 @@ function ImageUpload({ setOwner }) {
     const urlForTheRequest = uid
       ? `${API}/users/${uid}/upload`
       : mentor_id
-      ? `${API}/mentors/${mentor_id}/upload`
-      : `${API}/owners/${owner}/upload`;
+        ? `${API}/mentors/${mentor_id}/upload`
+        : `${API}/owners/${owner}/upload`;
     axios
       .post(`${urlForTheRequest}`, formData)
       .then((res) => {
@@ -33,20 +39,26 @@ function ImageUpload({ setOwner }) {
         const navUrl = uid
           ? `/users/${uid}`
           : mentor_id
-          ? "/mentors"
-          : "/about";
+            ? "/mentors"
+            : "/about";
         navigate(`${navUrl}`);
       })
       .catch((e) => console.log(e));
   };
   return (
     <div className="image">
+      <div className="upload-intro">
+        <h1>Show yourself off!</h1>
+        <p>Add a photo for your user profile.</p>
+      </div>
       <form onSubmit={handleSubmit} className="image-upload">
         <div className="image-upload-first">
-          <input type="file" id="image-input" onChange={handleChange} />
+          <input className = "input-button" type="file" id="image-input" onChange={handleChange} />
         </div>
         <div className="image-upload-second">
-          <input type="submit" value={"Upload"} />
+          <Button style = {buttonStyle} variant="text" size="small">
+            <input type="submit" value={"Upload"} />
+          </Button>
         </div>
       </form>
     </div>
