@@ -4,6 +4,8 @@
     grid-template-columns: 1fr;
     width: 100%;
 }
+
+
 .image-upload{
     width: 75%;
     display: grid;
@@ -12,11 +14,19 @@
     margin: 100px auto;
     
 }
+
+.input-button {
+color: green;
+}
+
+form input[type=file] {
+border: none;
+}
+
 .image-upload-first{
     width: 75%;
-    border: 2px solid black;
-    background-color: rgb(11, 67, 171);
 }
+
 .image-upload-second{
     width: 75%;
 }

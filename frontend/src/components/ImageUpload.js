@@ -53,7 +53,7 @@ function ImageUpload({ setOwner }) {
       </div>
       <form onSubmit={handleSubmit} className="image-upload">
         <div className="image-upload-first">
-          <input type="file" id="image-input" onChange={handleChange} />
+          <input className = "input-button" type="file" id="image-input" onChange={handleChange} />
         </div>
         <div className="image-upload-second">
           <Button style = {buttonStyle} variant="text" size="small">
