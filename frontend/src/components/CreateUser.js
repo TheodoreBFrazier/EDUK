@@ -47,22 +47,18 @@ function CreateUser() {
       <form className="create-user-form" onSubmit={handleSubmit}>
       <div className="title">Welcome to EDUK!</div>
          {/* <h2 className="subtitle">Let's create your account!</h2> */}
-         <div>
-           <br />
-           <br />
-           <br />
+        
          <div className="subtitle">Let's create your account!</div>
-          Already signed Up? <Link to="/users/login">Login Here</Link>
-
-        </div>
+         <div className="subtitle-2">  Already signed Up? <Link to="/users/login">Login Here!</Link></div>
   
           <label htmlFor="first_name" >
-            First name
+            {/* First name */}
           </label>
           <input
             id="first_name"
             className="input"
             type="text"
+            placeholder="First Name"
             value={user.first_name}
             onChange={handleTextChange}
           />
@@ -71,12 +67,13 @@ function CreateUser() {
 
  
           <label htmlFor="lastname" >
-            Last name
+            {/* Last name */}
           </label>
           <input
             id="last_name"
             className="input"
             type="text"
+            placeholder="Last Name"
             onChange={handleTextChange}
             value={user.last_name}
             />
@@ -87,36 +84,41 @@ function CreateUser() {
             id="age"
             className="input"
             type="number"
+            min='0'
+            max='99'
             onChange={handleTextChange}
             value={user.age}
           />
           <label htmlFor="username" >
-            User name
+            {/* User name */}
           </label>
           <input
             id="user_name"
             className="input"
             type="text"
+            placeholder="User Name"
             onChange={handleTextChange}
             value={user.user_name}
           />
           <label htmlFor="password" >
-            Password
+            {/* Password */}
           </label>
           <input
             id="password"
             className="input"
             type="text"
+            placeholder="Password"
             onChange={handleTextChange}
             value={user.password}
           />
           <label htmlFor="email" >
-            Email
+            {/* Email */}
           </label>
           <input
             id="email"
             className="input"
             type="text"
+            placeholder="Email"
             onChange={handleTextChange}
             value={user.email}
           />

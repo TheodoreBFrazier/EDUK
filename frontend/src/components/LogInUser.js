@@ -25,6 +25,7 @@ function LogInUser({ setLogText, mentors }) {
         const userInfo = res.data.result;
         const userId = userInfo.uid;
         if (!isNaN(userId)) {
+          // console.log(userInfo);
           setError("");
           //set userId in localStorage
           localStorage.setItem("userId", `${userId}`);
@@ -63,14 +64,14 @@ function LogInUser({ setLogText, mentors }) {
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login Here</h2>
         <input
-          placeholder="Please Enter Username"
+          placeholder="Username"
           type="text"
           id="user_name"
           onChange={handleChange}
           value={user.user_name}
         />
         <input
-          placeholder="Please Enter Password"
+          placeholder="Password"
           type="password"
           id="password"
           onChange={handleChange}
