@@ -1,113 +1,98 @@
 .create-mentor-form {
-    text-align: center;
-    font-size: larger;
-    font-weight: bolder ;
-    width: 850px;
-    margin: auto;
-    margin-top: 80px;
-    padding-bottom: 5em;
-    color: whitesmoke;
+	text-align: center;
+	font-size: larger;
+	font-weight: bolder;
+	width: 850px;
+	margin: auto;
+	margin-top: 80px;
+	padding-bottom: 5em;
+	color: whitesmoke;
 }
 
 .create-mentor-form h2 {
-    color: #4cadde;
-    font-weight: bolder;
-    font-size: 40px;
-    padding: 10px;
-    margin: 60px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-}
-
-.create-mentor-form-title {
-    margin: 20px;
-    padding: 25px;
-    font-size: 35px;
-    color:#72bde3;
-}
-
-.create-mentor-form-title:hover {
-    font-weight: bolder;
-    font-size: 40px;
+	color: #4cadde;
+	font-weight: bolder;
+	font-size: 40px;
+	padding: 10px;
+	margin: 60px;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+		rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .mentor-form {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 25px;
-    background-color: #72bde3;
-    margin-top: 30px;
-    padding: 100px 100px;
-    border-radius: 30px;
-    font-size: larger;
-    box-shadow: 10px 10px 5px #aaaaaa;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 25px;
+	background-color: #72bde3;
+	margin-top: 30px;
+	padding: 100px 100px;
+	border-radius: 30px;
+	font-size: larger;
+	box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .create-mentor-form input {
-    width: 250px;
-    border-radius: 10px;
+	width: 250px;
+	border-radius: 10px;
 }
 
 .create-mentor-form textarea {
-    width: 350px;
-    border-radius: 10px;
-    height: 5em;
+	width: 350px;
+	border-radius: 10px;
+	height: 5em;
 }
 
 .create-mentor-submit {
-    width: 120px;
-    background-color: #4cadde;
-    margin: auto;
-    color:rgb(228, 235, 236);
-    border: 3px solid antiquewhite;
-    border-radius: 10px;
-   
+	width: 120px;
+	background-color: #4cadde;
+	margin: auto;
+	color: rgb(228, 235, 236);
+	border: 3px solid antiquewhite;
+	border-radius: 10px;
 }
 
 .create-mentor-submit:hover {
-    font-weight: bold;
-    font-size: larger;
+	opacity: 0.8;
 }
 
 @media (max-width: 912px) {
-    .create-mentor-form {
-        font-size: medium;
-        width: 600px;
-        margin: auto;
-        margin-top: 80px;
- 
-    }
+	.create-mentor-form {
+		font-size: medium;
+		width: 600px;
+		margin: auto;
+		margin-top: 80px;
+	}
 
-    .create-mentor-form textarea {
-        width: 250px;
-    }
-  }
-  
-@media (max-width: 750px) {
-    .create-mentor-form {
-        font-size: medium;
-        width: 500px;
-        margin: auto;
-        padding: auto;
-    }
-
-    .create-mentor-form textarea {
-        width: 250px;
-    }
+	.create-mentor-form textarea {
+		width: 250px;
+	}
 }
 
+@media (max-width: 750px) {
+	.create-mentor-form {
+		font-size: medium;
+		width: 500px;
+		margin: auto;
+		padding: auto;
+	}
+
+	.create-mentor-form textarea {
+		width: 250px;
+	}
+}
 
 @media (max-width: 480px) {
-    .create-mentor-form {
-        font-size: medium;
-        width: 400px;
-    }
+	.create-mentor-form {
+		font-size: medium;
+		width: 400px;
+	}
 
-    .create-mentor-form input {
-        width: 140px;
-    }
+	.create-mentor-form input {
+		width: 140px;
+	}
 
-    .create-mentor-form textarea {
-        width: 140px;
-    }
+	.create-mentor-form textarea {
+		width: 140px;
+	}
 }
-
