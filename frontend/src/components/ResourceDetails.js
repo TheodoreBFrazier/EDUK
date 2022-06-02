@@ -66,11 +66,13 @@ function ResourceDetails() {
               </Button>
             </a>
           </div>
-          <div>
-            <Button onClick={addResource} variant="contained" size="small">
-              Add resource
-            </Button>
-          </div>
+          {userId && !isNaN(userId) ? (
+            <div>
+              <Button onClick={addResource} variant="contained" size="small">
+                Add resource
+              </Button>
+            </div>
+          ) : null}
           <div>
             {showMessage ? (
               <SuccessMessage />

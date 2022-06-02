@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./userdetails.css";
 //message component
@@ -19,7 +19,7 @@ function UserDetails() {
   const [showMessage, setShowMessage] = useState(false);
   // const [showUserDetails, setShowUserDetails] = useState(false);
   let { uid } = useParams();
-  //let navigate = useNavigate();
+  let navigate = useNavigate();
 
   //mentor info
   const mentor = JSON.parse(localStorage.getItem("userMentor"));
@@ -29,11 +29,11 @@ function UserDetails() {
     axios
       .delete(`${API}/users/${userId}/resources/${rid}`)
       .then((res) => {
-        setShowMessage(true);
         const newResources = userResources.filter(
           (el) => el.resource_id !== rid
         );
         setUserResources(newResources);
+        setShowMessage(true);
       })
       .catch((e) => console.log(e));
   };
@@ -59,51 +59,57 @@ function UserDetails() {
   }, [uid]);
 
   return (
-    <section className="user_details">
-      <div className="welcome">
-        <aside className="profile-card">
-          <header>
-            <a href="#!">
-              <img
-                src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-                alt="profile-img"
-              />
-            </a>
-            <h1>
-              Welcome {user.first_name} {user.last_name}!
-            </h1>
+    <div className="user_details">
+      <aside className="profile-card">
+        <header>
+          <a href="#!">
+            <img
+              onClick={() => navigate(`/users/${uid}/upload`)}
+              src={
+                user.user_image
+                  ? user.user_image
+                  : "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+              }
+              alt="profile-img"
+            />
+          </a>
+          <h1>
+            Welcome {user.first_name} {user.last_name}!
+          </h1>
 
-            <h2>"A step closer to your dreams"</h2>
-          </header>
+          <h2>"A step closer to your dreams"</h2>
+        </header>
 
-          <div className="profile-bio">
-            <p>
-              Username : {user.user_name} <br />
-              Age : {user.age} <br />
-              Mentor Name: {mentor ? mentor.mentor_fname : ""}{" "}
-              {mentor ? mentor.mentor_lname : ""} <br />
-              Email : {user.email}
-            </p>
-          </div>
-          <section>
-            <strong>User Resources:</strong>
-            {showMessage ? (
-              <GeneralSuccessM message={"Deleted Succesfully!!!"} />
-            ) : (
-              ""
-            )}
-            {userResources.map((resource) => (
-              <UserResource
-                key={resource.resource_id}
-                resource={resource}
-                showDelete={true}
-                removeResource={removeResource}
-              />
-            ))}
-          </section>
-        </aside>
-      </div>
-    </section>
+        <div className="profile-bio">
+          <p>
+            Username : {user.user_name} <br />
+            Age : {user.age} <br />
+            Mentor Name: {mentor ? mentor.mentor_fname : ""}{" "}
+            {mentor ? mentor.mentor_lname : ""} <br />
+            Email : {user.email}
+          </p>
+        </div>
+        <section className="userDetailsSection">
+          <h2 className="subHeaderResources" style={{ margin: "40px" }}>
+            User Resources
+          </h2>
+          {showMessage ? (
+            <GeneralSuccessM message={"Deleted Succesfully!!!"} />
+          ) : (
+            ""
+          )}
+          {userResources.map((resource) => (
+            <UserResource
+              className="userDetailsCard"
+              key={resource.resource_id}
+              resource={resource}
+              showDelete={true}
+              removeResource={removeResource}
+            />
+          ))}
+        </section>
+      </aside>
+    </div>
   );
 }
 
