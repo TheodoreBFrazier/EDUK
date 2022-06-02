@@ -1,30 +1,14 @@
-form {
+.create-user-form {
 	background-color: #4cadde;
 	border-radius: 20px;
 	box-sizing: border-box;
 	height: auto;
-	padding: 10px;
-	display: grid;
-	/* grid-template-columns: 1fr 1fr; */
-	grid-gap: 10px;
+	padding: 5px;
 	margin-top: 80px;
-	/* width: 50vw; */
-	/* margin-left: 25vw; */
 	font-weight: bolder;
-	padding-bottom: 150px;
+	padding-bottom: 50px;
 	margin-bottom: 100px;
 }
-
-/* label {
-	grid-column: 1 / 2;
-	color: white;
-	font-size: 20px;
-} */
-/* 
-input,
-button {
-	grid-column: 2 / 3;
-} */
 
 .title {
 	color: #eee;
@@ -32,20 +16,22 @@ button {
 	font-size: 36px;
 	font-weight: 600;
 	margin-top: 30px;
+	/* margin: auto; */
+	text-align: center;
 }
 
 .subtitle {
-	color: #eee;
+	color: rgb(255, 255, 255);
 	font-family: sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	margin-top: 10px;
+	font-size: 25px;
+	text-align: center;
 }
 
-.input-container {
-	height: 70px;
-	position: relative;
-	width: 100%;
+.subtitle-2{
+	color: #eee;
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 17px;
 }
 
 .input {
@@ -54,11 +40,10 @@ button {
 	border: 0;
 	box-sizing: border-box;
 	color: rgb(4, 0, 0);
-	font-size: 18px;
-	height: 100%;
-	outline: 0;
+	font-size: 20px;
 	padding: 4px 20px 0;
-	width: 100%;
+	width: 90%;
+	margin: auto;
 }
 
 .submit {
@@ -69,10 +54,11 @@ button {
 	color: #eee;
 	cursor: pointer;
 	font-size: 18px;
-	height: 50px;
+	height: 60px;
 	outline: 0;
 	text-align: center;
-	width: 100%;
+	/* width: 80%; */
+	margin: auto;
 }
 
 .submit:active {

@@ -38,19 +38,6 @@ function UserDetails() {
       .catch((e) => console.log(e));
   };
 
-<<<<<<< HEAD
-  return (
-    <section className="user_details">
-      <div className="welcome">
-        <aside className="profile-card">
-          <header>
-            <a href="#!">
-              <img
-                src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-                alt="profile-img"
-              />
-            </a>
-=======
   useEffect(() => {
     axios
       .get(API + "/users/" + uid)
@@ -60,7 +47,6 @@ function UserDetails() {
       .catch((error) => {
         console.log(error);
       });
->>>>>>> 68c89b7037e0655fcf236da856774b755f00802e
 
     axios
       .get(API + "/users/" + uid + "/resources")

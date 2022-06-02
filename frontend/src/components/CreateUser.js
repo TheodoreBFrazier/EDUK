@@ -47,14 +47,9 @@ function CreateUser() {
       <form className="create-user-form" onSubmit={handleSubmit}>
       <div className="title">Welcome to EDUK!</div>
          {/* <h2 className="subtitle">Let's create your account!</h2> */}
-         <div>
-           <br />
-           <br />
-           <br />
+        
          <div className="subtitle">Let's create your account!</div>
-          Already signed Up? <Link to="/users/login">Login Here</Link>
-
-        </div>
+         <div className="subtitle-2">  Already signed Up? <Link to="/users/login">Login Here!</Link></div>
   
           <label htmlFor="first_name" >
             First name
@@ -87,6 +82,8 @@ function CreateUser() {
             id="age"
             className="input"
             type="number"
+            min='0'
+            max='99'
             onChange={handleTextChange}
             value={user.age}
           />
