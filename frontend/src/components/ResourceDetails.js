@@ -26,7 +26,6 @@ function ResourceDetails() {
       .get(API + "/resources/" + resource_id)
       .then((response) => {
         setResource(response.data.result);
-        console.log(setResource);
       })
       .catch((error) => {
         console.log(error);

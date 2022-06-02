@@ -122,26 +122,23 @@ users.put("/:uid", async (req, res) => {
 users.post("/:uid/upload", async (req, res) => {
   const { uid } = req.params;
   if (!req.files) {
-    console.log("No file uploaded");
     return res.status(400).json({ success: false, error: "No file uploaded" });
   }
   const file = req.files.file;
   let reqPath = path.join(__dirname, "../..");
   file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
     if (err) {
-      console.log(err);
       return res.status(500).send(err);
     }
     const user = await getOneUser(uid);
 
     if (user.uid) {
       user.user_image = `/assets/${file.name}`;
-      console.log(user);
+
       var updatedUser = await updateUser(uid, user);
     }
 
     try {
-      console.log(updatedUser);
       if (updatedUser.uid)
         return res.json({
           fileName: file.name,

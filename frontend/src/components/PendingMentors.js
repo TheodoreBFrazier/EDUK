@@ -14,7 +14,7 @@ function PendingMentors() {
       .get(API + "/mentors/")
       .then((response) => {
         let mentorsInfo = response.data.result;
-        console.log(mentorsInfo);
+
         setMentors(mentorsInfo);
       })
       .catch((error) => {

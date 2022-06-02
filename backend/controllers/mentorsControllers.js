@@ -51,26 +51,23 @@ mentors.post("/", async (req, res) => {
 mentors.post("/:mentor_id/upload", async (req, res) => {
   const { mentor_id } = req.params;
   if (!req.files) {
-    console.log("No file uploaded");
     return res.status(400).json({ success: false, error: "No file uploaded" });
   }
   const file = req.files.file;
   let reqPath = path.join(__dirname, "../..");
   file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
     if (err) {
-      console.log(err);
       return res.status(500).send(err);
     }
     const mentor = await getOneMentor(mentor_id);
 
     if (mentor.mentor_id) {
       mentor.mentor_image = `/assets/${file.name}`;
-      // console.log(user);
+
       var updatedMentor = await updateMentor(mentor_id, mentor);
     }
 
     try {
-      // console.log(updatedMentor.mentor_id);
       if (updatedMentor.mentor_id)
         return res.json({
           fileName: file.name,

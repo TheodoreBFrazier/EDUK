@@ -25,7 +25,6 @@ function LogInUser({ setLogText, mentors }) {
         const userInfo = res.data.result;
         const userId = userInfo.uid;
         if (!isNaN(userId)) {
-          // console.log(userInfo);
           setError("");
           //set userId in localStorage
           localStorage.setItem("userId", `${userId}`);

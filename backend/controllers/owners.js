@@ -16,7 +16,6 @@ owners.get("/photos", async (req, res) => {
 owners.post("/:owner/upload", (req, res) => {
   const { owner } = req.params;
   if (!req.files) {
-    console.log("No file uploaded");
     return res.status(400).json({ success: false, error: "No file uploaded" });
   }
   const file = req.files.file;
@@ -26,7 +25,6 @@ owners.post("/:owner/upload", (req, res) => {
   // const fileN = owner + extensionName;
   file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
     if (err) {
-      console.log(err);
       return res.status(500).send(err);
     }
     const ownerObj = { owner_name: owner, photo: `/assets/${file.name}` };

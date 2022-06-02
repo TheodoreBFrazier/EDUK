@@ -15,7 +15,6 @@ function AllUsers() {
     axios
       .get(API + "/users")
       .then((response) => {
-        console.log(response);
         setUsers(response.data.result);
       })
       .catch((error) => {
