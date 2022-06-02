@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 
 const users = express.Router();
 //const resourcesController = require("./resourcesControllers.js");
@@ -80,7 +81,10 @@ users.post("/:uid/resources", async (req, res) => {
   const resource = req.body;
   const user_resource = await createResource(uid, resource);
   if (user_resource.uid) res.json({ success: true, result: user_resource });
-  else res.status(500).json({ success: false, result: user_resource });
+  else
+    res
+      .status(500)
+      .json({ success: false, error: "You already had the resource..." });
 });
 
 //delete User
@@ -105,6 +109,7 @@ users.delete("/:uid/resources/:resource_id", async (req, res) => {
 users.put("/:uid", async (req, res) => {
   const { uid } = req.params;
   const user = req.body;
+
   const updatedUser = await updateUser(uid, user);
   if (updatedUser.uid) {
     res.json({ success: true, result: updatedUser });
@@ -112,6 +117,37 @@ users.put("/:uid", async (req, res) => {
     res
       .status(500)
       .json({ success: false, error: `unable to update user ${uid}` });
+});
+//update user image
+users.post("/:uid/upload", async (req, res) => {
+  const { uid } = req.params;
+  if (!req.files) {
+    return res.status(400).json({ success: false, error: "No file uploaded" });
+  }
+  const file = req.files.file;
+  let reqPath = path.join(__dirname, "../..");
+  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+    const user = await getOneUser(uid);
+
+    if (user.uid) {
+      user.user_image = `/assets/${file.name}`;
+
+      var updatedUser = await updateUser(uid, user);
+    }
+
+    try {
+      if (updatedUser.uid)
+        return res.json({
+          fileName: file.name,
+          filePath: `/assets/${file.name}`,
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 });
 
 module.exports = users;

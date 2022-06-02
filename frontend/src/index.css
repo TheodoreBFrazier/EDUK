@@ -1,183 +1,264 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
-
 
 /* TYPOGRAPHY */
 
 /* Importing Font */
 
+
 /* Regular */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
 /* Italics */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap');
 
 h1 {
-  font-size: 40pt;
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 32pt;
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h3 {
-  font-size: 24pt;
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
+
 h4 {
-  font-family: 18pt;
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+	font-family: 'Roboto', sans-serif;
 }
 
 p {
-  font-size: 16pt;
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
-/* NAVIGATION CSS */
-
-nav {
-  margin-left: 125px;
-  height: 125px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-bottom: 0;
-}
-
-nav h3 {
-  margin-right: 100px;
-  color: #574D68;
-}
-
-/* Use the class name to edit this button */
-.navigation Button {
-  color: white;
-  background-color: #f3a712;
-  height: 50px;
-  width: 150px;
-  margin-left: 500px;
-}
-
-.navigation Button a {
-  color: white;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* ------------------------------    HOME  -------------------------------------- */
-
+------------------------------ HOME --------------------------------------
 /* HERO PAGE */
+/* .home {
+	position: relative;
+} */
 
 .Hero-text {
-  width: 700px;
-  margin-left: 125px;
-  text-align: left;
-  position: relative;
-  z-index: 9999;
-
+	z-index: 9;
 }
 
 .Hero .Hero-text h1 {
-  /* Used padding to prevent white space from showing" */
-  font-weight: 700;
-  padding-top: 250px;
-  position: relative; 
-  z-index: 9999;
-}
-
-.Hero .Hero-text h1 {
-  background: -webkit-linear-gradient(#574D68, #f3a712);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	color: white;
+	font: bold 60px Poppins, sans-serif;
+	text-align: center;
+	padding-top: 300px;
+	font-weight: 600;
+	/* position: relative; */
+	z-index: 2;
 }
 
 .Hero .Hero-text h3 {
-  position: relative;
-  z-index: 9999;
+	text-align: center;
+	/* position: relative; */
+	z-index: 9;
+	color: white;
 }
 
 .Hero {
-  margin: 0;
-  background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg");
-  height: 100vh;
+	margin: 0;
+	height: 100vh;
+	/* background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg"); */
+	margin-bottom: 110px;
+	background-color: #cccccc;
+	background-size: cover;
 }
-
 
 .Hero-text h1 {
-  /* margin on top of H1 causes space between navbar and content */
-  margin-top: 0;
-  font-size: 40pt;
+	margin-top: 0;
+	font-size: 40pt;
+}
 
+.joinUs {
+	margin: 30px;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.joinus div {
+	margin: 30px;
 }
 
 
-.about-intro {
-  margin-left: 150px;
-  text-align: left;
-  width: 500px;
+/* Making button lettes spread out on hover*/
+
+.joinUs button {
+	color: #57A773;
+	cursor: pointer;
+	border: none;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	text-decoration: none; 
+	transition-duration: .6s;
+  transition-timing-function: ease;
+}
+
+.joinUs button h3 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+.joinUs button:hover,
+.joinUs button:active {
+	letter-spacing: 5px;
+}
+
+.joinUs button:after,
+.joinUs button:before {
+	backface-visibility: hidden;
+	border: 1px solid #57A773;
+	bottom: 0px;
+	content: ' '; 
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	transition: all ms ease-in-out;
+	width: 0;
+}
+
+.joinUs button:hover:after,
+.joinUs button:hover:before {
+	backface-visibility: hidden;
+	border-color: #57A773;
+	transition: width 380ms ease-in-out;
+	width: 100%;
+}
+
+.joinUs button:hover:before {
+	bottom: auto;
+	top: 0;
+	width: 100%;
+}
+
+
+
+.joinUs a {
+	text-decoration: none;
+}
+
+.introduction h1 {
+	text-align: center;
+}
+
+.intro-container {
+	margin: 110px;
+	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.intro-container p {
+	color: black;
+	font-size: 25px;
+	font-family: sans-serif;
+}
+
+@media (max-width: 750px) {
+	.intro-container p {
+		font-size: 15px;
+	}
+
+	.Hero .Hero-text h1 {
+		font-size: 40px;
+	}
+
+	.Hero .Hero-text h3 {
+		font-size: 20px;
+	}
+
+	.joinUs h3 {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.intro-container {
+		margin-top: 30px;
+		display: list-item;
+		list-style: none;
+	}
+
+	.intro-container img {
+		height: 200px;
+		margin-bottom: 30px;
+	}
+}
+
+
+.rule {
+
+	margin: auto;
+	text-align: center;
+	width: 300px;
+}
+
+.services-icons {
+	display: grid;
+	width: 75%;
+	margin: auto;
+	grid-template-columns: repeat(3, 1fr)
+}
+
+.services-icons img {
+	height: 200px;
+}
+
+.services-icons div {
+text-align: center;
+	display: inline-block;
+}
+
+.visit-site-button {
+	padding-left: 50px;
+	width: 250px;
+}
+
+.mentors-array {
+	display: grid;
+	justify-content: space-evenly;
+	justify-items: center;
+	align-content: space-evenly;
+	align-items: center;
+	column-gap: 20px;
+	row-gap: 40px;
 }
 
 .resources-intro {
-  color: white;
-  background-color: #574D68;
-  height: 250px;
+	background-image: url ("https://childrensnational.org/-/media/cnhs-site/images/careers-and-training/gme/residency/pediatrics/launch-track-residents.jpg?h=400&la=en&w=600&hash=CF941CE970B09BAD8C7AAC22AC313764A822D015");
 }
 
-.resources-h2 {
-  margin-top: 0;
-}
-
-.search-resource {
-  height: 250px;
-  background-color: #e8e9eb;
-}
-
-.resources-searchbar TextField {
-  
-  width: 200px;
-}
-
-.resource-arr {  
-  display: grid;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-  grid-template-columns: 300px 300px 300px 300px;
-  column-gap: 20px;
-  row-gap: 40px;
-}
-
-card {
-  height: "100vh";
-}
-
-.resource-arr a {
-  text-decoration: none;
-}
-
-.resource-arr p {
-  font-size: 12pt;
+.upload-intro {
+	margin-left: 220px;
 }

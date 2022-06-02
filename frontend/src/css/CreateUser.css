@@ -1,0 +1,67 @@
+.create-user-form {
+	background-color: #4cadde;
+	border-radius: 20px;
+	text-align: center;
+    font-size: larger;
+    font-weight: bolder ;
+    width: 850px;
+    margin: auto;
+    padding-bottom: 1em;
+    color: whitesmoke;
+	margin-top: auto;
+	margin-top: 5%;
+}
+
+.title {
+	color: #eee;
+	font-family: sans-serif;
+	font-size: 36px;
+	font-weight: 600;
+	margin-top: 10%;
+	margin: auto;
+	padding-top: 25px;
+	text-align: center;
+}
+
+.subtitle {
+	color: rgb(255, 255, 255);
+	font-family: sans-serif;
+	font-size: 25px;
+	text-align: center;
+}
+
+.subtitle-2{
+	color: #eee;
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+
+.input {
+	/* display: grid; */
+    /* grid-template-columns: repeat(2,1fr); */
+    gap: 25px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 30px;
+    font-size: larger;
+	width: 250px;
+    border-radius: 10px;
+	margin: 8px;
+}
+
+.submit {
+	width: 120px;
+    background-color: #08d;
+    margin: auto;
+    color:rgb(228, 235, 236);
+    border: 3px solid antiquewhite;
+    border-radius: 10px;
+	padding: 10px;
+	margin: 20px;
+}
+
+.submit:active {
+	background-color: #06b;
+}  

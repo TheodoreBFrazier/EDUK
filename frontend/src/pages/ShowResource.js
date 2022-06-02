@@ -1,12 +1,12 @@
 import React from "react";
-import SingleResource from "../components/SingleResource";
+import ResourceDetails from "../components/ResourceDetails";
 
-function ShowResource () {
-    return (
-        <div>
-            <SingleResource />
-        </div>
-    )
+function ShowResource() {
+	return (
+		<div>
+			<ResourceDetails />
+		</div>
+	);
 }
 
-export default ShowResource
+export default ShowResource;

@@ -1,0 +1,29 @@
+.dropM {
+	width: 290px;
+	position: absolute;
+	top: 120px;
+	list-style: none;
+	text-align: start;
+	background-color: white;
+}
+
+.dropM li {
+	cursor: pointer;
+	padding: 5px;
+	font-size: 10px;
+}
+
+.dropM li:hover {
+	background-color: silver;
+}
+
+.dropM.clicked {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.dropM {
+		right: 180px;
+		width: 240px;
+	}
+}

@@ -1,0 +1,53 @@
+.image {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+
+.image-upload {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 100px auto;
+
+}
+
+.input-button {
+    color: green;
+}
+
+form input[type=file] {
+    border: none;
+}
+
+
+
+.image-upload-first {
+    width: 75%;
+}
+
+.image-upload-second {
+    width: 75%;
+}
+
+.image-upload-first input {
+    width: 100%;
+    height: 45px;
+    padding: 0;
+    border: 3px solid black;
+}
+
+#image-input:focus:active {
+    background-color: gray;
+    border-color: blue;
+}
+
+.image-upload-second input {
+    width: 100%;
+    height: 45px;
+    background-color: skyblue;
+    border-radius: 12px;
+border: none;
+}

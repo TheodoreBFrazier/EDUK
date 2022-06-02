@@ -1,0 +1,11 @@
+.users{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 65px;
+    margin: 100px auto;
+}
+
+.users a {
+    text-decoration: none;
+}

@@ -11,7 +11,6 @@ const getAllResources = async (uid) => {
     } else {
       var resources = await db.many("SELECT * FROM resources");
     }
-
     return resources;
   } catch (error) {
     return error;
@@ -42,12 +41,14 @@ const getOneResource = async (uid, resource_id) => {
   }
 };
 
-// creaete a resourcs
+// create a resourcs
+
 // /users/uid/resources
 // /resources
 const createResource = async (uid, resource) => {
   try {
     //add uid and resource_id into the join table(user add a resource to his profile)
+
     if (uid) {
       const user_resource = await db.one(
         "INSERT INTO users_resources(uid, resource_id) VALUES($1,$2) RETURNING*",
@@ -59,11 +60,12 @@ const createResource = async (uid, resource) => {
     //create a new resource
     else {
       const createdResouce = await db.one(
-        "INSERT INTO resources(resource_name,description,resource_category,start_datetime, end_datetime, url) VALUES($1,$2,$3,$4,$5,$6) RETURNING *",
+        "INSERT INTO resources(resource_name,description,resource_category,resourcefor,start_datetime, end_datetime, url) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *",
         [
           resource.resource_name,
           resource.description,
           resource.resource_category,
+          resource.resourcefor,
           resource.start_datetime,
           resource.end_datetime,
           resource.url,
@@ -106,14 +108,16 @@ const deleteResource = async (uid, resource_id) => {
 const updateResource = async (resource_id, resource) => {
   try {
     const updatedResource = await db.one(
-      "UPDATE resources SET resource_name=$1, description=$2, resource_category=$3, start_datetime=$4, end_datetime=$5, url=$6 WHERE resource_id=$7 RETURNING *",
+      "UPDATE resources SET resource_name=$1, description=$2, resource_category=$3, resourcefor=$4, start_datetime=$5, end_datetime=$6, url=$7, is_verified=$8 WHERE resource_id=$9 RETURNING *",
       [
         resource.resource_name,
         resource.description,
         resource.resource_category,
+        resource.resourcefor,
         resource.start_datetime,
         resource.end_datetime,
         resource.url,
+        resource.is_verified,
         resource_id,
       ]
     );
