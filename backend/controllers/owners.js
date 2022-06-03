@@ -1,8 +1,10 @@
 const express = require("express");
-const path = require("path");
+// const path = require("path");
 const owners = express.Router();
 //owners queries functions
 const { updatePhoto, getPhotos } = require("../queries/ownersPhotos.js");
+//multer
+const upload = require("../multer.js");
 
 //get all photos
 owners.get("/photos", async (req, res) => {
@@ -13,33 +15,21 @@ owners.get("/photos", async (req, res) => {
 });
 
 //create image for owners about page
-owners.post("/:owner/upload", (req, res) => {
+owners.post("/:owner/upload", upload.single("photo"), async (req, res) => {
   const { owner } = req.params;
-  if (!req.files) {
-    return res.status(400).json({ success: false, error: "No file uploaded" });
+  console.log(owner);
+  const file = req.file;
+
+  const ownerObj = { owner_name: owner, photo: file.filename };
+  const updatedPhoto = await updatePhoto(ownerObj);
+  if (updatedPhoto.photo_id) {
+    return res.json({
+      success: true,
+    });
   }
-  const file = req.files.file;
-  let reqPath = path.join(__dirname, "../..");
-  // fetch the file extension
-  // const extensionName = path.extname(file.name);
-  // const fileN = owner + extensionName;
-  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
-    const ownerObj = { owner_name: owner, photo: `/assets/${file.name}` };
-    const updatedPhoto = await updatePhoto(ownerObj);
-    if (updatedPhoto.photo_id) {
-      return res.json({
-        ownerName: owner,
-        fileName: file.name,
-        filePath: `/assets/${file.name}`,
-      });
-    }
-    return res
-      .status(500)
-      .json({ success: false, error: "Error while uploading the photo" });
-  });
+  return res
+    .status(500)
+    .json({ success: false, error: "Error while uploading the photo" });
 });
 
 module.exports = owners;

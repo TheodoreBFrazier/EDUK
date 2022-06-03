@@ -1,7 +1,7 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
-const fileUpload = require("express-fileupload");
+// const fileUpload = require("express-fileupload");
 const usersController = require("./controllers/usersControllers.js");
 const resourcesController = require("./controllers/resourcesControllers.js");
 const mentorsController = require("./controllers/mentorsControllers.js");
@@ -13,8 +13,7 @@ const app = express();
 
 // MIDDLEWARE
 app.use(cors());
-//file upload middl
-app.use(fileUpload());
+
 // Parse incoming JSON
 app.use(express.json());
 // /users/1/resources
@@ -27,8 +26,10 @@ app.use("/resources", resourcesController);
 app.use("/mentors", mentorsController);
 //auth controller
 app.use("/auth", authController);
-//owners controllers
+// owners controllers
 app.use("/owners", owners);
+//multer
+app.use(express.static("uploads"));
 
 require("dotenv").config();
 

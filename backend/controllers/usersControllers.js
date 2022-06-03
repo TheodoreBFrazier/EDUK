@@ -1,6 +1,6 @@
 const express = require("express");
-const path = require("path");
-
+// const path = require("path");
+const upload = require("../multer.js");
 const users = express.Router();
 //const resourcesController = require("./resourcesControllers.js");
 //users/1/resources
@@ -119,21 +119,37 @@ users.put("/:uid", async (req, res) => {
       .json({ success: false, error: `unable to update user ${uid}` });
 });
 //update user image
-users.post("/:uid/upload", async (req, res) => {
+users.post("/:uid/upload", upload.single("photo"), async (req, res) => {
+  const file = req.file;
+  // console.log(file);
   const { uid } = req.params;
-  if (!req.files) {
-    return res.status(400).json({ success: false, error: "No file uploaded" });
+  const user = await getOneUser(uid);
+  if (user.uid) {
+    user.user_image = file.filename;
+
+    var updatedUser = await updateUser(uid, user);
   }
+
+  try {
+    if (updatedUser.uid)
+      return res.json({
+        success: true,
+      });
+  } catch (error) {
+    console.log(error);
+  }
+<<<<<<< HEAD
   const file = req.files.file;
-  let reqPath = path.join(__dirname, "../..");
-  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
+  let reqPath = path.join(dpath, "../..");
+  file.mv(`frontend/public/assets/${file.name}`, async (err) => {
+    console.log("test")
     if (err) {
       return res.status(500).send(err);
     }
     const user = await getOneUser(uid);
 
     if (user.uid) {
-      user.user_image = `/assets/${file.name}`;
+      user.user_image = `./assets/${file.name}`;
 
       var updatedUser = await updateUser(uid, user);
     }
@@ -142,12 +158,14 @@ users.post("/:uid/upload", async (req, res) => {
       if (updatedUser.uid)
         return res.json({
           fileName: file.name,
-          filePath: `/assets/${file.name}`,
+          filePath: `./assets/${file.name}`,
         });
     } catch (error) {
       console.log(error);
     }
   });
+=======
+>>>>>>> 68a4b39d6a09e1ebbfd2709d0d7504544d362fd0
 });
 
 module.exports = users;
