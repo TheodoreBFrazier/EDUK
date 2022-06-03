@@ -83,7 +83,7 @@ const createResource = async (uid, resource_id) => {
 const deleteResource = async (uid, resource_id) => {
   try {
     //user removes a resource from his profile
-    if (uid) {
+    if (uid && resource_id) {
       const removedResource = await db.one(
         "DELETE FROM users_resources WHERE uid=$1 AND resource_id=$2 RETURNING *",
         [uid, resource_id]

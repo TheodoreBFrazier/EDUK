@@ -4,20 +4,22 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./userdetails.css";
 //message component
-import GeneralSuccessM from "./GeneralSuccessM";
+import GeneralShowMessage from "./GeneralShowMessage";
 import UserResource from "./UserResource";
 
 //API
 
 const API = process.env.REACT_APP_API_URL;
-const userId = localStorage.getItem("userId");
+// const userId = localStorage.getItem("userId");
 
 function UserDetails() {
   const [user, setUser] = useState({});
   const [userResources, setUserResources] = useState([]);
   //show Message
-  const [showMessage, setShowMessage] = useState(false);
-  // const [showUserDetails, setShowUserDetails] = useState(false);
+  // const [showMessage, setShowMessage] = useState(false);
+
+  //message state
+  const [open, setOpen] = useState(false);
   let { uid } = useParams();
   let navigate = useNavigate();
 
@@ -27,13 +29,14 @@ function UserDetails() {
   //handle remove a resource from user profile
   const removeResource = (rid) => {
     axios
-      .delete(`${API}/users/${userId}/resources/${rid}`)
+      .delete(`${API}/users/${uid}/resources/${rid}`)
       .then((res) => {
         const newResources = userResources.filter(
           (el) => el.resource_id !== rid
         );
         setUserResources(newResources);
-        setShowMessage(true);
+        // setShowMessage(true);
+        setOpen(true);
       })
       .catch((e) => console.log(e));
   };
@@ -57,6 +60,15 @@ function UserDetails() {
         console.log(error);
       });
   }, [uid]);
+  //message
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   return (
     <div className="user_details">
@@ -93,11 +105,14 @@ function UserDetails() {
           <h2 className="subHeaderResources" style={{ margin: "40px" }}>
             User Resources
           </h2>
-          {showMessage ? (
-            <GeneralSuccessM message={"Deleted Succesfully!!!"} />
-          ) : (
-            ""
-          )}
+
+          <GeneralShowMessage
+            severity="success"
+            message={"Deleted Succesfully!!!"}
+            handleClose={handleClose}
+            open={open}
+          />
+
           {userResources.map((resource) => (
             <UserResource
               className="userDetailsCard"

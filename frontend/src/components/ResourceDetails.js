@@ -1,22 +1,23 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import Button from "@mui/material/Button";
 import "./ResourceCategory.css";
-import SuccessMessage from "./SucccesMessage";
-import GeneralSuccessM from "./GeneralSuccessM";
+
+import GeneralShowMessage from "./GeneralShowMessage";
 
 const API = process.env.REACT_APP_API_URL;
 
 function ResourceDetails() {
   const [resource, setResource] = useState([]);
   //show message after adding a resource
-  const [showMessage, setShowMessage] = useState(false);
+  // const [showMessage, setShowMessage] = useState(false);
   //show error
   const [err, setErr] = useState(false);
   let { resource_id } = useParams();
-
+  //message
+  const [open, setOpen] = useState(false);
   //   const navigate = useNavigate();
 
   let userId = localStorage.getItem("userId");
@@ -39,12 +40,23 @@ function ResourceDetails() {
         uid: userId,
         resource_id: resource_id,
       })
-      .then(() => setShowMessage(true))
+      .then(() => setOpen(true))
       .catch((error) => {
         if (error.response) {
           setErr(true);
+          setOpen(true);
         }
       });
+  };
+
+  //message
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
   };
 
   return (
@@ -73,13 +85,21 @@ function ResourceDetails() {
             </div>
           ) : null}
           <div>
-            {showMessage ? (
-              <SuccessMessage />
-            ) : err ? (
-              <GeneralSuccessM message={"You Already had the resource..."} />
-            ) : (
-              ""
-            )}
+            <React.Fragment>
+              <GeneralShowMessage
+                severity={err ? "warning" : "success"}
+                message={
+                  err
+                    ? "You Already had the resource..."
+                    : "Resource Added Successfully..."
+                }
+                open={open}
+                handleClose={handleClose}
+              />
+              <Link to="/resources">
+                <strong>Continue</strong>
+              </Link>
+            </React.Fragment>
           </div>
         </div>
       </div>

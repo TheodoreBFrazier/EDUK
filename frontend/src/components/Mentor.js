@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import GeneralSuccessM from "./GeneralSuccessM";
+import GeneralShowMessage from "./GeneralShowMessage";
 import "../css/Mentor.css";
 
 const API = process.env.REACT_APP_API_URL;
@@ -55,7 +55,10 @@ function Mentor({ mentor }) {
           </aside>
           <div className="showMessage">
             {showMessage ? (
-              <GeneralSuccessM message={"Mentor Added Successfully..."} />
+              <GeneralShowMessage
+                severity="success"
+                message={"Mentor Added Successfully..."}
+              />
             ) : (
               ""
             )}
