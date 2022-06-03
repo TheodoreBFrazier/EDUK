@@ -53,5 +53,3 @@ CREATE TABLE photos(
     owner_name VARCHAR(50) NOT NULL,
     photo TEXT NOT NULL
 );
-
-
