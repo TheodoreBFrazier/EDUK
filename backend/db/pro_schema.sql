@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS mentors;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS resources;
-DROP TABLE IF EXISTS user_resources;
+DROP TABLE IF EXISTS users_resources;
 DROP TABLE IF EXISTS photos;
 
 CREATE TABLE mentors(
