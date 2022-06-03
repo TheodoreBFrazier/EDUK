@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import "../css/LogIn.css";
 import { Link } from "react-router-dom";
-import Error from "./Error";
+import GeneralShowMessage from "./GeneralShowMessage";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -16,6 +16,7 @@ function LogInUser({ setLogText, mentors }) {
   });
   //show error to user
   const [error, setError] = useState("");
+  const [open, setOpen] = useState(false);
 
   const logIn = () => {
     setError("");
@@ -45,6 +46,7 @@ function LogInUser({ setLogText, mentors }) {
       .catch((c) => {
         if (c.response && c.response.data) {
           setError(c.response.data.error);
+          setOpen(true);
         }
       });
   };
@@ -58,9 +60,28 @@ function LogInUser({ setLogText, mentors }) {
     logIn();
   };
 
+  //message
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   return (
     <div className="user-login-form">
-      {error ? <Error error={error} /> : ""}
+      <GeneralShowMessage
+        severity="error"
+        message={error}
+        open={open}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        handleClose={handleClose}
+      />
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login Here</h2>
         <input

@@ -78,7 +78,7 @@ users.post("/", async (req, res) => {
 //add uid and resource_id into the join table(user add a resource to his profile)
 users.post("/:uid/resources", async (req, res) => {
   const { uid, resource_id } = req.body;
-  // const resource = req.body;
+
   const user_resource = await createResource(uid, resource_id);
   if (user_resource.uid) res.json({ success: true, result: user_resource });
   else
