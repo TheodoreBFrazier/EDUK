@@ -138,34 +138,6 @@ users.post("/:uid/upload", upload.single("photo"), async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-<<<<<<< HEAD
-  const file = req.files.file;
-  let reqPath = path.join(dpath, "../..");
-  file.mv(`frontend/public/assets/${file.name}`, async (err) => {
-    console.log("test")
-    if (err) {
-      return res.status(500).send(err);
-    }
-    const user = await getOneUser(uid);
-
-    if (user.uid) {
-      user.user_image = `./assets/${file.name}`;
-
-      var updatedUser = await updateUser(uid, user);
-    }
-
-    try {
-      if (updatedUser.uid)
-        return res.json({
-          fileName: file.name,
-          filePath: `./assets/${file.name}`,
-        });
-    } catch (error) {
-      console.log(error);
-    }
-  });
-=======
->>>>>>> 68a4b39d6a09e1ebbfd2709d0d7504544d362fd0
 });
 
 module.exports = users;
