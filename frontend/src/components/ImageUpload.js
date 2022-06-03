@@ -5,9 +5,9 @@ import "../css/imageupload.css";
 import { Button } from "@mui/material";
 
 var buttonStyle = {
-  height: '400px',
-  width: '250px'
-}
+  height: "400px",
+  width: "250px",
+};
 
 const API = process.env.REACT_APP_API_URL;
 function ImageUpload({ setOwner }) {
@@ -22,12 +22,13 @@ function ImageUpload({ setOwner }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("photo", file);
     const urlForTheRequest = uid
       ? `${API}/users/${uid}/upload`
       : mentor_id
-        ? `${API}/mentors/${mentor_id}/upload`
-        : `${API}/owners/${owner}/upload`;
+      ? `${API}/mentors/${mentor_id}/upload`
+      : `${API}/owners/${owner}/upload`;
+    console.log(urlForTheRequest);
     axios
       .post(`${urlForTheRequest}`, formData)
       .then((res) => {
@@ -39,8 +40,8 @@ function ImageUpload({ setOwner }) {
         const navUrl = uid
           ? `/users/${uid}`
           : mentor_id
-            ? "/mentors"
-            : "/about";
+          ? "/mentors"
+          : "/about";
         navigate(`${navUrl}`);
       })
       .catch((e) => console.log(e));
@@ -53,10 +54,15 @@ function ImageUpload({ setOwner }) {
       </div>
       <form onSubmit={handleSubmit} className="image-upload">
         <div className="image-upload-first">
-          <input className = "input-button" type="file" id="image-input" onChange={handleChange} />
+          <input
+            className="input-button"
+            type="file"
+            id="image-input"
+            onChange={handleChange}
+          />
         </div>
         <div className="image-upload-second">
-          <Button style = {buttonStyle} variant="text" size="small">
+          <Button style={buttonStyle} variant="text" size="small">
             <input type="submit" value={"Upload"} />
           </Button>
         </div>

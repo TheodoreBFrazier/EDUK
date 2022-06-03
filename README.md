@@ -19,8 +19,11 @@ npm install
 Backend:
 npm install
 
-Heroku:
+Heroku (backend):
 
 https://capstone-g5-pursuit.herokuapp.com/
 
-#Mk
+Netlify (frontend):
+
+https://eduk.netlify.app
+
