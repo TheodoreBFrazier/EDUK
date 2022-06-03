@@ -1,22 +1,20 @@
-
-
 .about {
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
-	background-color: #14213D;
+	background-color: #14213d;
 }
 
 .about h2 {
 	margin: auto;
 	color: white;
-	padding-top: 50px;	
+	padding-top: 50px;
 	border-radius: 5px 10px;
 	width: 250px;
 	text-align: center;
 }
 
-.about p{
+.about p {
 	width: 65%;
 	margin: auto;
 	color: white;
@@ -45,7 +43,6 @@
 
 .about-container-two {
 	padding-top: 40px;
-	/* width: 100%; */
 	display: grid;
 	grid-template-columns: repeat(2fr 1fr);
 	list-style: none;
@@ -76,12 +73,25 @@
 	.valueNmission img {
 		display: none;
 	}
+	.aboutCard {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
 }
 
 @media (max-width: 1024px) {
+	.aboutCard {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+	}
 	.about-container-two img {
 		width: 280px;
 		height: 200px;
+	}
+	.aboutCardImg {
+		height: 600px;
 	}
 
 	.teammate {
