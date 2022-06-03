@@ -35,9 +35,10 @@ function Mentor({ mentor }) {
             onClick={() => navigate(`/mentors/${mentor.mentor_id}/upload`)}
             src={
               mentor.mentor_image
-                ? mentor.mentor_image
+                ? `${API}/${mentor.mentor_image}`
                 : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Y3ZPszS_3YY0cewvxvIHIuRoG1Q_94s21K77pbxTF7MtVLi_kyCQ326MpFL2YpeJnGU&usqp=CAU"
             }
+            style={{ width: "300px" }}
             alt="mentor-img"
           />
         </figure>

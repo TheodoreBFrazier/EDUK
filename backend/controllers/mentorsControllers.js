@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 const mentors = express.Router();
+//multer
+const upload = require("../multer.js");
 
 const {
   getAllMentors,
@@ -48,35 +50,27 @@ mentors.post("/", async (req, res) => {
 });
 //update mentor image
 
-mentors.post("/:mentor_id/upload", async (req, res) => {
+mentors.post("/:mentor_id/upload", upload.single("photo"), async (req, res) => {
   const { mentor_id } = req.params;
-  if (!req.files) {
-    return res.status(400).json({ success: false, error: "No file uploaded" });
+
+  const file = req.file;
+
+  const mentor = await getOneMentor(mentor_id);
+
+  if (mentor.mentor_id) {
+    mentor.mentor_image = file.filename;
+
+    var updatedMentor = await updateMentor(mentor_id, mentor);
   }
-  const file = req.files.file;
-  let reqPath = path.join(__dirname, "../..");
-  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
-    const mentor = await getOneMentor(mentor_id);
 
-    if (mentor.mentor_id) {
-      mentor.mentor_image = `/assets/${file.name}`;
-
-      var updatedMentor = await updateMentor(mentor_id, mentor);
-    }
-
-    try {
-      if (updatedMentor.mentor_id)
-        return res.json({
-          fileName: file.name,
-          filePath: `/assets/${file.name}`,
-        });
-    } catch (error) {
-      console.log(error);
-    }
-  });
+  try {
+    if (updatedMentor.mentor_id)
+      return res.json({
+        success: true,
+      });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 // Update a mentor
