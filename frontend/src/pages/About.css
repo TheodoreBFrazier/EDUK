@@ -78,6 +78,9 @@
 		flex-direction: column;
 		width: 100%;
 	}
+	.aboutCardImg {
+		height: 200px;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -91,7 +94,7 @@
 		height: 200px;
 	}
 	.aboutCardImg {
-		height: 600px;
+		height: 300px;
 	}
 
 	.teammate {

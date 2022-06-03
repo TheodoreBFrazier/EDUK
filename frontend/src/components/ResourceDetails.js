@@ -96,9 +96,11 @@ function ResourceDetails() {
                 open={open}
                 handleClose={handleClose}
               />
-              <Link to="/resources">
-                <strong>Continue</strong>
-              </Link>
+              <Button variant="contained" size="small">
+                <Link to="/resources">
+                  <strong>Continue</strong>
+                </Link>
+              </Button>
             </React.Fragment>
           </div>
         </div>
