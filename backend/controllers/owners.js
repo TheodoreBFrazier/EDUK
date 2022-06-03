@@ -23,7 +23,7 @@ owners.post("/:owner/upload", (req, res) => {
   // fetch the file extension
   // const extensionName = path.extname(file.name);
   // const fileN = owner + extensionName;
-  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
+  file.mv(`${reqPath}frontend/public/assets/${file.name}`, async (err) => {
     if (err) {
       return res.status(500).send(err);
     }
