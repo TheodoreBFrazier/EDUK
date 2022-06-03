@@ -63,7 +63,20 @@ function Mentor({ mentor }) {
               ""
             )}
           </div>
-          <button onClick={() => addMentor(mentor)}> Add Mentor</button>
+          <div style={{ textAlign: "center" }}>
+            <button
+              variant="outlined"
+              size="medium"
+              style={{
+                background_color: "rgb(22 38 85)",
+                fontSize: "10px",
+              }}
+              onClick={() => addMentor(mentor)}
+            >
+              {" "}
+              Add Mentor
+            </button>
+          </div>
         </div>
       </div>
     </main>
