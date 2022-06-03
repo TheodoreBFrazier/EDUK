@@ -133,7 +133,7 @@ users.post("/:uid/upload", async (req, res) => {
     const user = await getOneUser(uid);
 
     if (user.uid) {
-      user.user_image = `/assets/${file.name}`;
+      user.user_image = `./assets/${file.name}`;
 
       var updatedUser = await updateUser(uid, user);
     }
@@ -142,7 +142,7 @@ users.post("/:uid/upload", async (req, res) => {
       if (updatedUser.uid)
         return res.json({
           fileName: file.name,
-          filePath: `/assets/${file.name}`,
+          filePath: `./assets/${file.name}`,
         });
     } catch (error) {
       console.log(error);

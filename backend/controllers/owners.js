@@ -27,13 +27,13 @@ owners.post("/:owner/upload", (req, res) => {
     if (err) {
       return res.status(500).send(err);
     }
-    const ownerObj = { owner_name: owner, photo: `/assets/${file.name}` };
+    const ownerObj = { owner_name: owner, photo: `./assets/${file.name}` };
     const updatedPhoto = await updatePhoto(ownerObj);
     if (updatedPhoto.photo_id) {
       return res.json({
         ownerName: owner,
         fileName: file.name,
-        filePath: `/assets/${file.name}`,
+        filePath: `./assets/${file.name}`,
       });
     }
     return res
