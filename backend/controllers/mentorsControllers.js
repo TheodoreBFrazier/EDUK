@@ -55,14 +55,14 @@ mentors.post("/:mentor_id/upload", async (req, res) => {
   }
   const file = req.files.file;
   let reqPath = path.join(__dirname, "../..");
-  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
+  file.mv(`${reqPath}frontend/public/assets/${file.name}`, async (err) => {
     if (err) {
       return res.status(500).send(err);
     }
     const mentor = await getOneMentor(mentor_id);
 
     if (mentor.mentor_id) {
-      mentor.mentor_image = `/assets/${file.name}`;
+      mentor.mentor_image = `./assets/${file.name}`;
 
       var updatedMentor = await updateMentor(mentor_id, mentor);
     }
@@ -71,7 +71,7 @@ mentors.post("/:mentor_id/upload", async (req, res) => {
       if (updatedMentor.mentor_id)
         return res.json({
           fileName: file.name,
-          filePath: `/assets/${file.name}`,
+          filePath: `./assets/${file.name}`,
         });
     } catch (error) {
       console.log(error);
