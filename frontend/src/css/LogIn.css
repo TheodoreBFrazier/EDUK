@@ -1,16 +1,16 @@
 .user-login-form {
 	text-align: center;
 	font-size: larger;
-	font-weight: bolder;
-	width: 850px;
+	/* font-weight: bolder; */
+	width: 500px;
 	margin: auto;
-	margin-top: 70px;
+	margin-top: 30px;
 	padding-bottom: 5em;
 	color: whitesmoke;
 }
 
 .login-form h2 {
-	font-weight: bolder;
+	font-weight: 600;
 	font-size: 40px;
 	padding-bottom: 25px;
 }
@@ -18,9 +18,7 @@
 .login-form {
 	display: flex;
 	flex-direction: column;
-	/* display: grid;
-    grid-template-columns: repeat(1,1fr); */
-	gap: 35px;
+	gap: 20px;
 	background-color: #72bde3;
 	margin-top: 30px;
 	padding: 100px 100px;
@@ -35,7 +33,6 @@
 	border-radius: 10px;
 	align-self: center;
 	font-size: 20px;
-	/* text-align: center; */
 }
 
 .login-submit {
