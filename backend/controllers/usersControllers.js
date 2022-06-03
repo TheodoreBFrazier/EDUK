@@ -126,7 +126,7 @@ users.post("/:uid/upload", async (req, res) => {
   }
   const file = req.files.file;
   let reqPath = path.join(__dirname, "../..");
-  file.mv(`${reqPath}/frontend/public/assets/${file.name}`, async (err) => {
+  file.mv(`${reqPath}frontend/public/assets/${file.name}`, async (err) => {
     if (err) {
       return res.status(500).send(err);
     }
