@@ -45,14 +45,14 @@ const getOneResource = async (uid, resource_id) => {
 
 // /users/uid/resources
 // /resources
-const createResource = async (uid, resource) => {
+const createResource = async (uid, resource_id) => {
   try {
     //add uid and resource_id into the join table(user add a resource to his profile)
 
     if (uid) {
       const user_resource = await db.one(
         "INSERT INTO users_resources(uid, resource_id) VALUES($1,$2) RETURNING*",
-        [uid, resource.resource_id]
+        [uid, resource_id]
       );
       return user_resource;
     }
