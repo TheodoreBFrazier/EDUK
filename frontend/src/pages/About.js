@@ -195,7 +195,7 @@ function About() {
 					className="aboutCardImg"
 					onClick={() => navigate("/owners/theodore/upload")}
 					component="img"
-					height="auto"
+					height="400px"
 					image={theodore}
 					alt="Theodore-headshot"
 				/>
