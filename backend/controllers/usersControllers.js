@@ -125,9 +125,9 @@ users.post("/:uid/upload", async (req, res) => {
     return res.status(400).json({ success: false, error: "No file uploaded" });
   }
   const file = req.files.file;
-  let reqPath = path.join(__dirname, "../..");
-  file.mv(`${reqPath}frontend/public/assets/${file.name}`, async (err) => {
-    console.log("test", reqPath)
+  //let reqPath = path.join(__dirname, "../..");
+  file.mv(`frontend/public/assets/${file.name}`, async (err) => {
+    console.log("test")
     if (err) {
       return res.status(500).send(err);
     }
