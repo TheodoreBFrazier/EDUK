@@ -249,8 +249,8 @@ p {
 }
 
 .visit-site-button {
-	padding-left: 50px;
-	width: 250px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .mentors-array {
