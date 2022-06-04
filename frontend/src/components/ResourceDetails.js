@@ -105,7 +105,6 @@ function ResourceDetails() {
                     Back
                   </Button>
                 </Link>
-<<<<<<< HEAD
               
             </React.Fragment>
           </div>
@@ -114,15 +113,6 @@ function ResourceDetails() {
       </div>
     </div>
   );
-=======
-              </Button> */}
-						</React.Fragment>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
->>>>>>> 80d562385154970d53fc3ee4779add05edd24e57
 }
 
 export default ResourceDetails;
