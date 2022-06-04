@@ -120,8 +120,12 @@ users.put("/:uid", async (req, res) => {
 });
 //update user image
 users.post("/:uid/upload", upload.single("photo"), async (req, res) => {
+  if (!req.file) {
+    console.log("No file uploaded");
+    return res.status(400).json({ success: false, error: "No file uploaded!" });
+  }
   const file = req.file;
-  // console.log(file);
+  console.log(file);
   const { uid } = req.params;
   const user = await getOneUser(uid);
   if (user.uid) {

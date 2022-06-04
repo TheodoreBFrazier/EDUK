@@ -29,7 +29,8 @@ app.use("/auth", authController);
 // owners controllers
 app.use("/owners", owners);
 //multer
-app.use(express.static("uploads"));
+console.log("underscoredirname", __dirname + "/uploads");
+app.use(express.static(__dirname + "/uploads"));
 
 require("dotenv").config();
 
