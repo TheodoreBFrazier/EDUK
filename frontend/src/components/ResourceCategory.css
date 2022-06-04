@@ -38,6 +38,7 @@
 
 .resourceMainBtn {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 .resourceMainBtn div {

@@ -64,7 +64,7 @@ function ResourceDetails() {
       <div className="resource-heading">
         <h1> {resource.resource_name} </h1>
         <h5>
-          {resource.start_datetime} - {resource.end_datetime}
+          {resource.start_datetime === "N/A" ? "" : `${resource.start_datetime} - ${resource.end_datetime}`}
         </h5>
       </div>
       <div className="resource-text">
@@ -96,11 +96,13 @@ function ResourceDetails() {
                 open={open}
                 handleClose={handleClose}
               />
-              <Button variant="contained" size="small">
+              
                 <Link to="/resources">
-                  <strong>Continue</strong>
+                  <Button variant="contained" size="small">
+                    Back
+                  </Button>
                 </Link>
-              </Button>
+              
             </React.Fragment>
           </div>
         </div>

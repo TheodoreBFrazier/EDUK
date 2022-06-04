@@ -11,7 +11,7 @@ function ResourcesPage() {
 				<br />
 				<h2 className="resources-h2">Find Your Calling</h2>
 				<h4>
-					All resources has been resarched and verified information for classes
+					All resources have been researched and verified information for classes
 					, programs and scholarship <br /> for anyone trying to aquire new
 					skills needs information and what is possible , making the field
 					available for all .
