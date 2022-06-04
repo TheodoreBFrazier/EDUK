@@ -10,54 +10,54 @@ import GeneralShowMessage from "./GeneralShowMessage";
 const API = process.env.REACT_APP_API_URL;
 
 function ResourceDetails() {
-  const [resource, setResource] = useState([]);
-  //show message after adding a resource
-  // const [showMessage, setShowMessage] = useState(false);
-  //show error
-  const [err, setErr] = useState(false);
-  let { resource_id } = useParams();
-  //message
-  const [open, setOpen] = useState(false);
-  //   const navigate = useNavigate();
+	const [resource, setResource] = useState([]);
+	//show message after adding a resource
+	// const [showMessage, setShowMessage] = useState(false);
+	//show error
+	const [err, setErr] = useState(false);
+	let { resource_id } = useParams();
+	//message
+	const [open, setOpen] = useState(false);
+	//   const navigate = useNavigate();
 
-  let userId = localStorage.getItem("userId");
+	let userId = localStorage.getItem("userId");
 
-  useEffect(() => {
-    axios
-      .get(API + "/resources/" + resource_id)
-      .then((response) => {
-        setResource(response.data.result);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [resource_id]);
+	useEffect(() => {
+		axios
+			.get(API + "/resources/" + resource_id)
+			.then((response) => {
+				setResource(response.data.result);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, [resource_id]);
 
-  // adding the resource to the particular user
-  const addResource = () => {
-    axios
-      .post(`${API}/users/${userId}/resources`, {
-        uid: userId,
-        resource_id: resource_id,
-      })
-      .then(() => setOpen(true))
-      .catch((error) => {
-        if (error.response) {
-          setErr(true);
-          setOpen(true);
-        }
-      });
-  };
+	// adding the resource to the particular user
+	const addResource = () => {
+		axios
+			.post(`${API}/users/${userId}/resources`, {
+				uid: userId,
+				resource_id: resource_id,
+			})
+			.then(() => setOpen(true))
+			.catch((error) => {
+				if (error.response) {
+					setErr(true);
+					setOpen(true);
+				}
+			});
+	};
 
-  //message
+	//message
 
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
+	const handleClose = (event, reason) => {
+		if (reason === "clickaway") {
+			return;
+		}
 
-    setOpen(false);
-  };
+		setOpen(false);
+	};
 
   return (
     <div className="resource-detail-card">
@@ -105,6 +105,7 @@ function ResourceDetails() {
                     Back
                   </Button>
                 </Link>
+<<<<<<< HEAD
               
             </React.Fragment>
           </div>
@@ -113,6 +114,15 @@ function ResourceDetails() {
       </div>
     </div>
   );
+=======
+              </Button> */}
+						</React.Fragment>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+>>>>>>> 80d562385154970d53fc3ee4779add05edd24e57
 }
 
 export default ResourceDetails;
