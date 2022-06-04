@@ -60,7 +60,7 @@ function ResourceDetails() {
   };
 
   return (
-    <div>
+    <div className="resource-detail-card">
       <div className="resource-heading">
         <h1> {resource.resource_name} </h1>
         <h5>
@@ -70,23 +70,14 @@ function ResourceDetails() {
       <div className="resource-text">
         <p> {resource.description} </p>
         <div className="resourceMainBtn">
-          <div className="visit-site-button">
-            <a target="blank" href={resource.url}>
-              <Button variant="contained" size="small">
-                Visit {resource.resource_name}
-              </Button>
-            </a>
-          </div>
-          {userId && !isNaN(userId) ? (
+        {userId && !isNaN(userId) ? (
             <div>
               <Button onClick={addResource} variant="contained" size="small">
                 Add resource
               </Button>
             </div>
           ) : null}
-          <div>
-            <React.Fragment>
-              <GeneralShowMessage
+          <GeneralShowMessage
                 severity={err ? "warning" : "success"}
                 message={
                   err
@@ -96,6 +87,18 @@ function ResourceDetails() {
                 open={open}
                 handleClose={handleClose}
               />
+       
+
+          <div className="visit-site-button">
+            <a target="blank" href={resource.url}>
+              <Button variant="contained" size="small">
+                Visit {resource.resource_name}
+              </Button>
+            </a>
+          </div>
+          
+          <div>
+            <React.Fragment>
               
                 <Link to="/resources">
                   <Button variant="contained" size="small">
@@ -105,6 +108,7 @@ function ResourceDetails() {
               
             </React.Fragment>
           </div>
+          
         </div>
       </div>
     </div>
