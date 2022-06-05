@@ -8,14 +8,6 @@ INSERT INTO mentors(mentor_fname, mentor_lname, bio, email, speciality, is_verif
 ('Lillian', 'Schenck', 'I am a seasoned educational leader with significant success and experience as an instructional coach and public school administrator. My expertise lies in leading schools in achieving a rigorous academic and cultural vision through targeted teacher coaching and development, the organization and facilitation of job-embedded professional development, participation as a curriculum liason and thought partner, organizing and ensuring the dissemination of observational feedback and support, and creating a positive and proactive school culture informed by a growth mindset. ', 'Liiiiilian@gmail.com', 'Nursing', true),
 ('Jess', 'Lam', 'I am a seasoned educational leader with significant success and experience as an instructional coach and public school administrator. My expertise lies in leading schools in achieving a rigorous academic and cultural vision through targeted teacher coaching and development, the organization and facilitation of job-embedded professional development, participation as a curriculum liason and thought partner, organizing and ensuring the dissemination of observational feedback and support, and creating a positive and proactive school culture informed by a growth mindset. ', 'Jesss@gmail.com', 'Math', false);
 
-INSERT INTO users (mentor_id, first_name, last_name, age, email, user_name, password) VALUES
-(1, 'Nima', 'Sherpa', 20, 'nimaSherpa123@gmail.com', 'ninan', '12345'),
-(2, 'David', 'Vidals', 25, 'DavidVVVV333@gmail.com', 'ddddvidiall', '12345'),
-(1, 'Lili', 'Huang', 60, 'lilyhuang1111@gmail.com', 'lililihuang', '12345'),
-(3, 'Mukayila', 'Alao', 35, 'MKalao888@gmail.com', 'mula', '12345'),
-(2, 'Theodore', 'Frazier', 40, 'theodoreFF1@gmail.com', 'thfrazi', '12345'),
-(4, 'Samantha', 'Shapland', 18, 'SamShapland789@gmail.com', 'samanthasssss', '12345');
-
 INSERT INTO resources(resource_name, description, resource_category, resourcefor, start_datetime, end_datetime, url, is_verified) VALUES
 ('Project Basta', 'To create a bridge of opportunity  between employers and first-generation college goers of color to increase knowledge workforce diversity at all levels.', 'Program', ARRAY [ 'highschool','college' ] ,  'N/A', 'N/A', 'https://projectbasta.com/', true),
 ('Bottom Line', 'Bottom Line has addressed the low college graduation rates of first-generation students from low-income backgrounds. Our organization was founded on the belief that students need a mentor and a guide during the college application process and throughout college to succeed. By providing consistent one-on-one support, Bottom Line has helped thousands of first-generation students from low-income backgrounds stay in college and complete their degrees. ', 'Program', ARRAY [ 'highschool','college' ] , 'N/A', 'N/A', 'https://www.bottomline.org/', true),
@@ -39,23 +31,6 @@ We meet together to speak English. This group is for all with any English langua
 ('New York Travel Photography', 'If you love to travel and want to get the most out of your photography, then this group is for you. We travel to great places where you can make fun photos while being guided by a professional photographer. Plus we have local and regional outings where you can photograph cool locations that you might not know about. From beginners to professionals, everyone can learn, share and take beautiful photos.', 'Class', ARRAY [ 'highschool','college' , 'continued learning' ], 'N/A', 'N/A', 'https://www.meetup.com/New-York-Travel-Photography/', true),
 ('Free Spanish Classes - New York', '¡Hola! We’re Beepboop and we’ve taught over 100,000 students in our free Spanish classes called “Drills”, where students work together to complete fun, spoken challenges, guided by live native Spanish speakers', 'Class', ARRAY [ 'continued learning' ], 'N/A', 'N/A', 'https://www.meetup.com/Free-Spanish-Speaking-Drills-Online-Everyday-New-York/', true);
 
-
-INSERT INTO users_resources(uid, resource_id) VALUES
-(1, 3),
-(1, 4),
-(1, 11),
-(2, 3),
-(2, 1),
-(2, 2),
-(3, 3),
-(3, 5),
-(3, 6),
-(3, 7),
-(4, 3),
-(4, 8),
-(5, 3),
-(5, 9),
-(5, 10);
 
 INSERT INTO photos(owner_name,photo)
 VALUES
