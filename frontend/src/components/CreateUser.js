@@ -13,7 +13,7 @@ function CreateUser() {
 	const [user, setUser] = useState({
 		first_name: "",
 		last_name: "",
-		age: 0,
+		age: null,
 		email: "",
 		user_name: "",
 		password: "",
@@ -77,11 +77,11 @@ function CreateUser() {
 				</div>
 
 				<div>
-					<label htmlFor="age">Age</label>
 					<input
 						id="age"
 						className="input"
 						type="number"
+						placeholder="Age"
 						min="0"
 						max="99"
 						onChange={handleTextChange}

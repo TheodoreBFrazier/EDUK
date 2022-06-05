@@ -1,3 +1,4 @@
+\c data_dev;
 
 
 INSERT INTO mentors(mentor_fname, mentor_lname, bio, email, speciality, is_verified) VALUES 
@@ -63,4 +64,3 @@ VALUES
 ('lili','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png'),
 ('theodore','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png'),
 ('nima','https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png');
-

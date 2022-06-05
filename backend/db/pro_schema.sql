@@ -55,4 +55,3 @@ CREATE TABLE photos(
     photo TEXT NOT NULL
 );
 
-
