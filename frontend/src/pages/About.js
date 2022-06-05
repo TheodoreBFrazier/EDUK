@@ -25,21 +25,11 @@ const API = process.env.REACT_APP_API_URL;
 function About() {
   const navigate = useNavigate();
   //get each person photo
-  const [lili, setLili] = useState(
-    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-  );
-  const [mukayila, setMukayila] = useState(
-    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-  );
-  const [nima, setNima] = useState(
-    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-  );
-  const [david, setDavid] = useState(
-    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-  );
-  const [theodore, setTheodore] = useState(
-    "https://pngset.com/images/woman-headshot-silhouette-back-torso-person-human-transparent-png-173795.png"
-  );
+  const [lili, setLili] = useState("");
+  const [mukayila, setMukayila] = useState("");
+  const [nima, setNima] = useState("");
+  const [david, setDavid] = useState("");
+  const [theodore, setTheodore] = useState("");
 
   useEffect(() => {
     axios
@@ -111,7 +101,7 @@ function About() {
           onClick={() => navigate("/owners/david/upload")}
           component="img"
           height="auto"
-          image={`${API}/${david}`}
+          image={david.includes("https") ? david : `${API}/${david}`}
           alt="David-headshot"
         />
 
@@ -132,7 +122,7 @@ function About() {
           onClick={() => navigate("/owners/lili/upload")}
           component="img"
           height="auto"
-          image={`${API}/${lili}`}
+          image={lili.includes("https") ? lili : `${API}/${lili}`}
           alt="Lili-headshot"
         />
 
@@ -154,7 +144,7 @@ function About() {
           onClick={() => navigate("/owners/mukayila/upload")}
           component="img"
           height="auto"
-          image={`${API}/${mukayila}`}
+          image={mukayila.includes("https") ? mukayila : `${API}/${mukayila}`}
           alt="MK-headshot"
         />
 
@@ -176,7 +166,7 @@ function About() {
           onClick={() => navigate("/owners/nima/upload")}
           component="img"
           height="auto"
-          image={`${API}/${nima}`}
+          image={nima.includes("https") ? nima : `${API}/${nima}`}
           alt="Nima-headshot"
         />
 
@@ -196,7 +186,7 @@ function About() {
           onClick={() => navigate("/owners/theodore/upload")}
           component="img"
           height="auto"
-          image={`${API}/${theodore}`}
+          image={theodore.includes("https") ? theodore : `${API}/${theodore}`}
           alt="Theodore-headshot"
         />
 
