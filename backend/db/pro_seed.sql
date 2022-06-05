@@ -1,4 +1,4 @@
-\c data_dev;
+
 
 
 INSERT INTO mentors(mentor_fname, mentor_lname, bio, email, speciality, is_verified) VALUES 
