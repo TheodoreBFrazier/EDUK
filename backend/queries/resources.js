@@ -49,10 +49,10 @@ const createResource = async (uid, resource) => {
 	try {
 		//add uid and resource_id into the join table(user add a resource to his profile)
 
-		if (uid) {
+		if (uid && !isNaN(resource)) {
 			const user_resource = await db.one(
-				"INSERT INTO users_resources(uid, resource_id) VALUES($1,$2) RETURNING*",
-				[uid, resource_id]
+				"INSERT INTO users_resources(uid, resource_id) VALUES($1,$2) RETURNING *",
+				[uid, resource]
 			);
 			return user_resource;
 		}
