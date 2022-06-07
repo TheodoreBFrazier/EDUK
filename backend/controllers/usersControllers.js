@@ -125,7 +125,7 @@ users.post("/:uid/upload", upload.single("photo"), async (req, res) => {
     return res.status(400).json({ success: false, error: "No file uploaded!" });
   }
   const file = req.file;
-  console.log(file);
+
   const { uid } = req.params;
   const user = await getOneUser(uid);
   if (user.uid) {
