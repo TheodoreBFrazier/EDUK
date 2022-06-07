@@ -7,9 +7,10 @@ import "../css/Mentor.css";
 const API = process.env.REACT_APP_API_URL;
 function Mentor({ mentor }) {
   const [user, setUser] = useState({});
+  const [open, setOpen] = useState(false);
   const uid = localStorage.getItem("userId");
   const navigate = useNavigate();
-  const [showMessage, setShowMessage] = useState(false);
+  // const [showMessage, setShowMessage] = useState(false);
   useEffect(() => {
     axios
       .get(`${API}/users/${uid}`)
@@ -22,13 +23,33 @@ function Mentor({ mentor }) {
     axios
       .put(`${API}/users/${user.uid}`, user)
       .then((res) => {
-        setShowMessage(true);
+        setOpen(true);
         localStorage.setItem("userMentor", JSON.stringify(mentor));
       })
       .catch((e) => console.log(e));
   };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
   return (
     <main className="whole__card">
+      <div>
+        <GeneralShowMessage
+          severity="success"
+          message="Mentor added successfully..."
+          open={open}
+          handleClose={handleClose}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        />
+      </div>
       <div className="mentor__card__info">
         <figure className="card__thumb">
           <img
@@ -54,16 +75,7 @@ function Mentor({ mentor }) {
           <aside>
             <p className="card__description">{mentor.bio}</p>
           </aside>
-          <div className="showMessage">
-            {showMessage ? (
-              <GeneralShowMessage
-                severity="success"
-                message={"Mentor Added Successfully..."}
-              />
-            ) : (
-              ""
-            )}
-          </div>
+
           <div style={{ textAlign: "center" }}>
             <button
               variant="outlined"

@@ -29,13 +29,13 @@ app.use("/auth", authController);
 // owners controllers
 app.use("/owners", owners);
 //multer
-console.log("underscoredirname", __dirname + "/uploads");
+// console.log("underscoredirname", __dirname + "/uploads");
 app.use(express.static(__dirname + "/uploads"));
 
 require("dotenv").config();
 
 app.get("/", (req, res) => {
-  res.send("Welcome To Rose App");
+  res.send("Welcome To EDUK App");
 });
 
 app.get("*", (req, res) => {
