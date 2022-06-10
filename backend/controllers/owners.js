@@ -17,7 +17,7 @@ owners.get("/photos", async (req, res) => {
 //create image for owners about page
 owners.post("/:owner/upload", upload.single("photo"), async (req, res) => {
   const { owner } = req.params;
-  console.log(owner);
+
   const file = req.file;
 
   const ownerObj = { owner_name: owner, photo: file.filename };

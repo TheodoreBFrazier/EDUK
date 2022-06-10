@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+// import { useNavigate } from "react-router-dom";
 import "./About.css";
-import axios from "axios";
+// import axios from "axios";
 import { Card, Typography } from "@mui/material";
 //importing the styles from MATERIAL UI
 // import { withStyles } from "@mui/material";
 
+// import img
+
+import david from "../images/david.jpg";
+import mukailya from "../images/mukailya.png";
+import nns from "../images/nns.png";
+import lili from "../images/lili.png";
+import theodore from "../images/theodore.png";
+
 //For faces for headshots
 import { CardMedia } from "@mui/material";
-//For card typography -text
+// //For card typography -text
 import { CardContent } from "@mui/material";
 
 const cardStyle = {
@@ -21,41 +29,42 @@ const cardStyle = {
   justifyContent: "center",
 };
 //api
-const API = process.env.REACT_APP_API_URL;
+// const API = process.env.REACT_APP_API_URL;
 function About() {
-  const navigate = useNavigate();
-  //get each person photo
-  const [lili, setLili] = useState("");
-  const [mukayila, setMukayila] = useState("");
-  const [nima, setNima] = useState("");
-  const [david, setDavid] = useState("");
-  const [theodore, setTheodore] = useState("");
+  // const navigate = useNavigate();
+  //   //get each person photo
+  //   const [lili, setLili] = useState("");
+  //   const [mukayila, setMukayila] = useState("");
+  //   const [nima, setNima] = useState("");
+  //   const [david, setDavid] = useState("");
+  //   const [theodore, setTheodore] = useState("");
 
-  useEffect(() => {
-    axios
-      .get(`${API}/owners/photos`)
-      .then((res) => {
-        // get each person photo
-        const arr = res.data.result;
+  // useEffect(() => {
+  //   axios
+  //     .get(`${API}/owners/photos`)
+  //     .then((res) => {
+  //       // get each person photo
+  //       const arr = res.data.result;
 
-        const davidObj = arr.find((owner) => owner.owner_name === "david");
-        const liliObj = arr.find((owner) => owner.owner_name === "lili");
-        const theodoreObj = arr.find(
-          (owner) => owner.owner_name === "theodore"
-        );
-        const mukayilaObj = arr.find(
-          (owner) => owner.owner_name === "mukayila"
-        );
-        const nimaObj = arr.find((owner) => owner.owner_name === "nima");
+  //       const davidObj = arr.find((owner) => owner.owner_name === "david");
+  //       const liliObj = arr.find((owner) => owner.owner_name === "lili");
+  //       const theodoreObj = arr.find(
+  //         (owner) => owner.owner_name === "theodore"
+  //       );
+  //       const mukayilaObj = arr.find(
+  //         (owner) => owner.owner_name === "mukayila"
+  //       );
+  //       const nimaObj = arr.find((owner) => owner.owner_name === "nima");
 
-        if (davidObj.photo) setDavid(davidObj.photo);
-        if (mukayilaObj.photo) setMukayila(mukayilaObj.photo);
-        if (liliObj.photo) setLili(liliObj.photo);
-        if (nimaObj.photo) setNima(nimaObj.photo);
-        if (theodoreObj.photo) setTheodore(theodoreObj.photo);
-      })
-      .catch((e) => console.log(e));
-  }, []);
+  //       if (davidObj.photo) setDavid(davidObj.photo);
+  //       if (mukayilaObj.photo) setMukayila(mukayilaObj.photo);
+  //       if (liliObj.photo) setLili(liliObj.photo);
+  //       if (nimaObj.photo) setNima(nimaObj.photo);
+  //       if (theodoreObj.photo) setTheodore(theodoreObj.photo);
+  //     })
+  //     .catch((e) => console.log(e));
+  // }, []);
+
   return (
     <div className="about">
       <div className="valueNmission">
@@ -71,7 +80,6 @@ function About() {
           </p>
         </div>
       </div>
-
       <div className="valueNmission">
         <div>
           <h2 id="our_mission">Mission & Vision</h2>
@@ -92,16 +100,15 @@ function About() {
 						alt="mission"
 					/> */}
       </div>
-
       <h2>Our Team</h2>
-
       <Card style={cardStyle} className="aboutCard" variant="outlined">
         <CardMedia
           className="aboutCardImg"
-          onClick={() => navigate("/owners/david/upload")}
+          // onClick={() => navigate("/owners/david/upload")}
           component="img"
           height="auto"
-          image={david.includes("https") ? david : `${API}/${david}`}
+          // image={david.includes("https") ? david : `${API}/${david}`}
+          image={david}
           alt="David-headshot"
         />
 
@@ -113,16 +120,15 @@ function About() {
           me is that I love play video games.
         </CardContent>
       </Card>
-
       <br />
-
       <Card style={cardStyle} className="aboutCard" variant="outlined">
         <CardMedia
           className="aboutCardImg"
-          onClick={() => navigate("/owners/lili/upload")}
+          // onClick={() => navigate("/owners/lili/upload")}
           component="img"
           height="auto"
-          image={lili.includes("https") ? lili : `${API}/${lili}`}
+          // image={lili.includes("https") ? lili : `${API}/${lili}`}
+          image={lili}
           alt="Lili-headshot"
         />
 
@@ -135,16 +141,15 @@ function About() {
           me to move forward and keep learning as an engineer.
         </CardContent>
       </Card>
-
       <br />
-
       <Card style={cardStyle} className="aboutCard" variant="outlined">
         <CardMedia
           className="aboutCardImg"
-          onClick={() => navigate("/owners/mukayila/upload")}
+          // onClick={() => navigate("/owners/mukayila/upload")}
           component="img"
           height="auto"
-          image={mukayila.includes("https") ? mukayila : `${API}/${mukayila}`}
+          // image={mukayila.includes("https") ? mukayila : `${API}/${mukayila}`}
+          image={mukailya}
           alt="MK-headshot"
         />
 
@@ -157,16 +162,15 @@ function About() {
           today and I can't wait to land my first job and contribute.
         </CardContent>
       </Card>
-
       <br />
-
       <Card style={cardStyle} className="aboutCard" variant="outlined">
         <CardMedia
           className="aboutCardImg"
-          onClick={() => navigate("/owners/nima/upload")}
+          // onClick={() => navigate("/owners/nima/upload")}
           component="img"
           height="auto"
-          image={nima.includes("https") ? nima : `${API}/${nima}`}
+          // image={nima.includes("https") ? nima : `${API}/${nima}`}
+          image={nns}
           alt="Nima-headshot"
         />
 
@@ -177,16 +181,15 @@ function About() {
           tech , Ability to learn and implement new technologies quickly.
         </CardContent>
       </Card>
-
       <br />
-
       <Card style={cardStyle} className="aboutCard" variant="outlined">
         <CardMedia
           className="aboutCardImg"
-          onClick={() => navigate("/owners/theodore/upload")}
+          // onClick={() => navigate("/owners/theodore/upload")}
           component="img"
           height="auto"
-          image={theodore.includes("https") ? theodore : `${API}/${theodore}`}
+          // image={theodore.includes("https") ? theodore : `${API}/${theodore}`}
+          image={theodore}
           alt="Theodore-headshot"
         />
 
