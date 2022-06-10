@@ -1,4 +1,4 @@
-# NYC-Rose-App
+# EDUK
 
 App Description
 
