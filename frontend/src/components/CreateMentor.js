@@ -39,57 +39,48 @@ function CreateMentor() {
 
 	return (
 		<div className="create-mentor-form">
-			<h2>Let's create your account!</h2>
 			<div className="subHeaderResources">Become a Mentor at EDUK!</div>
 			<form className="mentor-form" onSubmit={handleSubmit}>
-				<label htmlFor="firstname">First Name</label>
 				<input
 					id="mentor_fname"
 					className="input"
 					type="text"
 					value={mentor.mentor_fname}
-					// placeholder="Please Enter First Name"
+					placeholder="First Name"
 					onChange={handleTextChange}
 				/>
-
-				<label htmlFor="lastname">Last Name</label>
 				<input
 					id="mentor_lname"
 					className="input"
 					type="text"
 					onChange={handleTextChange}
 					value={mentor.mentor_lname}
-					// placeholder="Please Enter Last Name"
+					placeholder="Last Name"
 				/>
-
-				<label htmlFor="speciality">Speciality</label>
 				<input
 					id="speciality"
 					className="input"
 					type="text"
 					onChange={handleTextChange}
 					value={mentor.speciality}
-					// placeholder="Please Enter Speciality"
+					placeholder="Speciality"
 				/>
-
-				<label htmlFor="email">Email</label>
 				<input
 					id="email"
 					className="input"
 					type="text"
 					onChange={handleTextChange}
 					value={mentor.email}
-					// placeholder="Please Enter Email Address"
+					placeholder="Email Address"
 				/>
 
-				<label htmlFor="bio">Bio</label>
 				<textarea
 					id="bio"
 					className="input"
 					type="text"
 					onChange={handleTextChange}
 					value={mentor.bio}
-					// placeholder="Please Enter Bio"
+					placeholder="Bio"
 				/>
 				<button type="submit" className="create-mentor-submit">
 					Submit

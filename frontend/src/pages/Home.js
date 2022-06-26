@@ -8,11 +8,10 @@ const HorizontalRule = ({ color }) => (
 			color: color,
 			backgroundColor: color,
 			height: 5,
-			width: '300px',
+			width: "300px",
 		}}
 	/>
 );
-
 
 function Home() {
 	return (
@@ -58,10 +57,8 @@ function Home() {
 						of life.
 					</p>
 				</div>
-				<div className="why-eduk">
-					<h1>
-						SERVICES WITH YOU IN MIND
-					</h1>
+				{/* <div className="why-eduk">
+					<h1>SERVICES WITH YOU IN MIND</h1>
 
 					<br />
 
@@ -69,10 +66,9 @@ function Home() {
 						<HorizontalRule color="black" />
 					</div>
 
-
 					<br />
-					<br />
-					<div className="services-icons">
+					<br /> */}
+				{/* <div className="services-icons">
 						<div className="icons-mentor">
 							<img src="https://cdn-icons-png.flaticon.com/128/767/767388.png" alt="helping" />
 							<br />
@@ -104,10 +100,8 @@ function Home() {
 
 						</div>
 
-					</div>
-
-
-				</div>
+					</div> */}
+				{/* </div> */}
 			</div>
 		</div>
 	);

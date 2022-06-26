@@ -1,3 +1,6 @@
+.subHeaderResources {
+	font-size: 2em;
+}
 .create-mentor-form {
 	text-align: center;
 	font-size: larger;
@@ -9,32 +12,26 @@
 	color: whitesmoke;
 }
 
-.create-mentor-form h2 {
-	color: #4cadde;
-	font-weight: bolder;
-	font-size: 40px;
-	padding: 10px;
-	margin: 60px;
-	border-radius: 10px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-		rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-}
-
 .mentor-form {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 25px;
-	background-color: #72bde3;
-	margin-top: 30px;
-	padding: 100px 100px;
+	margin-top: 40px;
+	text-align: center;
+	font-family: monospace;
+	align-items: center;
+	display: flex;
+	padding: 60px;
+	flex-direction: column;
+	margin-bottom: 40px;
+	background-color: #4cadde;
 	border-radius: 30px;
-	font-size: larger;
-	box-shadow: 10px 10px 5px #aaaaaa;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40em;
 }
 
 .create-mentor-form input {
 	width: 250px;
-	border-radius: 10px;
+	border-radius: 5px;
+	margin: 10px;
 }
 
 .create-mentor-form textarea {
@@ -44,11 +41,11 @@
 }
 
 .create-mentor-submit {
+	margin: 10px;
 	width: 120px;
-	background-color: #4cadde;
+	background-color: white;
 	margin: auto;
-	color: rgb(228, 235, 236);
-	border: 3px solid antiquewhite;
+	color: black;
 	border-radius: 10px;
 }
 
