@@ -8,7 +8,7 @@ Team Members:
 
 Lili Huang
 Mukayila Alao
-Nima $herpa
+Nima Sherpa
 David Vidals
 Theodore Frazier
 
