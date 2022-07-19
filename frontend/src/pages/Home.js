@@ -2,16 +2,16 @@ import React from "react";
 import Background from "../images/home.jpg";
 import { Link } from "react-router-dom";
 
-const HorizontalRule = ({ color }) => (
-	<hr
-		style={{
-			color: color,
-			backgroundColor: color,
-			height: 5,
-			width: "300px",
-		}}
-	/>
-);
+// const HorizontalRule = ({ color }) => (
+// 	<hr
+// 		style={{
+// 			color: color,
+// 			backgroundColor: color,
+// 			height: 5,
+// 			width: "300px",
+// 		}}
+// 	/>
+// );
 
 function Home() {
 	return (

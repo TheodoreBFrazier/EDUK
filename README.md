@@ -1,4 +1,4 @@
-# NYC-Rose-App
+# EDUK
 
 App Description
 
@@ -21,9 +21,8 @@ npm install
 
 Heroku (backend):
 
-https://capstone-g5-pursuit.herokuapp.com/
+N/A
 
 Netlify (frontend):
 
-https://eduk.netlify.app
-
+N/A
