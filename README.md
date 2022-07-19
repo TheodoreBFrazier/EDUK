@@ -21,8 +21,8 @@ npm install
 
 Heroku (backend):
 
-N/A
+- https://nns-eduk-data.herokuapp.com/
 
 Netlify (frontend):
 
-N/A
+- https://edukapp.netlify.app/
