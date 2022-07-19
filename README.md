@@ -19,10 +19,10 @@ npm install
 Backend:
 npm install
 
-Heroku (backend):
+Heroku (backend) :
 
 - https://nns-eduk-data.herokuapp.com/
 
-Netlify (frontend):
+Netlify (frontend) :
 
 - https://edukapp.netlify.app/
