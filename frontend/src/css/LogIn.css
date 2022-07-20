@@ -65,16 +65,27 @@
 
 @media (min-width: 1550px) {
 	.login-form input {
-		width: 600px;
+		width: 500px;
 	}
 }
 
-@media (max-width: 912px) {
+@media (max-width: 1212px) {
 	.user-login-form {
 		font-size: medium;
 		width: 600px;
 		margin: auto;
 		margin-top: 50px;
+	}
+	.loginDivider {
+		display: flex;
+		flex-direction: column;
+	}
+	.firstLoginDiv {
+		height: 100px;
+		/* width: 200px; */
+	}
+	.loginImg {
+		height: 200px;
 	}
 }
 

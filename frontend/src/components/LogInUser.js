@@ -85,7 +85,7 @@ function LogInUser({ setLogText, mentors }) {
 			/>
 			<div className="loginDivider">
 				<div className="firstLoginDiv">
-					<img width="auto" src={login} />
+					<img className="loginImg" src={login} />
 				</div>
 
 				<div>
