@@ -5,20 +5,19 @@
 	margin: auto;
 	margin-top: 30px;
 	padding-bottom: 5em;
+	background-color: rgb(35 40 63);
+	border-radius: 10px;
 }
 .loginDivider {
-	border: 1px solid slateblue;
 	display: flex;
 	justify-content: space-between;
 }
 
 .login-form h2 {
+	color: silver;
 	font-weight: 600;
 	font-size: 40px;
 	padding-bottom: 25px;
-}
-.firstLoginDiv {
-	background-color: aliceblue;
 }
 
 .login-form {
@@ -32,7 +31,6 @@
 
 .login-form input {
 	padding: 10px;
-	/* width: 600px; */
 	border-radius: 5px;
 	align-self: center;
 	font-size: 20px;

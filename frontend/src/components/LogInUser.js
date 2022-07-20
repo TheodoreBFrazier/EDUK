@@ -90,7 +90,7 @@ function LogInUser({ setLogText, mentors }) {
 
 				<div>
 					<form onSubmit={handleSubmit} className="login-form">
-						<h2>Sign-In</h2>
+						<h2>Student LogIn</h2>
 						<input
 							placeholder="Username"
 							type="text"
@@ -107,10 +107,16 @@ function LogInUser({ setLogText, mentors }) {
 						/>
 
 						<button className="login-submit">Log In</button>
-						<div style={{ fontSize: "20px", fontWeight: "600" }}>
+						<div
+							style={{
+								fontSize: "20px",
+								fontWeight: "600",
+								color: "lightblue",
+							}}
+						>
 							NEW TO EDUK ? &nbsp;
 							<Link
-								style={{ color: "blue", fontSize: "15px" }}
+								style={{ color: "silver", fontSize: "15px" }}
 								to="/users/create"
 							>
 								Sign up here !!
