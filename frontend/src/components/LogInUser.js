@@ -5,6 +5,7 @@ import React from "react";
 import "../css/LogIn.css";
 import { Link } from "react-router-dom";
 import GeneralShowMessage from "./GeneralShowMessage";
+import login from "../images/login.png";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -82,31 +83,42 @@ function LogInUser({ setLogText, mentors }) {
 				}}
 				handleClose={handleClose}
 			/>
-			<form onSubmit={handleSubmit} className="login-form">
-				<h2>Login Here</h2>
-				<input
-					placeholder="Username"
-					type="text"
-					id="user_name"
-					onChange={handleChange}
-					value={user.user_name}
-				/>
-				<input
-					placeholder="Password"
-					type="password"
-					id="password"
-					onChange={handleChange}
-					value={user.password}
-				/>
-
-				<button className="login-submit">Log In</button>
-				<div style={{ fontSize: "20px", fontWeight: "600" }}>
-					NEW TO EDUK ? &nbsp;
-					<Link style={{ color: "blue", fontSize: "15px" }} to="/users/create">
-						Sign up here !!
-					</Link>
+			<div className="loginDivider">
+				<div className="firstLoginDiv">
+					<img width="auto" src={login} />
 				</div>
-			</form>
+
+				<div>
+					<form onSubmit={handleSubmit} className="login-form">
+						<h2>Sign-In</h2>
+						<input
+							placeholder="Username"
+							type="text"
+							id="user_name"
+							onChange={handleChange}
+							value={user.user_name}
+						/>
+						<input
+							placeholder="Password"
+							type="password"
+							id="password"
+							onChange={handleChange}
+							value={user.password}
+						/>
+
+						<button className="login-submit">Log In</button>
+						<div style={{ fontSize: "20px", fontWeight: "600" }}>
+							NEW TO EDUK ? &nbsp;
+							<Link
+								style={{ color: "blue", fontSize: "15px" }}
+								to="/users/create"
+							>
+								Sign up here !!
+							</Link>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	);
 }

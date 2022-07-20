@@ -1,12 +1,15 @@
 .user-login-form {
 	text-align: center;
 	font-size: larger;
-	/* font-weight: bolder; */
-	width: 500px;
+	width: 70%;
 	margin: auto;
 	margin-top: 30px;
 	padding-bottom: 5em;
-	color: whitesmoke;
+}
+.loginDivider {
+	border: 1px solid slateblue;
+	display: flex;
+	justify-content: space-between;
 }
 
 .login-form h2 {
@@ -14,34 +17,34 @@
 	font-size: 40px;
 	padding-bottom: 25px;
 }
+.firstLoginDiv {
+	background-color: aliceblue;
+}
 
 .login-form {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	background-color: #72bde3;
 	margin-top: 30px;
 	padding: 100px 100px;
 	border-radius: 30px;
-	font-size: larger;
-	box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .login-form input {
 	padding: 10px;
-	width: 300px;
-	border-radius: 10px;
+	/* width: 600px; */
+	border-radius: 5px;
 	align-self: center;
 	font-size: 20px;
 }
 
 .login-submit {
-	width: 120px;
+	width: 200px;
 	margin-bottom: 20px;
 	font-weight: bold;
 	color: rgb(38, 38, 38);
-	border-radius: 10px;
-	border: 3px solid antiquewhite;
+	border-radius: 4px;
+	border: 1px solid black;
 	align-self: center;
 }
 
@@ -58,6 +61,14 @@
 
 .sign-up-submit:hover {
 	opacity: 0.7;
+}
+
+/* screen bigger than a mac  */
+
+@media (min-width: 1550px) {
+	.login-form input {
+		width: 600px;
+	}
 }
 
 @media (max-width: 912px) {
