@@ -68,14 +68,13 @@ function CreateUser() {
 			/>
 			<div className="title">Welcome to EDUK!</div>
 			<div className="mainSignUp">
-				<div>
-					<img height="600px" lassName="signUpImgHolder" src={signUp} />
+				<div height="100%">
+					<img height="600px" className="signUpImgHolder" src={signUp} />
 				</div>
 				<div>
 					<form className="create-user-form" onSubmit={handleSubmit}>
 						<div className="subtitle">Let's create your account!</div>
 						<div className="subtitle-2">
-							{" "}
 							Already signed Up? <Link to="/users/login">Login Here!</Link>
 						</div>
 
