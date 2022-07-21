@@ -129,9 +129,9 @@ export default function RightNav({
 					<Link to="/users/login">
 						<Button
 							variant="contained"
-							size="medium"
+							size="small"
 							style={{
-								background_color: "rgb(22 38 85)",
+								background_color: "rgb(35 40 63)",
 								fontSize: "18px",
 							}}
 						>

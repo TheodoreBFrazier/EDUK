@@ -1,5 +1,5 @@
 .logoimg {
-	height: 120px;
+	height: 100px;
 	margin: 0;
 }
 
@@ -7,9 +7,9 @@ nav {
 	padding-right: 40px;
 	display: flex;
 	justify-content: space-between;
-	height: 120px;
+	height: 110px;
 	align-items: center;
-	background-color: #fffffc;
+	background-color: #fcfcfc;
 }
 .navLinks {
 	display: flex;

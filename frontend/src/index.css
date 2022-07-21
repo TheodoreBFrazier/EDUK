@@ -69,22 +69,21 @@ p {
 	color: white;
 	font: bold 60px Poppins, sans-serif;
 	text-align: center;
-	padding-top: 300px;
-	font-weight: 600;
+	padding-top: 100px;
+	font-weight: 300;
 	/* position: relative; */
 	z-index: 2;
 }
 
 .Hero .Hero-text h3 {
 	text-align: center;
-	/* position: relative; */
 	z-index: 9;
 	color: white;
 }
 
 .Hero {
+	height: 60vh;
 	margin: 0;
-	height: 100vh;
 	/* background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg"); */
 	margin-bottom: 110px;
 	background-color: #cccccc;
