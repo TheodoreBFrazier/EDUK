@@ -161,16 +161,19 @@ p {
 .joinUs a {
 	text-decoration: none;
 }
+/* .introduction {
+	background-color: #3a3b4938;
+} */
 
 .introduction h1 {
 	text-align: center;
 }
 
 .intro-container {
-	width: 80%;
-	margin: 60px;
-	align-items: center;
 	display: grid;
+	width: 80%;
+	margin: auto;
+	align-items: center;
 	grid-template-columns: repeat(2, 1fr);
 	margin-top: 120px;
 	margin-bottom: 120px;

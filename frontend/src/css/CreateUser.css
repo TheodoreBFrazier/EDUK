@@ -24,6 +24,7 @@
 	font-size: 36px;
 	font-weight: 600;
 	text-align: center;
+	margin: 40px;
 }
 
 .subtitle {
@@ -50,6 +51,7 @@
 	margin-top: 10px;
 	width: 400px;
 	margin: 10px;
+	border-radius: 4px;
 }
 
 .submit {
@@ -83,7 +85,7 @@
 		flex-direction: column;
 	}
 	.signUpImgHolder {
-		height: 260px;
+		height: 240px;
 	}
 	.input {
 		background-color: white;
