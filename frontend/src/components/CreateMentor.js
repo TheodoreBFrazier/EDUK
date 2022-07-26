@@ -39,53 +39,67 @@ function CreateMentor() {
 
 	return (
 		<div className="create-mentor-form">
-			<div className="subHeaderResources">Become a Mentor at EDUK!</div>
-			<form className="mentor-form" onSubmit={handleSubmit}>
-				<input
-					id="mentor_fname"
-					className="input"
-					type="text"
-					value={mentor.mentor_fname}
-					placeholder="First Name"
-					onChange={handleTextChange}
-				/>
-				<input
-					id="mentor_lname"
-					className="input"
-					type="text"
-					onChange={handleTextChange}
-					value={mentor.mentor_lname}
-					placeholder="Last Name"
-				/>
-				<input
-					id="speciality"
-					className="input"
-					type="text"
-					onChange={handleTextChange}
-					value={mentor.speciality}
-					placeholder="Speciality"
-				/>
-				<input
-					id="email"
-					className="input"
-					type="text"
-					onChange={handleTextChange}
-					value={mentor.email}
-					placeholder="Email Address"
-				/>
+			{/* <div className="subHeaderResources">Become a Mentor at EDUK!</div> */}
+			<div>
+				<div>
+					<img
+						className="createMentorImg"
+						src={
+							"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Illustration_Mentoring.png/605px-Illustration_Mentoring.png"
+						}
+					/>
+				</div>
+				<div>
+					<div className="subHeaderResources">Become a Mentor at EDUK!</div>
 
-				<textarea
-					id="bio"
-					className="input"
-					type="text"
-					onChange={handleTextChange}
-					value={mentor.bio}
-					placeholder="Bio"
-				/>
-				<button type="submit" className="create-mentor-submit">
-					Submit
-				</button>
-			</form>
+					<form className="mentor-form" onSubmit={handleSubmit}>
+						<input
+							id="mentor_fname"
+							className="input"
+							type="text"
+							value={mentor.mentor_fname}
+							placeholder="First Name"
+							onChange={handleTextChange}
+						/>
+						<input
+							id="mentor_lname"
+							className="input"
+							type="text"
+							onChange={handleTextChange}
+							value={mentor.mentor_lname}
+							placeholder="Last Name"
+						/>
+						<input
+							id="speciality"
+							className="input"
+							type="text"
+							onChange={handleTextChange}
+							value={mentor.speciality}
+							placeholder="Speciality"
+						/>
+						<input
+							id="email"
+							className="input"
+							type="text"
+							onChange={handleTextChange}
+							value={mentor.email}
+							placeholder="Email Address"
+						/>
+
+						<textarea
+							id="bio"
+							className="input"
+							type="text"
+							onChange={handleTextChange}
+							value={mentor.bio}
+							placeholder="Bio"
+						/>
+						<button type="submit" className="create-mentor-submit">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	);
 }

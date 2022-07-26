@@ -4,11 +4,10 @@
 	margin: auto;
 	margin-top: 40px;
 	padding-bottom: 5em;
-	/* border-radius: 10px; */
 	padding: 30px;
 	height: 500px;
 	align-items: flex-start;
-	background-color: rgb(35 40 63);
+	background-color: #222b2f;
 }
 .mainSignUp {
 	display: flex;

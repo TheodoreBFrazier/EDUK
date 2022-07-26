@@ -1,5 +1,6 @@
 .subHeaderResources {
 	font-size: 2em;
+	margin: 2em;
 }
 .create-mentor-form {
 	text-align: center;
@@ -21,32 +22,31 @@
 	padding: 60px;
 	flex-direction: column;
 	margin-bottom: 40px;
-	background-color: #4cadde;
+	background-color: #222b2f;
 	border-radius: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 40em;
 }
 
 .create-mentor-form input {
-	width: 250px;
+	font-size: 18px;
 	border-radius: 5px;
+	padding: 10px;
 	margin: 10px;
 }
 
 .create-mentor-form textarea {
-	width: 350px;
-	border-radius: 10px;
-	height: 5em;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 8px;
 }
 
 .create-mentor-submit {
 	margin: 10px;
 	width: 120px;
 	background-color: white;
-	margin: auto;
+	margin: 10px;
 	color: black;
-	border-radius: 10px;
+	border-radius: 5px;
+	border: 1px solid white;
 }
 
 .create-mentor-submit:hover {
@@ -73,23 +73,26 @@
 		margin: auto;
 		padding: auto;
 	}
-
-	.create-mentor-form textarea {
+	*/ .create-mentor-form textarea {
 		width: 250px;
 	}
 }
 
 @media (max-width: 480px) {
+	.createMentorImg {
+		width: 300px;
+		height: 300px;
+	}
 	.create-mentor-form {
 		font-size: medium;
 		width: 400px;
 	}
 
 	.create-mentor-form input {
-		width: 140px;
+		width: 300px;
 	}
 
 	.create-mentor-form textarea {
-		width: 140px;
+		width: 300px;
 	}
 }
