@@ -51,9 +51,9 @@ export default function RightNav({
 				className="eachLi mainLi "
 				onClick={dropdown ? onMouseUnclick : onMouseClick}
 			>
-				<Link to="/resources">
+				<div>
 					Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
-				</Link>
+				</div>
 				{dropdown && (
 					<Dropdown
 						handleClick={handleClick}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import RightNav from "./RightNav";
 
@@ -67,6 +67,21 @@ export default function Burger({ logText, setLogText }) {
 	const toggleDropdownOpen = () => {
 		setClick(!click);
 	};
+
+	// useEffect(() => {
+	// 	window.addEventListener("click", hideDiv);
+	// });
+
+	// componentDidMount = () => {
+	// 	window.addEventListener("click", hideDiv);
+	// };
+
+	// const hideDiv = () => {
+	// 	if (dropdown) {
+	// 		setDropdown(false);
+	// 	}
+	// };
+
 	return (
 		<>
 			<StyledBurger
