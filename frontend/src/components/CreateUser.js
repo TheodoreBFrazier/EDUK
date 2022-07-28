@@ -67,91 +67,84 @@ function CreateUser() {
 				}}
 			/>
 			<div className="title">Welcome to EDUK!</div>
-			<div className="mainSignUp">
-				<div height="100%">
-					<img height="600px" className="signUpImgHolder" src={signUp} />
+			<form className="create-user-form" onSubmit={handleSubmit}>
+				<div className="subtitle">Let's create your account!</div>
+				<div className="subtitle-2">
+					Already signed Up? <Link to="/users/login">Login Here!</Link>
 				</div>
+
 				<div>
-					<form className="create-user-form" onSubmit={handleSubmit}>
-						<div className="subtitle">Let's create your account!</div>
-						<div className="subtitle-2">
-							Already signed Up? <Link to="/users/login">Login Here!</Link>
-						</div>
-
-						<div>
-							<input
-								id="first_name"
-								className="input"
-								type="text"
-								placeholder="First Name"
-								value={user.first_name}
-								onChange={handleTextChange}
-							/>
-						</div>
-
-						<div>
-							<input
-								id="last_name"
-								className="input"
-								type="text"
-								placeholder="Last Name"
-								onChange={handleTextChange}
-								value={user.last_name}
-							/>
-						</div>
-
-						<div>
-							<input
-								id="age"
-								className="input"
-								type="number"
-								placeholder="Age"
-								min="0"
-								max="99"
-								onChange={handleTextChange}
-								value={user.age}
-							/>
-						</div>
-
-						<div>
-							<input
-								id="user_name"
-								className="input"
-								type="text"
-								placeholder="User Name"
-								onChange={handleTextChange}
-								value={user.user_name}
-							/>
-						</div>
-
-						<div>
-							<input
-								id="password"
-								className="input"
-								type="text"
-								placeholder="Password"
-								onChange={handleTextChange}
-								value={user.password}
-							/>
-						</div>
-
-						<div>
-							<input
-								id="email"
-								className="input"
-								type="text"
-								placeholder="Email"
-								onChange={handleTextChange}
-								value={user.email}
-							/>
-						</div>
-
-						<button type="text" className="submit">
-							Submit
-						</button>
-					</form>
+					<input
+						id="first_name"
+						className="input"
+						type="text"
+						placeholder="First Name"
+						value={user.first_name}
+						onChange={handleTextChange}
+					/>
 				</div>
-			</div>
+
+				<div>
+					<input
+						id="last_name"
+						className="input"
+						type="text"
+						placeholder="Last Name"
+						onChange={handleTextChange}
+						value={user.last_name}
+					/>
+				</div>
+
+				<div>
+					<input
+						id="age"
+						className="input"
+						type="number"
+						placeholder="Age"
+						min="0"
+						max="99"
+						onChange={handleTextChange}
+						value={user.age}
+					/>
+				</div>
+
+				<div>
+					<input
+						id="user_name"
+						className="input"
+						type="text"
+						placeholder="User Name"
+						onChange={handleTextChange}
+						value={user.user_name}
+					/>
+				</div>
+
+				<div>
+					<input
+						id="password"
+						className="input"
+						type="text"
+						placeholder="Password"
+						onChange={handleTextChange}
+						value={user.password}
+					/>
+				</div>
+
+				<div>
+					<input
+						id="email"
+						className="input"
+						type="text"
+						placeholder="Email"
+						onChange={handleTextChange}
+						value={user.email}
+					/>
+				</div>
+
+				<button type="text" className="submit">
+					Submit
+				</button>
+			</form>
 		</div>
 	);
 }
