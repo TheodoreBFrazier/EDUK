@@ -13,8 +13,8 @@ function About() {
 		<div className="about">
 			<div className="aboutContainer">
 				<div className="valuesContainer">
+					<h2>Our Values</h2>
 					<div className="values">
-						<h2>Our Values</h2>
 						<br />
 						<p>
 							We assume responsibility for our collective strength by developing
@@ -24,8 +24,8 @@ function About() {
 							are accountable to each other to deliver on our vision.
 						</p>
 					</div>
-					<div>
-						<h2>Mission & Vision</h2>
+					<h2>Mission & Vision</h2>
+					<div className="values">
 						<br />
 						<p>
 							Our goal is to connect high school, college students, minorities
