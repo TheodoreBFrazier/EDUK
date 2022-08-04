@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "../css/CreateUser.css";
 import GeneralShowMessage from "./GeneralShowMessage";
-import signUp from "../images/signup.jpg";
+// import signUp from "../images/signup.jpg";
 
 const API = process.env.REACT_APP_API_URL;
 

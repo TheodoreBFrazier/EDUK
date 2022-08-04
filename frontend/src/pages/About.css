@@ -1,110 +1,50 @@
+.aboutContainer {
+	display: flex;
+	justify-content: center;
+}
+.valuesContainer {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid white;
+	margin: 1em;
+}
+.eachContainer {
+	border: 1px solid white;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1em;
+	padding: 2em;
+}
+
+/* // prev code  */
+
 .about {
+	margin: 40px;
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
-	background-color: #14213d;
+	background-color: #292929;
+}
+.aboutDescrption {
+	color: white;
 }
 
 .about h2 {
-	margin: auto;
 	color: white;
-	padding-top: 50px;
-	border-radius: 5px 10px;
-	width: 250px;
+	margin: auto;
+	padding: 40px;
 	text-align: center;
+}
+.about span {
+	color: white;
+	border-bottom: 2px solid white;
 }
 
 .about p {
-	width: 65%;
-	margin: auto;
 	color: white;
-	text-align: center;
-}
 
-.about-container-one {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	width: 60%;
 	margin: auto;
 	text-align: center;
-	width: 80%;
-	padding-bottom: 60px;
-	left: 20px;
-}
-
-.valueNmission img {
-	padding: 20px 10px 20px 10px;
-	margin: 150px 0 0 80px;
-	width: 300px;
-	height: 350px;
-	border-width: 3em;
-	border: 1px solid black;
-	border-color: rgb(125, 190, 234);
-}
-
-.about-container-two {
-	padding-top: 40px;
-	display: grid;
-	grid-template-columns: repeat(2fr 1fr);
-	list-style: none;
-	margin-bottom: 100px;
-}
-
-.about-container-two h2 {
-	margin: auto;
-}
-
-.about-container-two img {
-	width: 380px;
-	height: 300px;
-}
-
-.teammate {
-	padding: 50px;
-	margin: 30px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-}
-
-@media (max-width: 767px) {
-	.valueNmission {
-		display: table-column;
-		font-style: oblique;
-	}
-	.valueNmission img {
-		display: none;
-	}
-	.aboutCard {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-	.aboutCardImg {
-		height: 200px;
-	}
-}
-
-@media (max-width: 1024px) {
-	.aboutCard {
-		display: flex;
-		flex-direction: column;
-		width: 90%;
-	}
-	.about-container-two img {
-		width: 280px;
-		height: 200px;
-	}
-	.aboutCardImg {
-		height: 300px;
-	}
-
-	.teammate {
-		padding: 20px;
-		display: list-item;
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-		list-style: none;
-	}
-	.about h2 {
-		margin-bottom: 20px;
-	}
+	line-height: 1.6;
 }
