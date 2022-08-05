@@ -76,7 +76,7 @@
 .resource-card {
 	display: flex;
 	justify-content: center;
-	height: auto;
+	/* height: auto; */
 }
 
 .resource-card h4 {
@@ -146,9 +146,13 @@
 	.resource-arr {
 		grid-template-columns: 1fr;
 	}
+	.resource-card {
+		width: 320px;
+		/* height: auto; */
+	}
 	.resource-text {
 		height: auto;
-		width: 400px;
+		width: 340px;
 		margin-left: 10px;
 	}
 	.resource-heading {

@@ -1,7 +1,6 @@
 .dropM {
-	width: 290px;
 	position: absolute;
-	top: 120px;
+	margin: 0.7em;
 	list-style: none;
 	text-align: start;
 	background-color: white;
@@ -24,7 +23,8 @@
 
 @media only screen and (max-width: 768px) {
 	.dropM {
-		right: 180px;
-		width: 240px;
+		right: 160px;
+		width: 230px;
+		border-radius: 5px;
 	}
 }

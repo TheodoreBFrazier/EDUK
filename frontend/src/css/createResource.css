@@ -64,3 +64,12 @@
 .newForm div input:hover {
 	opacity: 0.3;
 }
+
+@media (max-width: 750px) {
+	.newForm form {
+		width: 320px;
+	}
+	.create-resource-checkboxes {
+		display: block;
+	}
+}

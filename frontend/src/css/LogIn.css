@@ -112,7 +112,7 @@
 @media (max-width: 480px) {
 	.user-login-form {
 		font-size: small;
-		width: 400px;
+		width: 360px;
 	}
 
 	.user-login-form input {

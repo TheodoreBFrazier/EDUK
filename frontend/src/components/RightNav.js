@@ -9,13 +9,13 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const Ul = styled.ul`
 	@media (max-width: 768px) {
 		flex-flow: column nowrap;
-		background-color: rgb(247 247 247);
+		background-color: inherit;
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		top: 25px;
 		right: 0;
 		height: 100vh;
-		width: 240px;
+		width: 180px;
 		padding-top: 3.5rem;
 		transition: 0.3s ease-in-out;
 		z-index: 20;

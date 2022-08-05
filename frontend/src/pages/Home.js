@@ -21,10 +21,10 @@ function Home() {
 					<h1>
 						TIME TO EVEN <br /> THE PLAYING FIELD
 					</h1>
-					<h3>
+					{/* <h3>
 						Linking NYers in underserved communities with essential career and
 						education services.
-					</h3>
+					</h3> */}
 				</div>
 				<div className="joinUs">
 					<div>
