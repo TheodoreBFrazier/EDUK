@@ -1,6 +1,6 @@
 .create-user-form {
 	text-align: center;
-	width: 50%;
+	width: 70%;
 	margin: auto;
 	margin-top: 40px;
 	padding-bottom: 5em;
@@ -8,6 +8,7 @@
 	height: 500px;
 	align-items: flex-start;
 	background-color: #222b2f;
+	border-radius: 8px;
 }
 .mainSignUp {
 	display: flex;

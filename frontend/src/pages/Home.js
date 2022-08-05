@@ -12,19 +12,19 @@ import { Link } from "react-router-dom";
 // 		}}
 // 	/>
 // );
-
+// style={{ backgroundImage: `url(${Background})` }}
 function Home() {
 	return (
 		<div className="Home">
-			<div className="Hero" style={{ backgroundImage: `url(${Background})` }}>
+			<div className="Hero">
 				<div className="Hero-text">
 					<h1>
 						TIME TO EVEN <br /> THE PLAYING FIELD
 					</h1>
-					{/* <h3>
+					<h3>
 						Linking NYers in underserved communities with essential career and
 						education services.
-					</h3> */}
+					</h3>
 				</div>
 				<div className="joinUs">
 					<div>

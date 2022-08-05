@@ -39,8 +39,8 @@
 .resourceMainBtn {
 	margin: 0px 150px 0px 150px;
 	padding-bottom: 30px;
-	display: grid;
-	grid-template-columns: 20% 10% 45% 35%;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .resourceMainBtn button {
@@ -148,7 +148,6 @@
 	}
 	.resource-card {
 		width: 320px;
-		/* height: auto; */
 	}
 	.resource-text {
 		height: auto;
@@ -160,8 +159,11 @@
 	}
 
 	.resourceMainBtn {
+		width: 40%;
 		margin: auto;
-		display: grid;
-		grid-template-columns: 12% 3% 57% 28%;
+		flex-direction: column;
+	}
+	.resourceMainBtn div {
+		margin: 2px;
 	}
 }
