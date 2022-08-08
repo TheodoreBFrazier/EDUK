@@ -43,6 +43,7 @@ function CreateMentor() {
 			<div>
 				<div>
 					<img
+						alt="Mentor Pic"
 						className="createMentorImg"
 						src={
 							"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Illustration_Mentoring.png/605px-Illustration_Mentoring.png"

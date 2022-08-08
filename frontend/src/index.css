@@ -16,14 +16,6 @@ code {
 		monospace;
 }
 
-/* TYPOGRAPHY */
-
-/* Importing Font */
-
-/* Regular */
-
-/* Italics */
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap");
 
 h1 {
@@ -81,11 +73,21 @@ p {
 .Hero {
 	height: 60vh;
 	margin: 0;
-	/* background-image: url("https://cdn.dribbble.com/users/1626229/screenshots/14556747/media/ceb42cd2838a68f02e27032469c01870.jpg"); */
 	margin-bottom: 110px;
 	background-color: #cccccc;
 	background-size: cover;
-	background: #222b2f; /* fallback for old browsers */
+	/* background: #222b2f; fallback for old browsers */
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#434343,
+		#000000
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#434343,
+		#000000
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .Hero-text h1 {
@@ -182,6 +184,10 @@ p {
 	font-size: 20px;
 	font-family: sans-serif;
 }
+.intro-container img {
+	width: 400px;
+	height: 367px;
+}
 
 @media (max-width: 750px) {
 	.intro-container p {
@@ -208,6 +214,9 @@ p {
 	}
 	.intro-container p {
 		font-size: 10px;
+	}
+	.intro-container img {
+		width: 200px;
 	}
 }
 

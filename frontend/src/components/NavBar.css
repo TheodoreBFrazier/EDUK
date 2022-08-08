@@ -1,6 +1,6 @@
 .logoimg {
+	width: 140px;
 	height: 100px;
-	margin: 0;
 }
 
 nav {
@@ -35,7 +35,6 @@ nav {
 }
 .navLinks .iconLi {
 	text-decoration: none;
-
 	padding-top: 10px;
 	height: 2em;
 	text-align: center;

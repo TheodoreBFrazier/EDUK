@@ -1,18 +1,7 @@
 import React from "react";
-import Background from "../images/home.jpg";
+// import Background from "../images/home.jpg";
 import { Link } from "react-router-dom";
 
-// const HorizontalRule = ({ color }) => (
-// 	<hr
-// 		style={{
-// 			color: color,
-// 			backgroundColor: color,
-// 			height: 5,
-// 			width: "300px",
-// 		}}
-// 	/>
-// );
-// style={{ backgroundImage: `url(${Background})` }}
 function Home() {
 	return (
 		<div className="Home">
@@ -43,7 +32,7 @@ function Home() {
 				<div className="intro-container">
 					<img
 						alt="homeimg"
-						src="https://nces.ed.gov/images/homepage/coe.jpg"
+						src="https://danscartoons.com/wp-content/uploads/2013/08/Education-School-Clip-Art-Cartoon-22.gif"
 					/>
 					<p>
 						The goal of EDUK to connect highschool, college students, minority
@@ -57,51 +46,6 @@ function Home() {
 						of life.
 					</p>
 				</div>
-				{/* <div className="why-eduk">
-					<h1>SERVICES WITH YOU IN MIND</h1>
-
-					<br />
-
-					<div className="rule">
-						<HorizontalRule color="black" />
-					</div>
-
-					<br />
-					<br /> */}
-				{/* <div className="services-icons">
-						<div className="icons-mentor">
-							<img src="https://cdn-icons-png.flaticon.com/128/767/767388.png" alt="helping" />
-							<br />
-							<br />
-							<p> A selection of mentors <br />
-								to help you achieve your goals <br />
-							</p>
-
-						</div>
-
-						<div className="icons-mentor">
-							<img src="https://cdn-icons-png.flaticon.com/128/767/767388.png" alt="helping" />
-							<br />
-							<br />
-							<p> A selection of mentors <br />
-								to help you achieve your goals <br />
-							</p>
-
-						</div>
-
-
-						<div className="icons-resources">
-							<img src="https://cdn-icons-png.flaticon.com/128/500/500425.png" alt="resources" />
-							<br />
-							<br />
-							<p> A selection of mentors <br />
-								to help you achieve your goals <br />
-							</p>
-
-						</div>
-
-					</div> */}
-				{/* </div> */}
 			</div>
 		</div>
 	);
