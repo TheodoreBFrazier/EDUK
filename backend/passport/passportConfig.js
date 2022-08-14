@@ -27,4 +27,5 @@ async function verifyCallback(username, password, done) {
 	}
 }
 
-const strategy = new LocalStrategy();
+const strategy = new LocalStrategy(customFields, verifyCallback);
+passport.user(strategy);

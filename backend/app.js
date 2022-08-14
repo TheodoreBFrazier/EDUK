@@ -1,6 +1,11 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+// import passport;
+const passport = require("passport");
+// import session
+const session = require("express-session");
+
 // const fileUpload = require("express-fileupload");
 const usersController = require("./controllers/usersControllers.js");
 const resourcesController = require("./controllers/resourcesControllers.js");
@@ -16,6 +21,23 @@ app.use(cors());
 
 // Parse incoming JSON
 app.use(express.json());
+
+// session middleware
+app.use(
+	session({
+		secret: process.env.SECRET,
+		resave: false,
+		saveUninitialized: true,
+		store: sessionStore,
+		cookie: {
+			maxAge: 1000 * 60 * 60 * 24,
+		},
+	})
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 // /users/1/resources
 app.use("/users", usersController);
 
