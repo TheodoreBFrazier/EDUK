@@ -28,7 +28,7 @@ const {
 //users.use("/:uid/resources", resourcesController);
 
 //get all users  /users/
-users.get("/", async (req, res) => {
+users.get("/", isAuth, async (req, res) => {
 	const users = await getAllUsers();
 	if (users[0]) {
 		res.json({ success: true, result: users });

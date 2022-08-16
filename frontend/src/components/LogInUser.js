@@ -61,8 +61,6 @@ function LogInUser({ setLogText, mentors }) {
 		logIn();
 	};
 
-	//message
-
 	const handleClose = (event, reason) => {
 		if (reason === "clickaway") {
 			return;

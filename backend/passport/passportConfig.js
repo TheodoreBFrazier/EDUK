@@ -2,30 +2,29 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const db = require("../db/dbConfig.js");
 const bcrypt = require("bcrypt");
-// const { init } = require("../app.js");
 
 function isAuth(req, res, next) {
 	// isAuthenticated
 	if (req.isAuthenticated()) {
 		next();
 	} else {
-		// console.log("Fail the login");
 		res.status(401).json({ success: false, error: "Please Login" });
 	}
 }
-
+// verify password using passport , passport local
 async function authenticateUser(user_name, password, done) {
 	const user = await db.one(
 		"SELECT * FROM users WHERE user_name=$1",
 		user_name
 	);
-	// checking if the user exist;
+	// checking if the user exist; checking if the id exist ...
 	if (!user.uid) return done(null, false);
-
+	// checking if the password is correct
 	const isValid = await bcrypt.compare(password, user.password);
 	// if the user is there and the password is correct
 	// send the information..
 	if (isValid) {
+		// returning user information
 		return done(null, user);
 	} else {
 		return done(null, false);
