@@ -13,11 +13,18 @@ const mentorsController = require("./controllers/mentorsControllers.js");
 const authController = require("./controllers/authController.js");
 const owners = require("./controllers/owners");
 
+require("dotenv").config();
+
 // CONFIGURATION
 const app = express();
 
 // MIDDLEWARE.
-app.use(cors());
+app.use(
+	cors({
+		origin: "http://localhost:3000",
+		credentials: true,
+	})
+);
 
 // Parse incoming JSON
 app.use(express.json());
@@ -27,15 +34,17 @@ app.use(
 	session({
 		secret: process.env.SECRET,
 		resave: false,
-		saveUninitialized: true,
-		store: sessionStore,
+		saveUninitialized: false,
+		// store: sessionStore,
 		cookie: {
 			maxAge: 1000 * 60 * 60 * 24,
 		},
 	})
 );
 
+// initialize the passport js middleware ;
 app.use(passport.initialize());
+// serialize and desarilize
 app.use(passport.session());
 
 // /users/1/resources
@@ -53,8 +62,6 @@ app.use("/owners", owners);
 //multer
 // console.log("underscoredirname", __dirname + "/uploads");
 app.use(express.static(__dirname + "/uploads"));
-
-require("dotenv").config();
 
 app.get("/", (req, res) => {
 	res.send("Welcome To EDUK App");

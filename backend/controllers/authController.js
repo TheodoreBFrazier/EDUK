@@ -4,7 +4,12 @@ const auth = express.Router();
 const { createUser } = require("../queries/users.js");
 const { authUser } = require("../queries/auth.js");
 const bcrypt = require("bcrypt");
-const { rawListeners } = require("../app.js");
+// const { rawListeners } = require("../app.js");
+const passport = require("passport");
+
+// import passport config ;
+
+require("../passport/passportConfig.js");
 
 //create a auth
 auth.post("/sign_up", async (req, res) => {
@@ -27,7 +32,7 @@ auth.post("/sign_up", async (req, res) => {
 });
 
 //Login a exsiting user
-auth.post("/login", async (req, res) => {
+auth.post("/login", passport.authenticate("local"), async (req, res) => {
 	const { user_name, password } = req.body;
 	const userInfo = await authUser(user_name, password);
 
