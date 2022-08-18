@@ -10,13 +10,11 @@ import UserResource from "./UserResource";
 //API
 
 const API = process.env.REACT_APP_API_URL;
-// const userId = localStorage.getItem("userId");
+const userId = localStorage.getItem("userId");
 
 function UserDetails() {
 	const [user, setUser] = useState({});
 	const [userResources, setUserResources] = useState([]);
-	//show Message
-	// const [showMessage, setShowMessage] = useState(false);
 
 	//message state
 	const [open, setOpen] = useState(false);
@@ -35,7 +33,6 @@ function UserDetails() {
 					(el) => el.resource_id !== rid
 				);
 				setUserResources(newResources);
-				// setShowMessage(true);
 				setOpen(true);
 			})
 			.catch((e) => console.log(e));
@@ -48,7 +45,8 @@ function UserDetails() {
 				setUser(response.data.result);
 			})
 			.catch((error) => {
-				console.log(error + "not the same user");
+				window.location.replace("http://localhost:3000/users/login");
+				console.log(error);
 			});
 
 		axios
@@ -60,6 +58,7 @@ function UserDetails() {
 				console.log(error);
 			});
 	}, [uid]);
+
 	//message
 
 	const handleClose = (event, reason) => {

@@ -3,14 +3,6 @@ const LocalStrategy = require("passport-local").Strategy;
 const db = require("../db/dbConfig.js");
 const bcrypt = require("bcrypt");
 
-function isAuth(req, res, next) {
-	// isAuthenticated
-	if (req.isAuthenticated()) {
-		next();
-	} else {
-		res.status(401).json({ success: false, error: "Please Login" });
-	}
-}
 // verify password using passport , passport local
 async function authenticateUser(user_name, password, done) {
 	const user = await db.one(
@@ -58,5 +50,3 @@ passport.deserializeUser(async function (userId, done) {
 	if (user.uid) done(null, user);
 	else done(user, null);
 });
-
-module.exports = { isAuth };

@@ -2,7 +2,7 @@ const express = require("express");
 // const path = require("path");
 const upload = require("../multer.js");
 const users = express.Router();
-const { isAuth } = require("../passport/passportConfig.js");
+const { isAuth } = require("../passport/passportUtils.js");
 
 //const resourcesController = require("./resourcesControllers.js");
 //users/1/resources
