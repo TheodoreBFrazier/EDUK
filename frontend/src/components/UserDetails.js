@@ -48,7 +48,7 @@ function UserDetails() {
 				setUser(response.data.result);
 			})
 			.catch((error) => {
-				console.log(error);
+				console.log(error + "not the same user");
 			});
 
 		axios
