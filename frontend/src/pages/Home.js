@@ -32,7 +32,7 @@ function Home() {
 				<div className="intro-container">
 					<img
 						alt="homeimg"
-						src="https://danscartoons.com/wp-content/uploads/2013/08/Education-School-Clip-Art-Cartoon-22.gif"
+						src="https://media.istockphoto.com/vectors/computer-lab-abstract-concept-vector-illustration-vector-id1353786683?k=20&m=1353786683&s=612x612&w=0&h=qOnTLR1tqTPTsqtZl1wKi6tiuDxF-Le0KRKnuUZ7oBU="
 					/>
 					<p>
 						The goal of EDUK to connect highschool, college students, minority

@@ -10,7 +10,7 @@ import UserResource from "./UserResource";
 //API
 
 const API = process.env.REACT_APP_API_URL;
-const userId = localStorage.getItem("userId");
+// const userId = localStorage.getItem("userId");
 
 function UserDetails() {
 	const [user, setUser] = useState({});

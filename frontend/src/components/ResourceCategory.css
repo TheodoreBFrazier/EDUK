@@ -76,7 +76,6 @@
 .resource-card {
 	display: flex;
 	justify-content: center;
-	/* height: auto; */
 }
 
 .resource-card h4 {

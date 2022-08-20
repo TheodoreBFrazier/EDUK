@@ -2,7 +2,6 @@
 function isAuth(req, res, next) {
 	// isAuthenticated
 	const { uid } = req.params;
-	console.log(uid);
 
 	if (uid == req.user.uid && req.isAuthenticated()) {
 		next();

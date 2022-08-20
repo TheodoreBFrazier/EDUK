@@ -161,9 +161,6 @@ p {
 .joinUs a {
 	text-decoration: none;
 }
-/* .introduction {
-	background-color: #3a3b4938;
-} */
 
 .introduction h1 {
 	text-align: center;
@@ -186,7 +183,6 @@ p {
 }
 .intro-container img {
 	width: 400px;
-	height: 367px;
 }
 
 @media (max-width: 750px) {
