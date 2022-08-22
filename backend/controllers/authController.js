@@ -29,20 +29,6 @@ auth.post("/sign_up", async (req, res) => {
 });
 
 //Login a exsiting user
-// auth.post("/login", passport.authenticate("local"), async (req, res) => {
-// 	const { user_name, password } = req.body;
-// 	const userInfo = await authUser(user_name, password);
-
-// 	try {
-// 		if (!isNaN(userInfo.uid)) res.json({ success: true, result: userInfo });
-// 		else res.status(500).json({ success: false, error: userInfo.error });
-// 	} catch (e) {
-// 		res
-// 			.status(500)
-// 			.json({ success: false, error: "Incorrect Username or Password" });
-// 	}
-// });
-
 auth.post("/login", passport.authenticate("local"), async (req, res) => {
 	console.log("passed the login");
 	const { user_name, password } = req.body;
@@ -51,7 +37,7 @@ auth.post("/login", passport.authenticate("local"), async (req, res) => {
 	try {
 		if (!isNaN(userInfo.uid)) res.json({ success: true, result: userInfo });
 		else res.status(500).json({ success: false, error: userInfo.error });
-	} catch (e) {
+	} catch (error) {
 		res
 			.status(500)
 			.json({ success: false, error: "Incorrect Username or Password" });

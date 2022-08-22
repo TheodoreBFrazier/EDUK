@@ -8,9 +8,7 @@ import GeneralShowMessage from "./GeneralShowMessage";
 import UserResource from "./UserResource";
 
 //API
-
 const API = process.env.REACT_APP_API_URL;
-// const userId = localStorage.getItem("userId");
 
 function UserDetails() {
 	const [user, setUser] = useState({});
@@ -60,7 +58,6 @@ function UserDetails() {
 	}, [uid]);
 
 	//message
-
 	const handleClose = (event, reason) => {
 		if (reason === "clickaway") {
 			return;

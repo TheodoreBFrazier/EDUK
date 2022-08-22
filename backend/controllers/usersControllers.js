@@ -49,7 +49,6 @@ users.get("/:uid", isAuth, async (req, res) => {
 });
 
 //get all resources of a user  /users/1/resources
-
 users.get("/:uid/resources", isAuth, async (req, res) => {
 	const { uid } = req.params;
 	const resources = await getAllResources(uid);
@@ -100,6 +99,7 @@ users.delete("/:uid", async (req, res) => {
 			.status(500)
 			.json({ success: false, error: `unable to delete user ${uid}` });
 });
+
 //user remove a resource from his profile
 users.delete("/:uid/resources/:resource_id", async (req, res) => {
 	const { uid, resource_id } = req.params;
@@ -107,6 +107,7 @@ users.delete("/:uid/resources/:resource_id", async (req, res) => {
 	if (removedResource.uid) res.json({ success: true, result: removedResource });
 	else res.status(500).json({ success: false, error: removedResource });
 });
+
 //update a user
 users.put("/:uid", async (req, res) => {
 	const { uid } = req.params;
@@ -120,6 +121,7 @@ users.put("/:uid", async (req, res) => {
 			.status(500)
 			.json({ success: false, error: `unable to update user ${uid}` });
 });
+
 //update user image
 users.post("/:uid/upload", upload.single("photo"), async (req, res) => {
 	if (!req.file) {
