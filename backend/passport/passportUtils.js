@@ -1,9 +1,10 @@
 // isAuth
 function isAuth(req, res, next) {
 	// isAuthenticated
-	const { uid } = req.params;
+	// const { uid } = req.params;
+	// uid == req.user.uid &&
 
-	if (uid == req.user.uid && req.isAuthenticated()) {
+	if (req.isAuthenticated()) {
 		next();
 	} else {
 		res.status(401).json({ success: false, error: "Not Authenticated" });

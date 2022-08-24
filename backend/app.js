@@ -18,10 +18,13 @@ require("dotenv").config();
 // CONFIGURATION
 const app = express();
 
+// app.options("*", cors()); // i
+
 // MIDDLEWARE.
 app.use(
 	cors({
 		origin: process.env.ORIGIN,
+		optionsSuccessStatus: 200,
 		credentials: true,
 	})
 );
@@ -46,6 +49,8 @@ app.use(
 app.use(passport.initialize());
 // serialize and desarilize
 app.use(passport.session());
+//auth controller
+app.use("/auth", authController);
 
 // /users/1/resources
 app.use("/users", usersController);
@@ -55,8 +60,6 @@ app.use("/users", usersController);
 app.use("/resources", resourcesController);
 //mentors controller
 app.use("/mentors", mentorsController);
-//auth controller
-app.use("/auth", authController);
 // owners controllers
 app.use("/owners", owners);
 //multer
