@@ -24,7 +24,6 @@ const app = express();
 app.use(
 	cors({
 		origin: process.env.ORIGIN,
-		preflightContinue: true,
 		credentials: true,
 	})
 );
@@ -40,7 +39,9 @@ app.use(
 		saveUninitialized: true,
 		// store: sessionStore,
 		cookie: {
-			// sameSite: "none",
+			httpOnly: true,
+			sameSite: "none",
+			secure: true,
 			maxAge: 1000 * 60 * 60 * 24,
 		},
 	})
