@@ -24,7 +24,7 @@ const app = express();
 app.use(
 	cors({
 		origin: process.env.ORIGIN,
-		optionsSuccessStatus: 200,
+		preflightContinue: true,
 		credentials: true,
 	})
 );
@@ -40,10 +40,22 @@ app.use(
 		saveUninitialized: true,
 		// store: sessionStore,
 		cookie: {
+			// sameSite: "none",
 			maxAge: 1000 * 60 * 60 * 24,
 		},
 	})
 );
+
+app.use((req, res, next) => {
+	res.set("Access-Control-Allow-Origin", `${process.env.ORIGIN}`);
+	res.set("Access-Control-Allow-Credentials", "true");
+	next();
+});
+
+// if (process.env.PG_HOST === "production") {
+// 	app.set("trust proxy", 1); // trust first proxy
+// 	sessionConfig.cookie.secure = true; // serve secure cookies
+// }
 
 // initialize the passport js middleware ;
 app.use(passport.initialize());
