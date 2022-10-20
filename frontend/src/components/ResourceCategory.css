@@ -38,7 +38,7 @@
 
 .resourceMainBtn {
 	margin: 0px 150px 0px 150px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	display: flex;
 	justify-content: flex-start;
 }
@@ -120,27 +120,26 @@
 .resource-arr p {
 	font-size: 12pt;
 }
-
+/* ipad */
 @media (max-width: 1024px) {
 	.resource-arr {
 		grid-template-columns: 1fr 1fr;
 	}
 	.resource-text {
 		margin-left: 60px;
-		height: auto;
 		width: 600px;
 	}
 	.resource-heading {
 		margin-left: 60px;
 	}
-
 	.resourceMainBtn {
-		margin: 10px 250px 10px 250px;
-		padding-bottom: 30px;
+		margin: 0px;
+		padding-bottom: 10px;
 		display: flex;
 		justify-content: center;
 	}
 }
+/* phone  */
 @media (max-width: 767px) {
 	.resource-arr {
 		grid-template-columns: 1fr;
@@ -149,20 +148,23 @@
 		width: 320px;
 	}
 	.resource-text {
-		height: auto;
-		width: 340px;
+		width: 380px;
 		margin-left: 10px;
+	}
+	.resource-text p {
+		margin: 20px;
+		padding: 20px;
 	}
 	.resource-heading {
 		margin-left: 30px;
 	}
-
-	.resourceMainBtn {
-		width: 40%;
-		margin: auto;
-		flex-direction: column;
-	}
 	.resourceMainBtn div {
 		margin: 2px;
+	}
+	.resourceMainBtn {
+		margin: 0px;
+		padding-bottom: 10px;
+		display: flex;
+		justify-content: center;
 	}
 }

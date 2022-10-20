@@ -49,7 +49,6 @@ function ResourceDetails() {
 	};
 
 	//message
-
 	const handleClose = (event, reason) => {
 		if (reason === "clickaway") {
 			return;
@@ -92,7 +91,7 @@ function ResourceDetails() {
 					<div className="visit-site-button">
 						<a target="blank" href={resource.url}>
 							<Button variant="contained" size="small">
-								{resource.resource_name}
+								View
 							</Button>
 						</a>
 					</div>
