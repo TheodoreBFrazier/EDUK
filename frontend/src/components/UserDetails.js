@@ -95,7 +95,7 @@ function UserDetails() {
 						Username : {user.user_name} <br />
 						Age : {user.age} <br />
 						Mentor Name: {mentor ? mentor.mentor_fname : ""}{" "}
-						{mentor ? mentor.mentor_lname : ""} <br />
+						{mentor ? mentor.mentor_lname : "N/A"} <br />
 						Email : {user.email}
 					</p>
 				</div>
