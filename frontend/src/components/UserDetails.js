@@ -38,17 +38,19 @@ function UserDetails() {
 
 	useEffect(() => {
 		axios
-			.get(API + "/users/" + uid, { withCredentials: true })
+			//, { withCredentials: true }
+			.get(API + "/users/" + uid)
 			.then((response) => {
 				setUser(response.data.result);
 			})
 			.catch((error) => {
-				window.location.replace("http://localhost:3000/users/login");
+				// window.location.replace("http://localhost:3000/users/login");
 				console.log(error);
 			});
 
 		axios
-			.get(API + "/users/" + uid + "/resources", { withCredentials: true })
+			//, { withCredentials: true }
+			.get(API + "/users/" + uid + "/resources")
 			.then((response) => {
 				setUserResources(response.data.result);
 			})

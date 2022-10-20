@@ -28,7 +28,8 @@ const {
 //users.use("/:uid/resources", resourcesController);
 
 //get all users  /users/
-users.get("/", isAuth, async (req, res) => {
+// isAuth,
+users.get("/", async (req, res) => {
 	const users = await getAllUsers();
 	if (users[0]) {
 		res.json({ success: true, result: users });
@@ -36,7 +37,8 @@ users.get("/", isAuth, async (req, res) => {
 });
 
 //get a User   /users/1
-users.get("/:uid", isAuth, async (req, res) => {
+// isAuth,
+users.get("/:uid", async (req, res) => {
 	const { uid } = req.params;
 
 	const user = await getOneUser(uid);
@@ -49,7 +51,8 @@ users.get("/:uid", isAuth, async (req, res) => {
 });
 
 //get all resources of a user  /users/1/resources
-users.get("/:uid/resources", isAuth, async (req, res) => {
+// isAuth
+users.get("/:uid/resources", async (req, res) => {
 	const { uid } = req.params;
 	const resources = await getAllResources(uid);
 	if (resources[0]) {

@@ -22,7 +22,8 @@ function LogInUser({ setLogText, mentors }) {
 	const logIn = () => {
 		setError("");
 		axios
-			.post(`${API}/auth/login`, user, { withCredentials: true })
+			// , { withCredentials: true }
+			.post(`${API}/auth/login`, user)
 			.then((res) => {
 				const userInfo = res.data.result;
 				const userId = userInfo.uid;
