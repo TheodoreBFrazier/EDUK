@@ -1,20 +1,27 @@
 .dropM {
 	position: absolute;
-	margin: 0.7em;
+	width: 220px;
+	margin-top: 0.8em;
 	list-style: none;
-	text-align: start;
 	background-color: white;
 	z-index: 1;
+	padding: 0;
+	box-shadow: rgba(183, 141, 141, 0.24) 0px 3px 8px;
+	display: grid;
+	grid-template-columns: auto;
 }
 
-.dropM li {
+.dropM a {
 	cursor: pointer;
-	padding: 5px;
-	font-size: 10px;
+	padding: 10px 10px;
+	font-size: 16px;
+	color: rgb(20, 20, 20);
+	margin: 0px;
 }
 
-.dropM li:hover {
-	background-color: silver;
+.dropM a:hover {
+	color: white;
+	background-color: #222b2f;
 }
 
 .dropM.clicked {

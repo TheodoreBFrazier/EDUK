@@ -41,7 +41,6 @@ export default function RightNav({
 	};
 
 	const userId = localStorage.getItem("userId");
-
 	//user data from local storage
 	const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 

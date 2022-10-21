@@ -68,20 +68,6 @@ export default function Burger({ logText, setLogText }) {
 		setClick(!click);
 	};
 
-	// useEffect(() => {
-	// 	window.addEventListener("click", hideDiv);
-	// });
-
-	// componentDidMount = () => {
-	// 	window.addEventListener("click", hideDiv);
-	// };
-
-	// const hideDiv = () => {
-	// 	if (dropdown) {
-	// 		setDropdown(false);
-	// 	}
-	// };
-
 	return (
 		<>
 			<StyledBurger
@@ -89,7 +75,6 @@ export default function Burger({ logText, setLogText }) {
 				onClick={() => {
 					toggleOpen();
 					toggleDropdownOpen();
-					// toggleMouseClick();
 				}}
 				className="mainHam"
 			>
