@@ -14,7 +14,6 @@ export default function DropDown({
 			<ul onClick={handleClick} className="dropM">
 				{MenuItems.map((item, index) => {
 					return (
-						// <li key={index}>
 						<Link
 							className={item.name}
 							to={item.path}
@@ -25,7 +24,6 @@ export default function DropDown({
 						>
 							{item.title}
 						</Link>
-						// </li>
 					);
 				})}
 			</ul>

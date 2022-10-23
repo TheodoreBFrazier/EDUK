@@ -15,6 +15,7 @@ nav {
 	display: flex;
 	flex-flow: row nowrap;
 	padding-top: 40px;
+	background-color: inherit;
 }
 
 .navLinks a {
