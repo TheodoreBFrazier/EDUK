@@ -14,7 +14,6 @@ const Ul = styled.ul`
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		top: 25px;
 		right: 0;
-		height: 100vh;
 		width: 180px;
 		padding-top: 3.5rem;
 		transition: 0.3s ease-in-out;
@@ -37,8 +36,8 @@ export default function RightNav({
 	toggleDropdownOpen,
 	toggleOpen,
 	dropdown,
-	onMouseClick,
-	onMouseUnclick,
+	toggleMouseClick,
+	setDropdown,
 }) {
 	const logOut = () => {
 		localStorage.clear();
@@ -51,10 +50,7 @@ export default function RightNav({
 
 	return (
 		<Ul open={open} className="navLinks">
-			<li
-				className="eachLi mainLi "
-				onClick={dropdown ? onMouseUnclick : onMouseClick}
-			>
+			<li className="eachLi mainLi " onClick={toggleMouseClick}>
 				<div>
 					Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
 				</div>

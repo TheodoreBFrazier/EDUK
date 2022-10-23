@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useRef, useState } from "react";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 import "./Dropdown.css";
@@ -7,8 +8,8 @@ export default function DropDown({
 	toggleOpen,
 	toggleDropdownOpen,
 	handleClick,
-	click,
 }) {
+	useEffect(() => {}, []);
 	return (
 		<>
 			<ul onClick={handleClick} className="dropM">

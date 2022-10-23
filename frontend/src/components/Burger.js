@@ -42,20 +42,15 @@ const StyledBurger = styled.div`
 
 export default function Burger({ logText, setLogText }) {
 	// drop down functionality
+	// the first drop down
 	const [dropdown, setDropdown] = useState(false);
 	const [open, setOpen] = useState(false);
 	// state for the drop down close or open
 	const [click, setClick] = useState(false);
 
-	const onMouseClick = () => {
-		setDropdown(true);
-	};
-	const onMouseUnclick = () => {
-		setDropdown(false);
-	};
-
+	// opening the first dropdown
 	const toggleMouseClick = () => {
-		dropdown ? onMouseUnclick() : onMouseClick();
+		setDropdown(!dropdown);
 	};
 	const handleClick = () => setClick(!click);
 
@@ -93,8 +88,6 @@ export default function Burger({ logText, setLogText }) {
 				toggleDropdownOpen={toggleDropdownOpen}
 				toggleOpen={toggleOpen}
 				dropdown={dropdown}
-				onMouseClick={onMouseClick}
-				onMouseUnclick={onMouseUnclick}
 				toggleMouseClick={toggleMouseClick}
 				setDropdown={setDropdown}
 			/>

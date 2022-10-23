@@ -52,6 +52,7 @@
 	width: 50%;
 	margin: 10px;
 	border-radius: 4px;
+	outline: none;
 }
 
 .submit {
@@ -84,6 +85,9 @@
 }
 
 @media (max-width: 750px) {
+	.create-user-form div input {
+		width: 200px;
+	}
 	.submit {
 		margin: 5px;
 		width: 100px;
@@ -94,6 +98,6 @@
 	}
 
 	.create-user-form {
-		width: 80%;
+		width: 90%;
 	}
 }
