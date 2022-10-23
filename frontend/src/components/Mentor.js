@@ -12,16 +12,17 @@ function Mentor({ mentor }) {
 	const navigate = useNavigate();
 	// const [showMessage, setShowMessage] = useState(false);
 	useEffect(() => {
+		//  { withCredentials: true }
 		axios
-			.get(`${API}/users/${uid}`, { withCredentials: true })
+			.get(`${API}/users/${uid}`)
 			.then((res) => setUser(res.data.result))
 			.catch((e) => console.log(e));
 	}, [uid]);
-
+	//  { withCredentials: true }
 	const addMentor = (mentor) => {
 		user.mentor_id = mentor.mentor_id;
 		axios
-			.put(`${API}/users/${user.uid}`, user, { withCredentials: true })
+			.put(`${API}/users/${user.uid}`, user)
 			.then((res) => {
 				setOpen(true);
 				localStorage.setItem("userMentor", JSON.stringify(mentor));

@@ -6,7 +6,7 @@
 	text-align: center;
 	font-size: larger;
 	font-weight: bolder;
-	width: 850px;
+	width: 80%;
 	margin: auto;
 	margin-top: 80px;
 	padding-bottom: 5em;
@@ -14,23 +14,21 @@
 }
 
 .mentor-form {
-	margin-top: 40px;
 	text-align: center;
 	font-family: monospace;
 	align-items: center;
 	display: flex;
 	padding: 60px;
 	flex-direction: column;
-	margin-bottom: 40px;
 	background-color: #222b2f;
 	border-radius: 30px;
 }
 
 .create-mentor-form input {
-	font-size: 18px;
+	font-size: 20px;
 	border-radius: 5px;
 	padding: 10px;
-	margin: 10px;
+	margin: 14px;
 }
 
 .create-mentor-form textarea {
