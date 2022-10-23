@@ -110,7 +110,7 @@
 	display: grid;
 	justify-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
-	row-gap: 60px;
+	row-gap: 40px;
 }
 
 .resource-arr a {

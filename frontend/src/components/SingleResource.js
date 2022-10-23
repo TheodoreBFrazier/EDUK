@@ -7,7 +7,7 @@ import { Card } from "@mui/material";
 
 var cardStyle = {
 	height: "auto",
-	width: "400px",
+	width: "360px",
 	padding: "20px",
 	boxshadow: "box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px",
 };

@@ -88,7 +88,7 @@ function LogInUser({ setLogText, mentors }) {
 
 				<div>
 					<form onSubmit={handleSubmit} className="login-form">
-						<h2>LogIn</h2>
+						<h3>Log In</h3>
 						<input
 							placeholder="Username"
 							type="text"

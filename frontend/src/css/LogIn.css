@@ -14,7 +14,7 @@
 	justify-content: space-between;
 }
 
-.login-form h2 {
+.login-form h3 {
 	color: silver;
 	font-weight: 600;
 	font-size: 40px;
@@ -35,16 +35,21 @@
 	border-radius: 5px;
 	align-self: center;
 	font-size: 20px;
+	outline: none;
 }
 
 .login-submit {
+	font-size: 20px;
 	width: 200px;
+	height: 40px;
 	margin-bottom: 20px;
+	margin-top: 20px;
 	font-weight: bold;
-	color: rgb(38, 38, 38);
+	color: white;
 	border-radius: 4px;
-	border: 1px solid black;
+	border: 1px solid rgb(238, 238, 238);
 	align-self: center;
+	background-color: inherit;
 }
 
 .sign-up-submit {
@@ -52,7 +57,7 @@
 	padding: 15px;
 	background-color: #ffffff;
 	margin: auto;
-	color: rgb(0, 0, 0);
+	color: rgb(226, 226, 226);
 	border: 1px solid rgb(54, 47, 47);
 	border-radius: 10px;
 	transition: 0.3s ease-in;
@@ -106,6 +111,10 @@
 	.sign-up-submit {
 		width: 170px;
 		padding: 5px;
+	}
+	.login-submit {
+		width: 100px;
+		font-size: 10px;
 	}
 }
 
