@@ -19,7 +19,7 @@ const Ul = styled.ul`
 		transition: 0.3s ease-in-out;
 		z-index: 20;
 		margin-top: 20px;
-		height: 310px;
+		height: 340px;
 		border-radius: 10px;
 		box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
 			rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
