@@ -49,7 +49,6 @@ export default function RightNav({
 			if (!menuRef.current.contains(e.target)) {
 				setDropdown(false);
 				setOpen(false);
-				console.log("handler function");
 			}
 		};
 		document.addEventListener("mousedown", handler);
