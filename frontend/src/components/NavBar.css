@@ -1,20 +1,22 @@
 .logoimg {
-	width: 140px;
-	height: 100px;
+	width: 60px;
+	height: 60px;
+	margin: 0px;
+	margin-left: 20px;
 }
 
 nav {
 	padding-right: 40px;
 	display: flex;
 	justify-content: space-between;
-	height: 110px;
+	height: 80px;
 	align-items: center;
 	background-color: #fcfcfc;
 }
 .navLinks {
 	display: flex;
 	flex-flow: row nowrap;
-	padding-top: 40px;
+	padding-top: 10px;
 	background-color: inherit;
 }
 
