@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -31,25 +32,36 @@ export default function RightNav({
 	setOpen,
 	logText,
 	setLogText,
-	click,
 	handleClick,
-	toggleDropdownOpen,
 	toggleOpen,
 	dropdown,
 	toggleMouseClick,
 	setDropdown,
 }) {
+	let menuRef = useRef();
 	const logOut = () => {
 		localStorage.clear();
 		setLogText("Log In");
 	};
+
+	useEffect(() => {
+		let handler = (e) => {
+			if (!menuRef.current.contains(e.target)) {
+				setDropdown(false);
+				setOpen(false);
+				console.log("handler function");
+			}
+		};
+		document.addEventListener("mousedown", handler);
+		return () => [document.removeEventListener("mousedown", handler)];
+	}, []);
 
 	const userId = localStorage.getItem("userId");
 	//user data from local storage
 	const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 	return (
-		<Ul open={open} className="navLinks">
+		<Ul open={open} className="navLinks" ref={menuRef}>
 			<li className="eachLi mainLi " onClick={toggleMouseClick}>
 				<div>
 					Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
@@ -57,18 +69,16 @@ export default function RightNav({
 				{dropdown && (
 					<Dropdown
 						handleClick={handleClick}
-						click={click}
 						open={open}
 						toggleOpen={toggleOpen}
-						toggleDropdownOpen={toggleDropdownOpen}
 						setOpen={setOpen}
+						setDropdown={setDropdown}
 					/>
 				)}
 			</li>
 			<li
 				onClick={() => {
 					toggleOpen();
-					toggleDropdownOpen();
 				}}
 				className="eachLi mainLi"
 			>
@@ -81,7 +91,6 @@ export default function RightNav({
 				<li
 					onClick={() => {
 						toggleOpen();
-						toggleDropdownOpen();
 					}}
 					className="eachLi mainLi"
 				>
@@ -91,7 +100,6 @@ export default function RightNav({
 				<li
 					onClick={() => {
 						toggleOpen();
-						toggleDropdownOpen();
 					}}
 					className="eachLi mainLi"
 				>
@@ -102,7 +110,6 @@ export default function RightNav({
 			<li
 				onClick={() => {
 					toggleOpen();
-					toggleDropdownOpen();
 				}}
 				className="eachLi mainLi"
 			>
@@ -115,7 +122,6 @@ export default function RightNav({
 			<div
 				onClick={() => {
 					toggleOpen();
-					toggleDropdownOpen();
 				}}
 				className="loginIcon"
 			>

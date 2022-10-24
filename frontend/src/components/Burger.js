@@ -41,35 +41,25 @@ const StyledBurger = styled.div`
 `;
 
 export default function Burger({ logText, setLogText }) {
-	// drop down functionality
-	// the first drop down
+	// the drop down with featiures
 	const [dropdown, setDropdown] = useState(false);
+	// the nav of the mobile phone
 	const [open, setOpen] = useState(false);
-	// state for the drop down close or open
-	const [click, setClick] = useState(false);
 
-	// opening the first dropdown
 	const toggleMouseClick = () => {
 		setDropdown(!dropdown);
 	};
-	const handleClick = () => setClick(!click);
 
 	const toggleOpen = () => {
 		setDropdown(false);
 		setOpen(!open);
 	};
-
-	const toggleDropdownOpen = () => {
-		setClick(!click);
-	};
-
 	return (
 		<>
 			<StyledBurger
 				open={open}
 				onClick={() => {
 					toggleOpen();
-					toggleDropdownOpen();
 				}}
 				className="mainHam"
 			>
@@ -78,14 +68,10 @@ export default function Burger({ logText, setLogText }) {
 				<div />
 			</StyledBurger>
 			<RightNav
-				handleClick={handleClick}
-				click={click}
 				open={open}
 				setOpen={setOpen}
 				logText={logText}
 				setLogText={setLogText}
-				setClick={setClick}
-				toggleDropdownOpen={toggleDropdownOpen}
 				toggleOpen={toggleOpen}
 				dropdown={dropdown}
 				toggleMouseClick={toggleMouseClick}
