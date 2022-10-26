@@ -17,9 +17,7 @@ require("dotenv").config();
 
 // CONFIGURATION
 const app = express();
-
 // app.options("*", cors()); // i
-
 // MIDDLEWARE.
 app.use(
 	cors({
@@ -30,6 +28,7 @@ app.use(
 
 // Parse incoming JSON
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // session middleware
 app.use(
@@ -37,13 +36,12 @@ app.use(
 		secret: process.env.SECRET,
 		resave: false,
 		saveUninitialized: true,
-		// store: sessionStore,
-		cookie: {
-			httpOnly: true,
-			sameSite: "none",
-			secure: true,
-			maxAge: 1000 * 60 * 60 * 24,
-		},
+		// cookie: {
+		// 	httpOnly: true,
+		// 	sameSite: "none",
+		// 	secure: true,
+		// 	maxAge: 1000 * 60 * 60 * 24,
+		// },
 	})
 );
 
@@ -53,10 +51,10 @@ app.use((req, res, next) => {
 	next();
 });
 
-// if (process.env.PG_HOST === "production") {
-// 	app.set("trust proxy", 1); // trust first proxy
-// 	sessionConfig.cookie.secure = true; // serve secure cookies
-// }
+if (process.env.PG_HOST === "production") {
+	app.set("trust proxy", 1); // trust first proxy
+	sessionConfig.cookie.secure = true; // serve secure cookies
+}
 
 // initialize the passport js middleware ;
 app.use(passport.initialize());

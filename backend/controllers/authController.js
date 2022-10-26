@@ -33,7 +33,6 @@ auth.post("/login", passport.authenticate("local"), async (req, res) => {
 	console.log("passed the login");
 	const { user_name, password } = req.body;
 	const userInfo = await authUser(user_name, password);
-	console.log("tyna login");
 	try {
 		if (!isNaN(userInfo.uid)) res.json({ success: true, result: userInfo });
 		else res.status(500).json({ success: false, error: userInfo.error });

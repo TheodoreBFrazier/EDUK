@@ -46,7 +46,8 @@ passport.serializeUser((user, done) => done(null, user.uid));
 // The fetched object is attached to the request object as req.user
 
 passport.deserializeUser(async function (userId, done) {
-	const user = await db.one("SELECT * FROM users WHERE uid=$1", userId);
-	if (user.uid) done(null, user);
-	else done(user, null);
+	// const user = await db.one("SELECT * FROM users WHERE uid=$1", userId);
+	// if (user.uid)
+	done(null, user);
+	// else done(user, null);
 });
