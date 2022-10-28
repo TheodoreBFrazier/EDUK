@@ -28,6 +28,7 @@ passport.use(
 		{
 			usernameField: "user_name",
 			passwordField: "password",
+			session: true,
 		},
 		authenticateUser
 	)
@@ -36,7 +37,7 @@ passport.use(
 // Stores user details inside session. serializeUser determines which data of the user
 // object should be stored in the session. The result of the serializeUser method is attached
 // to the session as req.session.passport.user = {}. Here for instance, it would be (as we provide
-//   the user id as the key) req.session.passport.user = {id: 'xyz'}
+//  the user id as the key) req.session.passport.user = {id: 'xyz'}
 // grabbing the user into the session
 
 passport.serializeUser((user, done) => done(null, user.uid));
@@ -46,8 +47,7 @@ passport.serializeUser((user, done) => done(null, user.uid));
 // The fetched object is attached to the request object as req.user
 
 passport.deserializeUser(async function (userId, done) {
-	// const user = await db.one("SELECT * FROM users WHERE uid=$1", userId);
-	// if (user.uid)
-	done(null, user);
-	// else done(user, null);
+	const user = await db.one("SELECT * FROM users WHERE uid=$1", userId);
+	if (user.uid) done(null, user);
+	else done(user, null);
 });

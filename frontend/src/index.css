@@ -182,7 +182,7 @@ p {
 	font-family: sans-serif;
 }
 .intro-container img {
-	width: 400px;
+	height: 70%;
 }
 
 @media (max-width: 750px) {
@@ -211,9 +211,6 @@ p {
 	.intro-container p {
 		font-size: 10px;
 	}
-	.intro-container img {
-		width: 200px;
-	}
 }
 
 @media (max-width: 1024px) {
@@ -224,7 +221,7 @@ p {
 	}
 
 	.intro-container img {
-		height: 180px;
+		height: 300px;
 		margin-bottom: 30px;
 	}
 	.intro-container p {

@@ -6,6 +6,7 @@ import "./NavBar.css";
 import Button from "@mui/material/Button";
 import styled from "styled-components";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 const Ul = styled.ul`
 	@media (max-width: 768px) {
@@ -63,7 +64,12 @@ export default function RightNav({
 		<Ul open={open} className="navLinks" ref={menuRef}>
 			<li className="eachLi mainLi " onClick={toggleMouseClick}>
 				<div>
-					Resources <ArrowDropDownIcon fontSize="small"></ArrowDropDownIcon>
+					Resources
+					{!dropdown ? (
+						<ArrowDropDownIcon fontSize="medium"></ArrowDropDownIcon>
+					) : (
+						<ArrowDropUpIcon fontSize="medium"></ArrowDropUpIcon>
+					)}
 				</div>
 				{dropdown && (
 					<Dropdown

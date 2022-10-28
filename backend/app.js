@@ -13,18 +13,26 @@ const mentorsController = require("./controllers/mentorsControllers.js");
 const authController = require("./controllers/authController.js");
 const owners = require("./controllers/owners");
 
-require("dotenv").config();
+// require("dotenv").config();
 
 // CONFIGURATION
 const app = express();
+
+if (process.env.PG_HOST !== "production") {
+	// app.set("trust proxy", 1); // trust first proxy
+	// sessionConfig.cookie.secure = true; // serve secure cookies
+	require("dotenv").config();
+}
+
 // app.options("*", cors()); // i
 // MIDDLEWARE.
-app.use(
-	cors({
-		origin: process.env.ORIGIN,
-		credentials: true,
-	})
-);
+// app.use(
+// 	cors({
+// 		origin: process.env.ORIGIN,
+// 		credentials: true,
+// 	})
+// );
+app.use(cors());
 
 // Parse incoming JSON
 app.use(express.json());
@@ -35,7 +43,7 @@ app.use(
 	session({
 		secret: process.env.SECRET,
 		resave: false,
-		saveUninitialized: true,
+		saveUninitialized: false,
 		// cookie: {
 		// 	httpOnly: true,
 		// 	sameSite: "none",
@@ -45,16 +53,11 @@ app.use(
 	})
 );
 
-app.use((req, res, next) => {
-	res.set("Access-Control-Allow-Origin", `${process.env.ORIGIN}`);
-	res.set("Access-Control-Allow-Credentials", "true");
-	next();
-});
-
-if (process.env.PG_HOST === "production") {
-	app.set("trust proxy", 1); // trust first proxy
-	sessionConfig.cookie.secure = true; // serve secure cookies
-}
+// app.use((req, res, next) => {
+// 	res.set("Access-Control-Allow-Origin", `${process.env.ORIGIN}`);
+// 	res.set("Access-Control-Allow-Credentials", "true");
+// 	next();
+// });
 
 // initialize the passport js middleware ;
 app.use(passport.initialize());
