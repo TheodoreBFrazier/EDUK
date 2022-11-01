@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -39,29 +38,16 @@ export default function RightNav({
 	toggleMouseClick,
 	setDropdown,
 }) {
-	let menuRef = useRef();
 	const logOut = () => {
 		localStorage.clear();
 		setLogText("Log In");
 	};
-
-	useEffect(() => {
-		let handler = (e) => {
-			if (!menuRef.current.contains(e.target)) {
-				setDropdown(false);
-				setOpen(false);
-			}
-		};
-		document.addEventListener("mousedown", handler);
-		return () => [document.removeEventListener("mousedown", handler)];
-	}, []);
-
 	const userId = localStorage.getItem("userId");
 	//user data from local storage
 	const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 	return (
-		<Ul open={open} className="navLinks" ref={menuRef}>
+		<Ul open={open} className="navLinks">
 			<li className="eachLi mainLi " onClick={toggleMouseClick}>
 				<div>
 					Resources

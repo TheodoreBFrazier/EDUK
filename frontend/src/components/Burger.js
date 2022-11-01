@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import RightNav from "./RightNav";
 
@@ -41,12 +41,14 @@ const StyledBurger = styled.div`
 	}
 `;
 
-export default function Burger({ logText, setLogText }) {
-	// the drop down with featiures
-	const [dropdown, setDropdown] = useState(false);
-	// the nav of the mobile phone
-	const [open, setOpen] = useState(false);
-
+export default function Burger({
+	logText,
+	setLogText,
+	open,
+	setOpen,
+	dropdown,
+	setDropdown,
+}) {
 	const toggleMouseClick = () => {
 		setDropdown(!dropdown);
 	};

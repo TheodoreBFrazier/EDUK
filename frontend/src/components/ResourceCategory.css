@@ -145,10 +145,10 @@
 		grid-template-columns: 1fr;
 	}
 	.resource-card {
-		width: 320px;
+		width: 310px;
 	}
 	.resource-text {
-		width: 380px;
+		width: 350px;
 		margin-left: 10px;
 	}
 	.resource-text p {
