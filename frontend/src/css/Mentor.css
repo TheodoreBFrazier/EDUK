@@ -49,5 +49,9 @@
 @media (max-width: 750px) {
 	.mentor-list {
 		display: block;
+		margin-bottom: 10px;
+	}
+	.whole__card {
+		margin-bottom: 10px;
 	}
 }

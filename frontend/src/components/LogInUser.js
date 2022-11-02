@@ -105,20 +105,9 @@ function LogInUser({ setLogText, mentors }) {
 						/>
 
 						<button className="login-submit">Log In</button>
-						<div
-							style={{
-								fontSize: "20px",
-								fontWeight: "600",
-								color: "lightblue",
-							}}
-						>
+						<div>
 							NEW TO EDUK ? &nbsp;
-							<Link
-								style={{ color: "silver", fontSize: "15px" }}
-								to="/users/create"
-							>
-								Sign up here !!
-							</Link>
+							<Link to="/users/create">Sign up here !!</Link>
 						</div>
 					</form>
 				</div>

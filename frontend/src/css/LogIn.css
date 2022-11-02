@@ -3,7 +3,7 @@
 	font-size: larger;
 	width: 70%;
 	margin: auto;
-	margin-top: 30px;
+	margin-top: 50px;
 	padding-bottom: 5em;
 	background-color: #222b2f;
 	border-radius: 10px;
@@ -50,6 +50,9 @@
 	align-self: center;
 	background-color: inherit;
 }
+.loginImg {
+	margin-top: 30px;
+}
 
 .sign-up-submit {
 	width: 350px;
@@ -64,6 +67,16 @@
 
 .sign-up-submit:hover {
 	opacity: 0.7;
+}
+
+.login-form div {
+	font-size: 20px;
+	font-weight: 600;
+	color: lightblue;
+}
+.login-form div a {
+	color: silver;
+	font-size: 15px;
 }
 
 /* screen bigger than a mac  */
@@ -121,9 +134,29 @@
 	.user-login-form {
 		font-size: small;
 		width: 360px;
+		background-color: inherit;
+		margin-top: 20px;
 	}
 
 	.user-login-form input {
-		width: 180px;
+		width: 230px;
+		height: 40px;
+	}
+	.login-submit {
+		width: 200px;
+		font-size: 20px;
+		background-color: #252525;
+		color: rgb(226, 226, 226);
+		border: 1px solid rgb(255, 255, 255);
+	}
+	.login-form div {
+		color: rgb(0, 165, 207);
+	}
+	.login-form div a {
+		color: rgb(37, 37, 37);
+	}
+	.login-form h3 {
+		color: rgb(74, 74, 74);
+		font-size: 20px;
 	}
 }
