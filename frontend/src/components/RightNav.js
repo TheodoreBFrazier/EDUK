@@ -13,13 +13,13 @@ const Ul = styled.ul`
 		background-color: inherit;
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-		top: 25px;
+		top: 0px;
 		right: 0;
 		width: 180px;
 		padding-top: 3.5rem;
 		transition: 0.3s ease-in-out;
 		z-index: 20;
-		margin-top: 20px;
+		margin-top: 10px;
 		height: 340px;
 		border-radius: 10px;
 		box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,

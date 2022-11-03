@@ -20,7 +20,7 @@ function Home() {
 						<div>
 							<Link to="/mentors/create">
 								<button>
-									<h3>Join us become a Mentor</h3>
+									<h4>Join us become a Mentor</h4>
 								</button>
 							</Link>
 						</div>
