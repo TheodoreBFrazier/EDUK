@@ -30,7 +30,6 @@ auth.post("/sign_up", async (req, res) => {
 
 //Login a exsiting user
 auth.post("/login", passport.authenticate("local"), async (req, res) => {
-	console.log("passed the login");
 	const { user_name, password } = req.body;
 	const userInfo = await authUser(user_name, password);
 	try {

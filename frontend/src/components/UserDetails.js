@@ -13,6 +13,8 @@ const API = process.env.REACT_APP_API_URL;
 function UserDetails() {
 	const [user, setUser] = useState({});
 	const [userResources, setUserResources] = useState([]);
+	const userId = localStorage.getItem("userId");
+	console.log(userId);
 
 	//message state
 	const [open, setOpen] = useState(false);
@@ -35,29 +37,31 @@ function UserDetails() {
 			})
 			.catch((e) => console.log(e));
 	};
+	if (userId !== null) {
+		useEffect(() => {
+			axios
+				//, { withCredentials: true }
+				.get(API + "/users/" + uid)
+				.then((response) => {
+					setUser(response.data.result);
+				})
+				.catch((error) => {
+					console.log(error);
+				});
 
-	useEffect(() => {
-		axios
-			//, { withCredentials: true }
-			.get(API + "/users/" + uid)
-			.then((response) => {
-				setUser(response.data.result);
-			})
-			.catch((error) => {
-				// window.location.replace("http://localhost:3000/users/login");
-				console.log(error);
-			});
-
-		axios
-			//, { withCredentials: true }
-			.get(API + "/users/" + uid + "/resources")
-			.then((response) => {
-				setUserResources(response.data.result);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}, [uid]);
+			axios
+				//, { withCredentials: true }
+				.get(API + "/users/" + uid + "/resources")
+				.then((response) => {
+					setUserResources(response.data.result);
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+		}, [uid]);
+	} else {
+		window.location.replace("http://localhost:3000/users/login");
+	}
 
 	//message
 	const handleClose = (event, reason) => {

@@ -69,16 +69,6 @@ users.get("/:uid/resources/:resource_id", async (req, res) => {
 	} else res.status(500).json({ success: false, error: resource });
 });
 
-//create a user
-users.post("/", async (req, res) => {
-	const user = req.body;
-	const createdUser = await createUser(user);
-	if (createdUser.uid) {
-		res.json({ success: true, result: createdUser });
-	} else
-		res.status(500).json({ success: false, error: "unable to create user..." });
-});
-
 //add uid and resource_id into the join table(user add a resource to his profile)
 users.post("/:uid/resources", async (req, res) => {
 	const { uid, resource_id } = req.body;
