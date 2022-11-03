@@ -60,7 +60,7 @@ function UserDetails() {
 				});
 		}, [uid]);
 	} else {
-		window.location.replace("http://localhost:3000/users/login");
+		window.location.replace("https://edukapp.netlify.app/users/login");
 	}
 
 	//message
