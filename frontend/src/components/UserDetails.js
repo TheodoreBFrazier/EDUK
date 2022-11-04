@@ -14,7 +14,6 @@ function UserDetails() {
 	const [user, setUser] = useState({});
 	const [userResources, setUserResources] = useState([]);
 	const userId = localStorage.getItem("userId");
-	console.log(userId);
 
 	//message state
 	const [open, setOpen] = useState(false);
@@ -37,7 +36,7 @@ function UserDetails() {
 			})
 			.catch((e) => console.log(e));
 	};
-	if (userId !== null) {
+	if (userId === uid) {
 		useEffect(() => {
 			axios
 				//, { withCredentials: true }
@@ -60,7 +59,7 @@ function UserDetails() {
 				});
 		}, [uid]);
 	} else {
-		window.location.replace("https://edukapp.netlify.app/users/login");
+		window.location.replace("https://edukapp.netlify.app/");
 	}
 
 	//message
